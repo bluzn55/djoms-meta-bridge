@@ -1,0 +1,8 @@
+{
+  "functions": { "api/meta/*.js": { "maxDuration": 120 } },
+  "headers": [{ "source": "/api/meta/(.*)", "headers": [
+    { "key": "Cache-Control", "value": "no-store" },
+    { "key": "X-Content-Type-Options", "value": "nosniff" },
+    { "key": "Referrer-Policy", "value": "no-referrer" }
+  ] }]
+}
