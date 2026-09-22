@@ -2,14 +2,20 @@ import {
   xConnectEndpoint,
   xCallbackEndpoint,
   xStatusEndpoint,
-  xPostEndpoint
+  xPostEndpoint,
+  xMentionsEndpoint,
+  xMentionReplyEndpoint,
+  xMentionHandledEndpoint
 } from '../../lib/x.js';
 
 const routes = {
   connect: xConnectEndpoint,
   callback: xCallbackEndpoint,
   status: xStatusEndpoint,
-  post: xPostEndpoint
+  post: xPostEndpoint,
+  mentions: xMentionsEndpoint,
+  'mention-reply': xMentionReplyEndpoint,
+  'mention-handled': xMentionHandledEndpoint
 };
 
 export default async function handler(req, res) {
