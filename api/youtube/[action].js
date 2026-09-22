@@ -6,7 +6,10 @@ import {
   youtubeVideoInitEndpoint,
   youtubeVideoRegisterEndpoint,
   youtubeVideoSaveEndpoint,
-  youtubeVideoDeleteEndpoint
+  youtubeVideoDeleteEndpoint,
+  youtubeCommentsEndpoint,
+  youtubeCommentReplyEndpoint,
+  youtubeCommentHandledEndpoint
 } from '../../lib/youtube.js';
 
 const routes = {
@@ -17,7 +20,10 @@ const routes = {
   'video-init': youtubeVideoInitEndpoint,
   'video-register': youtubeVideoRegisterEndpoint,
   'video-save': youtubeVideoSaveEndpoint,
-  'video-delete': youtubeVideoDeleteEndpoint
+  'video-delete': youtubeVideoDeleteEndpoint,
+  comments: youtubeCommentsEndpoint,
+  'comment-reply': youtubeCommentReplyEndpoint,
+  'comment-handled': youtubeCommentHandledEndpoint
 };
 
 export default async function handler(req, res) {
