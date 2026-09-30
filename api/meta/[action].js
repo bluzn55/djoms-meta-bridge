@@ -1,6 +1,7 @@
 import { sessionEndpoint, passwordEndpoint } from '../../lib/core.js';
 import { analyticsEndpoint } from '../../lib/records.js';
 import { localStatusEndpoint, localGoogleConnectEndpoint, localGoogleCallbackEndpoint, localGoogleSelectEndpoint, localGoogleReplyEndpoint } from '../../lib/local.js';
+import { wixBlogCommentsEndpoint } from '../../lib/wix-blog.js';
 
 export default async function handler(req, res) {
   const action = req.query?.action;
@@ -12,5 +13,6 @@ export default async function handler(req, res) {
   if (action === 'local-google-callback') return localGoogleCallbackEndpoint(req, res);
   if (action === 'local-google-select') return localGoogleSelectEndpoint(req, res);
   if (action === 'local-google-reply') return localGoogleReplyEndpoint(req, res);
+  if (action === 'wix-blog-comments') return wixBlogCommentsEndpoint(req, res);
   return res.status(404).json({ error: 'Not found.' });
 }
