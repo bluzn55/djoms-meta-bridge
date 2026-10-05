@@ -14,5 +14,9 @@ export default async function handler(req, res) {
   if (action === 'local-google-select') return localGoogleSelectEndpoint(req, res);
   if (action === 'local-google-reply') return localGoogleReplyEndpoint(req, res);
   if (action === 'wix-blog-comments') return wixBlogCommentsEndpoint(req, res);
+  if (action === 'website-interests') {
+    const { websiteInterestsEndpoint } = await import('../../lib/website-interests.js');
+    return websiteInterestsEndpoint(req, res);
+  }
   return res.status(404).json({ error: 'Not found.' });
 }
