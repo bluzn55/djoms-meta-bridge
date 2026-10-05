@@ -18,5 +18,9 @@ export default async function handler(req, res) {
     const { websiteInterestsEndpoint } = await import('../../lib/website-interests.js');
     return websiteInterestsEndpoint(req, res);
   }
+  if (action === 'radio-report') {
+    const { radioReportEndpoint } = await import('../../lib/radio-report.js');
+    return radioReportEndpoint(req, res);
+  }
   return res.status(404).json({ error: 'Not found.' });
 }
