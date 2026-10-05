@@ -26,5 +26,9 @@ export default async function handler(req, res) {
     const { chapterClicksEndpoint } = await import('../../lib/chapter-clicks.js');
     return chapterClicksEndpoint(req, res);
   }
+  if (action === 'trading-post-sales') {
+    const { tradingPostSalesEndpoint } = await import('../../lib/trading-post-sales.js');
+    return tradingPostSalesEndpoint(req, res);
+  }
   return res.status(404).json({ error: 'Not found.' });
 }
