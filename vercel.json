@@ -1,8 +1,32 @@
 {
-  "functions": { "api/meta/*.js": { "maxDuration": 120 } },
-  "headers": [{ "source": "/api/meta/(.*)", "headers": [
-    { "key": "Cache-Control", "value": "no-store" },
-    { "key": "X-Content-Type-Options", "value": "nosniff" },
-    { "key": "Referrer-Policy", "value": "no-referrer" }
-  ] }]
+  "functions": {
+    "api/meta/*.js": {
+      "maxDuration": 120
+    }
+  },
+  "headers": [
+    {
+      "source": "/api/meta/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "no-referrer"
+        }
+      ]
+    }
+  ],
+  "crons": [
+    {
+      "path": "/api/meta/rotation-cron",
+      "schedule": "0 0 * * *"
+    }
+  ]
 }
