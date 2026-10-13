@@ -22,11 +22,5 @@
         }
       ]
     }
-  ],
-  "crons": [
-    {
-      "path": "/api/meta/rotation-cron",
-      "schedule": "0 0 * * *"
-    }
   ]
 }
