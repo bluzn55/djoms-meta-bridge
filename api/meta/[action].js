@@ -1,5 +1,5 @@
 import { sessionEndpoint, passwordEndpoint } from '../../lib/core.js';
-import { analyticsEndpoint } from '../../lib/records.js';
+import { analyticsEndpoint, rotationEndpoint } from '../../lib/records.js';
 import { localStatusEndpoint, localGoogleConnectEndpoint, localGoogleCallbackEndpoint, localGoogleSelectEndpoint, localGoogleReplyEndpoint } from '../../lib/local.js';
 import { wixBlogCommentsEndpoint } from '../../lib/wix-blog.js';
 
@@ -8,6 +8,7 @@ export default async function handler(req, res) {
   if (action === 'session') return sessionEndpoint(req, res);
   if (action === 'password') return passwordEndpoint(req, res);
   if (action === 'analytics') return analyticsEndpoint(req, res);
+  if (action === 'rotation') return rotationEndpoint(req, res);
   if (action === 'local-status') return localStatusEndpoint(req, res);
   if (action === 'local-google-connect') return localGoogleConnectEndpoint(req, res);
   if (action === 'local-google-callback') return localGoogleCallbackEndpoint(req, res);
