@@ -1,5 +1,5 @@
 import { sessionEndpoint, passwordEndpoint } from '../../lib/core.js';
-import { analyticsEndpoint, rotationEndpoint } from '../../lib/records.js';
+import { rotationEndpoint } from '../../lib/records.js';
 import { localStatusEndpoint, localGoogleConnectEndpoint, localGoogleCallbackEndpoint, localGoogleSelectEndpoint, localGoogleReplyEndpoint } from '../../lib/local.js';
 import { wixBlogCommentsEndpoint } from '../../lib/wix-blog.js';
 
@@ -7,7 +7,18 @@ export default async function handler(req, res) {
   const action = req.query?.action;
   if (action === 'session') return sessionEndpoint(req, res);
   if (action === 'password') return passwordEndpoint(req, res);
-  if (action === 'analytics') return analyticsEndpoint(req, res);
+  if (action === 'analytics') {
+    const { verifiedAnalyticsEndpoint } = await import('../../lib/verified-analytics.js');
+    return verifiedAnalyticsEndpoint(req, res);
+  }
+  if (action === 'report') {
+    const { ownerReportEndpoint } = await import('../../lib/owner-report.js');
+    return ownerReportEndpoint(req, res);
+  }
+  if (action === 'youtube-report-connect') {
+    const { youtubeReportingConnectEndpoint } = await import('../../lib/owner-report.js');
+    return youtubeReportingConnectEndpoint(req, res);
+  }
   if (action === 'rotation') return rotationEndpoint(req, res);
   if (action === 'local-status') return localStatusEndpoint(req, res);
   if (action === 'local-google-connect') return localGoogleConnectEndpoint(req, res);
