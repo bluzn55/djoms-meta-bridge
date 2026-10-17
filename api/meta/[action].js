@@ -22,6 +22,18 @@ export default async function handler(req, res) {
   if (action === 'rotation') return rotationEndpoint(req, res);
   if (action === 'local-status') return localStatusEndpoint(req, res);
   if (action === 'website-range') return wixWebsiteRangeEndpoint(req,res);
+  if (action === 'seo-connect') {
+    const { seoConnectEndpoint }=await import('../../lib/search-console.js');
+    return seoConnectEndpoint(req,res);
+  }
+  if (action === 'seo-callback') {
+    const { seoCallbackEndpoint }=await import('../../lib/search-console.js');
+    return seoCallbackEndpoint(req,res);
+  }
+  if (action === 'seo-status') {
+    const { seoStatusEndpoint }=await import('../../lib/search-console.js');
+    return seoStatusEndpoint(req,res);
+  }
   if (action === 'local-google-connect') return localGoogleConnectEndpoint(req, res);
   if (action === 'local-google-callback') return localGoogleCallbackEndpoint(req, res);
   if (action === 'local-google-select') return localGoogleSelectEndpoint(req, res);
