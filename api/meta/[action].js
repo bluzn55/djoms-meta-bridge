@@ -1,7 +1,7 @@
 import { sessionEndpoint, passwordEndpoint } from '../../lib/core.js';
 import { rotationEndpoint } from '../../lib/records.js';
 import { localStatusEndpoint, localGoogleConnectEndpoint, localGoogleCallbackEndpoint, localGoogleSelectEndpoint, localGoogleReplyEndpoint } from '../../lib/local.js';
-import { wixBlogCommentsEndpoint } from '../../lib/wix-blog.js';
+import { wixBlogCommentsEndpoint, wixWebsiteRangeEndpoint } from '../../lib/wix-blog.js';
 
 export default async function handler(req, res) {
   const action = req.query?.action;
@@ -21,6 +21,7 @@ export default async function handler(req, res) {
   }
   if (action === 'rotation') return rotationEndpoint(req, res);
   if (action === 'local-status') return localStatusEndpoint(req, res);
+  if (action === 'website-range') return wixWebsiteRangeEndpoint(req,res);
   if (action === 'local-google-connect') return localGoogleConnectEndpoint(req, res);
   if (action === 'local-google-callback') return localGoogleCallbackEndpoint(req, res);
   if (action === 'local-google-select') return localGoogleSelectEndpoint(req, res);
