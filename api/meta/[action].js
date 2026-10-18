@@ -22,6 +22,14 @@ export default async function handler(req, res) {
   if (action === 'rotation') return rotationEndpoint(req, res);
   if (action === 'local-status') return localStatusEndpoint(req, res);
   if (action === 'website-range') return wixWebsiteRangeEndpoint(req,res);
+  if (action === 'ga4-connect') {
+    const { ga4ConnectEndpoint }=await import('../../lib/google-analytics.js');
+    return ga4ConnectEndpoint(req,res);
+  }
+  if (action === 'ga4-status') {
+    const { ga4StatusEndpoint }=await import('../../lib/google-analytics.js');
+    return ga4StatusEndpoint(req,res);
+  }
   if (action === 'seo-connect') {
     const { seoConnectEndpoint }=await import('../../lib/search-console.js');
     return seoConnectEndpoint(req,res);
