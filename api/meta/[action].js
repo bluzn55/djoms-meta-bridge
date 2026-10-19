@@ -30,6 +30,10 @@ export default async function handler(req, res) {
     const { ga4StatusEndpoint }=await import('../../lib/google-analytics.js');
     return ga4StatusEndpoint(req,res);
   }
+  if (action === 'ga4-verify') {
+    const { ga4VerifyEndpoint }=await import('../../lib/google-analytics.js');
+    return ga4VerifyEndpoint(req,res);
+  }
   if (action === 'seo-connect') {
     const { seoConnectEndpoint }=await import('../../lib/search-console.js');
     return seoConnectEndpoint(req,res);
