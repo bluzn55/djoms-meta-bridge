@@ -132,8 +132,8 @@ export default async function handler(req,res){
       const now=Date.now(),day=chiDate(new Date(now));
       const event=await redis(['EVAL',LUA,'3',PREFIX+'session:'+p.sessionId,
         PREFIX+'day:'+day,PREFIX+'all',String(now),String(p.activeSeconds),
-        String(p.furthestPercent),String(p.started),
-        String(p.finished),String(p.reachedEnd),day]);
+        String(p.furthestPercent),(p.started?'1':'0'),
+        (p.finished?'1':'0'),(p.reachedEnd?'1':'0'),day]);
       return respond(res,200,{ok:true,tracked:event.result!==null});
     }catch(err){
       return respond(res,503,{ok:false,error:'reading_tracking_temporarily_unavailable'});
