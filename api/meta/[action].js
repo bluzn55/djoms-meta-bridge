@@ -67,6 +67,10 @@ export default async function handler(req, res) {
     const { radioLiveStatusEndpoint } = await import('../../lib/radio-report.js');
     return radioLiveStatusEndpoint(req, res);
   }
+  if (action === 'chapter-reading') {
+    const { chapterReadingEndpoint } = await import('../../lib/chapter-reading.js');
+    return chapterReadingEndpoint(req, res);
+  }
   if (action === 'chapter-clicks') {
     const { chapterClicksEndpoint } = await import('../../lib/chapter-clicks.js');
     return chapterClicksEndpoint(req, res);
