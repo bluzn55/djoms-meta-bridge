@@ -5,7 +5,7 @@ const ALLOWED_POST_ORIGINS = new Set(['https://www.docjaks.com','https://docjaks
 const ALLOWED_GET_ORIGINS = new Set([...ALLOWED_POST_ORIGINS,'https://djoms-social-command.vercel.app']);
 const VALID_EVENTS = new Set(['open','start','heartbeat','progress','end-reached','finish','unfinish','pause','resume','leave']);
 const PREFIX = 'djoms:chapter-reader:v1:';
-const LUA = String.raw\`
+const LUA = String.raw`
 local session=KEYS[1]
 local daily=KEYS[2]
 local totals=KEYS[3]
@@ -61,7 +61,7 @@ redis.call('HSET',session,'sec',sec,'pct',pct,'started',started,'finished',finis
 redis.call('EXPIRE',session,7776000)
 redis.call('EXPIRE',daily,34560000)
 return {sec,pct,started,finished,endReached}
-\`;
+`;
 function respond(res, status, data) {
   res.status(status).setHeader('Cache-Control','no-store').setHeader('X-Content-Type-Options','nosniff').json(data);
 }
@@ -119,20 +119,20 @@ export default async function handler(req,res){
   if(method==='OPTIONS')return respond(res,origin&&ALLOWED_POST_ORIGINS.has(origin)?204:403,{});
   if(method==='POST'){
     if(!origin||!ALLOWED_POST_ORIGINS.has(origin))return respond(res,403,{ok:false,error:'origin_not_allowed'});
-    const p=typeof req.body==='string'?JSON.parse(req.body):req.body;
+    let p;try{p=typeof req.body==='string'?JSON.parse(req.body):req.body;}catch(_){return respond(res,400,{ok:false,error:'invalid_json'});}
     if(!p||p.type!=='docjaks:chapter-reader'||p.version!==1
       ||p.book!=='the-wooden-token'||p.chapter!==1
       ||typeof p.sessionId!=='string'||!/^[a-zA-Z0-9-]{8,90}$/.test(p.sessionId)
       ||!VALID_EVENTS.has(p.event)
       ||!Number.isInteger(p.activeSeconds)||p.activeSeconds<0||p.activeSeconds>14400
       ||!Number.isInteger(p.furthestPercent)||p.furthestPercent<0||p.furthestPercent>100
-      ||typeof p.finished!=='boolean'||typeof p.reachedEnd!=='boolean')
+      ||typeof p.started!=='boolean'||typeof p.finished!=='boolean'||typeof p.reachedEnd!=='boolean')
       return respond(res,400,{ok:false,error:'invalid_reading_event'});
     try {
       const now=Date.now(),day=chiDate(new Date(now));
       const event=await redis(['EVAL',LUA,'3',PREFIX+'session:'+p.sessionId,
         PREFIX+'day:'+day,PREFIX+'all',String(now),String(p.activeSeconds),
-        String(p.furthestPercent),String(p.event!=='open'),
+        String(p.furthestPercent),String(p.started),
         String(p.finished),String(p.reachedEnd),day]);
       return respond(res,200,{ok:true,tracked:event.result!==null});
     }catch(err){
