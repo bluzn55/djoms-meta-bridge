@@ -50,6 +50,10 @@ export default async function handler(req, res) {
     const { bingStatusEndpoint }=await import('../../lib/bing-webmaster.js');
     return bingStatusEndpoint(req,res);
   }
+  if (action === 'bing-key') {
+    const { bingKeyEndpoint }=await import('../../lib/bing-webmaster.js');
+    return bingKeyEndpoint(req,res);
+  }
   if (action === 'maps-performance') {
     const { mapsPerformanceEndpoint }=await import('../../lib/maps-performance.js');
     return mapsPerformanceEndpoint(req,res);
