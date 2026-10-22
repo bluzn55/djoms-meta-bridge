@@ -46,6 +46,10 @@ export default async function handler(req, res) {
     const { seoStatusEndpoint }=await import('../../lib/search-console.js');
     return seoStatusEndpoint(req,res);
   }
+  if (action === 'maps-performance') {
+    const { mapsPerformanceEndpoint }=await import('../../lib/maps-performance.js');
+    return mapsPerformanceEndpoint(req,res);
+  }
   if (action === 'local-google-connect') return localGoogleConnectEndpoint(req, res);
   if (action === 'local-google-callback') return localGoogleCallbackEndpoint(req, res);
   if (action === 'local-google-select') return localGoogleSelectEndpoint(req, res);
