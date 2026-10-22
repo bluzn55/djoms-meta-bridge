@@ -46,6 +46,10 @@ export default async function handler(req, res) {
     const { seoStatusEndpoint }=await import('../../lib/search-console.js');
     return seoStatusEndpoint(req,res);
   }
+  if (action === 'bing-status') {
+    const { bingStatusEndpoint }=await import('../../lib/bing-webmaster.js');
+    return bingStatusEndpoint(req,res);
+  }
   if (action === 'maps-performance') {
     const { mapsPerformanceEndpoint }=await import('../../lib/maps-performance.js');
     return mapsPerformanceEndpoint(req,res);
