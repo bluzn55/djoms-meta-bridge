@@ -91,6 +91,10 @@ export default async function handler(req, res) {
     const { journeyTestsEndpoint } = await import('../../lib/journey-tests.js');
     return journeyTestsEndpoint(req,res);
   }
+  if (action === 'friend-supporters') {
+    const { friendSupportersEndpoint }=await import('../../lib/friend-supporters.js');
+    return friendSupportersEndpoint(req,res);
+  }
   if (action === 'trading-post-sales') {
     const { tradingPostSalesEndpoint } = await import('../../lib/trading-post-sales.js');
     return tradingPostSalesEndpoint(req, res);
