@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#140d09">
+  <title>Outlaw Radio 5150 | Most-Liked Songs</title>
+  <style>
+    :root{color-scheme:dark;font-family:Arial,Helvetica,sans-serif}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:transparent;color:#fbe5b0}
+    .panel{width:100%;padding:6px 5px 5px;text-align:center;background:transparent}
+    .divider{height:2px;margin:0 auto 9px;background:linear-gradient(90deg,transparent,#bc8944 15%,#ffe2a5 50%,#bc8944 85%,transparent)}
+    .eyebrow{margin:0 0 5px;color:#e5af64;font-size:clamp(13px,3.6vw,15px);font-weight:900;letter-spacing:.035em}
+    .heart{color:#e64842;text-shadow:0 0 6px #b02826;margin-right:6px}
+    .title{margin:0;min-height:30px;font:900 clamp(18px,6vw,25px)/1.15 Georgia,serif;overflow-wrap:anywhere;color:#ffe5a5;text-shadow:0 1px 1px #080604}
+    .likes{margin:4px 0 8px;color:#f5ba9e;font:900 13px/1.25 Arial,sans-serif}
+    .tie{display:block;font-size:11px;color:#e2c48e;margin-top:-2px;margin-bottom:5px}
+    details{width:100%;border:1px solid #bb8848;border-radius:4px;background:#291d13;text-align:left}
+    summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:7px;padding:9px 10px;font-size:13px;font-weight:900;color:#ffdf9f}
+    summary::-webkit-details-marker{display:none}
+    summary:focus-visible{outline:2px solid #fff2c1;outline-offset:2px}
+    .counter{font-size:12px;color:#f1ca88;white-space:nowrap}
+    .chevron{display:inline-block;margin-left:6px;transition:transform .12s ease}
+    details[open] .chevron{transform:rotate(180deg)}
+    .list{max-height:155px;overflow:auto;padding:0 9px 6px;border-top:1px solid #765229}
+    .song{display:grid;grid-template-columns:23px minmax(0,1fr) auto;align-items:center;gap:7px;padding:8px 0;border-bottom:1px solid #644627;font-size:13px;font-weight:800}
+    .song:last-child{border-bottom:0}
+    .place{color:#ceab73}
+    .songname{overflow-wrap:anywhere}
+    .count{color:#f5a695;font-weight:900;white-space:nowrap}
+    .empty{margin:7px 0;font-size:12px;line-height:1.35;color:#e0c99f}
+    .foot{color:#bda373;font-size:10px;padding:7px 10px;border-top:1px solid #674a2d}
+    @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+  </style>
+</head>
+<body>
+  <section class="panel" aria-label="Outlaw Radio 5150 most-liked songs" aria-live="off">
+    <div class="divider"></div>
+    <p class="eyebrow"><span class="heart" aria-hidden="true">♥</span>#1 MOST-LIKED SONG</p>
+    <h2 id="topTitle" class="title" aria-live="polite">Checking listener votes…</h2>
+    <p id="likeCount" class="likes" aria-live="polite"></p>
+    <span class="tie" id="tie" hidden></span>
+    <details id="ranking">
+      <summary>
+        <span>ALL SONG LIKES</span>
+        <span class="counter"><span id="totalSongs">…</span><span class="chevron" aria-hidden="true">▾</span></span>
+      </summary>
+      <div class="list" id="songList" role="list">
+        <p class="empty">Loading verified votes…</p>
+      </div>
+      <div class="foot">Live listener hearts · Lifetime totals</div>
+    </details>
+  </section>
+  <script>
+    (() => {
+      'use strict';
+      const api='/api/meta/song-likes-public';
+      const top=document.getElementById('topTitle');
+      const count=document.getElementById('likeCount');
+      const total=document.getElementById('totalSongs');
+      const list=document.getElementById('songList');
+      const tie=document.getElementById('tie');
+      let previous='';
+      function text(el,value){el.textContent=String(value);}
+      function display(data){
+        if(data?.status!=='reported'||!Array.isArray(data.songs)) throw Error('unverified');
+        const ranked=data.songs.filter(s=>s&&typeof s.title==='string'&&Number.isSafeInteger(s.likes)&&s.likes>=1)
+          .sort((a,b)=>b.likes-a.likes||a.title.localeCompare(b.title));
+        const signature=JSON.stringify(ranked.map(s=>[s.title,s.likes]));
+        if(signature===previous)return;
+        previous=signature;
+        list.replaceChildren();
+        text(total,ranked.length+' SONG'+(ranked.length===1?'':'S'));
+        if(!ranked.length){
+          text(top,'No song likes yet');
+          text(count,'Be the first to vote!');
+          tie.hidden=true;
+          const empty=document.createElement('p');empty.className='empty';
+          text(empty,'Songs appear here after listeners tap LIKE THIS SONG.');
+          list.appendChild(empty);
+          return;
+        }
+        const first=ranked[0],leaders=ranked.filter(s=>s.likes===first.likes);
+        text(top,first.title);
+        text(count,'♥ '+first.likes+' '+(first.likes===1?'LIKE':'LIKES'));
+        tie.hidden=leaders.length<2;
+        if(leaders.length>=2)text(tie,leaders.length+' SONGS TIED FOR FIRST');
+        let position=0,lastLikes=null;
+        ranked.forEach((song,index)=>{
+          if(song.likes!==lastLikes){position=index+1;lastLikes=song.likes;}
+          const row=document.createElement('div');row.className='song';row.setAttribute('role','listitem');
+          const place=document.createElement('span');place.className='place';text(place,'#'+position);
+          const title=document.createElement('span');title.className='songname';text(title,song.title);
+          const hearts=document.createElement('span');hearts.className='count';text(hearts,'♥ '+song.likes);
+          row.append(place,title,hearts);
+          list.appendChild(row);
+        });
+      }
+      async function refresh(){
+        try{
+          const response=await fetch(api,{cache:'no-store',headers:{Accept:'application/json'}});
+          if(!response.ok)throw Error('unavailable');
+          display(await response.json());
+        }catch(e){
+          if(previous)return; // keep last confirmed ranking visible during outages
+          text(top,'Votes unavailable');
+          text(count,'Unable to read the live song ranking');
+          text(total,'N/A');
+          list.replaceChildren();
+          const notice=document.createElement('p');notice.className='empty';
+          text(notice,'The voting report could not be reached. Try again soon.');
+          list.appendChild(notice);
+        }
+      }
+      refresh();
+      setInterval(refresh,45000);
+    })();
+  </script>
+</body>
+</html>
