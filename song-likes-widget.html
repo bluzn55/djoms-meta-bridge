@@ -10,33 +10,32 @@
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;background:transparent;color:#fbe5b0}
     .panel{width:100%;padding:6px 5px 5px;text-align:center;background:transparent}
-    .divider{height:2px;margin:0 auto 9px;background:linear-gradient(90deg,transparent,#bc8944 15%,#ffe2a5 50%,#bc8944 85%,transparent)}
+    .divider{display:none}
     .eyebrow{margin:0 0 5px;color:#e5af64;font-size:clamp(13px,3.6vw,15px);font-weight:900;letter-spacing:.035em}
     .heart{color:#e64842;text-shadow:0 0 6px #b02826;margin-right:6px}
     .title{margin:0;min-height:30px;font:900 clamp(18px,6vw,25px)/1.15 Georgia,serif;overflow-wrap:anywhere;color:#ffe5a5;text-shadow:0 1px 1px #080604}
     .likes{margin:4px 0 8px;color:#f5ba9e;font:900 13px/1.25 Arial,sans-serif}
     .tie{display:block;font-size:11px;color:#e2c48e;margin-top:-2px;margin-bottom:5px}.tie[hidden]{display:none}
-    details{width:100%;border:1px solid #bb8848;border-radius:4px;background:#291d13;text-align:left}
+    details{width:100%;border:0;border-radius:0;background:transparent;text-align:left}
     summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:7px;padding:9px 10px;font-size:13px;font-weight:900;color:#ffdf9f}
     summary::-webkit-details-marker{display:none}
     summary:focus-visible{outline:2px solid #fff2c1;outline-offset:2px}
     .counter{font-size:12px;color:#f1ca88;white-space:nowrap}
     .chevron{display:inline-block;margin-left:6px;transition:transform .12s ease}
     details[open] .chevron{transform:rotate(180deg)}
-    .list{max-height:155px;overflow:auto;padding:0 9px 6px;border-top:1px solid #765229}
+    .list{max-height:155px;overflow:auto;padding:0 9px 6px;border-top:0}
     .song{display:grid;grid-template-columns:23px minmax(0,1fr) auto;align-items:center;gap:7px;padding:8px 0;border-bottom:1px solid #644627;font-size:13px;font-weight:800}
     .song:last-child{border-bottom:0}
     .place{color:#ceab73}
     .songname{overflow-wrap:anywhere}
     .count{color:#f5a695;font-weight:900;white-space:nowrap}
     .empty{margin:7px 0;font-size:12px;line-height:1.35;color:#e0c99f}
-    .foot{color:#bda373;font-size:10px;padding:7px 10px;border-top:1px solid #674a2d}
+    .foot{color:#bda373;font-size:10px;padding:7px 10px;border-top:0}
     @media(prefers-reduced-motion:reduce){*{transition:none!important}}
   </style>
 </head>
 <body>
   <section class="panel" aria-label="Outlaw Radio 5150 most-liked songs" aria-live="off">
-    <div class="divider"></div>
     <p class="eyebrow"><span class="heart" aria-hidden="true">♥</span>#1 MOST-LIKED SONG</p>
     <h2 id="topTitle" class="title" aria-live="polite">Checking listener votes…</h2>
     <p id="likeCount" class="likes" aria-live="polite"></p>
