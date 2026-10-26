@@ -2,6 +2,7 @@ import { sessionEndpoint, passwordEndpoint } from '../../lib/core.js';
 import { rotationEndpoint } from '../../lib/records.js';
 import { localStatusEndpoint, localGoogleConnectEndpoint, localGoogleCallbackEndpoint, localGoogleSelectEndpoint, localGoogleReplyEndpoint } from '../../lib/local.js';
 import { wixBlogCommentsEndpoint, wixWebsiteRangeEndpoint } from '../../lib/wix-blog.js';
+import { postReferralsEndpoint } from '../../lib/post-referrals.js';
 
 export default async function handler(req, res) {
   const action = req.query?.action;
@@ -22,6 +23,7 @@ export default async function handler(req, res) {
   if (action === 'rotation') return rotationEndpoint(req, res);
   if (action === 'local-status') return localStatusEndpoint(req, res);
   if (action === 'website-range') return wixWebsiteRangeEndpoint(req,res);
+  if (action === 'post-referrals') return postReferralsEndpoint(req,res);
   if (action === 'ga4-connect') {
     const { ga4ConnectEndpoint }=await import('../../lib/google-analytics.js');
     return ga4ConnectEndpoint(req,res);
