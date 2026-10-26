@@ -95,6 +95,14 @@ export default async function handler(req, res) {
     const { chapterClicksEndpoint } = await import('../../lib/chapter-clicks.js');
     return chapterClicksEndpoint(req, res);
   }
+  if (action === 'visitor-event') {
+    const { visitorEventEndpoint } = await import('../../lib/visitor-intelligence.js');
+    return visitorEventEndpoint(req, res);
+  }
+  if (action === 'visitor-intelligence') {
+    const { visitorIntelligenceEndpoint } = await import('../../lib/visitor-intelligence.js');
+    return visitorIntelligenceEndpoint(req, res);
+  }
   if (action === 'report-snapshots') {
     const { reportSnapshotsEndpoint } = await import('../../lib/report-snapshots.js');
     return reportSnapshotsEndpoint(req,res);
