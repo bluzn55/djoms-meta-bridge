@@ -24,6 +24,10 @@ export default async function handler(req, res) {
   if (action === 'local-status') return localStatusEndpoint(req, res);
   if (action === 'website-range') return wixWebsiteRangeEndpoint(req,res);
   if (action === 'post-referrals') return postReferralsEndpoint(req,res);
+  if (action === 'security-watch') {
+    const { securityWatchEndpoint } = await import('../../lib/security-watch.js');
+    return securityWatchEndpoint(req,res);
+  }
   if (action === 'ga4-connect') {
     const { ga4ConnectEndpoint }=await import('../../lib/google-analytics.js');
     return ga4ConnectEndpoint(req,res);
