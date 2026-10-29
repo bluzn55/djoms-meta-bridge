@@ -89,6 +89,10 @@ export default async function handler(req, res) {
     const { radioIntelligenceEndpoint } = await import('../../lib/radio-intelligence.js');
     return radioIntelligenceEndpoint(req,res);
   }
+  if (action === 'radio-audience') {
+    const { radioAudienceEndpoint }=await import('../../lib/radio-audience.js');
+    return radioAudienceEndpoint(req,res);
+  }
   if (action === 'radio-report') {
     const { radioReportEndpoint } = await import('../../lib/radio-report.js');
     return radioReportEndpoint(req, res);
