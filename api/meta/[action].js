@@ -28,6 +28,10 @@ export default async function handler(req, res) {
     const { securityWatchEndpoint } = await import('../../lib/security-watch.js');
     return securityWatchEndpoint(req,res);
   }
+  if (action === 'visitor-geography') {
+    const mod=await import('../../lib/visitor-geography.js');
+    return mod.visitorGeographyEndpoint(req,res);
+  }
   if (action === 'ga4-connect') {
     const { ga4ConnectEndpoint }=await import('../../lib/google-analytics.js');
     return ga4ConnectEndpoint(req,res);
