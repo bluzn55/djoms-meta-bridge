@@ -40,6 +40,10 @@ export default async function handler(req, res) {
     const { trafficQualityEndpoint }=await import('../../lib/traffic-quality.js');
     return trafficQualityEndpoint(req,res);
   }
+  if (action === 'maintenance-health') {
+    const { maintenanceHealthEndpoint } = await import('../../lib/maintenance-health.js');
+    return maintenanceHealthEndpoint(req,res);
+  }
   if (action === 'ga4-connect') {
     const { ga4ConnectEndpoint }=await import('../../lib/google-analytics.js');
     return ga4ConnectEndpoint(req,res);
