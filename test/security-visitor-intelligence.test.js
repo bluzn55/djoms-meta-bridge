@@ -94,3 +94,54 @@ test('Partial Wix evidence stays explicitly partial',()=>{
   assert.equal(data.engagedLookingSessions,1);
   assert.equal(data.unclearSessions,0);
 });
+
+
+test('Unclear reasons preserve genuine single-page visits when Wix time is unmeasured',()=>{
+  const result=summarizeSecurityVisitors([
+    row({sid:'reader-a',ip:'192.0.2.1',path:'/the-wooden-token',source:'direct',
+      member:'false',type:'returning_visitor'}),
+    row({sid:'reader-b',ip:'192.0.2.2',path:'/outlaw-radio-5150',stay:12,
+      member:'true',source:'social'}),
+    row({sid:'reader-c',ip:'192.0.2.3',path:'',source:'organic_search'}),
+    row({sid:'engaged-d',ip:'192.0.2.4',path:'/the-pit',stay:35}),
+    row({sid:'crawler-e',ip:'192.0.2.5',path:'/sm-welcome'})
+  ],new Set(['crawler-e']),null,false);
+  const u=result.unclearDetail;
+  assert.equal(result.unclearSessions,3);
+  assert.equal(u.total,3);
+  assert.equal(u.reasons.onePageNoMeasuredTime,1);
+  assert.equal(u.reasons.onePageShortMeasuredTime,1);
+  assert.equal(u.reasons.pageUnreported,1);
+  assert.equal(u.reasons.otherInsufficientEvidence,0);
+  assert.equal(u.returningBrowserSessions,1);
+  assert.equal(u.signedInMemberSessions,1);
+  assert.equal(u.sessionsShown,3);
+  assert.ok(u.topPages.some(r=>r.path==='/the-wooden-token'&&r.sessions===1));
+  assert.ok(u.sources.some(r=>r.source==='social'&&r.sessions===1));
+  assert.ok(u.sessionRows.some(r=>r.page==='/outlaw-radio-5150'&&r.wixAverageSeconds===12));
+  assert.ok(u.sessionRows.some(r=>r.page==='/the-wooden-token'&&r.wixAverageSeconds===null));
+  assert.equal(JSON.stringify(result).includes('reader-a'),false);
+  assert.equal(JSON.stringify(result).includes('crawler-e'),false);
+});
+
+test('Unclear session examples are capped without silently reducing counts',()=>{
+  const rows=Array.from({length:173},(_,i)=>row({
+    sid:'unclassified_'+i,source:i%2?'direct':'organic_search',
+    path:i%3?'/outlaw-radio-5150':'/the-wooden-token'
+  }));
+  const report=summarizeSecurityVisitors(rows,new Set(),null,false);
+  assert.equal(report.unclearSessions,173);
+  assert.equal(report.unclearDetail.total,173);
+  assert.equal(report.unclearDetail.sessionsShown,150);
+  assert.equal(report.unclearDetail.sessionRows.length,150);
+  assert.equal(report.unclearDetail.reasons.onePageNoMeasuredTime,173);
+});
+
+test('Unclear evidence marks truncated source data as partial',()=>{
+  const report=summarizeSecurityVisitors([
+    row({sid:'quiet',source:'direct'})
+  ],new Set(),null,true);
+  assert.equal(report.status,'partial');
+  assert.equal(report.unclearDetail.partial,true);
+  assert.equal(report.unclearDetail.total,1);
+});
