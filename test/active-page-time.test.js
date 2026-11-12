@@ -56,3 +56,16 @@ test('Missing page records are explicitly partial and not invented',()=>{
  assert.equal(result.trackedPageOpens,1);
  assert.equal(result.totalRecordedActiveSeconds,120);
 });
+
+
+test('Aggregated page-time report accepts expected storefront paths but rejects arbitrary brace paths',()=>{
+  const report=summarizeActivePageTime([
+    record('a',40,[['/the-wooden-token',40]]),
+    record('b',40,[['/name{not-a-page}',40]])
+  ],2,false,true);
+  assert.equal(report.sampledSessions,2);
+  assert.equal(report.totalRecordedActiveSeconds,80);
+  assert.equal(report.trackedPageOpens,1);
+  assert.equal(report.pathsSeen,1);
+  assert.equal(report.pages[0].path,'/the-wooden-token');
+});
