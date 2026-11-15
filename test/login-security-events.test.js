@@ -53,10 +53,10 @@ test('actual rejected passwords and lockout windows produce owner-only aggregate
         if(command[1].includes('redis.call("incr"')) {
           result=++attempts;
         }else if(command[1].includes('HINCRBY')){
-          const type=command[5];
+          const type=command[4];
           if(!Object.hasOwn(counts,type))throw Error('Unrecognized counter '+type);
           counts[type]++;
-          assert.match(command[4],new RegExp('^'+PREFIX+'security:owner-login:'));
+          assert.match(command[3],new RegExp('^'+PREFIX+'security:owner-login:'));
           result=1;
         }else if(command[1].includes('HMGET')){
           result=JSON.stringify({...counts,lastFailed:'',lastLockout:''});
