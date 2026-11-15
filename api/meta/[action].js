@@ -32,6 +32,10 @@ export default async function handler(req, res) {
     const { securityWatchEndpoint } = await import('../../lib/security-watch.js');
     return securityWatchEndpoint(req,res);
   }
+  if (action === 'security-events') {
+    const { securityEventsEndpoint } = await import('../../lib/login-security-events.js');
+    return securityEventsEndpoint(req,res);
+  }
   if (action === 'visitor-geography') {
     const mod=await import('../../lib/visitor-geography.js');
     return mod.visitorGeographyEndpoint(req,res);
