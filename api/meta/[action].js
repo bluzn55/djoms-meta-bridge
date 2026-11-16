@@ -24,6 +24,10 @@ export default async function handler(req, res) {
   if (action === 'local-status') return localStatusEndpoint(req, res);
   if (action === 'website-range') return wixWebsiteRangeEndpoint(req,res);
   if (action === 'post-referrals') return postReferralsEndpoint(req,res);
+  if (action === 'website-arrival-groups') {
+    const { websiteArrivalGroupsEndpoint } = await import('../../lib/website-arrival-groups.js');
+    return websiteArrivalGroupsEndpoint(req,res);
+  }
   if (action === 'sm-welcome-journey') {
     const { smWelcomeJourneyEndpoint } = await import('../../lib/sm-welcome-journey.js');
     return smWelcomeJourneyEndpoint(req,res);
