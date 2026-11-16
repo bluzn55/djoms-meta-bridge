@@ -6,40 +6,46 @@
   <meta name="theme-color" content="#140d09">
   <title>Outlaw Radio 5150 | Most-Liked Songs</title>
   <style>
-    :root{color-scheme:dark;font-family:Arial,Helvetica,sans-serif}
+    :root{font-family:Arial,Helvetica,sans-serif;--gap:clamp(1px,1.4vh,3px);--pad:clamp(2px,2vh,6px);--small:clamp(8px,min(4vw,8vh),13px);--control-height:clamp(14px,16vh,28px);--foot-height:clamp(9px,9vh,15px)}
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:transparent;color:#fbe5b0}
-    .panel{width:100%;padding:6px 5px 5px;text-align:center;background:transparent}
+    html,body{width:100%;height:100%;margin:0;padding:0;overflow:hidden;background:transparent;color:#fbe5b0}
+    .panel{position:relative;display:flex;flex-direction:column;gap:var(--gap);width:100%;height:100%;padding:var(--pad);text-align:center;background:transparent}
+    .leader{display:flex;flex:1;flex-direction:column;gap:var(--gap);min-height:0}
     .divider{display:none}
-    .eyebrow{margin:0 0 5px;color:#e5af64;font-size:clamp(13px,3.6vw,15px);font-weight:900;letter-spacing:.035em}
-    .heart{color:#e64842;text-shadow:0 0 6px #b02826;margin-right:6px}
-    .title{margin:0;min-height:30px;font:900 clamp(18px,6vw,25px)/1.15 Georgia,serif;overflow-wrap:anywhere;color:#ffe5a5;text-shadow:0 1px 1px #080604}
-    .likes{margin:4px 0 8px;color:#f5ba9e;font:900 13px/1.25 Arial,sans-serif}
-    .tie{display:block;font-size:11px;color:#e2c48e;margin-top:-2px;margin-bottom:5px}.tie[hidden]{display:none}
-    details{width:100%;border:0;border-radius:0;background:transparent;text-align:left}
-    summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:7px;padding:9px 10px;font-size:13px;font-weight:900;color:#ffdf9f}
+    .eyebrow{flex:none;margin:0;color:#e5af64;font-size:var(--small);line-height:1.1;font-weight:900;white-space:nowrap}
+    .heart{color:#e64842;text-shadow:0 0 6px #b02826;margin-right:3px}
+    .title{display:flex;flex:1;align-items:center;justify-content:center;min-height:0;margin:0;overflow:hidden;font:900 clamp(12px,min(7.8vw,14vh),25px)/1.1 Georgia,serif;overflow-wrap:anywhere;color:#ffe5a5;text-shadow:0 1px 1px #080604}
+    .title-text{display:-webkit-box;width:100%;overflow:hidden;-webkit-box-orient:vertical}
+    .likes{flex:none;margin:0;color:#f5ba9e;font:900 var(--small)/1.1 Arial,sans-serif}
+    .tie{display:block;flex:none;font-size:clamp(7px,min(3.5vw,7vh),11px);line-height:1.1;color:#e2c48e;margin:0}.tie[hidden]{display:none}
+    details{flex:none;width:100%;border:0;border-radius:0;background:transparent;text-align:left}
+    summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:3px;height:var(--control-height);padding:0 2px;font-size:var(--small);line-height:1.1;font-weight:900;color:#ffdf9f;white-space:nowrap}
     summary::-webkit-details-marker{display:none}
-    summary:focus-visible{outline:2px solid #fff2c1;outline-offset:2px}
-    .counter{font-size:12px;color:#f1ca88;white-space:nowrap}
-    .chevron{display:inline-block;margin-left:6px;transition:transform .12s ease}
+    summary:focus-visible{outline:2px solid #fff2c1;outline-offset:-2px}
+    .counter{font-size:clamp(7px,min(3.6vw,7vh),12px);color:#f1ca88;white-space:nowrap}
+    .chevron{display:inline-block;margin-left:3px;transition:transform .12s ease}
+    .panel:has(details[open]) .leader{visibility:hidden}
+    details[open]{position:absolute;inset:var(--pad);width:auto}
     details[open] .chevron{transform:rotate(180deg)}
-    .list{max-height:155px;overflow:auto;padding:0 9px 6px;border-top:0}
-    .song{display:grid;grid-template-columns:23px minmax(0,1fr) auto;align-items:center;gap:7px;padding:8px 0;border-bottom:1px solid #644627;font-size:13px;font-weight:800}
+    .list{position:absolute;top:var(--control-height);right:0;bottom:var(--foot-height);left:0;min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;padding:0 2px;border-top:0}
+    .song{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:clamp(3px,2vw,7px);padding:clamp(3px,3vh,8px) 0;border-bottom:1px solid #644627;font-size:var(--small);line-height:1.2;font-weight:800}
     .song:last-child{border-bottom:0}
     .place{color:#ceab73}
     .songname{overflow-wrap:anywhere}
     .count{color:#f5a695;font-weight:900;white-space:nowrap}
-    .empty{margin:7px 0;font-size:12px;line-height:1.35;color:#e0c99f}
-    .foot{color:#bda373;font-size:10px;padding:7px 10px;border-top:0}
+    .empty{margin:3px 0;font-size:var(--small);line-height:1.25;color:#e0c99f}
+    .foot{position:absolute;right:0;bottom:0;left:0;height:var(--foot-height);display:flex;align-items:center;justify-content:center;color:#bda373;font-size:clamp(6px,min(3vw,6vh),10px);line-height:1.1;padding:0 2px;border-top:0;white-space:nowrap}
     @media(prefers-reduced-motion:reduce){*{transition:none!important}}
   </style>
 </head>
 <body>
   <section class="panel" aria-label="Outlaw Radio 5150 most-liked songs" aria-live="off">
-    <p class="eyebrow"><span class="heart" aria-hidden="true">♥</span>#1 MOST-LIKED SONG</p>
-    <h2 id="topTitle" class="title" aria-live="polite">Checking listener votes…</h2>
-    <p id="likeCount" class="likes" aria-live="polite"></p>
-    <span class="tie" id="tie" hidden></span>
+    <div class="leader">
+      <p class="eyebrow"><span class="heart" aria-hidden="true">♥</span>#1 MOST-LIKED SONG</p>
+      <h2 class="title" aria-live="polite"><span id="topTitle" class="title-text">Checking listener votes…</span></h2>
+      <p id="likeCount" class="likes" aria-live="polite"></p>
+      <span class="tie" id="tie" hidden></span>
+    </div>
     <details id="ranking">
       <summary>
         <span>ALL SONG LIKES</span>
@@ -51,6 +57,32 @@
       <div class="foot">Live listener hearts · Lifetime totals</div>
     </details>
   </section>
+  <script>
+    (() => {
+      // Fit the song to the space left by the heading, votes and ranking control.
+      // Only exceptionally long titles are truncated; their full text stays available.
+      const title=document.getElementById('topTitle');
+      const box=title.parentElement;
+      let pending=false;
+      function fit(){
+        pending=false;
+        if(!box.clientWidth||!box.clientHeight)return;
+        let size=parseFloat(getComputedStyle(box).fontSize);
+        title.style.webkitLineClamp='unset';
+        title.style.fontSize=size+'px';
+        while(size>8&&(title.scrollHeight>box.clientHeight||title.scrollWidth>box.clientWidth)){
+          size=Math.max(8,size-.5);
+          title.style.fontSize=size+'px';
+        }
+        title.style.webkitLineClamp=String(Math.max(1,Math.floor(box.clientHeight/(size*1.1))));
+        title.title=title.textContent;
+      }
+      function schedule(){if(!pending){pending=true;requestAnimationFrame(fit);}}
+      new ResizeObserver(schedule).observe(box);
+      new MutationObserver(schedule).observe(title,{childList:true,characterData:true,subtree:true});
+      schedule();
+    })();
+  </script>
   <script>
     (() => {
       'use strict';
