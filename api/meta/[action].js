@@ -8,6 +8,10 @@ export default async function handler(req, res) {
   const action = req.query?.action;
   if (action === 'session') return sessionEndpoint(req, res);
   if (action === 'password') return passwordEndpoint(req, res);
+  if (action === 'report-filings') {
+    const { reportFilingsEndpoint } = await import('../../lib/report-filings.js');
+    return reportFilingsEndpoint(req, res);
+  }
   if (action === 'analytics') {
     const { verifiedAnalyticsEndpoint } = await import('../../lib/verified-analytics.js');
     return verifiedAnalyticsEndpoint(req, res);
@@ -159,3 +163,4 @@ export default async function handler(req, res) {
   }
   return res.status(404).json({ error: 'Not found.' });
 }
+
