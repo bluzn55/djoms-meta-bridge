@@ -78,7 +78,7 @@ async function harness(run){
       const res=response();
       const headers={origin:ORIGIN,'content-type':'application/json',cookie,'x-djoms-csrf':csrf,...options.headers};
       if(options.anonymous)delete headers.cookie;
-      await reportFilingsEndpoint({method:options.method||'POST',query:{action:'report-filings'},body,headers},res);
+      await reportFilingsEndpoint({method:options.method||'POST',query:{action:'report-filings',...options.query},body,headers},res);
       return res;
     };
     const create=async(details=validReport())=>{
@@ -90,7 +90,7 @@ async function harness(run){
       const res=await action('review',await create(details));
       assert.equal(res.statusCode,200,res.body?.error);return res.body.report;
     };
-    await run({request,create,action,ready,storage,providerCalls,setMode:value=>{mode=value;},
+    await run({request,create,action,ready,storage,sets,providerCalls,setMode:value=>{mode=value;},
       failFinalSave:()=>{failFinalSave=true;}});
   }finally{
     globalThis.fetch=previousFetch;
@@ -107,6 +107,28 @@ test('private report data requires owner session and writes require CSRF and ori
   const list=await h.request({}, {method:'GET'});
   assert.deepEqual(list.body.reports,[]);
   assert.deepEqual(h.providerCalls,[]);
+}));
+
+test('report history paginates beyond 500 records and rejects malformed cursors',()=>harness(async h=>{
+  const index=new Map();
+  for(let i=0;i<501;i++){
+    const id=(i+1).toString(16).padStart(36,'0');
+    const report={...validReport(),id,revision:1,status:'filed',history:[],
+      createdAt:'2026-01-01T00:00:00.000Z',updatedAt:'2026-01-01T00:00:00.000Z'};
+    index.set(id,i);h.storage.set(PREFIX+'report-filing:'+id,JSON.stringify(report));
+  }
+  h.sets.set(PREFIX+'report-filings:index',index);
+  const first=await h.request({}, {method:'GET'});
+  assert.equal(first.statusCode,200);assert.equal(first.body.reports.length,500);
+  assert.equal(first.body.limited,true);assert.equal(first.body.nextCursor,'500');
+  const second=await h.request({}, {method:'GET',query:{cursor:first.body.nextCursor}});
+  assert.equal(second.statusCode,200);assert.equal(second.body.reports.length,1);
+  assert.equal(second.body.limited,false);assert.equal(second.body.nextCursor,null);
+  assert.equal(second.body.reports[0].id,'1'.padStart(36,'0'),'The oldest report remains accessible');
+  assert.equal(new Set([...first.body.reports,...second.body.reports].map(report=>report.id)).size,501);
+  for(const cursor of ['-1','1.5','1e2','00','',String(Number.MAX_SAFE_INTEGER),['0','500']])
+    assert.equal((await h.request({}, {method:'GET',query:{cursor}})).statusCode,400);
+  assert.equal(h.providerCalls.length,0);
 }));
 
 test('draft approval is refused; exact revision is required and edits clear approval',()=>harness(async h=>{
