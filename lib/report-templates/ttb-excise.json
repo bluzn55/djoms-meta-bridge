@@ -1,0 +1,804 @@
+{
+  "id": "ttb_excise",
+  "name": "TTB - Excise Tax Return",
+  "shortName": "Excise tax",
+  "formNumber": "TTB F 5000.24",
+  "sourceEdition": "04/2012",
+  "frequency": "unspecified",
+  "jurisdiction": "federal",
+  "agency": "TTB",
+  "schedule": null,
+  "scheduleNote": "Bimonthly - confirm schedule",
+  "pdfAsset": "/assets/report-forms/ttb-excise.pdf",
+  "sections": [
+    {
+      "id": "identity",
+      "title": "Return and taxpayer details",
+      "type": "fields",
+      "description": "Enter the identity for this business only. No taxpayer identifiers or addresses are prefilled."
+    },
+    {
+      "id": "tax",
+      "title": "Calculation of tax due",
+      "type": "table",
+      "rows": [
+        {
+          "id": "9",
+          "label": "9. Distilled spirits"
+        },
+        {
+          "id": "10",
+          "label": "10. Wine"
+        },
+        {
+          "id": "11",
+          "label": "11. Beer"
+        },
+        {
+          "id": "12",
+          "label": "12. Cigars"
+        },
+        {
+          "id": "13",
+          "label": "13. Cigarettes"
+        },
+        {
+          "id": "14",
+          "label": "14. Cigarette papers and/or tubes"
+        },
+        {
+          "id": "15",
+          "label": "15. Chewing tobacco and/or snuff"
+        },
+        {
+          "id": "16",
+          "label": "16. Pipe tobacco and/or roll-your-own tobacco"
+        },
+        {
+          "id": "17",
+          "label": "17. Total tax liability"
+        },
+        {
+          "id": "18",
+          "label": "18. Adjustments increasing amount due"
+        },
+        {
+          "id": "19",
+          "label": "19. Gross amount due"
+        },
+        {
+          "id": "20",
+          "label": "20. Adjustments decreasing amount due"
+        },
+        {
+          "id": "21",
+          "label": "21. Amount to be paid with this return"
+        }
+      ],
+      "columns": [
+        {
+          "id": "amount",
+          "label": "Amount of tax",
+          "unit": "USD"
+        }
+      ],
+      "description": "Enter tax amounts from your records. No tax rates are assumed. Arithmetic totals remain blank until every referenced amount is entered explicitly."
+    },
+    {
+      "id": "schedule_a",
+      "title": "Schedule A - Adjustments increasing amount due",
+      "type": "table",
+      "rows": [
+        {
+          "id": "25",
+          "label": "25. Adjustment"
+        },
+        {
+          "id": "26",
+          "label": "26. Adjustment"
+        },
+        {
+          "id": "27",
+          "label": "27. Adjustment"
+        },
+        {
+          "id": "28",
+          "label": "28. Subtotals"
+        }
+      ],
+      "columns": [
+        {
+          "id": "explanation",
+          "label": "Explanation of individual errors or transactions"
+        },
+        {
+          "id": "tax",
+          "label": "Tax",
+          "unit": "USD"
+        },
+        {
+          "id": "interest",
+          "label": "Interest",
+          "unit": "USD"
+        },
+        {
+          "id": "penalty",
+          "label": "Penalty",
+          "unit": "USD"
+        }
+      ]
+    },
+    {
+      "id": "schedule_a_total",
+      "title": "Schedule A total",
+      "type": "fields"
+    },
+    {
+      "id": "schedule_b",
+      "title": "Schedule B - Adjustments decreasing amount due",
+      "type": "table",
+      "rows": [
+        {
+          "id": "30",
+          "label": "30. Adjustment"
+        },
+        {
+          "id": "31",
+          "label": "31. Adjustment"
+        },
+        {
+          "id": "32",
+          "label": "32. Adjustment"
+        },
+        {
+          "id": "33",
+          "label": "33. Subtotals"
+        }
+      ],
+      "columns": [
+        {
+          "id": "explanation",
+          "label": "Explanation of individual errors or transactions"
+        },
+        {
+          "id": "tax",
+          "label": "Tax",
+          "unit": "USD"
+        },
+        {
+          "id": "interest",
+          "label": "Interest",
+          "unit": "USD"
+        }
+      ]
+    },
+    {
+      "id": "schedule_b_total",
+      "title": "Schedule B total",
+      "type": "fields"
+    },
+    {
+      "id": "signature",
+      "title": "Date, signature and title",
+      "type": "fields",
+      "description": "The official form contains a legal declaration. This workspace does not sign or attest for you. Complete the signature manually using the authorized filing process."
+    },
+    {
+      "id": "remarks",
+      "title": "Additional remarks",
+      "type": "fields"
+    }
+  ],
+  "fields": [
+    {
+      "id": "serial_number",
+      "label": "1. Serial number",
+      "section": "identity",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "payment_method",
+      "label": "2. Form of payment",
+      "section": "identity",
+      "type": "select",
+      "options": [
+        {
+          "value": "check",
+          "label": "Check"
+        },
+        {
+          "value": "money_order",
+          "label": "Money order"
+        },
+        {
+          "value": "eft",
+          "label": "EFT"
+        },
+        {
+          "value": "other",
+          "label": "Other"
+        }
+      ],
+      "required": true
+    },
+    {
+      "id": "payment_other",
+      "label": "Other form of payment (specify)",
+      "section": "identity",
+      "type": "text"
+    },
+    {
+      "id": "amount_payment",
+      "label": "3. Amount of payment",
+      "section": "identity",
+      "type": "money",
+      "unit": "USD",
+      "required": true
+    },
+    {
+      "id": "return_covers",
+      "label": "4. Return covers",
+      "section": "identity",
+      "type": "select",
+      "options": [
+        {
+          "value": "prepayment",
+          "label": "Prepayment"
+        },
+        {
+          "value": "period",
+          "label": "Period"
+        }
+      ],
+      "required": true
+    },
+    {
+      "id": "period_begin",
+      "label": "Period beginning",
+      "section": "identity",
+      "type": "date"
+    },
+    {
+      "id": "period_end",
+      "label": "Period ending",
+      "section": "identity",
+      "type": "date"
+    },
+    {
+      "id": "products_removal_date",
+      "label": "5. Date products to be removed (prepayment returns only)",
+      "section": "identity",
+      "type": "date"
+    },
+    {
+      "id": "employer_identification_number",
+      "label": "6. Employer identification number",
+      "section": "identity",
+      "type": "text",
+      "required": true,
+      "profileKey": "ein"
+    },
+    {
+      "id": "plant_registry_permit_number",
+      "label": "7. Plant, registry, or permit number",
+      "section": "identity",
+      "type": "text",
+      "required": true,
+      "profileKey": "plantNumber"
+    },
+    {
+      "id": "taxpayer_name_address",
+      "label": "8. Name and address of taxpayer, including ZIP code",
+      "section": "identity",
+      "type": "textarea",
+      "required": true,
+      "profileKey": "nameAddress"
+    },
+    {
+      "id": "tax_distilled_spirits",
+      "label": "9. Distilled spirits",
+      "section": "tax",
+      "type": "money",
+      "row": "9",
+      "column": "amount",
+      "unit": "USD",
+      "required": true
+    },
+    {
+      "id": "tax_wine",
+      "label": "10. Wine",
+      "section": "tax",
+      "type": "money",
+      "row": "10",
+      "column": "amount",
+      "unit": "USD",
+      "required": true
+    },
+    {
+      "id": "tax_beer",
+      "label": "11. Beer",
+      "section": "tax",
+      "type": "money",
+      "row": "11",
+      "column": "amount",
+      "unit": "USD",
+      "required": true
+    },
+    {
+      "id": "tax_cigars",
+      "label": "12. Cigars",
+      "section": "tax",
+      "type": "money",
+      "row": "12",
+      "column": "amount",
+      "unit": "USD",
+      "required": true
+    },
+    {
+      "id": "tax_cigarettes",
+      "label": "13. Cigarettes",
+      "section": "tax",
+      "type": "money",
+      "row": "13",
+      "column": "amount",
+      "unit": "USD",
+      "required": true
+    },
+    {
+      "id": "tax_papers_tubes",
+      "label": "14. Cigarette papers and/or tubes",
+      "section": "tax",
+      "type": "money",
+      "row": "14",
+      "column": "amount",
+      "unit": "USD",
+      "required": true
+    },
+    {
+      "id": "tax_chewing_tobacco_snuff",
+      "label": "15. Chewing tobacco and/or snuff",
+      "section": "tax",
+      "type": "money",
+      "row": "15",
+      "column": "amount",
+      "unit": "USD",
+      "required": true
+    },
+    {
+      "id": "tax_pipe_rolling_tobacco",
+      "label": "16. Pipe tobacco and/or roll-your-own tobacco",
+      "section": "tax",
+      "type": "money",
+      "row": "16",
+      "column": "amount",
+      "unit": "USD",
+      "required": true
+    },
+    {
+      "id": "total_tax_liability",
+      "label": "17. Total tax liability",
+      "section": "tax",
+      "type": "money",
+      "row": "17",
+      "column": "amount",
+      "unit": "USD",
+      "required": true,
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "tax_distilled_spirits",
+          "tax_wine",
+          "tax_beer",
+          "tax_cigars",
+          "tax_cigarettes",
+          "tax_papers_tubes",
+          "tax_chewing_tobacco_snuff",
+          "tax_pipe_rolling_tobacco"
+        ]
+      }
+    },
+    {
+      "id": "adjustments_increasing",
+      "label": "18. Adjustments increasing amount due",
+      "section": "tax",
+      "type": "money",
+      "row": "18",
+      "column": "amount",
+      "unit": "USD",
+      "required": true,
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "schedule_a_total"
+        ]
+      }
+    },
+    {
+      "id": "gross_amount_due",
+      "label": "19. Gross amount due",
+      "section": "tax",
+      "type": "money",
+      "row": "19",
+      "column": "amount",
+      "unit": "USD",
+      "required": true,
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "total_tax_liability",
+          "adjustments_increasing"
+        ]
+      }
+    },
+    {
+      "id": "adjustments_decreasing",
+      "label": "20. Adjustments decreasing amount due",
+      "section": "tax",
+      "type": "money",
+      "row": "20",
+      "column": "amount",
+      "unit": "USD",
+      "required": true,
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "schedule_b_total"
+        ]
+      }
+    },
+    {
+      "id": "amount_to_pay",
+      "label": "21. Amount to be paid with this return",
+      "section": "tax",
+      "type": "money",
+      "row": "21",
+      "column": "amount",
+      "unit": "USD",
+      "required": true,
+      "calculation": {
+        "op": "subtract",
+        "refs": [
+          "gross_amount_due",
+          "adjustments_decreasing"
+        ]
+      }
+    },
+    {
+      "id": "schedule_a_25_explanation",
+      "label": "25. Explanation",
+      "section": "schedule_a",
+      "type": "textarea",
+      "row": "25",
+      "column": "explanation"
+    },
+    {
+      "id": "schedule_a_25_tax",
+      "label": "25. Tax",
+      "section": "schedule_a",
+      "type": "money",
+      "row": "25",
+      "column": "tax",
+      "unit": "USD"
+    },
+    {
+      "id": "schedule_a_25_interest",
+      "label": "25. Interest",
+      "section": "schedule_a",
+      "type": "money",
+      "row": "25",
+      "column": "interest",
+      "unit": "USD"
+    },
+    {
+      "id": "schedule_a_25_penalty",
+      "label": "25. Penalty",
+      "section": "schedule_a",
+      "type": "money",
+      "row": "25",
+      "column": "penalty",
+      "unit": "USD"
+    },
+    {
+      "id": "schedule_a_26_explanation",
+      "label": "26. Explanation",
+      "section": "schedule_a",
+      "type": "textarea",
+      "row": "26",
+      "column": "explanation"
+    },
+    {
+      "id": "schedule_a_26_tax",
+      "label": "26. Tax",
+      "section": "schedule_a",
+      "type": "money",
+      "row": "26",
+      "column": "tax",
+      "unit": "USD"
+    },
+    {
+      "id": "schedule_a_26_interest",
+      "label": "26. Interest",
+      "section": "schedule_a",
+      "type": "money",
+      "row": "26",
+      "column": "interest",
+      "unit": "USD"
+    },
+    {
+      "id": "schedule_a_26_penalty",
+      "label": "26. Penalty",
+      "section": "schedule_a",
+      "type": "money",
+      "row": "26",
+      "column": "penalty",
+      "unit": "USD"
+    },
+    {
+      "id": "schedule_a_27_explanation",
+      "label": "27. Explanation",
+      "section": "schedule_a",
+      "type": "textarea",
+      "row": "27",
+      "column": "explanation"
+    },
+    {
+      "id": "schedule_a_27_tax",
+      "label": "27. Tax",
+      "section": "schedule_a",
+      "type": "money",
+      "row": "27",
+      "column": "tax",
+      "unit": "USD"
+    },
+    {
+      "id": "schedule_a_27_interest",
+      "label": "27. Interest",
+      "section": "schedule_a",
+      "type": "money",
+      "row": "27",
+      "column": "interest",
+      "unit": "USD"
+    },
+    {
+      "id": "schedule_a_27_penalty",
+      "label": "27. Penalty",
+      "section": "schedule_a",
+      "type": "money",
+      "row": "27",
+      "column": "penalty",
+      "unit": "USD"
+    },
+    {
+      "id": "schedule_a_subtotal_tax",
+      "label": "28. Tax subtotal",
+      "section": "schedule_a",
+      "type": "money",
+      "row": "28",
+      "column": "tax",
+      "unit": "USD",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "schedule_a_25_tax",
+          "schedule_a_26_tax",
+          "schedule_a_27_tax"
+        ]
+      }
+    },
+    {
+      "id": "schedule_a_subtotal_interest",
+      "label": "28. Interest subtotal",
+      "section": "schedule_a",
+      "type": "money",
+      "row": "28",
+      "column": "interest",
+      "unit": "USD",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "schedule_a_25_interest",
+          "schedule_a_26_interest",
+          "schedule_a_27_interest"
+        ]
+      }
+    },
+    {
+      "id": "schedule_a_subtotal_penalty",
+      "label": "28. Penalty subtotal",
+      "section": "schedule_a",
+      "type": "money",
+      "row": "28",
+      "column": "penalty",
+      "unit": "USD",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "schedule_a_25_penalty",
+          "schedule_a_26_penalty",
+          "schedule_a_27_penalty"
+        ]
+      }
+    },
+    {
+      "id": "schedule_a_total",
+      "label": "29. Total adjustments increasing amount due",
+      "section": "schedule_a_total",
+      "type": "money",
+      "unit": "USD",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "schedule_a_subtotal_tax",
+          "schedule_a_subtotal_interest",
+          "schedule_a_subtotal_penalty"
+        ]
+      }
+    },
+    {
+      "id": "schedule_b_30_explanation",
+      "label": "30. Explanation",
+      "section": "schedule_b",
+      "type": "textarea",
+      "row": "30",
+      "column": "explanation"
+    },
+    {
+      "id": "schedule_b_30_tax",
+      "label": "30. Tax",
+      "section": "schedule_b",
+      "type": "money",
+      "row": "30",
+      "column": "tax",
+      "unit": "USD"
+    },
+    {
+      "id": "schedule_b_30_interest",
+      "label": "30. Interest",
+      "section": "schedule_b",
+      "type": "money",
+      "row": "30",
+      "column": "interest",
+      "unit": "USD"
+    },
+    {
+      "id": "schedule_b_31_explanation",
+      "label": "31. Explanation",
+      "section": "schedule_b",
+      "type": "textarea",
+      "row": "31",
+      "column": "explanation"
+    },
+    {
+      "id": "schedule_b_31_tax",
+      "label": "31. Tax",
+      "section": "schedule_b",
+      "type": "money",
+      "row": "31",
+      "column": "tax",
+      "unit": "USD"
+    },
+    {
+      "id": "schedule_b_31_interest",
+      "label": "31. Interest",
+      "section": "schedule_b",
+      "type": "money",
+      "row": "31",
+      "column": "interest",
+      "unit": "USD"
+    },
+    {
+      "id": "schedule_b_32_explanation",
+      "label": "32. Explanation",
+      "section": "schedule_b",
+      "type": "textarea",
+      "row": "32",
+      "column": "explanation"
+    },
+    {
+      "id": "schedule_b_32_tax",
+      "label": "32. Tax",
+      "section": "schedule_b",
+      "type": "money",
+      "row": "32",
+      "column": "tax",
+      "unit": "USD"
+    },
+    {
+      "id": "schedule_b_32_interest",
+      "label": "32. Interest",
+      "section": "schedule_b",
+      "type": "money",
+      "row": "32",
+      "column": "interest",
+      "unit": "USD"
+    },
+    {
+      "id": "schedule_b_subtotal_tax",
+      "label": "33. Tax subtotal",
+      "section": "schedule_b",
+      "type": "money",
+      "row": "33",
+      "column": "tax",
+      "unit": "USD",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "schedule_b_30_tax",
+          "schedule_b_31_tax",
+          "schedule_b_32_tax"
+        ]
+      }
+    },
+    {
+      "id": "schedule_b_subtotal_interest",
+      "label": "33. Interest subtotal",
+      "section": "schedule_b",
+      "type": "money",
+      "row": "33",
+      "column": "interest",
+      "unit": "USD",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "schedule_b_30_interest",
+          "schedule_b_31_interest",
+          "schedule_b_32_interest"
+        ]
+      }
+    },
+    {
+      "id": "schedule_b_total",
+      "label": "34. Total adjustments decreasing amount due",
+      "section": "schedule_b_total",
+      "type": "money",
+      "unit": "USD",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "schedule_b_subtotal_tax",
+          "schedule_b_subtotal_interest"
+        ]
+      }
+    },
+    {
+      "id": "signature_date",
+      "label": "22. Date",
+      "section": "signature",
+      "type": "date"
+    },
+    {
+      "id": "signature",
+      "label": "23. Signature - complete manually on the official form",
+      "section": "signature",
+      "type": "text",
+      "manualOnly": true
+    },
+    {
+      "id": "signer_title",
+      "label": "24. Title",
+      "section": "signature",
+      "type": "text"
+    },
+    {
+      "id": "additional_remarks",
+      "label": "35. Additional remarks (reference item number)",
+      "section": "remarks",
+      "type": "textarea"
+    }
+  ],
+  "amountDueField": "amount_to_pay",
+  "checks": [
+    {
+      "id": "payment_matches_return",
+      "label": "Payment amount matches line 21",
+      "leftRefs": [
+        "amount_payment"
+      ],
+      "rightRefs": [
+        "amount_to_pay"
+      ]
+    }
+  ],
+  "sourceNotes": "Mapped from the user-provided blank 04/2012 form. For TTB Use Only boxes are excluded. No tax rates, taxpayer identities, signatures or legal attestations are supplied."
+}

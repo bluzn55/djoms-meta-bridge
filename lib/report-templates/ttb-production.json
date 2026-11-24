@@ -1,0 +1,5064 @@
+{
+  "id": "ttb_production",
+  "name": "TTB — Production",
+  "shortName": "Production",
+  "formNumber": "TTB F 5110.40",
+  "sourceEdition": "01/2010",
+  "frequency": "monthly",
+  "jurisdiction": "federal",
+  "agency": "TTB",
+  "schedule": {
+    "type": "monthly_following",
+    "targetDay": 5,
+    "dueDay": 15
+  },
+  "pdfAsset": "/assets/report-forms/ttb-production.pdf",
+  "officialInstructionsUrl": "https://www.ttb.gov/ttb-form-511040",
+  "sections": [
+    {
+      "id": "identity",
+      "title": "Plant and reporting period",
+      "type": "fields",
+      "description": "Use the proprietor name and bonded-premises address shown on the permit. Quantities belong to the selected reporting month."
+    },
+    {
+      "id": "transaction_labels",
+      "title": "Transaction descriptions",
+      "type": "fields",
+      "description": "Identify the Other spirits column when used. The official instructions direct you to consult TTB before using blank transaction lines 13 or 16."
+    },
+    {
+      "id": "part_i",
+      "title": "Part I — Transactions",
+      "type": "table",
+      "description": "All quantities are proof gallons. Row totals and Produced totals calculate after every component is entered; blanks are not treated as zero. Line 17 is quarter-end physical inventory.",
+      "rows": [
+        {
+          "id": "r01",
+          "label": "1. Tax payment"
+        },
+        {
+          "id": "r02",
+          "label": "2. Use of U.S."
+        },
+        {
+          "id": "r03",
+          "label": "3. Hospital, scientific, or educational use"
+        },
+        {
+          "id": "r04",
+          "label": "4. Export"
+        },
+        {
+          "id": "r05",
+          "label": "5. Transfer to foreign trade zone"
+        },
+        {
+          "id": "r06",
+          "label": "6. Transfer to CMBW"
+        },
+        {
+          "id": "r07",
+          "label": "7. Use as supplies on vessels or aircraft"
+        },
+        {
+          "id": "r08",
+          "label": "8. Use in wine production"
+        },
+        {
+          "id": "r09",
+          "label": "9. Entered in processing account"
+        },
+        {
+          "id": "r10",
+          "label": "10. Entered for transfer in bond"
+        },
+        {
+          "id": "r11",
+          "label": "11. Entered in storage account"
+        },
+        {
+          "id": "r12",
+          "label": "12. Withdrawn for research, development, or testing"
+        },
+        {
+          "id": "r13",
+          "label": "13. Other transaction (identify above)"
+        },
+        {
+          "id": "r14",
+          "label": "14. Produced — total lines 1 through 13"
+        },
+        {
+          "id": "r15",
+          "label": "15. Received for redistillation"
+        },
+        {
+          "id": "r16",
+          "label": "16. Samples returned / other transaction (identify above)"
+        },
+        {
+          "id": "r17a",
+          "label": "17(a). Quarter-end physical inventory — received for redistillation"
+        },
+        {
+          "id": "r17b",
+          "label": "17(b). Quarter-end physical inventory — unfinished spirits"
+        }
+      ],
+      "columns": [
+        {
+          "id": "whisky_160_under",
+          "label": "Whisky 160° and under",
+          "unit": "Proof gallons"
+        },
+        {
+          "id": "whisky_over_160",
+          "label": "Whisky over 160°",
+          "unit": "Proof gallons"
+        },
+        {
+          "id": "brandy_170_under",
+          "label": "Brandy 170° and under",
+          "unit": "Proof gallons"
+        },
+        {
+          "id": "brandy_over_170",
+          "label": "Brandy over 170°",
+          "unit": "Proof gallons"
+        },
+        {
+          "id": "rum",
+          "label": "Rum",
+          "unit": "Proof gallons"
+        },
+        {
+          "id": "gin",
+          "label": "Gin",
+          "unit": "Proof gallons"
+        },
+        {
+          "id": "vodka",
+          "label": "Vodka",
+          "unit": "Proof gallons"
+        },
+        {
+          "id": "alcohol_190_over",
+          "label": "Alcohol and spirits 190° and over (distillation proof)",
+          "unit": "Proof gallons"
+        },
+        {
+          "id": "alcohol_under_190",
+          "label": "Alcohol and spirits under 190° (distillation proof)",
+          "unit": "Proof gallons"
+        },
+        {
+          "id": "other",
+          "label": "Other — identify above",
+          "unit": "Proof gallons"
+        },
+        {
+          "id": "total",
+          "label": "Total",
+          "unit": "Proof gallons"
+        }
+      ]
+    },
+    {
+      "id": "part_ii",
+      "title": "Part II — Production of alcohol and spirits of 190° or more of proof, by material",
+      "type": "table",
+      "description": "Report proof gallons by the material used. Identify imported spirits used for redistillation separately where applicable.",
+      "rows": [
+        {
+          "id": "r01",
+          "label": "1. Grain"
+        },
+        {
+          "id": "r02",
+          "label": "2. Fruit"
+        },
+        {
+          "id": "r03",
+          "label": "3. Molasses"
+        },
+        {
+          "id": "r04",
+          "label": "4. Ethyl sulfate"
+        },
+        {
+          "id": "r05",
+          "label": "5. Ethylene gas"
+        },
+        {
+          "id": "r06",
+          "label": "6. Sulphite liquors"
+        },
+        {
+          "id": "r07",
+          "label": "7. From redistillation"
+        },
+        {
+          "id": "r08",
+          "label": "8. Other material (identify)"
+        }
+      ],
+      "columns": [
+        {
+          "id": "kind",
+          "label": "Other material description",
+          "unit": ""
+        },
+        {
+          "id": "proof_gallons",
+          "label": "Proof gallons",
+          "unit": "Proof gallons"
+        }
+      ]
+    },
+    {
+      "id": "part_iii",
+      "title": "Part III — Production of whisky by kind and cooperage",
+      "type": "table",
+      "description": "All quantities are proof gallons.",
+      "rows": [
+        {
+          "id": "r01",
+          "label": "1. Bourbon"
+        },
+        {
+          "id": "r02",
+          "label": "2. Corn"
+        },
+        {
+          "id": "r03",
+          "label": "3. Rye"
+        },
+        {
+          "id": "r04",
+          "label": "4. Light"
+        },
+        {
+          "id": "r05",
+          "label": "5. Other whisky"
+        },
+        {
+          "id": "r06",
+          "label": "6. Other whisky"
+        },
+        {
+          "id": "r07",
+          "label": "7. Other whisky"
+        },
+        {
+          "id": "r08",
+          "label": "8. Other whisky"
+        }
+      ],
+      "columns": [
+        {
+          "id": "kind",
+          "label": "Other whisky — identify",
+          "unit": ""
+        },
+        {
+          "id": "new_cooperage",
+          "label": "New cooperage",
+          "unit": "Proof gallons"
+        },
+        {
+          "id": "used_cooperage",
+          "label": "Used cooperage",
+          "unit": "Proof gallons"
+        },
+        {
+          "id": "tanks",
+          "label": "Deposited in tanks",
+          "unit": "Proof gallons"
+        }
+      ]
+    },
+    {
+      "id": "part_iv",
+      "title": "Part IV — Production of brandy by kind",
+      "type": "table",
+      "description": "All quantities are proof gallons.",
+      "rows": [
+        {
+          "id": "r01",
+          "label": "1. Grape brandy"
+        },
+        {
+          "id": "r02",
+          "label": "2. All other brandy"
+        },
+        {
+          "id": "r03",
+          "label": "3. Neutral grape brandy"
+        },
+        {
+          "id": "r04",
+          "label": "4. All other neutral brandy"
+        },
+        {
+          "id": "r05",
+          "label": "5. Other brandy"
+        },
+        {
+          "id": "r06",
+          "label": "6. Other brandy"
+        },
+        {
+          "id": "r07",
+          "label": "7. Other brandy"
+        },
+        {
+          "id": "r08",
+          "label": "8. Other brandy"
+        }
+      ],
+      "columns": [
+        {
+          "id": "kind",
+          "label": "Other brandy — identify",
+          "unit": ""
+        },
+        {
+          "id": "proof_gallons",
+          "label": "Proof gallons",
+          "unit": "Proof gallons"
+        }
+      ]
+    },
+    {
+      "id": "part_v",
+      "title": "Part V — Used in redistillation",
+      "type": "table",
+      "description": "Identify each kind of spirit. For alcohol or spirits, indicate 190° or over or under 190°. Report imported spirits separately.",
+      "rows": [
+        {
+          "id": "r01",
+          "label": "1. Spirits used"
+        },
+        {
+          "id": "r02",
+          "label": "2. Spirits used"
+        },
+        {
+          "id": "r03",
+          "label": "3. Spirits used"
+        },
+        {
+          "id": "r04",
+          "label": "4. Spirits used"
+        },
+        {
+          "id": "r05",
+          "label": "5. Spirits used"
+        },
+        {
+          "id": "r06",
+          "label": "6. Spirits used"
+        },
+        {
+          "id": "r07",
+          "label": "7. Spirits used"
+        },
+        {
+          "id": "r08",
+          "label": "8. Spirits used"
+        }
+      ],
+      "columns": [
+        {
+          "id": "kind",
+          "label": "Kind of spirits",
+          "unit": ""
+        },
+        {
+          "id": "proof_gallons",
+          "label": "Proof gallons",
+          "unit": "Proof gallons"
+        }
+      ]
+    },
+    {
+      "id": "part_vi",
+      "title": "Part VI — Materials used",
+      "type": "table",
+      "description": "Enter each quantity in its specified unit. Pounds and gallons are separate measurements and are never added together.",
+      "rows": [
+        {
+          "id": "r01",
+          "label": "1. Corn"
+        },
+        {
+          "id": "r02",
+          "label": "2. Rye"
+        },
+        {
+          "id": "r03",
+          "label": "3. Malt"
+        },
+        {
+          "id": "r04",
+          "label": "4. Wheat"
+        },
+        {
+          "id": "r05",
+          "label": "5. Sorghum grain"
+        },
+        {
+          "id": "r06",
+          "label": "6. Barley"
+        },
+        {
+          "id": "r07",
+          "label": "7. Other grain or grain product"
+        },
+        {
+          "id": "r08",
+          "label": "8. Other grain or grain product"
+        },
+        {
+          "id": "r09",
+          "label": "9. Grape"
+        },
+        {
+          "id": "r10",
+          "label": "10. Other fruit or fruit product"
+        },
+        {
+          "id": "r11",
+          "label": "11. Other fruit or fruit product"
+        },
+        {
+          "id": "r12",
+          "label": "12. Other fruit or fruit product"
+        },
+        {
+          "id": "r13",
+          "label": "13. Other fruit or fruit product"
+        },
+        {
+          "id": "r14",
+          "label": "14. Other fruit or fruit product"
+        },
+        {
+          "id": "r15",
+          "label": "15. Molasses"
+        },
+        {
+          "id": "r16",
+          "label": "16. Other cane or cane product"
+        },
+        {
+          "id": "r17",
+          "label": "17. Other cane or cane product"
+        },
+        {
+          "id": "r18",
+          "label": "18. Other cane or cane product"
+        },
+        {
+          "id": "r19",
+          "label": "19. Ethyl sulfate"
+        },
+        {
+          "id": "r20",
+          "label": "20. Ethylene gas"
+        },
+        {
+          "id": "r21",
+          "label": "21. Sulphite liquors"
+        },
+        {
+          "id": "r22",
+          "label": "22. Butane gas"
+        },
+        {
+          "id": "r23",
+          "label": "23. Other material"
+        }
+      ],
+      "columns": [
+        {
+          "id": "kind",
+          "label": "Other material — identify",
+          "unit": ""
+        },
+        {
+          "id": "production_pounds",
+          "label": "Used in distilled-spirits production — pounds",
+          "unit": "Pounds"
+        },
+        {
+          "id": "production_gallons",
+          "label": "Used in distilled-spirits production — gallons",
+          "unit": "Gallons"
+        },
+        {
+          "id": "other_pounds",
+          "label": "Used in manufacture of other substances yielding spirits as by-product — pounds",
+          "unit": "Pounds"
+        },
+        {
+          "id": "other_gallons",
+          "label": "Used in manufacture of other substances yielding spirits as by-product — gallons",
+          "unit": "Gallons"
+        }
+      ]
+    },
+    {
+      "id": "certification",
+      "title": "Certification",
+      "type": "fields",
+      "description": "Review the completed official form before filing. Approval in DJOMS does not sign the government form."
+    }
+  ],
+  "fields": [
+    {
+      "id": "proprietor_name",
+      "label": "1. Name of proprietor",
+      "section": "identity",
+      "type": "text",
+      "required": true,
+      "profileKey": "legalName",
+      "pdfField": "Text1"
+    },
+    {
+      "id": "ein",
+      "label": "2. EIN",
+      "section": "identity",
+      "type": "text",
+      "required": true,
+      "profileKey": "ein",
+      "pdfField": "Text29"
+    },
+    {
+      "id": "plant_location",
+      "label": "4. Location of plant",
+      "section": "identity",
+      "type": "text",
+      "required": true,
+      "profileKey": "address",
+      "pdfField": "Text3"
+    },
+    {
+      "id": "plant_number",
+      "label": "5. Plant number (DSP)",
+      "section": "identity",
+      "type": "text",
+      "required": true,
+      "profileKey": "plantNumber",
+      "pdfField": "Text4"
+    },
+    {
+      "id": "reporting_month",
+      "label": "3. Month and year",
+      "section": "identity",
+      "type": "text",
+      "required": true,
+      "periodKey": "monthYear",
+      "pdfField": "Text2"
+    },
+    {
+      "id": "other_spirits_kind",
+      "label": "Other spirits — identify column (k)",
+      "section": "transaction_labels",
+      "type": "text",
+      "required": false,
+      "pdfField": "Text27"
+    },
+    {
+      "id": "transaction_13_description",
+      "label": "13. Transaction description",
+      "section": "transaction_labels",
+      "type": "text",
+      "required": false,
+      "pdfField": "Text30"
+    },
+    {
+      "id": "transaction_16_description",
+      "label": "16. Transaction description / samples returned",
+      "section": "transaction_labels",
+      "type": "text",
+      "required": false,
+      "pdfField": "Text33"
+    },
+    {
+      "id": "part_i_r01_whisky_160_under",
+      "label": "1. Tax payment — Whisky 160° and under",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r01",
+      "column": "whisky_160_under",
+      "unit": "Proof gallons",
+      "pdfField": "Text5q"
+    },
+    {
+      "id": "part_i_r01_whisky_over_160",
+      "label": "1. Tax payment — Whisky over 160°",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r01",
+      "column": "whisky_over_160",
+      "unit": "Proof gallons",
+      "pdfField": "Text5.0.0.0.1"
+    },
+    {
+      "id": "part_i_r01_brandy_170_under",
+      "label": "1. Tax payment — Brandy 170° and under",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r01",
+      "column": "brandy_170_under",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.0.0"
+    },
+    {
+      "id": "part_i_r01_brandy_over_170",
+      "label": "1. Tax payment — Brandy over 170°",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r01",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.0.1"
+    },
+    {
+      "id": "part_i_r01_rum",
+      "label": "1. Tax payment — Rum",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r01",
+      "column": "rum",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.0.2"
+    },
+    {
+      "id": "part_i_r01_gin",
+      "label": "1. Tax payment — Gin",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r01",
+      "column": "gin",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.0.3"
+    },
+    {
+      "id": "part_i_r01_vodka",
+      "label": "1. Tax payment — Vodka",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r01",
+      "column": "vodka",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.0.4"
+    },
+    {
+      "id": "part_i_r01_alcohol_190_over",
+      "label": "1. Tax payment — Alcohol and spirits 190° and over (distillation proof)",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r01",
+      "column": "alcohol_190_over",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.0.5"
+    },
+    {
+      "id": "part_i_r01_alcohol_under_190",
+      "label": "1. Tax payment — Alcohol and spirits under 190° (distillation proof)",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r01",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.0.6"
+    },
+    {
+      "id": "part_i_r01_other",
+      "label": "1. Tax payment — Other — identify above",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r01",
+      "column": "other",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.0.7"
+    },
+    {
+      "id": "part_i_r01_total",
+      "label": "1. Tax payment — Total",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r01",
+      "column": "total",
+      "unit": "Proof gallons",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "part_i_r01_whisky_160_under",
+          "part_i_r01_whisky_over_160",
+          "part_i_r01_brandy_170_under",
+          "part_i_r01_brandy_over_170",
+          "part_i_r01_rum",
+          "part_i_r01_gin",
+          "part_i_r01_vodka",
+          "part_i_r01_alcohol_190_over",
+          "part_i_r01_alcohol_under_190",
+          "part_i_r01_other"
+        ]
+      },
+      "pdfField": "Text8.0.8"
+    },
+    {
+      "id": "part_i_r02_whisky_160_under",
+      "label": "2. Use of U.S. — Whisky 160° and under",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r02",
+      "column": "whisky_160_under",
+      "unit": "Proof gallons",
+      "pdfField": "Text5b"
+    },
+    {
+      "id": "part_i_r02_whisky_over_160",
+      "label": "2. Use of U.S. — Whisky over 160°",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r02",
+      "column": "whisky_over_160",
+      "unit": "Proof gallons",
+      "pdfField": "Text5.0.0.1.1"
+    },
+    {
+      "id": "part_i_r02_brandy_170_under",
+      "label": "2. Use of U.S. — Brandy 170° and under",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r02",
+      "column": "brandy_170_under",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.1.0"
+    },
+    {
+      "id": "part_i_r02_brandy_over_170",
+      "label": "2. Use of U.S. — Brandy over 170°",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r02",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.1.1"
+    },
+    {
+      "id": "part_i_r02_rum",
+      "label": "2. Use of U.S. — Rum",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r02",
+      "column": "rum",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.1.2"
+    },
+    {
+      "id": "part_i_r02_gin",
+      "label": "2. Use of U.S. — Gin",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r02",
+      "column": "gin",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.1.3"
+    },
+    {
+      "id": "part_i_r02_vodka",
+      "label": "2. Use of U.S. — Vodka",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r02",
+      "column": "vodka",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.1.4"
+    },
+    {
+      "id": "part_i_r02_alcohol_190_over",
+      "label": "2. Use of U.S. — Alcohol and spirits 190° and over (distillation proof)",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r02",
+      "column": "alcohol_190_over",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.1.5"
+    },
+    {
+      "id": "part_i_r02_alcohol_under_190",
+      "label": "2. Use of U.S. — Alcohol and spirits under 190° (distillation proof)",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r02",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.1.6"
+    },
+    {
+      "id": "part_i_r02_other",
+      "label": "2. Use of U.S. — Other — identify above",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r02",
+      "column": "other",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.1.7"
+    },
+    {
+      "id": "part_i_r02_total",
+      "label": "2. Use of U.S. — Total",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r02",
+      "column": "total",
+      "unit": "Proof gallons",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "part_i_r02_whisky_160_under",
+          "part_i_r02_whisky_over_160",
+          "part_i_r02_brandy_170_under",
+          "part_i_r02_brandy_over_170",
+          "part_i_r02_rum",
+          "part_i_r02_gin",
+          "part_i_r02_vodka",
+          "part_i_r02_alcohol_190_over",
+          "part_i_r02_alcohol_under_190",
+          "part_i_r02_other"
+        ]
+      },
+      "pdfField": "Text8.1.8"
+    },
+    {
+      "id": "part_i_r03_whisky_160_under",
+      "label": "3. Hospital, scientific, or educational use — Whisky 160° and under",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r03",
+      "column": "whisky_160_under",
+      "unit": "Proof gallons",
+      "pdfField": "Text5c"
+    },
+    {
+      "id": "part_i_r03_whisky_over_160",
+      "label": "3. Hospital, scientific, or educational use — Whisky over 160°",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r03",
+      "column": "whisky_over_160",
+      "unit": "Proof gallons",
+      "pdfField": "Text5.12.1"
+    },
+    {
+      "id": "part_i_r03_brandy_170_under",
+      "label": "3. Hospital, scientific, or educational use — Brandy 170° and under",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r03",
+      "column": "brandy_170_under",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.2.0"
+    },
+    {
+      "id": "part_i_r03_brandy_over_170",
+      "label": "3. Hospital, scientific, or educational use — Brandy over 170°",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r03",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.2.1"
+    },
+    {
+      "id": "part_i_r03_rum",
+      "label": "3. Hospital, scientific, or educational use — Rum",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r03",
+      "column": "rum",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.2.2"
+    },
+    {
+      "id": "part_i_r03_gin",
+      "label": "3. Hospital, scientific, or educational use — Gin",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r03",
+      "column": "gin",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.2.3"
+    },
+    {
+      "id": "part_i_r03_vodka",
+      "label": "3. Hospital, scientific, or educational use — Vodka",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r03",
+      "column": "vodka",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.2.4"
+    },
+    {
+      "id": "part_i_r03_alcohol_190_over",
+      "label": "3. Hospital, scientific, or educational use — Alcohol and spirits 190° and over (distillation proof)",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r03",
+      "column": "alcohol_190_over",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.2.5"
+    },
+    {
+      "id": "part_i_r03_alcohol_under_190",
+      "label": "3. Hospital, scientific, or educational use — Alcohol and spirits under 190° (distillation proof)",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r03",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.2.6"
+    },
+    {
+      "id": "part_i_r03_other",
+      "label": "3. Hospital, scientific, or educational use — Other — identify above",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r03",
+      "column": "other",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.2.7"
+    },
+    {
+      "id": "part_i_r03_total",
+      "label": "3. Hospital, scientific, or educational use — Total",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r03",
+      "column": "total",
+      "unit": "Proof gallons",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "part_i_r03_whisky_160_under",
+          "part_i_r03_whisky_over_160",
+          "part_i_r03_brandy_170_under",
+          "part_i_r03_brandy_over_170",
+          "part_i_r03_rum",
+          "part_i_r03_gin",
+          "part_i_r03_vodka",
+          "part_i_r03_alcohol_190_over",
+          "part_i_r03_alcohol_under_190",
+          "part_i_r03_other"
+        ]
+      },
+      "pdfField": "Text8.2.8"
+    },
+    {
+      "id": "part_i_r04_whisky_160_under",
+      "label": "4. Export — Whisky 160° and under",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r04",
+      "column": "whisky_160_under",
+      "unit": "Proof gallons",
+      "pdfField": "Text5d"
+    },
+    {
+      "id": "part_i_r04_whisky_over_160",
+      "label": "4. Export — Whisky over 160°",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r04",
+      "column": "whisky_over_160",
+      "unit": "Proof gallons",
+      "pdfField": "Text5.0.0.2.1"
+    },
+    {
+      "id": "part_i_r04_brandy_170_under",
+      "label": "4. Export — Brandy 170° and under",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r04",
+      "column": "brandy_170_under",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.3.0"
+    },
+    {
+      "id": "part_i_r04_brandy_over_170",
+      "label": "4. Export — Brandy over 170°",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r04",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.3.1"
+    },
+    {
+      "id": "part_i_r04_rum",
+      "label": "4. Export — Rum",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r04",
+      "column": "rum",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.3.2"
+    },
+    {
+      "id": "part_i_r04_gin",
+      "label": "4. Export — Gin",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r04",
+      "column": "gin",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.3.3"
+    },
+    {
+      "id": "part_i_r04_vodka",
+      "label": "4. Export — Vodka",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r04",
+      "column": "vodka",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.3.4"
+    },
+    {
+      "id": "part_i_r04_alcohol_190_over",
+      "label": "4. Export — Alcohol and spirits 190° and over (distillation proof)",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r04",
+      "column": "alcohol_190_over",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.3.5"
+    },
+    {
+      "id": "part_i_r04_alcohol_under_190",
+      "label": "4. Export — Alcohol and spirits under 190° (distillation proof)",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r04",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.3.6"
+    },
+    {
+      "id": "part_i_r04_other",
+      "label": "4. Export — Other — identify above",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r04",
+      "column": "other",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.3.7"
+    },
+    {
+      "id": "part_i_r04_total",
+      "label": "4. Export — Total",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r04",
+      "column": "total",
+      "unit": "Proof gallons",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "part_i_r04_whisky_160_under",
+          "part_i_r04_whisky_over_160",
+          "part_i_r04_brandy_170_under",
+          "part_i_r04_brandy_over_170",
+          "part_i_r04_rum",
+          "part_i_r04_gin",
+          "part_i_r04_vodka",
+          "part_i_r04_alcohol_190_over",
+          "part_i_r04_alcohol_under_190",
+          "part_i_r04_other"
+        ]
+      },
+      "pdfField": "Text8.3.8"
+    },
+    {
+      "id": "part_i_r05_whisky_160_under",
+      "label": "5. Transfer to foreign trade zone — Whisky 160° and under",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r05",
+      "column": "whisky_160_under",
+      "unit": "Proof gallons",
+      "pdfField": "Texte"
+    },
+    {
+      "id": "part_i_r05_whisky_over_160",
+      "label": "5. Transfer to foreign trade zone — Whisky over 160°",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r05",
+      "column": "whisky_over_160",
+      "unit": "Proof gallons",
+      "pdfField": "Text5.0.0.3.1"
+    },
+    {
+      "id": "part_i_r05_brandy_170_under",
+      "label": "5. Transfer to foreign trade zone — Brandy 170° and under",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r05",
+      "column": "brandy_170_under",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.4.0"
+    },
+    {
+      "id": "part_i_r05_brandy_over_170",
+      "label": "5. Transfer to foreign trade zone — Brandy over 170°",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r05",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.4.1"
+    },
+    {
+      "id": "part_i_r05_rum",
+      "label": "5. Transfer to foreign trade zone — Rum",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r05",
+      "column": "rum",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.4.2"
+    },
+    {
+      "id": "part_i_r05_gin",
+      "label": "5. Transfer to foreign trade zone — Gin",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r05",
+      "column": "gin",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.4.3"
+    },
+    {
+      "id": "part_i_r05_vodka",
+      "label": "5. Transfer to foreign trade zone — Vodka",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r05",
+      "column": "vodka",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.4.4"
+    },
+    {
+      "id": "part_i_r05_alcohol_190_over",
+      "label": "5. Transfer to foreign trade zone — Alcohol and spirits 190° and over (distillation proof)",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r05",
+      "column": "alcohol_190_over",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.4.5"
+    },
+    {
+      "id": "part_i_r05_alcohol_under_190",
+      "label": "5. Transfer to foreign trade zone — Alcohol and spirits under 190° (distillation proof)",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r05",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.4.6"
+    },
+    {
+      "id": "part_i_r05_other",
+      "label": "5. Transfer to foreign trade zone — Other — identify above",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r05",
+      "column": "other",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.4.7"
+    },
+    {
+      "id": "part_i_r05_total",
+      "label": "5. Transfer to foreign trade zone — Total",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r05",
+      "column": "total",
+      "unit": "Proof gallons",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "part_i_r05_whisky_160_under",
+          "part_i_r05_whisky_over_160",
+          "part_i_r05_brandy_170_under",
+          "part_i_r05_brandy_over_170",
+          "part_i_r05_rum",
+          "part_i_r05_gin",
+          "part_i_r05_vodka",
+          "part_i_r05_alcohol_190_over",
+          "part_i_r05_alcohol_under_190",
+          "part_i_r05_other"
+        ]
+      },
+      "pdfField": "Text8.4.8"
+    },
+    {
+      "id": "part_i_r06_whisky_160_under",
+      "label": "6. Transfer to CMBW — Whisky 160° and under",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r06",
+      "column": "whisky_160_under",
+      "unit": "Proof gallons",
+      "pdfField": "Text5f"
+    },
+    {
+      "id": "part_i_r06_whisky_over_160",
+      "label": "6. Transfer to CMBW — Whisky over 160°",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r06",
+      "column": "whisky_over_160",
+      "unit": "Proof gallons",
+      "pdfField": "Text5.1.1"
+    },
+    {
+      "id": "part_i_r06_brandy_170_under",
+      "label": "6. Transfer to CMBW — Brandy 170° and under",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r06",
+      "column": "brandy_170_under",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.5.0"
+    },
+    {
+      "id": "part_i_r06_brandy_over_170",
+      "label": "6. Transfer to CMBW — Brandy over 170°",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r06",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.5.1"
+    },
+    {
+      "id": "part_i_r06_rum",
+      "label": "6. Transfer to CMBW — Rum",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r06",
+      "column": "rum",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.5.2"
+    },
+    {
+      "id": "part_i_r06_gin",
+      "label": "6. Transfer to CMBW — Gin",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r06",
+      "column": "gin",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.5.3"
+    },
+    {
+      "id": "part_i_r06_vodka",
+      "label": "6. Transfer to CMBW — Vodka",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r06",
+      "column": "vodka",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.5.4"
+    },
+    {
+      "id": "part_i_r06_alcohol_190_over",
+      "label": "6. Transfer to CMBW — Alcohol and spirits 190° and over (distillation proof)",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r06",
+      "column": "alcohol_190_over",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.5.5"
+    },
+    {
+      "id": "part_i_r06_alcohol_under_190",
+      "label": "6. Transfer to CMBW — Alcohol and spirits under 190° (distillation proof)",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r06",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.5.6"
+    },
+    {
+      "id": "part_i_r06_other",
+      "label": "6. Transfer to CMBW — Other — identify above",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r06",
+      "column": "other",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.5.7"
+    },
+    {
+      "id": "part_i_r06_total",
+      "label": "6. Transfer to CMBW — Total",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r06",
+      "column": "total",
+      "unit": "Proof gallons",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "part_i_r06_whisky_160_under",
+          "part_i_r06_whisky_over_160",
+          "part_i_r06_brandy_170_under",
+          "part_i_r06_brandy_over_170",
+          "part_i_r06_rum",
+          "part_i_r06_gin",
+          "part_i_r06_vodka",
+          "part_i_r06_alcohol_190_over",
+          "part_i_r06_alcohol_under_190",
+          "part_i_r06_other"
+        ]
+      },
+      "pdfField": "Text8.5.8"
+    },
+    {
+      "id": "part_i_r07_whisky_160_under",
+      "label": "7. Use as supplies on vessels or aircraft — Whisky 160° and under",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r07",
+      "column": "whisky_160_under",
+      "unit": "Proof gallons",
+      "pdfField": "Text5g"
+    },
+    {
+      "id": "part_i_r07_whisky_over_160",
+      "label": "7. Use as supplies on vessels or aircraft — Whisky over 160°",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r07",
+      "column": "whisky_over_160",
+      "unit": "Proof gallons",
+      "pdfField": "Text5.2.1"
+    },
+    {
+      "id": "part_i_r07_brandy_170_under",
+      "label": "7. Use as supplies on vessels or aircraft — Brandy 170° and under",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r07",
+      "column": "brandy_170_under",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.6.0"
+    },
+    {
+      "id": "part_i_r07_brandy_over_170",
+      "label": "7. Use as supplies on vessels or aircraft — Brandy over 170°",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r07",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.6.1"
+    },
+    {
+      "id": "part_i_r07_rum",
+      "label": "7. Use as supplies on vessels or aircraft — Rum",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r07",
+      "column": "rum",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.6.2"
+    },
+    {
+      "id": "part_i_r07_gin",
+      "label": "7. Use as supplies on vessels or aircraft — Gin",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r07",
+      "column": "gin",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.6.3"
+    },
+    {
+      "id": "part_i_r07_vodka",
+      "label": "7. Use as supplies on vessels or aircraft — Vodka",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r07",
+      "column": "vodka",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.6.4"
+    },
+    {
+      "id": "part_i_r07_alcohol_190_over",
+      "label": "7. Use as supplies on vessels or aircraft — Alcohol and spirits 190° and over (distillation proof)",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r07",
+      "column": "alcohol_190_over",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.6.5"
+    },
+    {
+      "id": "part_i_r07_alcohol_under_190",
+      "label": "7. Use as supplies on vessels or aircraft — Alcohol and spirits under 190° (distillation proof)",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r07",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.6.6"
+    },
+    {
+      "id": "part_i_r07_other",
+      "label": "7. Use as supplies on vessels or aircraft — Other — identify above",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r07",
+      "column": "other",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.6.7"
+    },
+    {
+      "id": "part_i_r07_total",
+      "label": "7. Use as supplies on vessels or aircraft — Total",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r07",
+      "column": "total",
+      "unit": "Proof gallons",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "part_i_r07_whisky_160_under",
+          "part_i_r07_whisky_over_160",
+          "part_i_r07_brandy_170_under",
+          "part_i_r07_brandy_over_170",
+          "part_i_r07_rum",
+          "part_i_r07_gin",
+          "part_i_r07_vodka",
+          "part_i_r07_alcohol_190_over",
+          "part_i_r07_alcohol_under_190",
+          "part_i_r07_other"
+        ]
+      },
+      "pdfField": "Text8.6.8"
+    },
+    {
+      "id": "part_i_r08_whisky_160_under",
+      "label": "8. Use in wine production — Whisky 160° and under",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r08",
+      "column": "whisky_160_under",
+      "unit": "Proof gallons",
+      "pdfField": "Text5h"
+    },
+    {
+      "id": "part_i_r08_whisky_over_160",
+      "label": "8. Use in wine production — Whisky over 160°",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r08",
+      "column": "whisky_over_160",
+      "unit": "Proof gallons",
+      "pdfField": "Text5.3.1"
+    },
+    {
+      "id": "part_i_r08_brandy_170_under",
+      "label": "8. Use in wine production — Brandy 170° and under",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r08",
+      "column": "brandy_170_under",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.7.0"
+    },
+    {
+      "id": "part_i_r08_brandy_over_170",
+      "label": "8. Use in wine production — Brandy over 170°",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r08",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.7.1"
+    },
+    {
+      "id": "part_i_r08_rum",
+      "label": "8. Use in wine production — Rum",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r08",
+      "column": "rum",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.7.2"
+    },
+    {
+      "id": "part_i_r08_gin",
+      "label": "8. Use in wine production — Gin",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r08",
+      "column": "gin",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.7.3"
+    },
+    {
+      "id": "part_i_r08_vodka",
+      "label": "8. Use in wine production — Vodka",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r08",
+      "column": "vodka",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.7.4"
+    },
+    {
+      "id": "part_i_r08_alcohol_190_over",
+      "label": "8. Use in wine production — Alcohol and spirits 190° and over (distillation proof)",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r08",
+      "column": "alcohol_190_over",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.7.5"
+    },
+    {
+      "id": "part_i_r08_alcohol_under_190",
+      "label": "8. Use in wine production — Alcohol and spirits under 190° (distillation proof)",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r08",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.7.6"
+    },
+    {
+      "id": "part_i_r08_other",
+      "label": "8. Use in wine production — Other — identify above",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r08",
+      "column": "other",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.7.7"
+    },
+    {
+      "id": "part_i_r08_total",
+      "label": "8. Use in wine production — Total",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r08",
+      "column": "total",
+      "unit": "Proof gallons",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "part_i_r08_whisky_160_under",
+          "part_i_r08_whisky_over_160",
+          "part_i_r08_brandy_170_under",
+          "part_i_r08_brandy_over_170",
+          "part_i_r08_rum",
+          "part_i_r08_gin",
+          "part_i_r08_vodka",
+          "part_i_r08_alcohol_190_over",
+          "part_i_r08_alcohol_under_190",
+          "part_i_r08_other"
+        ]
+      },
+      "pdfField": "Text8.7.8"
+    },
+    {
+      "id": "part_i_r09_whisky_160_under",
+      "label": "9. Entered in processing account — Whisky 160° and under",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r09",
+      "column": "whisky_160_under",
+      "unit": "Proof gallons",
+      "pdfField": "Text5i"
+    },
+    {
+      "id": "part_i_r09_whisky_over_160",
+      "label": "9. Entered in processing account — Whisky over 160°",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r09",
+      "column": "whisky_over_160",
+      "unit": "Proof gallons",
+      "pdfField": "Text5.4.1"
+    },
+    {
+      "id": "part_i_r09_brandy_170_under",
+      "label": "9. Entered in processing account — Brandy 170° and under",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r09",
+      "column": "brandy_170_under",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.8.0"
+    },
+    {
+      "id": "part_i_r09_brandy_over_170",
+      "label": "9. Entered in processing account — Brandy over 170°",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r09",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.8.1"
+    },
+    {
+      "id": "part_i_r09_rum",
+      "label": "9. Entered in processing account — Rum",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r09",
+      "column": "rum",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.8.2"
+    },
+    {
+      "id": "part_i_r09_gin",
+      "label": "9. Entered in processing account — Gin",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r09",
+      "column": "gin",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.8.3"
+    },
+    {
+      "id": "part_i_r09_vodka",
+      "label": "9. Entered in processing account — Vodka",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r09",
+      "column": "vodka",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.8.4"
+    },
+    {
+      "id": "part_i_r09_alcohol_190_over",
+      "label": "9. Entered in processing account — Alcohol and spirits 190° and over (distillation proof)",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r09",
+      "column": "alcohol_190_over",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.8.5"
+    },
+    {
+      "id": "part_i_r09_alcohol_under_190",
+      "label": "9. Entered in processing account — Alcohol and spirits under 190° (distillation proof)",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r09",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.8.6"
+    },
+    {
+      "id": "part_i_r09_other",
+      "label": "9. Entered in processing account — Other — identify above",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r09",
+      "column": "other",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.8.7"
+    },
+    {
+      "id": "part_i_r09_total",
+      "label": "9. Entered in processing account — Total",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r09",
+      "column": "total",
+      "unit": "Proof gallons",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "part_i_r09_whisky_160_under",
+          "part_i_r09_whisky_over_160",
+          "part_i_r09_brandy_170_under",
+          "part_i_r09_brandy_over_170",
+          "part_i_r09_rum",
+          "part_i_r09_gin",
+          "part_i_r09_vodka",
+          "part_i_r09_alcohol_190_over",
+          "part_i_r09_alcohol_under_190",
+          "part_i_r09_other"
+        ]
+      },
+      "pdfField": "Text8.8.8"
+    },
+    {
+      "id": "part_i_r10_whisky_160_under",
+      "label": "10. Entered for transfer in bond — Whisky 160° and under",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r10",
+      "column": "whisky_160_under",
+      "unit": "Proof gallons",
+      "pdfField": "Text5j"
+    },
+    {
+      "id": "part_i_r10_whisky_over_160",
+      "label": "10. Entered for transfer in bond — Whisky over 160°",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r10",
+      "column": "whisky_over_160",
+      "unit": "Proof gallons",
+      "pdfField": "Text5.5.1"
+    },
+    {
+      "id": "part_i_r10_brandy_170_under",
+      "label": "10. Entered for transfer in bond — Brandy 170° and under",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r10",
+      "column": "brandy_170_under",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.9.0"
+    },
+    {
+      "id": "part_i_r10_brandy_over_170",
+      "label": "10. Entered for transfer in bond — Brandy over 170°",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r10",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.9.1"
+    },
+    {
+      "id": "part_i_r10_rum",
+      "label": "10. Entered for transfer in bond — Rum",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r10",
+      "column": "rum",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.9.2"
+    },
+    {
+      "id": "part_i_r10_gin",
+      "label": "10. Entered for transfer in bond — Gin",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r10",
+      "column": "gin",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.9.3"
+    },
+    {
+      "id": "part_i_r10_vodka",
+      "label": "10. Entered for transfer in bond — Vodka",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r10",
+      "column": "vodka",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.9.4"
+    },
+    {
+      "id": "part_i_r10_alcohol_190_over",
+      "label": "10. Entered for transfer in bond — Alcohol and spirits 190° and over (distillation proof)",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r10",
+      "column": "alcohol_190_over",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.9.5"
+    },
+    {
+      "id": "part_i_r10_alcohol_under_190",
+      "label": "10. Entered for transfer in bond — Alcohol and spirits under 190° (distillation proof)",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r10",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.9.6"
+    },
+    {
+      "id": "part_i_r10_other",
+      "label": "10. Entered for transfer in bond — Other — identify above",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r10",
+      "column": "other",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.9.7"
+    },
+    {
+      "id": "part_i_r10_total",
+      "label": "10. Entered for transfer in bond — Total",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r10",
+      "column": "total",
+      "unit": "Proof gallons",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "part_i_r10_whisky_160_under",
+          "part_i_r10_whisky_over_160",
+          "part_i_r10_brandy_170_under",
+          "part_i_r10_brandy_over_170",
+          "part_i_r10_rum",
+          "part_i_r10_gin",
+          "part_i_r10_vodka",
+          "part_i_r10_alcohol_190_over",
+          "part_i_r10_alcohol_under_190",
+          "part_i_r10_other"
+        ]
+      },
+      "pdfField": "Text8.9.8"
+    },
+    {
+      "id": "part_i_r11_whisky_160_under",
+      "label": "11. Entered in storage account — Whisky 160° and under",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r11",
+      "column": "whisky_160_under",
+      "unit": "Proof gallons",
+      "pdfField": "Text5k"
+    },
+    {
+      "id": "part_i_r11_whisky_over_160",
+      "label": "11. Entered in storage account — Whisky over 160°",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r11",
+      "column": "whisky_over_160",
+      "unit": "Proof gallons",
+      "pdfField": "Text5.6.1"
+    },
+    {
+      "id": "part_i_r11_brandy_170_under",
+      "label": "11. Entered in storage account — Brandy 170° and under",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r11",
+      "column": "brandy_170_under",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.10.0"
+    },
+    {
+      "id": "part_i_r11_brandy_over_170",
+      "label": "11. Entered in storage account — Brandy over 170°",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r11",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.10.1"
+    },
+    {
+      "id": "part_i_r11_rum",
+      "label": "11. Entered in storage account — Rum",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r11",
+      "column": "rum",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.10.2"
+    },
+    {
+      "id": "part_i_r11_gin",
+      "label": "11. Entered in storage account — Gin",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r11",
+      "column": "gin",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.10.3"
+    },
+    {
+      "id": "part_i_r11_vodka",
+      "label": "11. Entered in storage account — Vodka",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r11",
+      "column": "vodka",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.10.4"
+    },
+    {
+      "id": "part_i_r11_alcohol_190_over",
+      "label": "11. Entered in storage account — Alcohol and spirits 190° and over (distillation proof)",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r11",
+      "column": "alcohol_190_over",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.10.5"
+    },
+    {
+      "id": "part_i_r11_alcohol_under_190",
+      "label": "11. Entered in storage account — Alcohol and spirits under 190° (distillation proof)",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r11",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.10.6"
+    },
+    {
+      "id": "part_i_r11_other",
+      "label": "11. Entered in storage account — Other — identify above",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r11",
+      "column": "other",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.10.7"
+    },
+    {
+      "id": "part_i_r11_total",
+      "label": "11. Entered in storage account — Total",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r11",
+      "column": "total",
+      "unit": "Proof gallons",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "part_i_r11_whisky_160_under",
+          "part_i_r11_whisky_over_160",
+          "part_i_r11_brandy_170_under",
+          "part_i_r11_brandy_over_170",
+          "part_i_r11_rum",
+          "part_i_r11_gin",
+          "part_i_r11_vodka",
+          "part_i_r11_alcohol_190_over",
+          "part_i_r11_alcohol_under_190",
+          "part_i_r11_other"
+        ]
+      },
+      "pdfField": "Text8.10.8"
+    },
+    {
+      "id": "part_i_r12_whisky_160_under",
+      "label": "12. Withdrawn for research, development, or testing — Whisky 160° and under",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r12",
+      "column": "whisky_160_under",
+      "unit": "Proof gallons",
+      "pdfField": "Text5l"
+    },
+    {
+      "id": "part_i_r12_whisky_over_160",
+      "label": "12. Withdrawn for research, development, or testing — Whisky over 160°",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r12",
+      "column": "whisky_over_160",
+      "unit": "Proof gallons",
+      "pdfField": "Text5.7.1"
+    },
+    {
+      "id": "part_i_r12_brandy_170_under",
+      "label": "12. Withdrawn for research, development, or testing — Brandy 170° and under",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r12",
+      "column": "brandy_170_under",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.11.0"
+    },
+    {
+      "id": "part_i_r12_brandy_over_170",
+      "label": "12. Withdrawn for research, development, or testing — Brandy over 170°",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r12",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.11.1"
+    },
+    {
+      "id": "part_i_r12_rum",
+      "label": "12. Withdrawn for research, development, or testing — Rum",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r12",
+      "column": "rum",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.11.2"
+    },
+    {
+      "id": "part_i_r12_gin",
+      "label": "12. Withdrawn for research, development, or testing — Gin",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r12",
+      "column": "gin",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.11.3"
+    },
+    {
+      "id": "part_i_r12_vodka",
+      "label": "12. Withdrawn for research, development, or testing — Vodka",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r12",
+      "column": "vodka",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.11.4"
+    },
+    {
+      "id": "part_i_r12_alcohol_190_over",
+      "label": "12. Withdrawn for research, development, or testing — Alcohol and spirits 190° and over (distillation proof)",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r12",
+      "column": "alcohol_190_over",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.11.5"
+    },
+    {
+      "id": "part_i_r12_alcohol_under_190",
+      "label": "12. Withdrawn for research, development, or testing — Alcohol and spirits under 190° (distillation proof)",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r12",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.11.6"
+    },
+    {
+      "id": "part_i_r12_other",
+      "label": "12. Withdrawn for research, development, or testing — Other — identify above",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r12",
+      "column": "other",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.11.7"
+    },
+    {
+      "id": "part_i_r12_total",
+      "label": "12. Withdrawn for research, development, or testing — Total",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r12",
+      "column": "total",
+      "unit": "Proof gallons",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "part_i_r12_whisky_160_under",
+          "part_i_r12_whisky_over_160",
+          "part_i_r12_brandy_170_under",
+          "part_i_r12_brandy_over_170",
+          "part_i_r12_rum",
+          "part_i_r12_gin",
+          "part_i_r12_vodka",
+          "part_i_r12_alcohol_190_over",
+          "part_i_r12_alcohol_under_190",
+          "part_i_r12_other"
+        ]
+      },
+      "pdfField": "Text8.11.8"
+    },
+    {
+      "id": "part_i_r13_whisky_160_under",
+      "label": "13. Other transaction (identify above) — Whisky 160° and under",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r13",
+      "column": "whisky_160_under",
+      "unit": "Proof gallons",
+      "pdfField": "Text5m"
+    },
+    {
+      "id": "part_i_r13_whisky_over_160",
+      "label": "13. Other transaction (identify above) — Whisky over 160°",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r13",
+      "column": "whisky_over_160",
+      "unit": "Proof gallons",
+      "pdfField": "Text5.8.1"
+    },
+    {
+      "id": "part_i_r13_brandy_170_under",
+      "label": "13. Other transaction (identify above) — Brandy 170° and under",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r13",
+      "column": "brandy_170_under",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.12.0"
+    },
+    {
+      "id": "part_i_r13_brandy_over_170",
+      "label": "13. Other transaction (identify above) — Brandy over 170°",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r13",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.12.1"
+    },
+    {
+      "id": "part_i_r13_rum",
+      "label": "13. Other transaction (identify above) — Rum",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r13",
+      "column": "rum",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.12.2"
+    },
+    {
+      "id": "part_i_r13_gin",
+      "label": "13. Other transaction (identify above) — Gin",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r13",
+      "column": "gin",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.12.3"
+    },
+    {
+      "id": "part_i_r13_vodka",
+      "label": "13. Other transaction (identify above) — Vodka",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r13",
+      "column": "vodka",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.12.4"
+    },
+    {
+      "id": "part_i_r13_alcohol_190_over",
+      "label": "13. Other transaction (identify above) — Alcohol and spirits 190° and over (distillation proof)",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r13",
+      "column": "alcohol_190_over",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.12.5"
+    },
+    {
+      "id": "part_i_r13_alcohol_under_190",
+      "label": "13. Other transaction (identify above) — Alcohol and spirits under 190° (distillation proof)",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r13",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.12.6"
+    },
+    {
+      "id": "part_i_r13_other",
+      "label": "13. Other transaction (identify above) — Other — identify above",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r13",
+      "column": "other",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.12.7"
+    },
+    {
+      "id": "part_i_r13_total",
+      "label": "13. Other transaction (identify above) — Total",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r13",
+      "column": "total",
+      "unit": "Proof gallons",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "part_i_r13_whisky_160_under",
+          "part_i_r13_whisky_over_160",
+          "part_i_r13_brandy_170_under",
+          "part_i_r13_brandy_over_170",
+          "part_i_r13_rum",
+          "part_i_r13_gin",
+          "part_i_r13_vodka",
+          "part_i_r13_alcohol_190_over",
+          "part_i_r13_alcohol_under_190",
+          "part_i_r13_other"
+        ]
+      },
+      "pdfField": "Text8.12.8"
+    },
+    {
+      "id": "part_i_r14_whisky_160_under",
+      "label": "14. Produced — total lines 1 through 13 — Whisky 160° and under",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r14",
+      "column": "whisky_160_under",
+      "unit": "Proof gallons",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "part_i_r01_whisky_160_under",
+          "part_i_r02_whisky_160_under",
+          "part_i_r03_whisky_160_under",
+          "part_i_r04_whisky_160_under",
+          "part_i_r05_whisky_160_under",
+          "part_i_r06_whisky_160_under",
+          "part_i_r07_whisky_160_under",
+          "part_i_r08_whisky_160_under",
+          "part_i_r09_whisky_160_under",
+          "part_i_r10_whisky_160_under",
+          "part_i_r11_whisky_160_under",
+          "part_i_r12_whisky_160_under",
+          "part_i_r13_whisky_160_under"
+        ]
+      },
+      "pdfField": "Text5n"
+    },
+    {
+      "id": "part_i_r14_whisky_over_160",
+      "label": "14. Produced — total lines 1 through 13 — Whisky over 160°",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r14",
+      "column": "whisky_over_160",
+      "unit": "Proof gallons",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "part_i_r01_whisky_over_160",
+          "part_i_r02_whisky_over_160",
+          "part_i_r03_whisky_over_160",
+          "part_i_r04_whisky_over_160",
+          "part_i_r05_whisky_over_160",
+          "part_i_r06_whisky_over_160",
+          "part_i_r07_whisky_over_160",
+          "part_i_r08_whisky_over_160",
+          "part_i_r09_whisky_over_160",
+          "part_i_r10_whisky_over_160",
+          "part_i_r11_whisky_over_160",
+          "part_i_r12_whisky_over_160",
+          "part_i_r13_whisky_over_160"
+        ]
+      },
+      "pdfField": "Text5.9.1"
+    },
+    {
+      "id": "part_i_r14_brandy_170_under",
+      "label": "14. Produced — total lines 1 through 13 — Brandy 170° and under",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r14",
+      "column": "brandy_170_under",
+      "unit": "Proof gallons",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "part_i_r01_brandy_170_under",
+          "part_i_r02_brandy_170_under",
+          "part_i_r03_brandy_170_under",
+          "part_i_r04_brandy_170_under",
+          "part_i_r05_brandy_170_under",
+          "part_i_r06_brandy_170_under",
+          "part_i_r07_brandy_170_under",
+          "part_i_r08_brandy_170_under",
+          "part_i_r09_brandy_170_under",
+          "part_i_r10_brandy_170_under",
+          "part_i_r11_brandy_170_under",
+          "part_i_r12_brandy_170_under",
+          "part_i_r13_brandy_170_under"
+        ]
+      },
+      "pdfField": "Text8.13.0"
+    },
+    {
+      "id": "part_i_r14_brandy_over_170",
+      "label": "14. Produced — total lines 1 through 13 — Brandy over 170°",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r14",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "part_i_r01_brandy_over_170",
+          "part_i_r02_brandy_over_170",
+          "part_i_r03_brandy_over_170",
+          "part_i_r04_brandy_over_170",
+          "part_i_r05_brandy_over_170",
+          "part_i_r06_brandy_over_170",
+          "part_i_r07_brandy_over_170",
+          "part_i_r08_brandy_over_170",
+          "part_i_r09_brandy_over_170",
+          "part_i_r10_brandy_over_170",
+          "part_i_r11_brandy_over_170",
+          "part_i_r12_brandy_over_170",
+          "part_i_r13_brandy_over_170"
+        ]
+      },
+      "pdfField": "Text8.13.1"
+    },
+    {
+      "id": "part_i_r14_rum",
+      "label": "14. Produced — total lines 1 through 13 — Rum",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r14",
+      "column": "rum",
+      "unit": "Proof gallons",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "part_i_r01_rum",
+          "part_i_r02_rum",
+          "part_i_r03_rum",
+          "part_i_r04_rum",
+          "part_i_r05_rum",
+          "part_i_r06_rum",
+          "part_i_r07_rum",
+          "part_i_r08_rum",
+          "part_i_r09_rum",
+          "part_i_r10_rum",
+          "part_i_r11_rum",
+          "part_i_r12_rum",
+          "part_i_r13_rum"
+        ]
+      },
+      "pdfField": "Text8.13.2"
+    },
+    {
+      "id": "part_i_r14_gin",
+      "label": "14. Produced — total lines 1 through 13 — Gin",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r14",
+      "column": "gin",
+      "unit": "Proof gallons",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "part_i_r01_gin",
+          "part_i_r02_gin",
+          "part_i_r03_gin",
+          "part_i_r04_gin",
+          "part_i_r05_gin",
+          "part_i_r06_gin",
+          "part_i_r07_gin",
+          "part_i_r08_gin",
+          "part_i_r09_gin",
+          "part_i_r10_gin",
+          "part_i_r11_gin",
+          "part_i_r12_gin",
+          "part_i_r13_gin"
+        ]
+      },
+      "pdfField": "Text8.13.3"
+    },
+    {
+      "id": "part_i_r14_vodka",
+      "label": "14. Produced — total lines 1 through 13 — Vodka",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r14",
+      "column": "vodka",
+      "unit": "Proof gallons",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "part_i_r01_vodka",
+          "part_i_r02_vodka",
+          "part_i_r03_vodka",
+          "part_i_r04_vodka",
+          "part_i_r05_vodka",
+          "part_i_r06_vodka",
+          "part_i_r07_vodka",
+          "part_i_r08_vodka",
+          "part_i_r09_vodka",
+          "part_i_r10_vodka",
+          "part_i_r11_vodka",
+          "part_i_r12_vodka",
+          "part_i_r13_vodka"
+        ]
+      },
+      "pdfField": "Text8.13.4"
+    },
+    {
+      "id": "part_i_r14_alcohol_190_over",
+      "label": "14. Produced — total lines 1 through 13 — Alcohol and spirits 190° and over (distillation proof)",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r14",
+      "column": "alcohol_190_over",
+      "unit": "Proof gallons",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "part_i_r01_alcohol_190_over",
+          "part_i_r02_alcohol_190_over",
+          "part_i_r03_alcohol_190_over",
+          "part_i_r04_alcohol_190_over",
+          "part_i_r05_alcohol_190_over",
+          "part_i_r06_alcohol_190_over",
+          "part_i_r07_alcohol_190_over",
+          "part_i_r08_alcohol_190_over",
+          "part_i_r09_alcohol_190_over",
+          "part_i_r10_alcohol_190_over",
+          "part_i_r11_alcohol_190_over",
+          "part_i_r12_alcohol_190_over",
+          "part_i_r13_alcohol_190_over"
+        ]
+      },
+      "pdfField": "Text8.13.5"
+    },
+    {
+      "id": "part_i_r14_alcohol_under_190",
+      "label": "14. Produced — total lines 1 through 13 — Alcohol and spirits under 190° (distillation proof)",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r14",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "part_i_r01_alcohol_under_190",
+          "part_i_r02_alcohol_under_190",
+          "part_i_r03_alcohol_under_190",
+          "part_i_r04_alcohol_under_190",
+          "part_i_r05_alcohol_under_190",
+          "part_i_r06_alcohol_under_190",
+          "part_i_r07_alcohol_under_190",
+          "part_i_r08_alcohol_under_190",
+          "part_i_r09_alcohol_under_190",
+          "part_i_r10_alcohol_under_190",
+          "part_i_r11_alcohol_under_190",
+          "part_i_r12_alcohol_under_190",
+          "part_i_r13_alcohol_under_190"
+        ]
+      },
+      "pdfField": "Text8.13.6"
+    },
+    {
+      "id": "part_i_r14_other",
+      "label": "14. Produced — total lines 1 through 13 — Other — identify above",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r14",
+      "column": "other",
+      "unit": "Proof gallons",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "part_i_r01_other",
+          "part_i_r02_other",
+          "part_i_r03_other",
+          "part_i_r04_other",
+          "part_i_r05_other",
+          "part_i_r06_other",
+          "part_i_r07_other",
+          "part_i_r08_other",
+          "part_i_r09_other",
+          "part_i_r10_other",
+          "part_i_r11_other",
+          "part_i_r12_other",
+          "part_i_r13_other"
+        ]
+      },
+      "pdfField": "Text8.13.7"
+    },
+    {
+      "id": "part_i_r14_total",
+      "label": "14. Produced — total lines 1 through 13 — Total",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r14",
+      "column": "total",
+      "unit": "Proof gallons",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "part_i_r14_whisky_160_under",
+          "part_i_r14_whisky_over_160",
+          "part_i_r14_brandy_170_under",
+          "part_i_r14_brandy_over_170",
+          "part_i_r14_rum",
+          "part_i_r14_gin",
+          "part_i_r14_vodka",
+          "part_i_r14_alcohol_190_over",
+          "part_i_r14_alcohol_under_190",
+          "part_i_r14_other"
+        ]
+      },
+      "pdfField": "Text8.13.8"
+    },
+    {
+      "id": "part_i_r15_whisky_160_under",
+      "label": "15. Received for redistillation — Whisky 160° and under",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r15",
+      "column": "whisky_160_under",
+      "unit": "Proof gallons",
+      "pdfField": "Text5p"
+    },
+    {
+      "id": "part_i_r15_whisky_over_160",
+      "label": "15. Received for redistillation — Whisky over 160°",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r15",
+      "column": "whisky_over_160",
+      "unit": "Proof gallons",
+      "pdfField": "Text5.10.1"
+    },
+    {
+      "id": "part_i_r15_brandy_170_under",
+      "label": "15. Received for redistillation — Brandy 170° and under",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r15",
+      "column": "brandy_170_under",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.14.0"
+    },
+    {
+      "id": "part_i_r15_brandy_over_170",
+      "label": "15. Received for redistillation — Brandy over 170°",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r15",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.14.1"
+    },
+    {
+      "id": "part_i_r15_rum",
+      "label": "15. Received for redistillation — Rum",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r15",
+      "column": "rum",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.14.2"
+    },
+    {
+      "id": "part_i_r15_gin",
+      "label": "15. Received for redistillation — Gin",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r15",
+      "column": "gin",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.14.3"
+    },
+    {
+      "id": "part_i_r15_vodka",
+      "label": "15. Received for redistillation — Vodka",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r15",
+      "column": "vodka",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.14.4"
+    },
+    {
+      "id": "part_i_r15_alcohol_190_over",
+      "label": "15. Received for redistillation — Alcohol and spirits 190° and over (distillation proof)",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r15",
+      "column": "alcohol_190_over",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.14.5"
+    },
+    {
+      "id": "part_i_r15_alcohol_under_190",
+      "label": "15. Received for redistillation — Alcohol and spirits under 190° (distillation proof)",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r15",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.14.6"
+    },
+    {
+      "id": "part_i_r15_other",
+      "label": "15. Received for redistillation — Other — identify above",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r15",
+      "column": "other",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.14.7"
+    },
+    {
+      "id": "part_i_r15_total",
+      "label": "15. Received for redistillation — Total",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r15",
+      "column": "total",
+      "unit": "Proof gallons",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "part_i_r15_whisky_160_under",
+          "part_i_r15_whisky_over_160",
+          "part_i_r15_brandy_170_under",
+          "part_i_r15_brandy_over_170",
+          "part_i_r15_rum",
+          "part_i_r15_gin",
+          "part_i_r15_vodka",
+          "part_i_r15_alcohol_190_over",
+          "part_i_r15_alcohol_under_190",
+          "part_i_r15_other"
+        ]
+      },
+      "pdfField": "Text8.14.8"
+    },
+    {
+      "id": "part_i_r16_whisky_160_under",
+      "label": "16. Samples returned / other transaction (identify above) — Whisky 160° and under",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r16",
+      "column": "whisky_160_under",
+      "unit": "Proof gallons",
+      "pdfField": "Text5.12.0"
+    },
+    {
+      "id": "part_i_r16_whisky_over_160",
+      "label": "16. Samples returned / other transaction (identify above) — Whisky over 160°",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r16",
+      "column": "whisky_over_160",
+      "unit": "Proof gallons",
+      "pdfField": "Text5.11.1"
+    },
+    {
+      "id": "part_i_r16_brandy_170_under",
+      "label": "16. Samples returned / other transaction (identify above) — Brandy 170° and under",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r16",
+      "column": "brandy_170_under",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.15.0"
+    },
+    {
+      "id": "part_i_r16_brandy_over_170",
+      "label": "16. Samples returned / other transaction (identify above) — Brandy over 170°",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r16",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.15.1"
+    },
+    {
+      "id": "part_i_r16_rum",
+      "label": "16. Samples returned / other transaction (identify above) — Rum",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r16",
+      "column": "rum",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.15.2"
+    },
+    {
+      "id": "part_i_r16_gin",
+      "label": "16. Samples returned / other transaction (identify above) — Gin",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r16",
+      "column": "gin",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.15.3"
+    },
+    {
+      "id": "part_i_r16_vodka",
+      "label": "16. Samples returned / other transaction (identify above) — Vodka",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r16",
+      "column": "vodka",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.15.4"
+    },
+    {
+      "id": "part_i_r16_alcohol_190_over",
+      "label": "16. Samples returned / other transaction (identify above) — Alcohol and spirits 190° and over (distillation proof)",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r16",
+      "column": "alcohol_190_over",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.15.5"
+    },
+    {
+      "id": "part_i_r16_alcohol_under_190",
+      "label": "16. Samples returned / other transaction (identify above) — Alcohol and spirits under 190° (distillation proof)",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r16",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.15.6"
+    },
+    {
+      "id": "part_i_r16_other",
+      "label": "16. Samples returned / other transaction (identify above) — Other — identify above",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r16",
+      "column": "other",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.15.7"
+    },
+    {
+      "id": "part_i_r16_total",
+      "label": "16. Samples returned / other transaction (identify above) — Total",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r16",
+      "column": "total",
+      "unit": "Proof gallons",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "part_i_r16_whisky_160_under",
+          "part_i_r16_whisky_over_160",
+          "part_i_r16_brandy_170_under",
+          "part_i_r16_brandy_over_170",
+          "part_i_r16_rum",
+          "part_i_r16_gin",
+          "part_i_r16_vodka",
+          "part_i_r16_alcohol_190_over",
+          "part_i_r16_alcohol_under_190",
+          "part_i_r16_other"
+        ]
+      },
+      "pdfField": "Text8.15.8"
+    },
+    {
+      "id": "part_i_r17a_whisky_160_under",
+      "label": "17(a). Quarter-end physical inventory — received for redistillation — Whisky 160° and under",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r17a",
+      "column": "whisky_160_under",
+      "unit": "Proof gallons",
+      "pdfField": "Text5.13r"
+    },
+    {
+      "id": "part_i_r17a_whisky_over_160",
+      "label": "17(a). Quarter-end physical inventory — received for redistillation — Whisky over 160°",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r17a",
+      "column": "whisky_over_160",
+      "unit": "Proof gallons",
+      "pdfField": "Text5.13.1"
+    },
+    {
+      "id": "part_i_r17a_brandy_170_under",
+      "label": "17(a). Quarter-end physical inventory — received for redistillation — Brandy 170° and under",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r17a",
+      "column": "brandy_170_under",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.16.0"
+    },
+    {
+      "id": "part_i_r17a_brandy_over_170",
+      "label": "17(a). Quarter-end physical inventory — received for redistillation — Brandy over 170°",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r17a",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.16.1"
+    },
+    {
+      "id": "part_i_r17a_rum",
+      "label": "17(a). Quarter-end physical inventory — received for redistillation — Rum",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r17a",
+      "column": "rum",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.16.2"
+    },
+    {
+      "id": "part_i_r17a_gin",
+      "label": "17(a). Quarter-end physical inventory — received for redistillation — Gin",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r17a",
+      "column": "gin",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.16.3"
+    },
+    {
+      "id": "part_i_r17a_vodka",
+      "label": "17(a). Quarter-end physical inventory — received for redistillation — Vodka",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r17a",
+      "column": "vodka",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.16.4"
+    },
+    {
+      "id": "part_i_r17a_alcohol_190_over",
+      "label": "17(a). Quarter-end physical inventory — received for redistillation — Alcohol and spirits 190° and over (distillation proof)",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r17a",
+      "column": "alcohol_190_over",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.16.5"
+    },
+    {
+      "id": "part_i_r17a_alcohol_under_190",
+      "label": "17(a). Quarter-end physical inventory — received for redistillation — Alcohol and spirits under 190° (distillation proof)",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r17a",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.16.6"
+    },
+    {
+      "id": "part_i_r17a_other",
+      "label": "17(a). Quarter-end physical inventory — received for redistillation — Other — identify above",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r17a",
+      "column": "other",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.16.7"
+    },
+    {
+      "id": "part_i_r17a_total",
+      "label": "17(a). Quarter-end physical inventory — received for redistillation — Total",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r17a",
+      "column": "total",
+      "unit": "Proof gallons",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "part_i_r17a_whisky_160_under",
+          "part_i_r17a_whisky_over_160",
+          "part_i_r17a_brandy_170_under",
+          "part_i_r17a_brandy_over_170",
+          "part_i_r17a_rum",
+          "part_i_r17a_gin",
+          "part_i_r17a_vodka",
+          "part_i_r17a_alcohol_190_over",
+          "part_i_r17a_alcohol_under_190",
+          "part_i_r17a_other"
+        ]
+      },
+      "pdfField": "Text8.16.8"
+    },
+    {
+      "id": "part_i_r17b_whisky_160_under",
+      "label": "17(b). Quarter-end physical inventory — unfinished spirits — Whisky 160° and under",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r17b",
+      "column": "whisky_160_under",
+      "unit": "Proof gallons",
+      "pdfField": "Text5.14s"
+    },
+    {
+      "id": "part_i_r17b_whisky_over_160",
+      "label": "17(b). Quarter-end physical inventory — unfinished spirits — Whisky over 160°",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r17b",
+      "column": "whisky_over_160",
+      "unit": "Proof gallons",
+      "pdfField": "Text5.14.1"
+    },
+    {
+      "id": "part_i_r17b_brandy_170_under",
+      "label": "17(b). Quarter-end physical inventory — unfinished spirits — Brandy 170° and under",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r17b",
+      "column": "brandy_170_under",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.17.0"
+    },
+    {
+      "id": "part_i_r17b_brandy_over_170",
+      "label": "17(b). Quarter-end physical inventory — unfinished spirits — Brandy over 170°",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r17b",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.17.1"
+    },
+    {
+      "id": "part_i_r17b_rum",
+      "label": "17(b). Quarter-end physical inventory — unfinished spirits — Rum",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r17b",
+      "column": "rum",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.17.2"
+    },
+    {
+      "id": "part_i_r17b_gin",
+      "label": "17(b). Quarter-end physical inventory — unfinished spirits — Gin",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r17b",
+      "column": "gin",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.17.3"
+    },
+    {
+      "id": "part_i_r17b_vodka",
+      "label": "17(b). Quarter-end physical inventory — unfinished spirits — Vodka",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r17b",
+      "column": "vodka",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.17.4"
+    },
+    {
+      "id": "part_i_r17b_alcohol_190_over",
+      "label": "17(b). Quarter-end physical inventory — unfinished spirits — Alcohol and spirits 190° and over (distillation proof)",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r17b",
+      "column": "alcohol_190_over",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.17.5"
+    },
+    {
+      "id": "part_i_r17b_alcohol_under_190",
+      "label": "17(b). Quarter-end physical inventory — unfinished spirits — Alcohol and spirits under 190° (distillation proof)",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r17b",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.17.6"
+    },
+    {
+      "id": "part_i_r17b_other",
+      "label": "17(b). Quarter-end physical inventory — unfinished spirits — Other — identify above",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r17b",
+      "column": "other",
+      "unit": "Proof gallons",
+      "pdfField": "Text8.17.7"
+    },
+    {
+      "id": "part_i_r17b_total",
+      "label": "17(b). Quarter-end physical inventory — unfinished spirits — Total",
+      "section": "part_i",
+      "type": "number",
+      "required": false,
+      "row": "r17b",
+      "column": "total",
+      "unit": "Proof gallons",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "part_i_r17b_whisky_160_under",
+          "part_i_r17b_whisky_over_160",
+          "part_i_r17b_brandy_170_under",
+          "part_i_r17b_brandy_over_170",
+          "part_i_r17b_rum",
+          "part_i_r17b_gin",
+          "part_i_r17b_vodka",
+          "part_i_r17b_alcohol_190_over",
+          "part_i_r17b_alcohol_under_190",
+          "part_i_r17b_other"
+        ]
+      },
+      "pdfField": "Text8.17.8"
+    },
+    {
+      "id": "part_ii_r01_proof_gallons",
+      "label": "1. Grain — proof gallons",
+      "section": "part_ii",
+      "type": "number",
+      "required": false,
+      "row": "r01",
+      "column": "proof_gallons",
+      "unit": "Proof gallons",
+      "pdfField": "Text10.0"
+    },
+    {
+      "id": "part_ii_r02_proof_gallons",
+      "label": "2. Fruit — proof gallons",
+      "section": "part_ii",
+      "type": "number",
+      "required": false,
+      "row": "r02",
+      "column": "proof_gallons",
+      "unit": "Proof gallons",
+      "pdfField": "Text10.1"
+    },
+    {
+      "id": "part_ii_r03_proof_gallons",
+      "label": "3. Molasses — proof gallons",
+      "section": "part_ii",
+      "type": "number",
+      "required": false,
+      "row": "r03",
+      "column": "proof_gallons",
+      "unit": "Proof gallons",
+      "pdfField": "Text10.2"
+    },
+    {
+      "id": "part_ii_r04_proof_gallons",
+      "label": "4. Ethyl sulfate — proof gallons",
+      "section": "part_ii",
+      "type": "number",
+      "required": false,
+      "row": "r04",
+      "column": "proof_gallons",
+      "unit": "Proof gallons",
+      "pdfField": "Text10.3"
+    },
+    {
+      "id": "part_ii_r05_proof_gallons",
+      "label": "5. Ethylene gas — proof gallons",
+      "section": "part_ii",
+      "type": "number",
+      "required": false,
+      "row": "r05",
+      "column": "proof_gallons",
+      "unit": "Proof gallons",
+      "pdfField": "Text10.4"
+    },
+    {
+      "id": "part_ii_r06_proof_gallons",
+      "label": "6. Sulphite liquors — proof gallons",
+      "section": "part_ii",
+      "type": "number",
+      "required": false,
+      "row": "r06",
+      "column": "proof_gallons",
+      "unit": "Proof gallons",
+      "pdfField": "Text10.5"
+    },
+    {
+      "id": "part_ii_r07_proof_gallons",
+      "label": "7. From redistillation — proof gallons",
+      "section": "part_ii",
+      "type": "number",
+      "required": false,
+      "row": "r07",
+      "column": "proof_gallons",
+      "unit": "Proof gallons",
+      "pdfField": "Text10.6"
+    },
+    {
+      "id": "part_ii_r08_proof_gallons",
+      "label": "8. Other material (identify) — proof gallons",
+      "section": "part_ii",
+      "type": "number",
+      "required": false,
+      "row": "r08",
+      "column": "proof_gallons",
+      "unit": "Proof gallons",
+      "pdfField": "Text10.7"
+    },
+    {
+      "id": "part_ii_r08_kind",
+      "label": "8. Other material description",
+      "section": "part_ii",
+      "type": "text",
+      "required": false,
+      "row": "r08",
+      "column": "kind",
+      "pdfField": "Text9"
+    },
+    {
+      "id": "part_iii_r01_new_cooperage",
+      "label": "1. Bourbon — New cooperage",
+      "section": "part_iii",
+      "type": "number",
+      "required": false,
+      "row": "r01",
+      "column": "new_cooperage",
+      "unit": "Proof gallons",
+      "pdfField": "Text11.0.0"
+    },
+    {
+      "id": "part_iii_r01_used_cooperage",
+      "label": "1. Bourbon — Used cooperage",
+      "section": "part_iii",
+      "type": "number",
+      "required": false,
+      "row": "r01",
+      "column": "used_cooperage",
+      "unit": "Proof gallons",
+      "pdfField": "Text11.0.1"
+    },
+    {
+      "id": "part_iii_r01_tanks",
+      "label": "1. Bourbon — Deposited in tanks",
+      "section": "part_iii",
+      "type": "number",
+      "required": false,
+      "row": "r01",
+      "column": "tanks",
+      "unit": "Proof gallons",
+      "pdfField": "Text11.0.2"
+    },
+    {
+      "id": "part_iii_r02_new_cooperage",
+      "label": "2. Corn — New cooperage",
+      "section": "part_iii",
+      "type": "number",
+      "required": false,
+      "row": "r02",
+      "column": "new_cooperage",
+      "unit": "Proof gallons",
+      "pdfField": "Text11.1.0"
+    },
+    {
+      "id": "part_iii_r02_used_cooperage",
+      "label": "2. Corn — Used cooperage",
+      "section": "part_iii",
+      "type": "number",
+      "required": false,
+      "row": "r02",
+      "column": "used_cooperage",
+      "unit": "Proof gallons",
+      "pdfField": "Text11.1.1"
+    },
+    {
+      "id": "part_iii_r02_tanks",
+      "label": "2. Corn — Deposited in tanks",
+      "section": "part_iii",
+      "type": "number",
+      "required": false,
+      "row": "r02",
+      "column": "tanks",
+      "unit": "Proof gallons",
+      "pdfField": "Text11.1.2"
+    },
+    {
+      "id": "part_iii_r03_new_cooperage",
+      "label": "3. Rye — New cooperage",
+      "section": "part_iii",
+      "type": "number",
+      "required": false,
+      "row": "r03",
+      "column": "new_cooperage",
+      "unit": "Proof gallons",
+      "pdfField": "Text11.2.0"
+    },
+    {
+      "id": "part_iii_r03_used_cooperage",
+      "label": "3. Rye — Used cooperage",
+      "section": "part_iii",
+      "type": "number",
+      "required": false,
+      "row": "r03",
+      "column": "used_cooperage",
+      "unit": "Proof gallons",
+      "pdfField": "Text11.2.1"
+    },
+    {
+      "id": "part_iii_r03_tanks",
+      "label": "3. Rye — Deposited in tanks",
+      "section": "part_iii",
+      "type": "number",
+      "required": false,
+      "row": "r03",
+      "column": "tanks",
+      "unit": "Proof gallons",
+      "pdfField": "Text11.2.2"
+    },
+    {
+      "id": "part_iii_r04_new_cooperage",
+      "label": "4. Light — New cooperage",
+      "section": "part_iii",
+      "type": "number",
+      "required": false,
+      "row": "r04",
+      "column": "new_cooperage",
+      "unit": "Proof gallons",
+      "pdfField": "Text11.3.0"
+    },
+    {
+      "id": "part_iii_r04_used_cooperage",
+      "label": "4. Light — Used cooperage",
+      "section": "part_iii",
+      "type": "number",
+      "required": false,
+      "row": "r04",
+      "column": "used_cooperage",
+      "unit": "Proof gallons",
+      "pdfField": "Text11.3.1"
+    },
+    {
+      "id": "part_iii_r04_tanks",
+      "label": "4. Light — Deposited in tanks",
+      "section": "part_iii",
+      "type": "number",
+      "required": false,
+      "row": "r04",
+      "column": "tanks",
+      "unit": "Proof gallons",
+      "pdfField": "Text11.3.2"
+    },
+    {
+      "id": "part_iii_r05_kind",
+      "label": "5. Other whisky — kind",
+      "section": "part_iii",
+      "type": "text",
+      "required": false,
+      "row": "r05",
+      "column": "kind",
+      "pdfField": "Text12.0"
+    },
+    {
+      "id": "part_iii_r05_new_cooperage",
+      "label": "5. Other whisky — New cooperage",
+      "section": "part_iii",
+      "type": "number",
+      "required": false,
+      "row": "r05",
+      "column": "new_cooperage",
+      "unit": "Proof gallons",
+      "pdfField": "Text11.4.0"
+    },
+    {
+      "id": "part_iii_r05_used_cooperage",
+      "label": "5. Other whisky — Used cooperage",
+      "section": "part_iii",
+      "type": "number",
+      "required": false,
+      "row": "r05",
+      "column": "used_cooperage",
+      "unit": "Proof gallons",
+      "pdfField": "Text11.4.1"
+    },
+    {
+      "id": "part_iii_r05_tanks",
+      "label": "5. Other whisky — Deposited in tanks",
+      "section": "part_iii",
+      "type": "number",
+      "required": false,
+      "row": "r05",
+      "column": "tanks",
+      "unit": "Proof gallons",
+      "pdfField": "Text11.4.2"
+    },
+    {
+      "id": "part_iii_r06_kind",
+      "label": "6. Other whisky — kind",
+      "section": "part_iii",
+      "type": "text",
+      "required": false,
+      "row": "r06",
+      "column": "kind",
+      "pdfField": "Text12.1"
+    },
+    {
+      "id": "part_iii_r06_new_cooperage",
+      "label": "6. Other whisky — New cooperage",
+      "section": "part_iii",
+      "type": "number",
+      "required": false,
+      "row": "r06",
+      "column": "new_cooperage",
+      "unit": "Proof gallons",
+      "pdfField": "Text11.5.0"
+    },
+    {
+      "id": "part_iii_r06_used_cooperage",
+      "label": "6. Other whisky — Used cooperage",
+      "section": "part_iii",
+      "type": "number",
+      "required": false,
+      "row": "r06",
+      "column": "used_cooperage",
+      "unit": "Proof gallons",
+      "pdfField": "Text11.5.1"
+    },
+    {
+      "id": "part_iii_r06_tanks",
+      "label": "6. Other whisky — Deposited in tanks",
+      "section": "part_iii",
+      "type": "number",
+      "required": false,
+      "row": "r06",
+      "column": "tanks",
+      "unit": "Proof gallons",
+      "pdfField": "Text11.5.2"
+    },
+    {
+      "id": "part_iii_r07_kind",
+      "label": "7. Other whisky — kind",
+      "section": "part_iii",
+      "type": "text",
+      "required": false,
+      "row": "r07",
+      "column": "kind",
+      "pdfField": "Text12.2"
+    },
+    {
+      "id": "part_iii_r07_new_cooperage",
+      "label": "7. Other whisky — New cooperage",
+      "section": "part_iii",
+      "type": "number",
+      "required": false,
+      "row": "r07",
+      "column": "new_cooperage",
+      "unit": "Proof gallons",
+      "pdfField": "Text11.6.0"
+    },
+    {
+      "id": "part_iii_r07_used_cooperage",
+      "label": "7. Other whisky — Used cooperage",
+      "section": "part_iii",
+      "type": "number",
+      "required": false,
+      "row": "r07",
+      "column": "used_cooperage",
+      "unit": "Proof gallons",
+      "pdfField": "Text11.6.1"
+    },
+    {
+      "id": "part_iii_r07_tanks",
+      "label": "7. Other whisky — Deposited in tanks",
+      "section": "part_iii",
+      "type": "number",
+      "required": false,
+      "row": "r07",
+      "column": "tanks",
+      "unit": "Proof gallons",
+      "pdfField": "Text11.6.2"
+    },
+    {
+      "id": "part_iii_r08_kind",
+      "label": "8. Other whisky — kind",
+      "section": "part_iii",
+      "type": "text",
+      "required": false,
+      "row": "r08",
+      "column": "kind",
+      "pdfField": "Text12.3"
+    },
+    {
+      "id": "part_iii_r08_new_cooperage",
+      "label": "8. Other whisky — New cooperage",
+      "section": "part_iii",
+      "type": "number",
+      "required": false,
+      "row": "r08",
+      "column": "new_cooperage",
+      "unit": "Proof gallons",
+      "pdfField": "Text11.7.0"
+    },
+    {
+      "id": "part_iii_r08_used_cooperage",
+      "label": "8. Other whisky — Used cooperage",
+      "section": "part_iii",
+      "type": "number",
+      "required": false,
+      "row": "r08",
+      "column": "used_cooperage",
+      "unit": "Proof gallons",
+      "pdfField": "Text11.7.1"
+    },
+    {
+      "id": "part_iii_r08_tanks",
+      "label": "8. Other whisky — Deposited in tanks",
+      "section": "part_iii",
+      "type": "number",
+      "required": false,
+      "row": "r08",
+      "column": "tanks",
+      "unit": "Proof gallons",
+      "pdfField": "Text11.7.2"
+    },
+    {
+      "id": "part_iv_r01_proof_gallons",
+      "label": "1. Grape brandy — proof gallons",
+      "section": "part_iv",
+      "type": "number",
+      "required": false,
+      "row": "r01",
+      "column": "proof_gallons",
+      "unit": "Proof gallons",
+      "pdfField": "Text14.0.0"
+    },
+    {
+      "id": "part_iv_r02_proof_gallons",
+      "label": "2. All other brandy — proof gallons",
+      "section": "part_iv",
+      "type": "number",
+      "required": false,
+      "row": "r02",
+      "column": "proof_gallons",
+      "unit": "Proof gallons",
+      "pdfField": "Text14.1.0"
+    },
+    {
+      "id": "part_iv_r03_proof_gallons",
+      "label": "3. Neutral grape brandy — proof gallons",
+      "section": "part_iv",
+      "type": "number",
+      "required": false,
+      "row": "r03",
+      "column": "proof_gallons",
+      "unit": "Proof gallons",
+      "pdfField": "Text14.2.0"
+    },
+    {
+      "id": "part_iv_r04_proof_gallons",
+      "label": "4. All other neutral brandy — proof gallons",
+      "section": "part_iv",
+      "type": "number",
+      "required": false,
+      "row": "r04",
+      "column": "proof_gallons",
+      "unit": "Proof gallons",
+      "pdfField": "Text14.3.0"
+    },
+    {
+      "id": "part_iv_r05_kind",
+      "label": "5. Other brandy — kind",
+      "section": "part_iv",
+      "type": "text",
+      "required": false,
+      "row": "r05",
+      "column": "kind",
+      "pdfField": "Text13.0"
+    },
+    {
+      "id": "part_iv_r05_proof_gallons",
+      "label": "5. Other brandy — proof gallons",
+      "section": "part_iv",
+      "type": "number",
+      "required": false,
+      "row": "r05",
+      "column": "proof_gallons",
+      "unit": "Proof gallons",
+      "pdfField": "Text14.4.0"
+    },
+    {
+      "id": "part_iv_r06_kind",
+      "label": "6. Other brandy — kind",
+      "section": "part_iv",
+      "type": "text",
+      "required": false,
+      "row": "r06",
+      "column": "kind",
+      "pdfField": "Text13.1"
+    },
+    {
+      "id": "part_iv_r06_proof_gallons",
+      "label": "6. Other brandy — proof gallons",
+      "section": "part_iv",
+      "type": "number",
+      "required": false,
+      "row": "r06",
+      "column": "proof_gallons",
+      "unit": "Proof gallons",
+      "pdfField": "Text14.5.0"
+    },
+    {
+      "id": "part_iv_r07_kind",
+      "label": "7. Other brandy — kind",
+      "section": "part_iv",
+      "type": "text",
+      "required": false,
+      "row": "r07",
+      "column": "kind",
+      "pdfField": "Text13.2"
+    },
+    {
+      "id": "part_iv_r07_proof_gallons",
+      "label": "7. Other brandy — proof gallons",
+      "section": "part_iv",
+      "type": "number",
+      "required": false,
+      "row": "r07",
+      "column": "proof_gallons",
+      "unit": "Proof gallons",
+      "pdfField": "Text14.6.0"
+    },
+    {
+      "id": "part_iv_r08_kind",
+      "label": "8. Other brandy — kind",
+      "section": "part_iv",
+      "type": "text",
+      "required": false,
+      "row": "r08",
+      "column": "kind",
+      "pdfField": "Text13.3"
+    },
+    {
+      "id": "part_iv_r08_proof_gallons",
+      "label": "8. Other brandy — proof gallons",
+      "section": "part_iv",
+      "type": "number",
+      "required": false,
+      "row": "r08",
+      "column": "proof_gallons",
+      "unit": "Proof gallons",
+      "pdfField": "Text14.7.0"
+    },
+    {
+      "id": "part_v_r01_kind",
+      "label": "1. Spirits used — kind",
+      "section": "part_v",
+      "type": "text",
+      "required": false,
+      "row": "r01",
+      "column": "kind",
+      "pdfField": "Text14.0.1"
+    },
+    {
+      "id": "part_v_r01_proof_gallons",
+      "label": "1. Spirits used — proof gallons",
+      "section": "part_v",
+      "type": "number",
+      "required": false,
+      "row": "r01",
+      "column": "proof_gallons",
+      "unit": "Proof gallons",
+      "pdfField": "Text14.0.2"
+    },
+    {
+      "id": "part_v_r02_kind",
+      "label": "2. Spirits used — kind",
+      "section": "part_v",
+      "type": "text",
+      "required": false,
+      "row": "r02",
+      "column": "kind",
+      "pdfField": "Text14.1.1"
+    },
+    {
+      "id": "part_v_r02_proof_gallons",
+      "label": "2. Spirits used — proof gallons",
+      "section": "part_v",
+      "type": "number",
+      "required": false,
+      "row": "r02",
+      "column": "proof_gallons",
+      "unit": "Proof gallons",
+      "pdfField": "Text14.1.2"
+    },
+    {
+      "id": "part_v_r03_kind",
+      "label": "3. Spirits used — kind",
+      "section": "part_v",
+      "type": "text",
+      "required": false,
+      "row": "r03",
+      "column": "kind",
+      "pdfField": "Text14.2.1"
+    },
+    {
+      "id": "part_v_r03_proof_gallons",
+      "label": "3. Spirits used — proof gallons",
+      "section": "part_v",
+      "type": "number",
+      "required": false,
+      "row": "r03",
+      "column": "proof_gallons",
+      "unit": "Proof gallons",
+      "pdfField": "Text14.2.2"
+    },
+    {
+      "id": "part_v_r04_kind",
+      "label": "4. Spirits used — kind",
+      "section": "part_v",
+      "type": "text",
+      "required": false,
+      "row": "r04",
+      "column": "kind",
+      "pdfField": "Text14.3.1"
+    },
+    {
+      "id": "part_v_r04_proof_gallons",
+      "label": "4. Spirits used — proof gallons",
+      "section": "part_v",
+      "type": "number",
+      "required": false,
+      "row": "r04",
+      "column": "proof_gallons",
+      "unit": "Proof gallons",
+      "pdfField": "Text14.3.2"
+    },
+    {
+      "id": "part_v_r05_kind",
+      "label": "5. Spirits used — kind",
+      "section": "part_v",
+      "type": "text",
+      "required": false,
+      "row": "r05",
+      "column": "kind",
+      "pdfField": "Text14.4.1"
+    },
+    {
+      "id": "part_v_r05_proof_gallons",
+      "label": "5. Spirits used — proof gallons",
+      "section": "part_v",
+      "type": "number",
+      "required": false,
+      "row": "r05",
+      "column": "proof_gallons",
+      "unit": "Proof gallons",
+      "pdfField": "Text14.4.2"
+    },
+    {
+      "id": "part_v_r06_kind",
+      "label": "6. Spirits used — kind",
+      "section": "part_v",
+      "type": "text",
+      "required": false,
+      "row": "r06",
+      "column": "kind",
+      "pdfField": "Text14.5.1"
+    },
+    {
+      "id": "part_v_r06_proof_gallons",
+      "label": "6. Spirits used — proof gallons",
+      "section": "part_v",
+      "type": "number",
+      "required": false,
+      "row": "r06",
+      "column": "proof_gallons",
+      "unit": "Proof gallons",
+      "pdfField": "Text14.5.2"
+    },
+    {
+      "id": "part_v_r07_kind",
+      "label": "7. Spirits used — kind",
+      "section": "part_v",
+      "type": "text",
+      "required": false,
+      "row": "r07",
+      "column": "kind",
+      "pdfField": "Text14.6.1"
+    },
+    {
+      "id": "part_v_r07_proof_gallons",
+      "label": "7. Spirits used — proof gallons",
+      "section": "part_v",
+      "type": "number",
+      "required": false,
+      "row": "r07",
+      "column": "proof_gallons",
+      "unit": "Proof gallons",
+      "pdfField": "Text14.6.2"
+    },
+    {
+      "id": "part_v_r08_kind",
+      "label": "8. Spirits used — kind",
+      "section": "part_v",
+      "type": "text",
+      "required": false,
+      "row": "r08",
+      "column": "kind",
+      "pdfField": "Text31"
+    },
+    {
+      "id": "part_v_r08_proof_gallons",
+      "label": "8. Spirits used — proof gallons",
+      "section": "part_v",
+      "type": "number",
+      "required": false,
+      "row": "r08",
+      "column": "proof_gallons",
+      "unit": "Proof gallons",
+      "pdfField": "Text32"
+    },
+    {
+      "id": "part_vi_r01_production_pounds",
+      "label": "1. Corn — Used in distilled-spirits production — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r01",
+      "column": "production_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.0.0"
+    },
+    {
+      "id": "part_vi_r01_production_gallons",
+      "label": "1. Corn — Used in distilled-spirits production — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r01",
+      "column": "production_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.0.1"
+    },
+    {
+      "id": "part_vi_r01_other_pounds",
+      "label": "1. Corn — Used in manufacture of other substances yielding spirits as by-product — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r01",
+      "column": "other_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.0.2"
+    },
+    {
+      "id": "part_vi_r01_other_gallons",
+      "label": "1. Corn — Used in manufacture of other substances yielding spirits as by-product — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r01",
+      "column": "other_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.0.3"
+    },
+    {
+      "id": "part_vi_r02_production_pounds",
+      "label": "2. Rye — Used in distilled-spirits production — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r02",
+      "column": "production_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.1.0.0"
+    },
+    {
+      "id": "part_vi_r02_production_gallons",
+      "label": "2. Rye — Used in distilled-spirits production — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r02",
+      "column": "production_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.1.0.1"
+    },
+    {
+      "id": "part_vi_r02_other_pounds",
+      "label": "2. Rye — Used in manufacture of other substances yielding spirits as by-product — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r02",
+      "column": "other_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.1.0.2"
+    },
+    {
+      "id": "part_vi_r02_other_gallons",
+      "label": "2. Rye — Used in manufacture of other substances yielding spirits as by-product — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r02",
+      "column": "other_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.1.3"
+    },
+    {
+      "id": "part_vi_r03_production_pounds",
+      "label": "3. Malt — Used in distilled-spirits production — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r03",
+      "column": "production_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.2.3.0"
+    },
+    {
+      "id": "part_vi_r03_production_gallons",
+      "label": "3. Malt — Used in distilled-spirits production — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r03",
+      "column": "production_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.2.3.1"
+    },
+    {
+      "id": "part_vi_r03_other_pounds",
+      "label": "3. Malt — Used in manufacture of other substances yielding spirits as by-product — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r03",
+      "column": "other_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.2.3.2"
+    },
+    {
+      "id": "part_vi_r03_other_gallons",
+      "label": "3. Malt — Used in manufacture of other substances yielding spirits as by-product — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r03",
+      "column": "other_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.2.3.3"
+    },
+    {
+      "id": "part_vi_r04_production_pounds",
+      "label": "4. Wheat — Used in distilled-spirits production — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r04",
+      "column": "production_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.3.3.0"
+    },
+    {
+      "id": "part_vi_r04_production_gallons",
+      "label": "4. Wheat — Used in distilled-spirits production — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r04",
+      "column": "production_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.3.3.1"
+    },
+    {
+      "id": "part_vi_r04_other_pounds",
+      "label": "4. Wheat — Used in manufacture of other substances yielding spirits as by-product — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r04",
+      "column": "other_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.3.3.2"
+    },
+    {
+      "id": "part_vi_r04_other_gallons",
+      "label": "4. Wheat — Used in manufacture of other substances yielding spirits as by-product — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r04",
+      "column": "other_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.3.3.3"
+    },
+    {
+      "id": "part_vi_r05_production_pounds",
+      "label": "5. Sorghum grain — Used in distilled-spirits production — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r05",
+      "column": "production_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.4.3.0"
+    },
+    {
+      "id": "part_vi_r05_production_gallons",
+      "label": "5. Sorghum grain — Used in distilled-spirits production — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r05",
+      "column": "production_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.4.3.1"
+    },
+    {
+      "id": "part_vi_r05_other_pounds",
+      "label": "5. Sorghum grain — Used in manufacture of other substances yielding spirits as by-product — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r05",
+      "column": "other_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.4.3.2"
+    },
+    {
+      "id": "part_vi_r05_other_gallons",
+      "label": "5. Sorghum grain — Used in manufacture of other substances yielding spirits as by-product — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r05",
+      "column": "other_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.4.3.3"
+    },
+    {
+      "id": "part_vi_r06_production_pounds",
+      "label": "6. Barley — Used in distilled-spirits production — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r06",
+      "column": "production_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.5.3.0"
+    },
+    {
+      "id": "part_vi_r06_production_gallons",
+      "label": "6. Barley — Used in distilled-spirits production — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r06",
+      "column": "production_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.5.3.1"
+    },
+    {
+      "id": "part_vi_r06_other_pounds",
+      "label": "6. Barley — Used in manufacture of other substances yielding spirits as by-product — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r06",
+      "column": "other_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.5.3.2"
+    },
+    {
+      "id": "part_vi_r06_other_gallons",
+      "label": "6. Barley — Used in manufacture of other substances yielding spirits as by-product — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r06",
+      "column": "other_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.5.3.3"
+    },
+    {
+      "id": "part_vi_r07_production_pounds",
+      "label": "7. Other grain or grain product — Used in distilled-spirits production — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r07",
+      "column": "production_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.6.3.0"
+    },
+    {
+      "id": "part_vi_r07_production_gallons",
+      "label": "7. Other grain or grain product — Used in distilled-spirits production — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r07",
+      "column": "production_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.6.3.1"
+    },
+    {
+      "id": "part_vi_r07_other_pounds",
+      "label": "7. Other grain or grain product — Used in manufacture of other substances yielding spirits as by-product — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r07",
+      "column": "other_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.6.3.2"
+    },
+    {
+      "id": "part_vi_r07_other_gallons",
+      "label": "7. Other grain or grain product — Used in manufacture of other substances yielding spirits as by-product — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r07",
+      "column": "other_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.6.3.3"
+    },
+    {
+      "id": "part_vi_r08_production_pounds",
+      "label": "8. Other grain or grain product — Used in distilled-spirits production — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r08",
+      "column": "production_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.7.3.0"
+    },
+    {
+      "id": "part_vi_r08_production_gallons",
+      "label": "8. Other grain or grain product — Used in distilled-spirits production — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r08",
+      "column": "production_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.7.3.1"
+    },
+    {
+      "id": "part_vi_r08_other_pounds",
+      "label": "8. Other grain or grain product — Used in manufacture of other substances yielding spirits as by-product — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r08",
+      "column": "other_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.7.3.2"
+    },
+    {
+      "id": "part_vi_r08_other_gallons",
+      "label": "8. Other grain or grain product — Used in manufacture of other substances yielding spirits as by-product — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r08",
+      "column": "other_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.7.3.3"
+    },
+    {
+      "id": "part_vi_r09_production_pounds",
+      "label": "9. Grape — Used in distilled-spirits production — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r09",
+      "column": "production_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.8.3.0"
+    },
+    {
+      "id": "part_vi_r09_production_gallons",
+      "label": "9. Grape — Used in distilled-spirits production — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r09",
+      "column": "production_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.8.3.1"
+    },
+    {
+      "id": "part_vi_r09_other_pounds",
+      "label": "9. Grape — Used in manufacture of other substances yielding spirits as by-product — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r09",
+      "column": "other_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.8.3.2"
+    },
+    {
+      "id": "part_vi_r09_other_gallons",
+      "label": "9. Grape — Used in manufacture of other substances yielding spirits as by-product — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r09",
+      "column": "other_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.8.3.3"
+    },
+    {
+      "id": "part_vi_r10_production_pounds",
+      "label": "10. Other fruit or fruit product — Used in distilled-spirits production — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r10",
+      "column": "production_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.9.3.0"
+    },
+    {
+      "id": "part_vi_r10_production_gallons",
+      "label": "10. Other fruit or fruit product — Used in distilled-spirits production — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r10",
+      "column": "production_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.9.3.1"
+    },
+    {
+      "id": "part_vi_r10_other_pounds",
+      "label": "10. Other fruit or fruit product — Used in manufacture of other substances yielding spirits as by-product — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r10",
+      "column": "other_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.9.3.2"
+    },
+    {
+      "id": "part_vi_r10_other_gallons",
+      "label": "10. Other fruit or fruit product — Used in manufacture of other substances yielding spirits as by-product — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r10",
+      "column": "other_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.9.3.3"
+    },
+    {
+      "id": "part_vi_r11_production_pounds",
+      "label": "11. Other fruit or fruit product — Used in distilled-spirits production — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r11",
+      "column": "production_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.10.3.0"
+    },
+    {
+      "id": "part_vi_r11_production_gallons",
+      "label": "11. Other fruit or fruit product — Used in distilled-spirits production — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r11",
+      "column": "production_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.10.3.1"
+    },
+    {
+      "id": "part_vi_r11_other_pounds",
+      "label": "11. Other fruit or fruit product — Used in manufacture of other substances yielding spirits as by-product — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r11",
+      "column": "other_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.10.3.2"
+    },
+    {
+      "id": "part_vi_r11_other_gallons",
+      "label": "11. Other fruit or fruit product — Used in manufacture of other substances yielding spirits as by-product — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r11",
+      "column": "other_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.10.3.3"
+    },
+    {
+      "id": "part_vi_r12_production_pounds",
+      "label": "12. Other fruit or fruit product — Used in distilled-spirits production — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r12",
+      "column": "production_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.11.3.0"
+    },
+    {
+      "id": "part_vi_r12_production_gallons",
+      "label": "12. Other fruit or fruit product — Used in distilled-spirits production — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r12",
+      "column": "production_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.11.3.1"
+    },
+    {
+      "id": "part_vi_r12_other_pounds",
+      "label": "12. Other fruit or fruit product — Used in manufacture of other substances yielding spirits as by-product — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r12",
+      "column": "other_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.11.3.2"
+    },
+    {
+      "id": "part_vi_r12_other_gallons",
+      "label": "12. Other fruit or fruit product — Used in manufacture of other substances yielding spirits as by-product — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r12",
+      "column": "other_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.11.3.3"
+    },
+    {
+      "id": "part_vi_r13_production_pounds",
+      "label": "13. Other fruit or fruit product — Used in distilled-spirits production — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r13",
+      "column": "production_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.12.3.0"
+    },
+    {
+      "id": "part_vi_r13_production_gallons",
+      "label": "13. Other fruit or fruit product — Used in distilled-spirits production — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r13",
+      "column": "production_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.12.3.1"
+    },
+    {
+      "id": "part_vi_r13_other_pounds",
+      "label": "13. Other fruit or fruit product — Used in manufacture of other substances yielding spirits as by-product — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r13",
+      "column": "other_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.12.3.2"
+    },
+    {
+      "id": "part_vi_r13_other_gallons",
+      "label": "13. Other fruit or fruit product — Used in manufacture of other substances yielding spirits as by-product — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r13",
+      "column": "other_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.12.3.3"
+    },
+    {
+      "id": "part_vi_r14_production_pounds",
+      "label": "14. Other fruit or fruit product — Used in distilled-spirits production — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r14",
+      "column": "production_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.13.3.0"
+    },
+    {
+      "id": "part_vi_r14_production_gallons",
+      "label": "14. Other fruit or fruit product — Used in distilled-spirits production — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r14",
+      "column": "production_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.13.3.1"
+    },
+    {
+      "id": "part_vi_r14_other_pounds",
+      "label": "14. Other fruit or fruit product — Used in manufacture of other substances yielding spirits as by-product — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r14",
+      "column": "other_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.13.3.2"
+    },
+    {
+      "id": "part_vi_r14_other_gallons",
+      "label": "14. Other fruit or fruit product — Used in manufacture of other substances yielding spirits as by-product — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r14",
+      "column": "other_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.13.3.3"
+    },
+    {
+      "id": "part_vi_r15_production_pounds",
+      "label": "15. Molasses — Used in distilled-spirits production — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r15",
+      "column": "production_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.14.3.0"
+    },
+    {
+      "id": "part_vi_r15_production_gallons",
+      "label": "15. Molasses — Used in distilled-spirits production — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r15",
+      "column": "production_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.14.3.1"
+    },
+    {
+      "id": "part_vi_r15_other_pounds",
+      "label": "15. Molasses — Used in manufacture of other substances yielding spirits as by-product — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r15",
+      "column": "other_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.14.3.2"
+    },
+    {
+      "id": "part_vi_r15_other_gallons",
+      "label": "15. Molasses — Used in manufacture of other substances yielding spirits as by-product — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r15",
+      "column": "other_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.14.3.3"
+    },
+    {
+      "id": "part_vi_r16_production_pounds",
+      "label": "16. Other cane or cane product — Used in distilled-spirits production — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r16",
+      "column": "production_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.15.3.0"
+    },
+    {
+      "id": "part_vi_r16_production_gallons",
+      "label": "16. Other cane or cane product — Used in distilled-spirits production — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r16",
+      "column": "production_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.15.3.1"
+    },
+    {
+      "id": "part_vi_r16_other_pounds",
+      "label": "16. Other cane or cane product — Used in manufacture of other substances yielding spirits as by-product — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r16",
+      "column": "other_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.15.3.2"
+    },
+    {
+      "id": "part_vi_r16_other_gallons",
+      "label": "16. Other cane or cane product — Used in manufacture of other substances yielding spirits as by-product — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r16",
+      "column": "other_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.15.3.3"
+    },
+    {
+      "id": "part_vi_r17_production_pounds",
+      "label": "17. Other cane or cane product — Used in distilled-spirits production — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r17",
+      "column": "production_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.16.3.0"
+    },
+    {
+      "id": "part_vi_r17_production_gallons",
+      "label": "17. Other cane or cane product — Used in distilled-spirits production — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r17",
+      "column": "production_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.16.3.1"
+    },
+    {
+      "id": "part_vi_r17_other_pounds",
+      "label": "17. Other cane or cane product — Used in manufacture of other substances yielding spirits as by-product — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r17",
+      "column": "other_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.16.3.2"
+    },
+    {
+      "id": "part_vi_r17_other_gallons",
+      "label": "17. Other cane or cane product — Used in manufacture of other substances yielding spirits as by-product — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r17",
+      "column": "other_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.16.3.3"
+    },
+    {
+      "id": "part_vi_r18_production_pounds",
+      "label": "18. Other cane or cane product — Used in distilled-spirits production — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r18",
+      "column": "production_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.17.3.0"
+    },
+    {
+      "id": "part_vi_r18_production_gallons",
+      "label": "18. Other cane or cane product — Used in distilled-spirits production — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r18",
+      "column": "production_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.17.3.1"
+    },
+    {
+      "id": "part_vi_r18_other_pounds",
+      "label": "18. Other cane or cane product — Used in manufacture of other substances yielding spirits as by-product — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r18",
+      "column": "other_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.17.3.2"
+    },
+    {
+      "id": "part_vi_r18_other_gallons",
+      "label": "18. Other cane or cane product — Used in manufacture of other substances yielding spirits as by-product — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r18",
+      "column": "other_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.17.3.3"
+    },
+    {
+      "id": "part_vi_r19_production_pounds",
+      "label": "19. Ethyl sulfate — Used in distilled-spirits production — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r19",
+      "column": "production_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.18.3.0"
+    },
+    {
+      "id": "part_vi_r19_production_gallons",
+      "label": "19. Ethyl sulfate — Used in distilled-spirits production — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r19",
+      "column": "production_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.18.3.1"
+    },
+    {
+      "id": "part_vi_r19_other_pounds",
+      "label": "19. Ethyl sulfate — Used in manufacture of other substances yielding spirits as by-product — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r19",
+      "column": "other_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.18.3.2"
+    },
+    {
+      "id": "part_vi_r19_other_gallons",
+      "label": "19. Ethyl sulfate — Used in manufacture of other substances yielding spirits as by-product — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r19",
+      "column": "other_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.18.3.3"
+    },
+    {
+      "id": "part_vi_r20_production_pounds",
+      "label": "20. Ethylene gas — Used in distilled-spirits production — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r20",
+      "column": "production_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.19.3.0"
+    },
+    {
+      "id": "part_vi_r20_production_gallons",
+      "label": "20. Ethylene gas — Used in distilled-spirits production — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r20",
+      "column": "production_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.19.3.1"
+    },
+    {
+      "id": "part_vi_r20_other_pounds",
+      "label": "20. Ethylene gas — Used in manufacture of other substances yielding spirits as by-product — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r20",
+      "column": "other_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.19.3.2"
+    },
+    {
+      "id": "part_vi_r20_other_gallons",
+      "label": "20. Ethylene gas — Used in manufacture of other substances yielding spirits as by-product — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r20",
+      "column": "other_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.19.3.3"
+    },
+    {
+      "id": "part_vi_r21_production_pounds",
+      "label": "21. Sulphite liquors — Used in distilled-spirits production — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r21",
+      "column": "production_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.20.3.0"
+    },
+    {
+      "id": "part_vi_r21_production_gallons",
+      "label": "21. Sulphite liquors — Used in distilled-spirits production — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r21",
+      "column": "production_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.20.3.1"
+    },
+    {
+      "id": "part_vi_r21_other_pounds",
+      "label": "21. Sulphite liquors — Used in manufacture of other substances yielding spirits as by-product — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r21",
+      "column": "other_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.20.3.2"
+    },
+    {
+      "id": "part_vi_r21_other_gallons",
+      "label": "21. Sulphite liquors — Used in manufacture of other substances yielding spirits as by-product — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r21",
+      "column": "other_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.20.3.3"
+    },
+    {
+      "id": "part_vi_r22_production_pounds",
+      "label": "22. Butane gas — Used in distilled-spirits production — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r22",
+      "column": "production_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.21.3.0.0"
+    },
+    {
+      "id": "part_vi_r22_production_gallons",
+      "label": "22. Butane gas — Used in distilled-spirits production — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r22",
+      "column": "production_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.21.3.1.0"
+    },
+    {
+      "id": "part_vi_r22_other_pounds",
+      "label": "22. Butane gas — Used in manufacture of other substances yielding spirits as by-product — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r22",
+      "column": "other_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.21.3.2.0"
+    },
+    {
+      "id": "part_vi_r22_other_gallons",
+      "label": "22. Butane gas — Used in manufacture of other substances yielding spirits as by-product — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r22",
+      "column": "other_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.21.3.3.0"
+    },
+    {
+      "id": "part_vi_r23_production_pounds",
+      "label": "23. Other material — Used in distilled-spirits production — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r23",
+      "column": "production_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.21.3.0.1"
+    },
+    {
+      "id": "part_vi_r23_production_gallons",
+      "label": "23. Other material — Used in distilled-spirits production — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r23",
+      "column": "production_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.21.3.1.1"
+    },
+    {
+      "id": "part_vi_r23_other_pounds",
+      "label": "23. Other material — Used in manufacture of other substances yielding spirits as by-product — pounds",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r23",
+      "column": "other_pounds",
+      "unit": "Pounds",
+      "pdfField": "Text15.21.3.2.1"
+    },
+    {
+      "id": "part_vi_r23_other_gallons",
+      "label": "23. Other material — Used in manufacture of other substances yielding spirits as by-product — gallons",
+      "section": "part_vi",
+      "type": "number",
+      "required": false,
+      "row": "r23",
+      "column": "other_gallons",
+      "unit": "Gallons",
+      "pdfField": "Text15.21.3.3.1"
+    },
+    {
+      "id": "part_vi_r07_kind",
+      "label": "7. Other grain or grain product — description",
+      "section": "part_vi",
+      "type": "text",
+      "required": false,
+      "row": "r07",
+      "column": "kind",
+      "pdfField": "Text19.0"
+    },
+    {
+      "id": "part_vi_r08_kind",
+      "label": "8. Other grain or grain product — description",
+      "section": "part_vi",
+      "type": "text",
+      "required": false,
+      "row": "r08",
+      "column": "kind",
+      "pdfField": "Text19.1"
+    },
+    {
+      "id": "part_vi_r10_kind",
+      "label": "10. Other fruit or fruit product — description",
+      "section": "part_vi",
+      "type": "text",
+      "required": false,
+      "row": "r10",
+      "column": "kind",
+      "pdfField": "Text19.2"
+    },
+    {
+      "id": "part_vi_r11_kind",
+      "label": "11. Other fruit or fruit product — description",
+      "section": "part_vi",
+      "type": "text",
+      "required": false,
+      "row": "r11",
+      "column": "kind",
+      "pdfField": "Text19.4"
+    },
+    {
+      "id": "part_vi_r12_kind",
+      "label": "12. Other fruit or fruit product — description",
+      "section": "part_vi",
+      "type": "text",
+      "required": false,
+      "row": "r12",
+      "column": "kind",
+      "pdfField": "Text19.3"
+    },
+    {
+      "id": "part_vi_r13_kind",
+      "label": "13. Other fruit or fruit product — description",
+      "section": "part_vi",
+      "type": "text",
+      "required": false,
+      "row": "r13",
+      "column": "kind",
+      "pdfField": "Text19.5"
+    },
+    {
+      "id": "part_vi_r14_kind",
+      "label": "14. Other fruit or fruit product — description",
+      "section": "part_vi",
+      "type": "text",
+      "required": false,
+      "row": "r14",
+      "column": "kind",
+      "pdfField": "Text19.6"
+    },
+    {
+      "id": "part_vi_r16_kind",
+      "label": "16. Other cane or cane product — description",
+      "section": "part_vi",
+      "type": "text",
+      "required": false,
+      "row": "r16",
+      "column": "kind",
+      "pdfField": "Text19.7"
+    },
+    {
+      "id": "part_vi_r17_kind",
+      "label": "17. Other cane or cane product — description",
+      "section": "part_vi",
+      "type": "text",
+      "required": false,
+      "row": "r17",
+      "column": "kind",
+      "pdfField": "Text19.8"
+    },
+    {
+      "id": "part_vi_r18_kind",
+      "label": "18. Other cane or cane product — description",
+      "section": "part_vi",
+      "type": "text",
+      "required": false,
+      "row": "r18",
+      "column": "kind",
+      "pdfField": "Text34"
+    },
+    {
+      "id": "part_vi_r23_kind",
+      "label": "23. Other material — description",
+      "section": "part_vi",
+      "type": "text",
+      "required": false,
+      "row": "r23",
+      "column": "kind",
+      "pdfField": "Text21"
+    },
+    {
+      "id": "certification_date",
+      "label": "Date",
+      "section": "certification",
+      "type": "date",
+      "required": false,
+      "pdfField": "Text17"
+    },
+    {
+      "id": "certification_proprietor",
+      "label": "Proprietor",
+      "section": "certification",
+      "type": "text",
+      "required": false,
+      "profileKey": "legalName",
+      "pdfField": "Text18"
+    },
+    {
+      "id": "certification_signature",
+      "label": "Signature and title",
+      "section": "certification",
+      "type": "text",
+      "required": false,
+      "manualOnly": true
+    }
+  ],
+  "checks": []
+}

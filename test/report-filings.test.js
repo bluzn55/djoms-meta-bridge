@@ -2,13 +2,14 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {sessionEndpoint,PREFIX} from '../lib/core.js';
 import {reportFilingsEndpoint,normalizeFiling} from '../lib/report-filings.js';
+import {reportTemplates,normalizeTemplateData} from '../lib/report-template-engine.js';
 
 const ORIGIN='https://command.example.test';
 const PASSWORD='this-is-only-a-test-password';
 const ENV_KEYS=['PUBLIC_BASE_URL','UPSTASH_REDIS_REST_URL','UPSTASH_REDIS_REST_TOKEN',
   'KV_REST_API_URL','KV_REST_API_TOKEN','DJOMS_SESSION_SECRET','DJOMS_ADMIN_PASSWORD',
   'DJOMS_OWNER_NAME','RESEND_API_KEY','DJOMS_EMAIL_FROM'];
-const validReport=()=>({name:'Example monthly report',jurisdiction:'state',frequency:'monthly',
+const validReport=()=>({name:'Example monthly report',businessId:'conestoga',jurisdiction:'state',frequency:'monthly',
   periodStart:'2026-01-01',periodEnd:'2026-01-31',dueDate:'2026-02-15',
   recipientName:'Example receiving office',deliveryMethod:'email',recipientEmail:'reports@example.test',
   portalUrl:'',subject:'Example report — January 2026',notes:'Owner-entered information.',
@@ -60,7 +61,9 @@ async function harness(run){
           const record=JSON.parse(json);
           if(failFinalSave&&record.status==='sent')return {ok:false,json:async()=>({error:'Synthetic storage failure'})};
           storage.set(keys[0],json);
-          const index=sets.get(keys[1])||new Map();index.set(id,Number(score));sets.set(keys[1],index);
+          const index=sets.get(keys[1])||new Map();
+          if(!script.includes('"NX"')||!index.has(id))index.set(id,Number(score));
+          sets.set(keys[1],index);
           if(count===3)storage.set(keys[2],id);
           result=1;
         }else if(script.includes('redis.call("del",KEYS[1])')){
@@ -109,26 +112,151 @@ test('private report data requires owner session and writes require CSRF and ori
   assert.deepEqual(h.providerCalls,[]);
 }));
 
+test('template and business registry reads create no reports or profiles',()=>harness(async h=>{
+  const before=[...h.storage.entries()];
+  const result=await h.request({}, {method:'GET'});
+  assert.deepEqual(result.body.reports,[]);
+  assert.deepEqual(result.body.templates.map(template=>template.id),['ttb_excise','ttb_production','ttb_storage','ttb_processing']);
+  assert.deepEqual(result.body.businessProfiles.map(profile=>profile.id),['conestoga','doc_jaks']);
+  assert.ok(result.body.businessProfiles.every(profile=>profile.revision===0&&Object.values(profile.values).every(value=>value==='')));
+  assert.deepEqual([...h.storage.entries()],before,'Reading the registry never seeds data');
+}));
+
+test('form values use exact arithmetic, never turn blanks into zero, and cannot forge totals or signatures',()=>{
+  const template=reportTemplates.find(template=>template.id==='ttb_excise');
+  const values=Object.fromEntries(template.fields.filter(field=>field.type==='money'&&!field.calculation).map(field=>[field.id,'0']));
+  values.tax_distilled_spirits='100.10';values.tax_wine='0.20';values.amount_payment='100.30';
+  values.total_tax_liability='999.99';
+  const exact=normalizeTemplateData(template.id,values);
+  assert.equal(exact.values.total_tax_liability,'100.30');assert.equal(exact.values.amount_to_pay,'100.30');
+  assert.equal(exact.checks.find(check=>check.id==='payment_matches_return').status,'pass');
+  delete values.tax_beer;
+  const missing=normalizeTemplateData(template.id,values);
+  assert.equal(missing.values.total_tax_liability,'');assert.equal(missing.values.amount_to_pay,'');
+  assert.equal(missing.checks.find(check=>check.id==='payment_matches_return').status,'pending');
+  assert.throws(()=>normalizeTemplateData(template.id,{unknown_field:'1'}),/unknown form field/);
+  assert.throws(()=>normalizeTemplateData(template.id,{signature:'A typed signature'}),/completed manually/);
+  assert.throws(()=>normalizeTemplateData(template.id,{tax_distilled_spirits:'1.234'}),/at most 2 decimal/);
+  const integerField=reportTemplates.flatMap(template=>template.fields.map(field=>({template,field}))).find(item=>item.field.integer&&!item.field.calculation);
+  assert.ok(integerField,'At least one provided form requires whole-gallon inputs');
+  assert.throws(()=>normalizeTemplateData(integerField.template.id,{[integerField.field.id]:'1.5'}),/whole number/);
+});
+
+test('template reports bind business and data; unresolved business or schedule cannot be approved',()=>harness(async h=>{
+  const details={...validReport(),jurisdiction:'federal',templateId:'ttb_excise',frequency:'unspecified',
+    templateValues:{tax_distilled_spirits:'12.30'},targetDate:'2026-02-10'};
+  let report=await h.create(details);
+  assert.equal(report.templateValues.tax_distilled_spirits,'12.30');
+  assert.equal((await h.action('review',report)).statusCode,400,'Excise cadence requires confirmation');
+  const legacyEdit=validReport();delete legacyEdit.businessId;delete legacyEdit.jurisdiction;
+  report=(await h.action('save',report,{report:legacyEdit})).body.report;
+  assert.equal(report.businessId,'conestoga');assert.equal(report.templateId,'ttb_excise');
+  assert.equal(report.templateValues.tax_distilled_spirits,'12.30');assert.equal(report.targetDate,'2026-02-10');
+  assert.equal((await h.action('save',report,{report:{...details,businessId:'doc_jaks'}})).statusCode,409);
+  const unassigned=validReport();delete unassigned.businessId;
+  const unassignedReport=await h.create(unassigned);
+  assert.equal(unassignedReport.businessId,'unassigned');
+  assert.match(unassignedReport.emailPreview.text,/^Report submission\n/);
+  assert.equal((await h.action('review',unassignedReport)).statusCode,400);
+  assert.throws(()=>normalizeFiling({...details,jurisdiction:'state'}),/Federal/);
+  assert.throws(()=>normalizeFiling({...details,templateId:'unknown'}),/supported report form/);
+}));
+
+test('operations dates follow the selected full month; excise dates remain explicit',()=>{
+  const template=reportTemplates.find(template=>template.id==='ttb_production');
+  const report=normalizeFiling({...validReport(),jurisdiction:'federal',templateId:template.id,templateValues:{},
+    periodStart:'2026-12-01',periodEnd:'2026-12-31',dueDate:'',targetDate:''});
+  assert.equal(report.targetDate,'2027-01-05');assert.equal(report.dueDate,'2027-01-15');
+  assert.equal(report.frequency,'monthly');
+  const monthField=template.fields.find(field=>field.periodKey==='monthYear');
+  if(monthField){
+    assert.equal(report.templateValues[monthField.id],'December 2026');
+    const cleared=normalizeFiling({...report,periodStart:'',periodEnd:''});
+    assert.equal(cleared.templateValues[monthField.id],'','Clearing the period clears stale derived month text');
+    const incomplete=normalizeFiling({...report,periodEnd:''});
+    assert.equal(incomplete.templateValues[monthField.id],'','An incomplete period cannot retain a stale month');
+  }
+  assert.throws(()=>normalizeFiling({...report,periodStart:'2026-12-15'}),/complete calendar month/);
+  const excise=normalizeFiling({...validReport(),jurisdiction:'federal',templateId:'ttb_excise',templateValues:{},
+    frequency:'unspecified',dueDate:'',targetDate:''});
+  assert.equal(excise.dueDate,'');assert.equal(excise.targetDate,'');assert.equal(excise.frequency,'unspecified');
+});
+
+test('private business profiles use revision guards and only prefill their own new drafts',()=>harness(async h=>{
+  const profile={legalName:'Example Conestoga Legal Name',displayName:'Example Conestoga',
+    address:'123 Example Lane\nExample City, CO 00000',ein:'12-3456789',plantNumber:'DSP-EX-00001'};
+  const save=await h.request({action:'saveBusinessProfile',businessId:'conestoga',expectedRevision:0,profile});
+  assert.equal(save.statusCode,200);assert.equal(save.body.businessProfile.revision,1);
+  assert.equal((await h.request({action:'saveBusinessProfile',businessId:'conestoga',expectedRevision:0,profile})).statusCode,409);
+  const list=await h.request({}, {method:'GET'});
+  assert.equal(list.body.businessProfiles.find(item=>item.id==='conestoga').values.ein,profile.ein);
+  assert.equal(list.body.businessProfiles.find(item=>item.id==='doc_jaks').values.ein,'');
+  const details={...validReport(),jurisdiction:'federal',templateId:'ttb_excise',frequency:'unspecified',templateValues:{tax_distilled_spirits:'10'}};
+  const report=await h.create(details);
+  assert.equal(report.templateValues.employer_identification_number,profile.ein);
+  assert.match(report.templateValues.taxpayer_name_address,/Example Conestoga Legal Name/);
+  const separate=await h.create({...details,businessId:'doc_jaks'});
+  assert.equal(separate.templateValues.employer_identification_number,'');
+  assert.equal(separate.templateValues.taxpayer_name_address,'');
+  const next=await h.action('nextPeriod',report,{report:{periodStart:'2026-02-01',periodEnd:'2026-02-28',dueDate:'2026-03-15'}});
+  assert.equal(next.statusCode,200,next.body?.error);
+  assert.equal(next.body.report.businessId,'conestoga');assert.equal(next.body.report.templateId,'ttb_excise');
+  assert.equal(next.body.report.templateValues.tax_distilled_spirits,'');
+  assert.equal(next.body.report.templateValues.employer_identification_number,profile.ein);
+  assert.equal(next.body.report.templateValues.signature,'');assert.equal(next.body.report.amountDue,'');
+  assert.equal(h.providerCalls.length,0);
+}));
+
 test('report history paginates beyond 500 records and rejects malformed cursors',()=>harness(async h=>{
   const index=new Map();
   for(let i=0;i<501;i++){
     const id=(i+1).toString(16).padStart(36,'0');
-    const report={...validReport(),id,revision:1,status:'filed',history:[],
+    const report={...validReport(),id,revision:1,status:'filed',history:i>=451?[{message:'x'.repeat(95000)}]:[],
       createdAt:'2026-01-01T00:00:00.000Z',updatedAt:'2026-01-01T00:00:00.000Z'};
     index.set(id,i);h.storage.set(PREFIX+'report-filing:'+id,JSON.stringify(report));
   }
   h.sets.set(PREFIX+'report-filings:index',index);
   const first=await h.request({}, {method:'GET'});
-  assert.equal(first.statusCode,200);assert.equal(first.body.reports.length,500);
-  assert.equal(first.body.limited,true);assert.equal(first.body.nextCursor,'500');
-  const second=await h.request({}, {method:'GET',query:{cursor:first.body.nextCursor}});
-  assert.equal(second.statusCode,200);assert.equal(second.body.reports.length,1);
-  assert.equal(second.body.limited,false);assert.equal(second.body.nextCursor,null);
-  assert.equal(second.body.reports[0].id,'1'.padStart(36,'0'),'The oldest report remains accessible');
-  assert.equal(new Set([...first.body.reports,...second.body.reports].map(report=>report.id)).size,501);
+  assert.equal(first.statusCode,200);assert.ok(first.body.reports.length>0&&first.body.reports.length<50,'Large history entries respect the response byte budget');
+  assert.ok(Buffer.byteLength(JSON.stringify(first.body),'utf8')<=3*1024*1024);
+  const all=[...first.body.reports];
+  let page=first;
+  while(page.body.nextCursor!==null){
+    assert.equal(page.body.limited,true);
+    page=await h.request({}, {method:'GET',query:{cursor:page.body.nextCursor}});
+    assert.equal(page.statusCode,200);assert.ok(page.body.reports.length<=50);
+    assert.ok(Buffer.byteLength(JSON.stringify(page.body),'utf8')<=3*1024*1024);
+    all.push(...page.body.reports);
+  }
+  assert.equal(page.body.limited,false);
+  assert.ok(all.some(report=>report.id==='1'.padStart(36,'0')),'The oldest report remains accessible');
+  assert.equal(new Set(all.map(report=>report.id)).size,501);
   for(const cursor of ['-1','1.5','1e2','00','',String(Number.MAX_SAFE_INTEGER),['0','500']])
     assert.equal((await h.request({}, {method:'GET',query:{cursor}})).statusCode,400);
   assert.equal(h.providerCalls.length,0);
+}));
+
+test('editing an unread report between history pages cannot move it ahead of the cursor',()=>harness(async h=>{
+  const index=new Map();
+  for(let i=0;i<81;i++){
+    const id=(i+1).toString(16).padStart(36,'0');
+    const report={...validReport(),id,revision:1,status:'draft',history:[],
+      createdAt:'2026-01-01T00:00:00.000Z',updatedAt:'2026-01-01T00:00:00.000Z'};
+    index.set(id,i);h.storage.set(PREFIX+'report-filing:'+id,JSON.stringify(report));
+  }
+  h.sets.set(PREFIX+'report-filings:index',index);
+  const first=await h.request({}, {method:'GET'});
+  assert.equal(first.body.reports.length,50);assert.equal(first.body.nextCursor,'50');
+  const unreadId='1'.padStart(36,'0');
+  assert.ok(!first.body.reports.some(report=>report.id===unreadId));
+  const unread=JSON.parse(h.storage.get(PREFIX+'report-filing:'+unreadId));
+  const saved=await h.action('save',unread,{report:{...validReport(),name:'Edited in another window'}});
+  assert.equal(saved.statusCode,200,saved.body?.error);
+  assert.equal(index.get(unreadId),0,'Updates preserve the original index score');
+  const rest=await h.request({}, {method:'GET',query:{cursor:first.body.nextCursor}});
+  assert.equal(rest.body.nextCursor,null);assert.equal(rest.body.limited,false);
+  assert.equal(rest.body.reports.find(report=>report.id===unreadId)?.name,'Edited in another window');
+  assert.equal(new Set([...first.body.reports,...rest.body.reports].map(report=>report.id)).size,81);
 }));
 
 test('draft approval is refused; exact revision is required and edits clear approval',()=>harness(async h=>{
@@ -217,6 +345,7 @@ test('amount due preserves blank versus zero, validates exact cents and protects
 test('Approve and send transmits exactly the reviewed preview once and keeps provider receipt',()=>harness(async h=>{
   const report=await h.ready();
   const preview=report.emailPreview;
+  assert.match(preview.text,/^Conestoga Distillery report\n/);
   const sent=await h.action('approveSend',report);
   assert.equal(sent.statusCode,200,sent.body?.error);
   assert.equal(sent.body.report.status,'sent');

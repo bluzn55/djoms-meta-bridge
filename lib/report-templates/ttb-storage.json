@@ -1,0 +1,5059 @@
+{
+  "id": "ttb_storage",
+  "name": "TTB — Storage",
+  "shortName": "Storage",
+  "formNumber": "TTB F 5110.11",
+  "sourceEdition": "01/2009",
+  "frequency": "monthly",
+  "jurisdiction": "federal",
+  "agency": "TTB",
+  "schedule": {
+    "type": "monthly_following",
+    "targetDay": 5,
+    "dueDay": 15
+  },
+  "pdfAsset": "/assets/report-forms/ttb-storage.pdf",
+  "sourceNotes": "Mapped from the user-provided form edition. Blank quantities remain unknown; enter zero explicitly where appropriate. Shaded cells are unavailable. No business identities, source quantities, signatures, or sample reporting periods are included. Approval in this application does not sign the official form.",
+  "sections": [
+    {
+      "id": "identity",
+      "title": "Plant and reporting period",
+      "type": "fields",
+      "description": "Select the report coverage and enter the plant identity and reporting month. The source form calls for separate reports for domestic, imported, Puerto Rican, and Virgin Islands spirits; domestic coverage also includes all wines."
+    },
+    {
+      "id": "transaction_labels",
+      "title": "Column and transaction descriptions",
+      "type": "fields",
+      "description": "Identify column (k) and the blank transaction lines 5 and 21 when used."
+    },
+    {
+      "id": "storage",
+      "title": "Storage operations — proof gallons",
+      "type": "table",
+      "description": "All columns on this form, including wine, are proof gallons. Lines 7–16 are withdrawals for the named use. Line 6 totals lines 1–5; line 24 totals lines 7–23. Each line total includes only the available commodity columns. Balance checks compare lines 6 and 24 for each column. Consult the source form footnotes for classification and withdrawal qualifications.",
+      "rows": [
+        {
+          "id": "line_01",
+          "label": "1. On hand first of month"
+        },
+        {
+          "id": "line_02",
+          "label": "2. Deposited in bulk storage"
+        },
+        {
+          "id": "line_03",
+          "label": "3. Received from Customs custody"
+        },
+        {
+          "id": "line_04",
+          "label": "4. Returned to bulk storage"
+        },
+        {
+          "id": "line_05",
+          "label": "5. (Identify transaction)"
+        },
+        {
+          "id": "line_06",
+          "label": "6. TOTAL (Lines 1 through 5)"
+        },
+        {
+          "id": "line_07",
+          "label": "7. Taxpaid"
+        },
+        {
+          "id": "line_08",
+          "label": "8. Use of the United States"
+        },
+        {
+          "id": "line_09",
+          "label": "9. Hospital, scientific educational use"
+        },
+        {
+          "id": "line_10",
+          "label": "10. Export"
+        },
+        {
+          "id": "line_11",
+          "label": "11. Transfer to foreign-trade zone"
+        },
+        {
+          "id": "line_12",
+          "label": "12. Transfer to CMBW"
+        },
+        {
+          "id": "line_13",
+          "label": "13. Use as supplies on vessels and aircraft"
+        },
+        {
+          "id": "line_14",
+          "label": "14. Transfer to bonded winery"
+        },
+        {
+          "id": "line_15",
+          "label": "15. Transfer to CBW"
+        },
+        {
+          "id": "line_16",
+          "label": "16. Research, development, or testing"
+        },
+        {
+          "id": "line_17",
+          "label": "17. Transferred to processing account"
+        },
+        {
+          "id": "line_18",
+          "label": "18. Transferred to production account"
+        },
+        {
+          "id": "line_19",
+          "label": "19. Transferred to other bonded premises"
+        },
+        {
+          "id": "line_20",
+          "label": "20. Destroyed"
+        },
+        {
+          "id": "line_21",
+          "label": "21. (Identify transaction)"
+        },
+        {
+          "id": "line_22",
+          "label": "22. Other Losses"
+        },
+        {
+          "id": "line_23",
+          "label": "23. On hand end of month"
+        },
+        {
+          "id": "line_24",
+          "label": "24. TOTAL (Lines 7 through 23)"
+        }
+      ],
+      "columns": [
+        {
+          "id": "whisky_160_and_under",
+          "label": "(b) Whisky, distilled at 160° and under",
+          "unit": "Proof gallons"
+        },
+        {
+          "id": "whisky_over_160",
+          "label": "(c) Whisky, distilled at over 160°",
+          "unit": "Proof gallons"
+        },
+        {
+          "id": "brandy_170_and_under",
+          "label": "(d) Brandy, distilled at 170° and under",
+          "unit": "Proof gallons"
+        },
+        {
+          "id": "brandy_over_170",
+          "label": "(e) Brandy, distilled at over 170°",
+          "unit": "Proof gallons"
+        },
+        {
+          "id": "rum",
+          "label": "(f) Rum",
+          "unit": "Proof gallons"
+        },
+        {
+          "id": "gin",
+          "label": "(g) Gin",
+          "unit": "Proof gallons"
+        },
+        {
+          "id": "vodka",
+          "label": "(h) Vodka",
+          "unit": "Proof gallons"
+        },
+        {
+          "id": "alcohol_190_and_over",
+          "label": "(i) Alcohol and spirits, 190° and over",
+          "unit": "Proof gallons"
+        },
+        {
+          "id": "alcohol_under_190",
+          "label": "(j) Alcohol and spirits, under 190°",
+          "unit": "Proof gallons"
+        },
+        {
+          "id": "other",
+          "label": "(k) Other (identify)",
+          "unit": "Proof gallons"
+        },
+        {
+          "id": "wine",
+          "label": "(l) Wine",
+          "unit": "Proof gallons"
+        },
+        {
+          "id": "total",
+          "label": "(m) Total",
+          "unit": "Proof gallons"
+        }
+      ]
+    },
+    {
+      "id": "certification",
+      "title": "Official form certification",
+      "type": "fields",
+      "description": "Review the declaration on the official form. The signature and title must be completed through the official filing process; application approval leaves the signature unsigned."
+    }
+  ],
+  "fields": [
+    {
+      "id": "report_covers",
+      "label": "Report covers",
+      "section": "identity",
+      "type": "select",
+      "required": true,
+      "options": [
+        {
+          "value": "domestic",
+          "label": "Domestic spirits and all wines"
+        },
+        {
+          "value": "imported",
+          "label": "Imported spirits"
+        },
+        {
+          "value": "puerto_rican",
+          "label": "Puerto Rican spirits"
+        },
+        {
+          "value": "virgin_islands",
+          "label": "Virgin Islands spirits"
+        }
+      ],
+      "pdfMapping": {
+        "kind": "checkboxChoice",
+        "choices": {
+          "domestic": {
+            "field": "Check Box4",
+            "onValue": "/Yes"
+          },
+          "imported": {
+            "field": "Check Box6",
+            "onValue": "/Yes"
+          },
+          "puerto_rican": {
+            "field": "Check Box5",
+            "onValue": "/Yes"
+          },
+          "virgin_islands": {
+            "field": "Check Box7",
+            "onValue": "/Yes"
+          }
+        }
+      }
+    },
+    {
+      "id": "report_month_year",
+      "label": "Month and year",
+      "section": "identity",
+      "type": "text",
+      "pdfField": "MONTH AND YEAR",
+      "required": true,
+      "periodKey": "monthYear"
+    },
+    {
+      "id": "proprietor_name",
+      "label": "Name of proprietor",
+      "section": "identity",
+      "type": "text",
+      "pdfField": "Text1",
+      "required": true,
+      "profileKey": "legalName"
+    },
+    {
+      "id": "ein",
+      "label": "EIN",
+      "section": "identity",
+      "type": "text",
+      "pdfField": "EIN",
+      "required": true,
+      "profileKey": "ein"
+    },
+    {
+      "id": "plant_location",
+      "label": "Location of plant",
+      "section": "identity",
+      "type": "textarea",
+      "pdfField": "LOCATION OF PLANT",
+      "required": true,
+      "profileKey": "address"
+    },
+    {
+      "id": "plant_number",
+      "label": "Plant number (DSP)",
+      "section": "identity",
+      "type": "text",
+      "pdfField": "PLANT NUMBER DSP",
+      "required": true,
+      "profileKey": "plantNumber"
+    },
+    {
+      "id": "other_spirits_description",
+      "label": "(k) Other spirits — identify",
+      "section": "transaction_labels",
+      "type": "text",
+      "pdfField": "Text10"
+    },
+    {
+      "id": "line_05_description",
+      "label": "5. Transaction description",
+      "section": "transaction_labels",
+      "type": "text",
+      "pdfField": "Text8"
+    },
+    {
+      "id": "line_21_description",
+      "label": "21. Transaction description",
+      "section": "transaction_labels",
+      "type": "text",
+      "pdfField": "Text9"
+    },
+    {
+      "id": "storage_l01_whisky_160_and_under",
+      "label": "1. On hand first of month — Whisky, distilled at 160° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT 160° AND UNDER b, 1 On hand first of month",
+      "row": "line_01",
+      "column": "whisky_160_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT 160° AND UNDER b, 1 On hand first of month",
+        "decimalField": "DISTILLED AT 160° AND UNDER b, 1 On hand first of month_2.0"
+      }
+    },
+    {
+      "id": "storage_l01_whisky_over_160",
+      "label": "1. On hand first of month — Whisky, distilled at over 160°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT OVER 160° c, 1 On hand first of month.0",
+      "row": "line_01",
+      "column": "whisky_over_160",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT OVER 160° c, 1 On hand first of month.0",
+        "decimalField": "DISTILLED AT OVER 160° c, 1 On hand first of month_2.0"
+      }
+    },
+    {
+      "id": "storage_l01_brandy_170_and_under",
+      "label": "1. On hand first of month — Brandy, distilled at 170° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT 170° AND UNDER d, 1 On hand first of month.0",
+      "row": "line_01",
+      "column": "brandy_170_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT 170° AND UNDER d, 1 On hand first of month.0",
+        "decimalField": "DISTILLED AT 170° AND UNDER d, 1 On hand first of month_2.0"
+      }
+    },
+    {
+      "id": "storage_l01_brandy_over_170",
+      "label": "1. On hand first of month — Brandy, distilled at over 170°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 1 On hand first of month.0.0",
+      "row": "line_01",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 1 On hand first of month.0.0",
+        "decimalField": "RUM f, 1 On hand first of month_2.0.0"
+      }
+    },
+    {
+      "id": "storage_l01_rum",
+      "label": "1. On hand first of month — Rum",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 1 On hand first of month.0.1",
+      "row": "line_01",
+      "column": "rum",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 1 On hand first of month.0.1",
+        "decimalField": "RUM f, 1 On hand first of month_2.0.1"
+      }
+    },
+    {
+      "id": "storage_l01_gin",
+      "label": "1. On hand first of month — Gin",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 1 On hand first of month.0.2",
+      "row": "line_01",
+      "column": "gin",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 1 On hand first of month.0.2",
+        "decimalField": "RUM f, 1 On hand first of month_2.0.2"
+      }
+    },
+    {
+      "id": "storage_l01_vodka",
+      "label": "1. On hand first of month — Vodka",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 1 On hand first of month.0.3",
+      "row": "line_01",
+      "column": "vodka",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 1 On hand first of month.0.3",
+        "decimalField": "RUM f, 1 On hand first of month_2.0.3"
+      }
+    },
+    {
+      "id": "storage_l01_alcohol_190_and_over",
+      "label": "1. On hand first of month — Alcohol and spirits, 190° and over",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "190° AND OVER i, 1 On hand first of month",
+      "row": "line_01",
+      "column": "alcohol_190_and_over",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "190° AND OVER i, 1 On hand first of month",
+        "decimalField": "190° AND OVER i, 1 On hand first of month_2"
+      }
+    },
+    {
+      "id": "storage_l01_alcohol_under_190",
+      "label": "1. On hand first of month — Alcohol and spirits, under 190°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "UNDER 190° i, 1 On hand first of month.0.0",
+      "row": "line_01",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "UNDER 190° i, 1 On hand first of month.0.0",
+        "decimalField": "UNDER 190° i, 1 On hand first of month_2.0.0"
+      }
+    },
+    {
+      "id": "storage_l01_other",
+      "label": "1. On hand first of month — Other (identify)",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 1 On hand first of month.0.0",
+      "row": "line_01",
+      "column": "other",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 1 On hand first of month.0.0",
+        "decimalField": "OTHER Identify k, 1 On hand first of month_2.0.0"
+      }
+    },
+    {
+      "id": "storage_l01_wine",
+      "label": "1. On hand first of month — Wine",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "WINE Proof gallons l, 1 On hand first of month",
+      "row": "line_01",
+      "column": "wine",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "WINE Proof gallons l, 1 On hand first of month",
+        "decimalField": "WINE Proof gallons l, 1 On hand first of month_2"
+      }
+    },
+    {
+      "id": "storage_l01_total",
+      "label": "1. On hand first of month — Total",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 1 On hand first of month.0.1",
+      "row": "line_01",
+      "column": "total",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 1 On hand first of month.0.1",
+        "decimalField": "OTHER Identify k, 1 On hand first of month_2.0.1"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l01_whisky_160_and_under",
+          "storage_l01_whisky_over_160",
+          "storage_l01_brandy_170_and_under",
+          "storage_l01_brandy_over_170",
+          "storage_l01_rum",
+          "storage_l01_gin",
+          "storage_l01_vodka",
+          "storage_l01_alcohol_190_and_over",
+          "storage_l01_alcohol_under_190",
+          "storage_l01_other",
+          "storage_l01_wine"
+        ]
+      }
+    },
+    {
+      "id": "storage_l02_whisky_160_and_under",
+      "label": "2. Deposited in bulk storage — Whisky, distilled at 160° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT 160° AND UNDER b, 2 Deposited in bulk storage1",
+      "row": "line_02",
+      "column": "whisky_160_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT 160° AND UNDER b, 2 Deposited in bulk storage1",
+        "decimalField": "DISTILLED AT 160° AND UNDER b, 2 Deposited in bulk storage1_2.0"
+      }
+    },
+    {
+      "id": "storage_l02_whisky_over_160",
+      "label": "2. Deposited in bulk storage — Whisky, distilled at over 160°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT OVER 160° c, 2 Deposited in bulk storage1.0",
+      "row": "line_02",
+      "column": "whisky_over_160",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT OVER 160° c, 2 Deposited in bulk storage1.0",
+        "decimalField": "DISTILLED AT OVER 160° c, 2 Deposited in bulk storage1_2.0"
+      }
+    },
+    {
+      "id": "storage_l02_brandy_170_and_under",
+      "label": "2. Deposited in bulk storage — Brandy, distilled at 170° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT 170° AND UNDER d, 2 Deposited in bulk storage1.0",
+      "row": "line_02",
+      "column": "brandy_170_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT 170° AND UNDER d, 2 Deposited in bulk storage1.0",
+        "decimalField": "DISTILLED AT 170° AND UNDER d, 2 Deposited in bulk storage1_2.0"
+      }
+    },
+    {
+      "id": "storage_l02_brandy_over_170",
+      "label": "2. Deposited in bulk storage — Brandy, distilled at over 170°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 2 Deposited in bulk storage1.0.0",
+      "row": "line_02",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 2 Deposited in bulk storage1.0.0",
+        "decimalField": "RUM f, 2 Deposited in bulk storage1_2.0.0"
+      }
+    },
+    {
+      "id": "storage_l02_rum",
+      "label": "2. Deposited in bulk storage — Rum",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 2 Deposited in bulk storage1.0.1",
+      "row": "line_02",
+      "column": "rum",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 2 Deposited in bulk storage1.0.1",
+        "decimalField": "RUM f, 2 Deposited in bulk storage1_2.0.1"
+      }
+    },
+    {
+      "id": "storage_l02_gin",
+      "label": "2. Deposited in bulk storage — Gin",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 2 Deposited in bulk storage1.0.2",
+      "row": "line_02",
+      "column": "gin",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 2 Deposited in bulk storage1.0.2",
+        "decimalField": "RUM f, 2 Deposited in bulk storage1_2.0.2"
+      }
+    },
+    {
+      "id": "storage_l02_vodka",
+      "label": "2. Deposited in bulk storage — Vodka",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 2 Deposited in bulk storage1.0.3",
+      "row": "line_02",
+      "column": "vodka",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 2 Deposited in bulk storage1.0.3",
+        "decimalField": "RUM f, 2 Deposited in bulk storage1_2.0.3"
+      }
+    },
+    {
+      "id": "storage_l02_alcohol_190_and_over",
+      "label": "2. Deposited in bulk storage — Alcohol and spirits, 190° and over",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "190° AND OVER i, 2 Deposited in bulk storage1",
+      "row": "line_02",
+      "column": "alcohol_190_and_over",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "190° AND OVER i, 2 Deposited in bulk storage1",
+        "decimalField": "190° AND OVER i, 2 Deposited in bulk storage1_2"
+      }
+    },
+    {
+      "id": "storage_l02_alcohol_under_190",
+      "label": "2. Deposited in bulk storage — Alcohol and spirits, under 190°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "UNDER 190° i, 2 Deposited in bulk storage1.0.0",
+      "row": "line_02",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "UNDER 190° i, 2 Deposited in bulk storage1.0.0",
+        "decimalField": "UNDER 190° i, 2 Deposited in bulk storage1_2.0.0"
+      }
+    },
+    {
+      "id": "storage_l02_other",
+      "label": "2. Deposited in bulk storage — Other (identify)",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 2 Deposited in bulk storage1.0.0",
+      "row": "line_02",
+      "column": "other",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 2 Deposited in bulk storage1.0.0",
+        "decimalField": "OTHER Identify k, 2 Deposited in bulk storage1_2.0.0"
+      }
+    },
+    {
+      "id": "storage_l02_wine",
+      "label": "2. Deposited in bulk storage — Wine",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "WINE Proof gallons l, 2 Deposited in bulk storage1",
+      "row": "line_02",
+      "column": "wine",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "WINE Proof gallons l, 2 Deposited in bulk storage1",
+        "decimalField": "WINE Proof gallons l, 2 Deposited in bulk storage1_2"
+      }
+    },
+    {
+      "id": "storage_l02_total",
+      "label": "2. Deposited in bulk storage — Total",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 2 Deposited in bulk storage1.0.1",
+      "row": "line_02",
+      "column": "total",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 2 Deposited in bulk storage1.0.1",
+        "decimalField": "OTHER Identify k, 2 Deposited in bulk storage1_2.0.1"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l02_whisky_160_and_under",
+          "storage_l02_whisky_over_160",
+          "storage_l02_brandy_170_and_under",
+          "storage_l02_brandy_over_170",
+          "storage_l02_rum",
+          "storage_l02_gin",
+          "storage_l02_vodka",
+          "storage_l02_alcohol_190_and_over",
+          "storage_l02_alcohol_under_190",
+          "storage_l02_other",
+          "storage_l02_wine"
+        ]
+      }
+    },
+    {
+      "id": "storage_l03_whisky_160_and_under",
+      "label": "3. Received from Customs custody — Whisky, distilled at 160° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT 160° AND UNDER b, 3 Received from Customs custody",
+      "row": "line_03",
+      "column": "whisky_160_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT 160° AND UNDER b, 3 Received from Customs custody",
+        "decimalField": "DISTILLED AT 160° AND UNDER b, 3 Received from Customs custody_2.0"
+      }
+    },
+    {
+      "id": "storage_l03_whisky_over_160",
+      "label": "3. Received from Customs custody — Whisky, distilled at over 160°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT OVER 160° c, 3 Received from Customs custody.0",
+      "row": "line_03",
+      "column": "whisky_over_160",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT OVER 160° c, 3 Received from Customs custody.0",
+        "decimalField": "DISTILLED AT OVER 160° c, 3 Received from Customs custody_2.0"
+      }
+    },
+    {
+      "id": "storage_l03_brandy_170_and_under",
+      "label": "3. Received from Customs custody — Brandy, distilled at 170° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT 170° AND UNDER d, 3 Received from Customs custody.0",
+      "row": "line_03",
+      "column": "brandy_170_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT 170° AND UNDER d, 3 Received from Customs custody.0",
+        "decimalField": "DISTILLED AT 170° AND UNDER d, 3 Received from Customs custody_2.0"
+      }
+    },
+    {
+      "id": "storage_l03_brandy_over_170",
+      "label": "3. Received from Customs custody — Brandy, distilled at over 170°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 3 Received from Customs custody.0.0",
+      "row": "line_03",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 3 Received from Customs custody.0.0",
+        "decimalField": "RUM f, 3 Received from Customs custody_2.0.0"
+      }
+    },
+    {
+      "id": "storage_l03_rum",
+      "label": "3. Received from Customs custody — Rum",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 3 Received from Customs custody.0.1",
+      "row": "line_03",
+      "column": "rum",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 3 Received from Customs custody.0.1",
+        "decimalField": "RUM f, 3 Received from Customs custody_2.0.1"
+      }
+    },
+    {
+      "id": "storage_l03_gin",
+      "label": "3. Received from Customs custody — Gin",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 3 Received from Customs custody.0.2",
+      "row": "line_03",
+      "column": "gin",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 3 Received from Customs custody.0.2",
+        "decimalField": "RUM f, 3 Received from Customs custody_2.0.2"
+      }
+    },
+    {
+      "id": "storage_l03_vodka",
+      "label": "3. Received from Customs custody — Vodka",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 3 Received from Customs custody.0.3",
+      "row": "line_03",
+      "column": "vodka",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 3 Received from Customs custody.0.3",
+        "decimalField": "RUM f, 3 Received from Customs custody_2.0.3"
+      }
+    },
+    {
+      "id": "storage_l03_alcohol_190_and_over",
+      "label": "3. Received from Customs custody — Alcohol and spirits, 190° and over",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "190° AND OVER i, 3 Received from Customs custody",
+      "row": "line_03",
+      "column": "alcohol_190_and_over",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "190° AND OVER i, 3 Received from Customs custody",
+        "decimalField": "190° AND OVER i, 3 Received from Customs custody_2"
+      }
+    },
+    {
+      "id": "storage_l03_alcohol_under_190",
+      "label": "3. Received from Customs custody — Alcohol and spirits, under 190°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "UNDER 190° i, 3 Received from Customs custody.0.0",
+      "row": "line_03",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "UNDER 190° i, 3 Received from Customs custody.0.0",
+        "decimalField": "UNDER 190° i, 3 Received from Customs custody_2.0.0"
+      }
+    },
+    {
+      "id": "storage_l03_other",
+      "label": "3. Received from Customs custody — Other (identify)",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 3 Received from Customs custody.0.0",
+      "row": "line_03",
+      "column": "other",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 3 Received from Customs custody.0.0",
+        "decimalField": "OTHER Identify k, 3 Received from Customs custody_2.0.0"
+      }
+    },
+    {
+      "id": "storage_l03_total",
+      "label": "3. Received from Customs custody — Total",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 3 Received from Customs custody.0.1",
+      "row": "line_03",
+      "column": "total",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 3 Received from Customs custody.0.1",
+        "decimalField": "OTHER Identify k, 3 Received from Customs custody_2.0.1"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l03_whisky_160_and_under",
+          "storage_l03_whisky_over_160",
+          "storage_l03_brandy_170_and_under",
+          "storage_l03_brandy_over_170",
+          "storage_l03_rum",
+          "storage_l03_gin",
+          "storage_l03_vodka",
+          "storage_l03_alcohol_190_and_over",
+          "storage_l03_alcohol_under_190",
+          "storage_l03_other"
+        ]
+      }
+    },
+    {
+      "id": "storage_l04_whisky_160_and_under",
+      "label": "4. Returned to bulk storage — Whisky, distilled at 160° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT 160° AND UNDER b, 4 Returned to bulk storage",
+      "row": "line_04",
+      "column": "whisky_160_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT 160° AND UNDER b, 4 Returned to bulk storage",
+        "decimalField": "DISTILLED AT 160° AND UNDER b, 4 Returned to bulk storage_2.0"
+      }
+    },
+    {
+      "id": "storage_l04_whisky_over_160",
+      "label": "4. Returned to bulk storage — Whisky, distilled at over 160°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT OVER 160° c, 4 Returned to bulk storage.0",
+      "row": "line_04",
+      "column": "whisky_over_160",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT OVER 160° c, 4 Returned to bulk storage.0",
+        "decimalField": "DISTILLED AT OVER 160° c, 4 Returned to bulk storage_2.0"
+      }
+    },
+    {
+      "id": "storage_l04_brandy_170_and_under",
+      "label": "4. Returned to bulk storage — Brandy, distilled at 170° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT 170° AND UNDER d, 4 Returned to bulk storage.0",
+      "row": "line_04",
+      "column": "brandy_170_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT 170° AND UNDER d, 4 Returned to bulk storage.0",
+        "decimalField": "DISTILLED AT 170° AND UNDER d, 4 Returned to bulk storage_2.0"
+      }
+    },
+    {
+      "id": "storage_l04_brandy_over_170",
+      "label": "4. Returned to bulk storage — Brandy, distilled at over 170°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 4 Returned to bulk storage.0.0",
+      "row": "line_04",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 4 Returned to bulk storage.0.0",
+        "decimalField": "RUM f, 4 Returned to bulk storage_2.0.0"
+      }
+    },
+    {
+      "id": "storage_l04_rum",
+      "label": "4. Returned to bulk storage — Rum",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 4 Returned to bulk storage.0.1",
+      "row": "line_04",
+      "column": "rum",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 4 Returned to bulk storage.0.1",
+        "decimalField": "RUM f, 4 Returned to bulk storage_2.0.1"
+      }
+    },
+    {
+      "id": "storage_l04_gin",
+      "label": "4. Returned to bulk storage — Gin",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 4 Returned to bulk storage.0.2",
+      "row": "line_04",
+      "column": "gin",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 4 Returned to bulk storage.0.2",
+        "decimalField": "RUM f, 4 Returned to bulk storage_2.0.2"
+      }
+    },
+    {
+      "id": "storage_l04_vodka",
+      "label": "4. Returned to bulk storage — Vodka",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 4 Returned to bulk storage.0.3",
+      "row": "line_04",
+      "column": "vodka",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 4 Returned to bulk storage.0.3",
+        "decimalField": "RUM f, 4 Returned to bulk storage_2.0.3"
+      }
+    },
+    {
+      "id": "storage_l04_alcohol_190_and_over",
+      "label": "4. Returned to bulk storage — Alcohol and spirits, 190° and over",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "190° AND OVER i, 4 Returned to bulk storage",
+      "row": "line_04",
+      "column": "alcohol_190_and_over",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "190° AND OVER i, 4 Returned to bulk storage",
+        "decimalField": "190° AND OVER i, 4 Returned to bulk storage_2"
+      }
+    },
+    {
+      "id": "storage_l04_alcohol_under_190",
+      "label": "4. Returned to bulk storage — Alcohol and spirits, under 190°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "UNDER 190° i, 4 Returned to bulk storage.0.0",
+      "row": "line_04",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "UNDER 190° i, 4 Returned to bulk storage.0.0",
+        "decimalField": "UNDER 190° i, 4 Returned to bulk storage_2.0.0"
+      }
+    },
+    {
+      "id": "storage_l04_other",
+      "label": "4. Returned to bulk storage — Other (identify)",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 4 Returned to bulk storage.0.0",
+      "row": "line_04",
+      "column": "other",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 4 Returned to bulk storage.0.0",
+        "decimalField": "OTHER Identify k, 4 Returned to bulk storage_2.0.0"
+      }
+    },
+    {
+      "id": "storage_l04_total",
+      "label": "4. Returned to bulk storage — Total",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 4 Returned to bulk storage.0.1",
+      "row": "line_04",
+      "column": "total",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 4 Returned to bulk storage.0.1",
+        "decimalField": "OTHER Identify k, 4 Returned to bulk storage_2.0.1"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l04_whisky_160_and_under",
+          "storage_l04_whisky_over_160",
+          "storage_l04_brandy_170_and_under",
+          "storage_l04_brandy_over_170",
+          "storage_l04_rum",
+          "storage_l04_gin",
+          "storage_l04_vodka",
+          "storage_l04_alcohol_190_and_over",
+          "storage_l04_alcohol_under_190",
+          "storage_l04_other"
+        ]
+      }
+    },
+    {
+      "id": "storage_l05_whisky_160_and_under",
+      "label": "5. (Identify transaction) — Whisky, distilled at 160° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT 160° AND UNDER b, 5",
+      "row": "line_05",
+      "column": "whisky_160_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT 160° AND UNDER b, 5",
+        "decimalField": "DISTILLED AT 160° AND UNDER b, 5_2.0"
+      }
+    },
+    {
+      "id": "storage_l05_whisky_over_160",
+      "label": "5. (Identify transaction) — Whisky, distilled at over 160°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT OVER 160° c, 5.0",
+      "row": "line_05",
+      "column": "whisky_over_160",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT OVER 160° c, 5.0",
+        "decimalField": "DISTILLED AT OVER 160° c, 5_2.0"
+      }
+    },
+    {
+      "id": "storage_l05_brandy_170_and_under",
+      "label": "5. (Identify transaction) — Brandy, distilled at 170° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT 170° AND UNDER d, 5.0",
+      "row": "line_05",
+      "column": "brandy_170_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT 170° AND UNDER d, 5.0",
+        "decimalField": "DISTILLED AT 170° AND UNDER d, 5_2.0"
+      }
+    },
+    {
+      "id": "storage_l05_brandy_over_170",
+      "label": "5. (Identify transaction) — Brandy, distilled at over 170°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 5.0.0",
+      "row": "line_05",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 5.0.0",
+        "decimalField": "RUM f, 5_2.0.0"
+      }
+    },
+    {
+      "id": "storage_l05_rum",
+      "label": "5. (Identify transaction) — Rum",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 5.0.1",
+      "row": "line_05",
+      "column": "rum",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 5.0.1",
+        "decimalField": "RUM f, 5_2.0.1"
+      }
+    },
+    {
+      "id": "storage_l05_gin",
+      "label": "5. (Identify transaction) — Gin",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 5.0.2",
+      "row": "line_05",
+      "column": "gin",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 5.0.2",
+        "decimalField": "RUM f, 5_2.0.2"
+      }
+    },
+    {
+      "id": "storage_l05_vodka",
+      "label": "5. (Identify transaction) — Vodka",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 5.0.3",
+      "row": "line_05",
+      "column": "vodka",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 5.0.3",
+        "decimalField": "RUM f, 5_2.0.3"
+      }
+    },
+    {
+      "id": "storage_l05_alcohol_190_and_over",
+      "label": "5. (Identify transaction) — Alcohol and spirits, 190° and over",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "190° AND OVER i, 5",
+      "row": "line_05",
+      "column": "alcohol_190_and_over",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "190° AND OVER i, 5",
+        "decimalField": "190° AND OVER i, 5_2"
+      }
+    },
+    {
+      "id": "storage_l05_alcohol_under_190",
+      "label": "5. (Identify transaction) — Alcohol and spirits, under 190°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "UNDER 190° i, 5.0.0",
+      "row": "line_05",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "UNDER 190° i, 5.0.0",
+        "decimalField": "UNDER 190° i, 5_2.0.0"
+      }
+    },
+    {
+      "id": "storage_l05_other",
+      "label": "5. (Identify transaction) — Other (identify)",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 5.0.0",
+      "row": "line_05",
+      "column": "other",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 5.0.0",
+        "decimalField": "OTHER Identify k, 5_2.0.0"
+      }
+    },
+    {
+      "id": "storage_l05_wine",
+      "label": "5. (Identify transaction) — Wine",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "WINE Proof gallons l, 5",
+      "row": "line_05",
+      "column": "wine",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "WINE Proof gallons l, 5",
+        "decimalField": "WINE Proof gallons l, 5_2"
+      }
+    },
+    {
+      "id": "storage_l05_total",
+      "label": "5. (Identify transaction) — Total",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 5.0.1",
+      "row": "line_05",
+      "column": "total",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 5.0.1",
+        "decimalField": "OTHER Identify k, 5_2.0.1"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l05_whisky_160_and_under",
+          "storage_l05_whisky_over_160",
+          "storage_l05_brandy_170_and_under",
+          "storage_l05_brandy_over_170",
+          "storage_l05_rum",
+          "storage_l05_gin",
+          "storage_l05_vodka",
+          "storage_l05_alcohol_190_and_over",
+          "storage_l05_alcohol_under_190",
+          "storage_l05_other",
+          "storage_l05_wine"
+        ]
+      }
+    },
+    {
+      "id": "storage_l06_whisky_160_and_under",
+      "label": "6. TOTAL (Lines 1 through 5) — Whisky, distilled at 160° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT 160° AND UNDER b, 6 TOTAL Lines 1 through 5",
+      "row": "line_06",
+      "column": "whisky_160_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT 160° AND UNDER b, 6 TOTAL Lines 1 through 5",
+        "decimalField": "DISTILLED AT 160° AND UNDER b, 6 TOTAL Lines 1 through 5_2.0"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l01_whisky_160_and_under",
+          "storage_l02_whisky_160_and_under",
+          "storage_l03_whisky_160_and_under",
+          "storage_l04_whisky_160_and_under",
+          "storage_l05_whisky_160_and_under"
+        ]
+      }
+    },
+    {
+      "id": "storage_l06_whisky_over_160",
+      "label": "6. TOTAL (Lines 1 through 5) — Whisky, distilled at over 160°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT OVER 160° c, 6 TOTAL Lines 1 through 5.0",
+      "row": "line_06",
+      "column": "whisky_over_160",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT OVER 160° c, 6 TOTAL Lines 1 through 5.0",
+        "decimalField": "DISTILLED AT OVER 160° c, 6 TOTAL Lines 1 through 5_2.0"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l01_whisky_over_160",
+          "storage_l02_whisky_over_160",
+          "storage_l03_whisky_over_160",
+          "storage_l04_whisky_over_160",
+          "storage_l05_whisky_over_160"
+        ]
+      }
+    },
+    {
+      "id": "storage_l06_brandy_170_and_under",
+      "label": "6. TOTAL (Lines 1 through 5) — Brandy, distilled at 170° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT 170° AND UNDER d, 6 TOTAL Lines 1 through 5.0",
+      "row": "line_06",
+      "column": "brandy_170_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT 170° AND UNDER d, 6 TOTAL Lines 1 through 5.0",
+        "decimalField": "DISTILLED AT 170° AND UNDER d, 6 TOTAL Lines 1 through 5_2.0"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l01_brandy_170_and_under",
+          "storage_l02_brandy_170_and_under",
+          "storage_l03_brandy_170_and_under",
+          "storage_l04_brandy_170_and_under",
+          "storage_l05_brandy_170_and_under"
+        ]
+      }
+    },
+    {
+      "id": "storage_l06_brandy_over_170",
+      "label": "6. TOTAL (Lines 1 through 5) — Brandy, distilled at over 170°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 6 TOTAL Lines 1 through 5.0.0",
+      "row": "line_06",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 6 TOTAL Lines 1 through 5.0.0",
+        "decimalField": "RUM f, 6 TOTAL Lines 1 through 5_2.0.0"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l01_brandy_over_170",
+          "storage_l02_brandy_over_170",
+          "storage_l03_brandy_over_170",
+          "storage_l04_brandy_over_170",
+          "storage_l05_brandy_over_170"
+        ]
+      }
+    },
+    {
+      "id": "storage_l06_rum",
+      "label": "6. TOTAL (Lines 1 through 5) — Rum",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 6 TOTAL Lines 1 through 5.0.1",
+      "row": "line_06",
+      "column": "rum",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 6 TOTAL Lines 1 through 5.0.1",
+        "decimalField": "RUM f, 6 TOTAL Lines 1 through 5_2.0.1"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l01_rum",
+          "storage_l02_rum",
+          "storage_l03_rum",
+          "storage_l04_rum",
+          "storage_l05_rum"
+        ]
+      }
+    },
+    {
+      "id": "storage_l06_gin",
+      "label": "6. TOTAL (Lines 1 through 5) — Gin",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 6 TOTAL Lines 1 through 5.0.2",
+      "row": "line_06",
+      "column": "gin",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 6 TOTAL Lines 1 through 5.0.2",
+        "decimalField": "RUM f, 6 TOTAL Lines 1 through 5_2.0.2"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l01_gin",
+          "storage_l02_gin",
+          "storage_l03_gin",
+          "storage_l04_gin",
+          "storage_l05_gin"
+        ]
+      }
+    },
+    {
+      "id": "storage_l06_vodka",
+      "label": "6. TOTAL (Lines 1 through 5) — Vodka",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 6 TOTAL Lines 1 through 5.0.3",
+      "row": "line_06",
+      "column": "vodka",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 6 TOTAL Lines 1 through 5.0.3",
+        "decimalField": "RUM f, 6 TOTAL Lines 1 through 5_2.0.3"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l01_vodka",
+          "storage_l02_vodka",
+          "storage_l03_vodka",
+          "storage_l04_vodka",
+          "storage_l05_vodka"
+        ]
+      }
+    },
+    {
+      "id": "storage_l06_alcohol_190_and_over",
+      "label": "6. TOTAL (Lines 1 through 5) — Alcohol and spirits, 190° and over",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "190° AND OVER i, 6 TOTAL Lines 1 through 5",
+      "row": "line_06",
+      "column": "alcohol_190_and_over",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "190° AND OVER i, 6 TOTAL Lines 1 through 5",
+        "decimalField": "190° AND OVER i, 6 TOTAL Lines 1 through 5_2"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l01_alcohol_190_and_over",
+          "storage_l02_alcohol_190_and_over",
+          "storage_l03_alcohol_190_and_over",
+          "storage_l04_alcohol_190_and_over",
+          "storage_l05_alcohol_190_and_over"
+        ]
+      }
+    },
+    {
+      "id": "storage_l06_alcohol_under_190",
+      "label": "6. TOTAL (Lines 1 through 5) — Alcohol and spirits, under 190°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "UNDER 190° i, 6 TOTAL Lines 1 through 5.0.0",
+      "row": "line_06",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "UNDER 190° i, 6 TOTAL Lines 1 through 5.0.0",
+        "decimalField": "UNDER 190° i, 6 TOTAL Lines 1 through 5_2.0.0"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l01_alcohol_under_190",
+          "storage_l02_alcohol_under_190",
+          "storage_l03_alcohol_under_190",
+          "storage_l04_alcohol_under_190",
+          "storage_l05_alcohol_under_190"
+        ]
+      }
+    },
+    {
+      "id": "storage_l06_other",
+      "label": "6. TOTAL (Lines 1 through 5) — Other (identify)",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 6 TOTAL Lines 1 through 5.0.0",
+      "row": "line_06",
+      "column": "other",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 6 TOTAL Lines 1 through 5.0.0",
+        "decimalField": "OTHER Identify k, 6 TOTAL Lines 1 through 5_2.0.0"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l01_other",
+          "storage_l02_other",
+          "storage_l03_other",
+          "storage_l04_other",
+          "storage_l05_other"
+        ]
+      }
+    },
+    {
+      "id": "storage_l06_wine",
+      "label": "6. TOTAL (Lines 1 through 5) — Wine",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "WINE Proof gallons l, 6 TOTAL Lines 1 through 5",
+      "row": "line_06",
+      "column": "wine",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "WINE Proof gallons l, 6 TOTAL Lines 1 through 5",
+        "decimalField": "WINE Proof gallons l, 6 TOTAL Lines 1 through 5_2"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l01_wine",
+          "storage_l02_wine",
+          "storage_l05_wine"
+        ]
+      }
+    },
+    {
+      "id": "storage_l06_total",
+      "label": "6. TOTAL (Lines 1 through 5) — Total",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 6 TOTAL Lines 1 through 5.0.1",
+      "row": "line_06",
+      "column": "total",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 6 TOTAL Lines 1 through 5.0.1",
+        "decimalField": "OTHER Identify k, 6 TOTAL Lines 1 through 5_2.0.1"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l01_total",
+          "storage_l02_total",
+          "storage_l03_total",
+          "storage_l04_total",
+          "storage_l05_total"
+        ]
+      }
+    },
+    {
+      "id": "storage_l07_whisky_160_and_under",
+      "label": "7. Taxpaid — Whisky, distilled at 160° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT 160° AND UNDER b, 7 Taxpaid",
+      "row": "line_07",
+      "column": "whisky_160_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT 160° AND UNDER b, 7 Taxpaid",
+        "decimalField": "DISTILLED AT 160° AND UNDER b, 7 Taxpaid_2.0"
+      }
+    },
+    {
+      "id": "storage_l07_whisky_over_160",
+      "label": "7. Taxpaid — Whisky, distilled at over 160°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT OVER 160° c, 7 Taxpaid.0",
+      "row": "line_07",
+      "column": "whisky_over_160",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT OVER 160° c, 7 Taxpaid.0",
+        "decimalField": "DISTILLED AT OVER 160° c, 7 Taxpaid_2.0"
+      }
+    },
+    {
+      "id": "storage_l07_brandy_170_and_under",
+      "label": "7. Taxpaid — Brandy, distilled at 170° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT 170° AND UNDER d, 7 Taxpaid.0",
+      "row": "line_07",
+      "column": "brandy_170_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT 170° AND UNDER d, 7 Taxpaid.0",
+        "decimalField": "DISTILLED AT 170° AND UNDER d, 7 Taxpaid_2.0"
+      }
+    },
+    {
+      "id": "storage_l07_brandy_over_170",
+      "label": "7. Taxpaid — Brandy, distilled at over 170°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 7 Taxpaid.0.0",
+      "row": "line_07",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 7 Taxpaid.0.0",
+        "decimalField": "RUM f, 7 Taxpaid_2.0.0"
+      }
+    },
+    {
+      "id": "storage_l07_rum",
+      "label": "7. Taxpaid — Rum",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 7 Taxpaid.0.1",
+      "row": "line_07",
+      "column": "rum",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 7 Taxpaid.0.1",
+        "decimalField": "RUM f, 7 Taxpaid_2.0.1"
+      }
+    },
+    {
+      "id": "storage_l07_gin",
+      "label": "7. Taxpaid — Gin",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 7 Taxpaid.0.2",
+      "row": "line_07",
+      "column": "gin",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 7 Taxpaid.0.2",
+        "decimalField": "RUM f, 7 Taxpaid_2.0.2"
+      }
+    },
+    {
+      "id": "storage_l07_vodka",
+      "label": "7. Taxpaid — Vodka",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 7 Taxpaid.0.3",
+      "row": "line_07",
+      "column": "vodka",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 7 Taxpaid.0.3",
+        "decimalField": "RUM f, 7 Taxpaid_2.0.3"
+      }
+    },
+    {
+      "id": "storage_l07_alcohol_190_and_over",
+      "label": "7. Taxpaid — Alcohol and spirits, 190° and over",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "190° AND OVER i, 7 Taxpaid",
+      "row": "line_07",
+      "column": "alcohol_190_and_over",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "190° AND OVER i, 7 Taxpaid",
+        "decimalField": "190° AND OVER i, 7 Taxpaid_2"
+      }
+    },
+    {
+      "id": "storage_l07_alcohol_under_190",
+      "label": "7. Taxpaid — Alcohol and spirits, under 190°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "UNDER 190° i, 7 Taxpaid.0.0",
+      "row": "line_07",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "UNDER 190° i, 7 Taxpaid.0.0",
+        "decimalField": "UNDER 190° i, 7 Taxpaid_2.0.0"
+      }
+    },
+    {
+      "id": "storage_l07_other",
+      "label": "7. Taxpaid — Other (identify)",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 7 Taxpaid.0.0",
+      "row": "line_07",
+      "column": "other",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 7 Taxpaid.0.0",
+        "decimalField": "OTHER Identify k, 7 Taxpaid_2.0.0"
+      }
+    },
+    {
+      "id": "storage_l07_total",
+      "label": "7. Taxpaid — Total",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 7 Taxpaid.0.1",
+      "row": "line_07",
+      "column": "total",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 7 Taxpaid.0.1",
+        "decimalField": "OTHER Identify k, 7 Taxpaid_2.0.1"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l07_whisky_160_and_under",
+          "storage_l07_whisky_over_160",
+          "storage_l07_brandy_170_and_under",
+          "storage_l07_brandy_over_170",
+          "storage_l07_rum",
+          "storage_l07_gin",
+          "storage_l07_vodka",
+          "storage_l07_alcohol_190_and_over",
+          "storage_l07_alcohol_under_190",
+          "storage_l07_other"
+        ]
+      }
+    },
+    {
+      "id": "storage_l08_whisky_160_and_under",
+      "label": "8. Use of the United States — Whisky, distilled at 160° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT 160° AND UNDER b, 8 Use of the United States",
+      "row": "line_08",
+      "column": "whisky_160_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT 160° AND UNDER b, 8 Use of the United States",
+        "decimalField": "DISTILLED AT 160° AND UNDER b, 8 Use of the United States_2.0"
+      }
+    },
+    {
+      "id": "storage_l08_whisky_over_160",
+      "label": "8. Use of the United States — Whisky, distilled at over 160°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT OVER 160° c, 8 Use of the United States.0",
+      "row": "line_08",
+      "column": "whisky_over_160",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT OVER 160° c, 8 Use of the United States.0",
+        "decimalField": "DISTILLED AT OVER 160° c, 8 Use of the United States_2.0"
+      }
+    },
+    {
+      "id": "storage_l08_brandy_170_and_under",
+      "label": "8. Use of the United States — Brandy, distilled at 170° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT 170° AND UNDER d, 8 Use of the United States.0",
+      "row": "line_08",
+      "column": "brandy_170_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT 170° AND UNDER d, 8 Use of the United States.0",
+        "decimalField": "DISTILLED AT 170° AND UNDER d, 8 Use of the United States_2.0"
+      }
+    },
+    {
+      "id": "storage_l08_brandy_over_170",
+      "label": "8. Use of the United States — Brandy, distilled at over 170°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 8 Use of the United States.0.0",
+      "row": "line_08",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 8 Use of the United States.0.0",
+        "decimalField": "RUM f, 8 Use of the United States_2.0.0"
+      }
+    },
+    {
+      "id": "storage_l08_rum",
+      "label": "8. Use of the United States — Rum",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 8 Use of the United States.0.1",
+      "row": "line_08",
+      "column": "rum",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 8 Use of the United States.0.1",
+        "decimalField": "RUM f, 8 Use of the United States_2.0.1"
+      }
+    },
+    {
+      "id": "storage_l08_gin",
+      "label": "8. Use of the United States — Gin",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 8 Use of the United States.0.2",
+      "row": "line_08",
+      "column": "gin",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 8 Use of the United States.0.2",
+        "decimalField": "RUM f, 8 Use of the United States_2.0.2"
+      }
+    },
+    {
+      "id": "storage_l08_vodka",
+      "label": "8. Use of the United States — Vodka",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 8 Use of the United States.0.3",
+      "row": "line_08",
+      "column": "vodka",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 8 Use of the United States.0.3",
+        "decimalField": "RUM f, 8 Use of the United States_2.0.3"
+      }
+    },
+    {
+      "id": "storage_l08_alcohol_190_and_over",
+      "label": "8. Use of the United States — Alcohol and spirits, 190° and over",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "190° AND OVER i, 8 Use of the United States",
+      "row": "line_08",
+      "column": "alcohol_190_and_over",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "190° AND OVER i, 8 Use of the United States",
+        "decimalField": "190° AND OVER i, 8 Use of the United States_2"
+      }
+    },
+    {
+      "id": "storage_l08_alcohol_under_190",
+      "label": "8. Use of the United States — Alcohol and spirits, under 190°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "UNDER 190° i, 8 Use of the United States.0.0",
+      "row": "line_08",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "UNDER 190° i, 8 Use of the United States.0.0",
+        "decimalField": "UNDER 190° i, 8 Use of the United States_2.0.0"
+      }
+    },
+    {
+      "id": "storage_l08_other",
+      "label": "8. Use of the United States — Other (identify)",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 8 Use of the United States.0.0",
+      "row": "line_08",
+      "column": "other",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 8 Use of the United States.0.0",
+        "decimalField": "OTHER Identify k, 8 Use of the United States_2.0.0"
+      }
+    },
+    {
+      "id": "storage_l08_total",
+      "label": "8. Use of the United States — Total",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 8 Use of the United States.0.1",
+      "row": "line_08",
+      "column": "total",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 8 Use of the United States.0.1",
+        "decimalField": "OTHER Identify k, 8 Use of the United States_2.0.1"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l08_whisky_160_and_under",
+          "storage_l08_whisky_over_160",
+          "storage_l08_brandy_170_and_under",
+          "storage_l08_brandy_over_170",
+          "storage_l08_rum",
+          "storage_l08_gin",
+          "storage_l08_vodka",
+          "storage_l08_alcohol_190_and_over",
+          "storage_l08_alcohol_under_190",
+          "storage_l08_other"
+        ]
+      }
+    },
+    {
+      "id": "storage_l09_alcohol_190_and_over",
+      "label": "9. Hospital, scientific educational use — Alcohol and spirits, 190° and over",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "190° AND OVER i, Row 9",
+      "row": "line_09",
+      "column": "alcohol_190_and_over",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "190° AND OVER i, Row 9",
+        "decimalField": "190° AND OVER i, Row 9_2"
+      }
+    },
+    {
+      "id": "storage_l09_total",
+      "label": "9. Hospital, scientific educational use — Total",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 1 On hand first of month.1.1",
+      "row": "line_09",
+      "column": "total",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 1 On hand first of month.1.1",
+        "decimalField": "OTHER Identify k, 1 On hand first of month_2.1.1"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l09_alcohol_190_and_over"
+        ]
+      }
+    },
+    {
+      "id": "storage_l10_whisky_160_and_under",
+      "label": "10. Export — Whisky, distilled at 160° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "10 Export",
+      "row": "line_10",
+      "column": "whisky_160_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "10 Export",
+        "decimalField": "DISTILLED AT 160° AND UNDER b, 2 Deposited in bulk storage1_2.1"
+      }
+    },
+    {
+      "id": "storage_l10_whisky_over_160",
+      "label": "10. Export — Whisky, distilled at over 160°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT OVER 160° c, 2 Deposited in bulk storage1.1",
+      "row": "line_10",
+      "column": "whisky_over_160",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT OVER 160° c, 2 Deposited in bulk storage1.1",
+        "decimalField": "DISTILLED AT OVER 160° c, 2 Deposited in bulk storage1_2.1"
+      }
+    },
+    {
+      "id": "storage_l10_brandy_170_and_under",
+      "label": "10. Export — Brandy, distilled at 170° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT 170° AND UNDER d, 2 Deposited in bulk storage1.1",
+      "row": "line_10",
+      "column": "brandy_170_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT 170° AND UNDER d, 2 Deposited in bulk storage1.1",
+        "decimalField": "DISTILLED AT 170° AND UNDER d, 2 Deposited in bulk storage1_2.1"
+      }
+    },
+    {
+      "id": "storage_l10_brandy_over_170",
+      "label": "10. Export — Brandy, distilled at over 170°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 2 Deposited in bulk storage1.1.0",
+      "row": "line_10",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 2 Deposited in bulk storage1.1.0",
+        "decimalField": "RUM f, 2 Deposited in bulk storage1_2.1.0"
+      }
+    },
+    {
+      "id": "storage_l10_rum",
+      "label": "10. Export — Rum",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 2 Deposited in bulk storage1.1.1",
+      "row": "line_10",
+      "column": "rum",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 2 Deposited in bulk storage1.1.1",
+        "decimalField": "RUM f, 2 Deposited in bulk storage1_2.1.1"
+      }
+    },
+    {
+      "id": "storage_l10_gin",
+      "label": "10. Export — Gin",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 2 Deposited in bulk storage1.1.2",
+      "row": "line_10",
+      "column": "gin",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 2 Deposited in bulk storage1.1.2",
+        "decimalField": "RUM f, 2 Deposited in bulk storage1_2.1.2"
+      }
+    },
+    {
+      "id": "storage_l10_vodka",
+      "label": "10. Export — Vodka",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 2 Deposited in bulk storage1.1.3",
+      "row": "line_10",
+      "column": "vodka",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 2 Deposited in bulk storage1.1.3",
+        "decimalField": "RUM f, 2 Deposited in bulk storage1_2.1.3"
+      }
+    },
+    {
+      "id": "storage_l10_alcohol_190_and_over",
+      "label": "10. Export — Alcohol and spirits, 190° and over",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "190° AND OVER i, 10 Export",
+      "row": "line_10",
+      "column": "alcohol_190_and_over",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "190° AND OVER i, 10 Export",
+        "decimalField": "190° AND OVER i, 10 Export_2"
+      }
+    },
+    {
+      "id": "storage_l10_alcohol_under_190",
+      "label": "10. Export — Alcohol and spirits, under 190°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "UNDER 190° i, 2 Deposited in bulk storage1.1.0",
+      "row": "line_10",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "UNDER 190° i, 2 Deposited in bulk storage1.1.0",
+        "decimalField": "UNDER 190° i, 2 Deposited in bulk storage1_2.1.0"
+      }
+    },
+    {
+      "id": "storage_l10_other",
+      "label": "10. Export — Other (identify)",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 2 Deposited in bulk storage1.1.0",
+      "row": "line_10",
+      "column": "other",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 2 Deposited in bulk storage1.1.0",
+        "decimalField": "OTHER Identify k, 2 Deposited in bulk storage1_2.1.0"
+      }
+    },
+    {
+      "id": "storage_l10_total",
+      "label": "10. Export — Total",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 2 Deposited in bulk storage1.1.1",
+      "row": "line_10",
+      "column": "total",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 2 Deposited in bulk storage1.1.1",
+        "decimalField": "OTHER Identify k, 2 Deposited in bulk storage1_2.1.1"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l10_whisky_160_and_under",
+          "storage_l10_whisky_over_160",
+          "storage_l10_brandy_170_and_under",
+          "storage_l10_brandy_over_170",
+          "storage_l10_rum",
+          "storage_l10_gin",
+          "storage_l10_vodka",
+          "storage_l10_alcohol_190_and_over",
+          "storage_l10_alcohol_under_190",
+          "storage_l10_other"
+        ]
+      }
+    },
+    {
+      "id": "storage_l11_whisky_160_and_under",
+      "label": "11. Transfer to foreign-trade zone — Whisky, distilled at 160° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "11 Transfer to foreign-trade zone",
+      "row": "line_11",
+      "column": "whisky_160_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "11 Transfer to foreign-trade zone",
+        "decimalField": "DISTILLED AT 160° AND UNDER b, 3 Received from Customs custody_2.1"
+      }
+    },
+    {
+      "id": "storage_l11_whisky_over_160",
+      "label": "11. Transfer to foreign-trade zone — Whisky, distilled at over 160°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT OVER 160° c, 3 Received from Customs custody.1",
+      "row": "line_11",
+      "column": "whisky_over_160",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT OVER 160° c, 3 Received from Customs custody.1",
+        "decimalField": "DISTILLED AT OVER 160° c, 3 Received from Customs custody_2.1"
+      }
+    },
+    {
+      "id": "storage_l11_brandy_170_and_under",
+      "label": "11. Transfer to foreign-trade zone — Brandy, distilled at 170° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT 170° AND UNDER d, 3 Received from Customs custody.1",
+      "row": "line_11",
+      "column": "brandy_170_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT 170° AND UNDER d, 3 Received from Customs custody.1",
+        "decimalField": "DISTILLED AT 170° AND UNDER d, 3 Received from Customs custody_2.1"
+      }
+    },
+    {
+      "id": "storage_l11_brandy_over_170",
+      "label": "11. Transfer to foreign-trade zone — Brandy, distilled at over 170°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 3 Received from Customs custody.1.0",
+      "row": "line_11",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 3 Received from Customs custody.1.0",
+        "decimalField": "RUM f, 3 Received from Customs custody_2.1.0"
+      }
+    },
+    {
+      "id": "storage_l11_rum",
+      "label": "11. Transfer to foreign-trade zone — Rum",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 3 Received from Customs custody.1.1",
+      "row": "line_11",
+      "column": "rum",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 3 Received from Customs custody.1.1",
+        "decimalField": "RUM f, 3 Received from Customs custody_2.1.1"
+      }
+    },
+    {
+      "id": "storage_l11_gin",
+      "label": "11. Transfer to foreign-trade zone — Gin",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 3 Received from Customs custody.1.2",
+      "row": "line_11",
+      "column": "gin",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 3 Received from Customs custody.1.2",
+        "decimalField": "RUM f, 3 Received from Customs custody_2.1.2"
+      }
+    },
+    {
+      "id": "storage_l11_vodka",
+      "label": "11. Transfer to foreign-trade zone — Vodka",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 3 Received from Customs custody.1.3",
+      "row": "line_11",
+      "column": "vodka",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 3 Received from Customs custody.1.3",
+        "decimalField": "RUM f, 3 Received from Customs custody_2.1.3"
+      }
+    },
+    {
+      "id": "storage_l11_alcohol_190_and_over",
+      "label": "11. Transfer to foreign-trade zone — Alcohol and spirits, 190° and over",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "190° AND OVER i, 11 Transfer to foreign-trade zone",
+      "row": "line_11",
+      "column": "alcohol_190_and_over",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "190° AND OVER i, 11 Transfer to foreign-trade zone",
+        "decimalField": "190° AND OVER i, 11 Transfer to foreign-trade zone_2"
+      }
+    },
+    {
+      "id": "storage_l11_alcohol_under_190",
+      "label": "11. Transfer to foreign-trade zone — Alcohol and spirits, under 190°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "UNDER 190° i, 3 Received from Customs custody.1.0",
+      "row": "line_11",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "UNDER 190° i, 3 Received from Customs custody.1.0",
+        "decimalField": "UNDER 190° i, 3 Received from Customs custody_2.1.0"
+      }
+    },
+    {
+      "id": "storage_l11_other",
+      "label": "11. Transfer to foreign-trade zone — Other (identify)",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 3 Received from Customs custody.1.0",
+      "row": "line_11",
+      "column": "other",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 3 Received from Customs custody.1.0",
+        "decimalField": "OTHER Identify k, 3 Received from Customs custody_2.1.0"
+      }
+    },
+    {
+      "id": "storage_l11_total",
+      "label": "11. Transfer to foreign-trade zone — Total",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 3 Received from Customs custody.1.1",
+      "row": "line_11",
+      "column": "total",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 3 Received from Customs custody.1.1",
+        "decimalField": "OTHER Identify k, 3 Received from Customs custody_2.1.1"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l11_whisky_160_and_under",
+          "storage_l11_whisky_over_160",
+          "storage_l11_brandy_170_and_under",
+          "storage_l11_brandy_over_170",
+          "storage_l11_rum",
+          "storage_l11_gin",
+          "storage_l11_vodka",
+          "storage_l11_alcohol_190_and_over",
+          "storage_l11_alcohol_under_190",
+          "storage_l11_other"
+        ]
+      }
+    },
+    {
+      "id": "storage_l12_whisky_160_and_under",
+      "label": "12. Transfer to CMBW — Whisky, distilled at 160° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "12 Transfer to CMBW",
+      "row": "line_12",
+      "column": "whisky_160_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "12 Transfer to CMBW",
+        "decimalField": "DISTILLED AT 160° AND UNDER b, 4 Returned to bulk storage_2.1"
+      }
+    },
+    {
+      "id": "storage_l12_whisky_over_160",
+      "label": "12. Transfer to CMBW — Whisky, distilled at over 160°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT OVER 160° c, 4 Returned to bulk storage.1",
+      "row": "line_12",
+      "column": "whisky_over_160",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT OVER 160° c, 4 Returned to bulk storage.1",
+        "decimalField": "DISTILLED AT OVER 160° c, 4 Returned to bulk storage_2.1"
+      }
+    },
+    {
+      "id": "storage_l12_brandy_170_and_under",
+      "label": "12. Transfer to CMBW — Brandy, distilled at 170° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT 170° AND UNDER d, 4 Returned to bulk storage.1",
+      "row": "line_12",
+      "column": "brandy_170_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT 170° AND UNDER d, 4 Returned to bulk storage.1",
+        "decimalField": "DISTILLED AT 170° AND UNDER d, 4 Returned to bulk storage_2.1"
+      }
+    },
+    {
+      "id": "storage_l12_brandy_over_170",
+      "label": "12. Transfer to CMBW — Brandy, distilled at over 170°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 4 Returned to bulk storage.1.0",
+      "row": "line_12",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 4 Returned to bulk storage.1.0",
+        "decimalField": "RUM f, 4 Returned to bulk storage_2.1.0"
+      }
+    },
+    {
+      "id": "storage_l12_rum",
+      "label": "12. Transfer to CMBW — Rum",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 4 Returned to bulk storage.1.1",
+      "row": "line_12",
+      "column": "rum",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 4 Returned to bulk storage.1.1",
+        "decimalField": "RUM f, 4 Returned to bulk storage_2.1.1"
+      }
+    },
+    {
+      "id": "storage_l12_gin",
+      "label": "12. Transfer to CMBW — Gin",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 4 Returned to bulk storage.1.2",
+      "row": "line_12",
+      "column": "gin",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 4 Returned to bulk storage.1.2",
+        "decimalField": "RUM f, 4 Returned to bulk storage_2.1.2"
+      }
+    },
+    {
+      "id": "storage_l12_vodka",
+      "label": "12. Transfer to CMBW — Vodka",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 4 Returned to bulk storage.1.3",
+      "row": "line_12",
+      "column": "vodka",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 4 Returned to bulk storage.1.3",
+        "decimalField": "RUM f, 4 Returned to bulk storage_2.1.3"
+      }
+    },
+    {
+      "id": "storage_l12_alcohol_190_and_over",
+      "label": "12. Transfer to CMBW — Alcohol and spirits, 190° and over",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "190° AND OVER i, 12 Transfer to CMBW",
+      "row": "line_12",
+      "column": "alcohol_190_and_over",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "190° AND OVER i, 12 Transfer to CMBW",
+        "decimalField": "190° AND OVER i, 12 Transfer to CMBW_2"
+      }
+    },
+    {
+      "id": "storage_l12_alcohol_under_190",
+      "label": "12. Transfer to CMBW — Alcohol and spirits, under 190°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "UNDER 190° i, 4 Returned to bulk storage.1.0",
+      "row": "line_12",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "UNDER 190° i, 4 Returned to bulk storage.1.0",
+        "decimalField": "UNDER 190° i, 4 Returned to bulk storage_2.1.0"
+      }
+    },
+    {
+      "id": "storage_l12_other",
+      "label": "12. Transfer to CMBW — Other (identify)",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 4 Returned to bulk storage.1.0",
+      "row": "line_12",
+      "column": "other",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 4 Returned to bulk storage.1.0",
+        "decimalField": "OTHER Identify k, 4 Returned to bulk storage_2.1.0"
+      }
+    },
+    {
+      "id": "storage_l12_total",
+      "label": "12. Transfer to CMBW — Total",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 4 Returned to bulk storage.1.1",
+      "row": "line_12",
+      "column": "total",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 4 Returned to bulk storage.1.1",
+        "decimalField": "OTHER Identify k, 4 Returned to bulk storage_2.1.1"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l12_whisky_160_and_under",
+          "storage_l12_whisky_over_160",
+          "storage_l12_brandy_170_and_under",
+          "storage_l12_brandy_over_170",
+          "storage_l12_rum",
+          "storage_l12_gin",
+          "storage_l12_vodka",
+          "storage_l12_alcohol_190_and_over",
+          "storage_l12_alcohol_under_190",
+          "storage_l12_other"
+        ]
+      }
+    },
+    {
+      "id": "storage_l13_whisky_160_and_under",
+      "label": "13. Use as supplies on vessels and aircraft — Whisky, distilled at 160° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "13 Use as supplies on vessels and aircraft",
+      "row": "line_13",
+      "column": "whisky_160_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "13 Use as supplies on vessels and aircraft",
+        "decimalField": "DISTILLED AT 160° AND UNDER b, 5_2.1"
+      }
+    },
+    {
+      "id": "storage_l13_whisky_over_160",
+      "label": "13. Use as supplies on vessels and aircraft — Whisky, distilled at over 160°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT OVER 160° c, 5.1",
+      "row": "line_13",
+      "column": "whisky_over_160",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT OVER 160° c, 5.1",
+        "decimalField": "DISTILLED AT OVER 160° c, 5_2.1"
+      }
+    },
+    {
+      "id": "storage_l13_brandy_170_and_under",
+      "label": "13. Use as supplies on vessels and aircraft — Brandy, distilled at 170° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT 170° AND UNDER d, 5.1",
+      "row": "line_13",
+      "column": "brandy_170_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT 170° AND UNDER d, 5.1",
+        "decimalField": "DISTILLED AT 170° AND UNDER d, 5_2.1"
+      }
+    },
+    {
+      "id": "storage_l13_brandy_over_170",
+      "label": "13. Use as supplies on vessels and aircraft — Brandy, distilled at over 170°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 5.1.0",
+      "row": "line_13",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 5.1.0",
+        "decimalField": "RUM f, 5_2.1.0"
+      }
+    },
+    {
+      "id": "storage_l13_rum",
+      "label": "13. Use as supplies on vessels and aircraft — Rum",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 5.1.1",
+      "row": "line_13",
+      "column": "rum",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 5.1.1",
+        "decimalField": "RUM f, 5_2.1.1"
+      }
+    },
+    {
+      "id": "storage_l13_gin",
+      "label": "13. Use as supplies on vessels and aircraft — Gin",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 5.1.2",
+      "row": "line_13",
+      "column": "gin",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 5.1.2",
+        "decimalField": "RUM f, 5_2.1.2"
+      }
+    },
+    {
+      "id": "storage_l13_vodka",
+      "label": "13. Use as supplies on vessels and aircraft — Vodka",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 5.1.3",
+      "row": "line_13",
+      "column": "vodka",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 5.1.3",
+        "decimalField": "RUM f, 5_2.1.3"
+      }
+    },
+    {
+      "id": "storage_l13_alcohol_190_and_over",
+      "label": "13. Use as supplies on vessels and aircraft — Alcohol and spirits, 190° and over",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "190° AND OVER i, 13 Use as supplies on vessels and aircraft",
+      "row": "line_13",
+      "column": "alcohol_190_and_over",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "190° AND OVER i, 13 Use as supplies on vessels and aircraft",
+        "decimalField": "190° AND OVER i, 13 Use as supplies on vessels and aircraft_2"
+      }
+    },
+    {
+      "id": "storage_l13_alcohol_under_190",
+      "label": "13. Use as supplies on vessels and aircraft — Alcohol and spirits, under 190°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "UNDER 190° i, 5.1.0",
+      "row": "line_13",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "UNDER 190° i, 5.1.0",
+        "decimalField": "UNDER 190° i, 5_2.1.0"
+      }
+    },
+    {
+      "id": "storage_l13_other",
+      "label": "13. Use as supplies on vessels and aircraft — Other (identify)",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 5.1.0",
+      "row": "line_13",
+      "column": "other",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 5.1.0",
+        "decimalField": "OTHER Identify k, 5_2.1.0"
+      }
+    },
+    {
+      "id": "storage_l13_total",
+      "label": "13. Use as supplies on vessels and aircraft — Total",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 5.1.1",
+      "row": "line_13",
+      "column": "total",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 5.1.1",
+        "decimalField": "OTHER Identify k, 5_2.1.1"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l13_whisky_160_and_under",
+          "storage_l13_whisky_over_160",
+          "storage_l13_brandy_170_and_under",
+          "storage_l13_brandy_over_170",
+          "storage_l13_rum",
+          "storage_l13_gin",
+          "storage_l13_vodka",
+          "storage_l13_alcohol_190_and_over",
+          "storage_l13_alcohol_under_190",
+          "storage_l13_other"
+        ]
+      }
+    },
+    {
+      "id": "storage_l14_brandy_170_and_under",
+      "label": "14. Transfer to bonded winery — Brandy, distilled at 170° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT OVER 160° c, 6 TOTAL Lines 1 through 5.1",
+      "row": "line_14",
+      "column": "brandy_170_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT OVER 160° c, 6 TOTAL Lines 1 through 5.1",
+        "decimalField": "DISTILLED AT OVER 160° c, 6 TOTAL Lines 1 through 5_2.1"
+      }
+    },
+    {
+      "id": "storage_l14_brandy_over_170",
+      "label": "14. Transfer to bonded winery — Brandy, distilled at over 170°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 6 TOTAL Lines 1 through 5.1.0",
+      "row": "line_14",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 6 TOTAL Lines 1 through 5.1.0",
+        "decimalField": "RUM f, 6 TOTAL Lines 1 through 5_2.1.0"
+      }
+    },
+    {
+      "id": "storage_l14_alcohol_190_and_over",
+      "label": "14. Transfer to bonded winery — Alcohol and spirits, 190° and over",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "190° AND OVER i, Row 14",
+      "row": "line_14",
+      "column": "alcohol_190_and_over",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "190° AND OVER i, Row 14",
+        "decimalField": "190° AND OVER i, Row 14_2"
+      }
+    },
+    {
+      "id": "storage_l14_alcohol_under_190",
+      "label": "14. Transfer to bonded winery — Alcohol and spirits, under 190°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "UNDER 190° i, 6 TOTAL Lines 1 through 5.1.0",
+      "row": "line_14",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "UNDER 190° i, 6 TOTAL Lines 1 through 5.1.0",
+        "decimalField": "UNDER 190° i, 6 TOTAL Lines 1 through 5_2.1.0"
+      }
+    },
+    {
+      "id": "storage_l14_total",
+      "label": "14. Transfer to bonded winery — Total",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 6 TOTAL Lines 1 through 5.1.1",
+      "row": "line_14",
+      "column": "total",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 6 TOTAL Lines 1 through 5.1.1",
+        "decimalField": "OTHER Identify k, 6 TOTAL Lines 1 through 5_2.1.1"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l14_brandy_170_and_under",
+          "storage_l14_brandy_over_170",
+          "storage_l14_alcohol_190_and_over",
+          "storage_l14_alcohol_under_190"
+        ]
+      }
+    },
+    {
+      "id": "storage_l15_whisky_160_and_under",
+      "label": "15. Transfer to CBW — Whisky, distilled at 160° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "15 Transfer to CBW",
+      "row": "line_15",
+      "column": "whisky_160_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "15 Transfer to CBW",
+        "decimalField": "DISTILLED AT 160° AND UNDER b, 7 Taxpaid_2.1"
+      }
+    },
+    {
+      "id": "storage_l15_whisky_over_160",
+      "label": "15. Transfer to CBW — Whisky, distilled at over 160°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT OVER 160° c, 7 Taxpaid.1",
+      "row": "line_15",
+      "column": "whisky_over_160",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT OVER 160° c, 7 Taxpaid.1",
+        "decimalField": "DISTILLED AT OVER 160° c, 7 Taxpaid_2.1"
+      }
+    },
+    {
+      "id": "storage_l15_brandy_170_and_under",
+      "label": "15. Transfer to CBW — Brandy, distilled at 170° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT 170° AND UNDER d, 7 Taxpaid.1",
+      "row": "line_15",
+      "column": "brandy_170_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT 170° AND UNDER d, 7 Taxpaid.1",
+        "decimalField": "DISTILLED AT 170° AND UNDER d, 7 Taxpaid_2.1"
+      }
+    },
+    {
+      "id": "storage_l15_brandy_over_170",
+      "label": "15. Transfer to CBW — Brandy, distilled at over 170°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 7 Taxpaid.1.0",
+      "row": "line_15",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 7 Taxpaid.1.0",
+        "decimalField": "RUM f, 7 Taxpaid_2.1.0"
+      }
+    },
+    {
+      "id": "storage_l15_rum",
+      "label": "15. Transfer to CBW — Rum",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 7 Taxpaid.1.1",
+      "row": "line_15",
+      "column": "rum",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 7 Taxpaid.1.1",
+        "decimalField": "RUM f, 7 Taxpaid_2.1.1"
+      }
+    },
+    {
+      "id": "storage_l15_gin",
+      "label": "15. Transfer to CBW — Gin",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 7 Taxpaid.1.2",
+      "row": "line_15",
+      "column": "gin",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 7 Taxpaid.1.2",
+        "decimalField": "RUM f, 7 Taxpaid_2.1.2"
+      }
+    },
+    {
+      "id": "storage_l15_vodka",
+      "label": "15. Transfer to CBW — Vodka",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 7 Taxpaid.1.3",
+      "row": "line_15",
+      "column": "vodka",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 7 Taxpaid.1.3",
+        "decimalField": "RUM f, 7 Taxpaid_2.1.3"
+      }
+    },
+    {
+      "id": "storage_l15_alcohol_190_and_over",
+      "label": "15. Transfer to CBW — Alcohol and spirits, 190° and over",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "190° AND OVER i, 15 Transfer to CBW",
+      "row": "line_15",
+      "column": "alcohol_190_and_over",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "190° AND OVER i, 15 Transfer to CBW",
+        "decimalField": "190° AND OVER i, 15 Transfer to CBW_2"
+      }
+    },
+    {
+      "id": "storage_l15_alcohol_under_190",
+      "label": "15. Transfer to CBW — Alcohol and spirits, under 190°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "UNDER 190° i, 7 Taxpaid.1.0",
+      "row": "line_15",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "UNDER 190° i, 7 Taxpaid.1.0",
+        "decimalField": "UNDER 190° i, 7 Taxpaid_2.1.0"
+      }
+    },
+    {
+      "id": "storage_l15_other",
+      "label": "15. Transfer to CBW — Other (identify)",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 7 Taxpaid.1.0",
+      "row": "line_15",
+      "column": "other",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 7 Taxpaid.1.0",
+        "decimalField": "OTHER Identify k, 7 Taxpaid_2.1.0"
+      }
+    },
+    {
+      "id": "storage_l15_total",
+      "label": "15. Transfer to CBW — Total",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 7 Taxpaid.1.1",
+      "row": "line_15",
+      "column": "total",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 7 Taxpaid.1.1",
+        "decimalField": "OTHER Identify k, 7 Taxpaid_2.1.1"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l15_whisky_160_and_under",
+          "storage_l15_whisky_over_160",
+          "storage_l15_brandy_170_and_under",
+          "storage_l15_brandy_over_170",
+          "storage_l15_rum",
+          "storage_l15_gin",
+          "storage_l15_vodka",
+          "storage_l15_alcohol_190_and_over",
+          "storage_l15_alcohol_under_190",
+          "storage_l15_other"
+        ]
+      }
+    },
+    {
+      "id": "storage_l16_whisky_160_and_under",
+      "label": "16. Research, development, or testing — Whisky, distilled at 160° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "16 Research, development or testing3",
+      "row": "line_16",
+      "column": "whisky_160_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "16 Research, development or testing3",
+        "decimalField": "DISTILLED AT 160° AND UNDER b, 8 Use of the United States_2.1"
+      }
+    },
+    {
+      "id": "storage_l16_whisky_over_160",
+      "label": "16. Research, development, or testing — Whisky, distilled at over 160°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT OVER 160° c, 8 Use of the United States.1",
+      "row": "line_16",
+      "column": "whisky_over_160",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT OVER 160° c, 8 Use of the United States.1",
+        "decimalField": "DISTILLED AT OVER 160° c, 8 Use of the United States_2.1"
+      }
+    },
+    {
+      "id": "storage_l16_brandy_170_and_under",
+      "label": "16. Research, development, or testing — Brandy, distilled at 170° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT 170° AND UNDER d, 8 Use of the United States.1",
+      "row": "line_16",
+      "column": "brandy_170_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT 170° AND UNDER d, 8 Use of the United States.1",
+        "decimalField": "DISTILLED AT 170° AND UNDER d, 8 Use of the United States_2.1"
+      }
+    },
+    {
+      "id": "storage_l16_brandy_over_170",
+      "label": "16. Research, development, or testing — Brandy, distilled at over 170°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 8 Use of the United States.1.0",
+      "row": "line_16",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 8 Use of the United States.1.0",
+        "decimalField": "RUM f, 8 Use of the United States_2.1.0"
+      }
+    },
+    {
+      "id": "storage_l16_rum",
+      "label": "16. Research, development, or testing — Rum",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 8 Use of the United States.1.1",
+      "row": "line_16",
+      "column": "rum",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 8 Use of the United States.1.1",
+        "decimalField": "RUM f, 8 Use of the United States_2.1.1"
+      }
+    },
+    {
+      "id": "storage_l16_gin",
+      "label": "16. Research, development, or testing — Gin",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 8 Use of the United States.1.2",
+      "row": "line_16",
+      "column": "gin",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 8 Use of the United States.1.2",
+        "decimalField": "RUM f, 8 Use of the United States_2.1.2"
+      }
+    },
+    {
+      "id": "storage_l16_vodka",
+      "label": "16. Research, development, or testing — Vodka",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 8 Use of the United States.1.3",
+      "row": "line_16",
+      "column": "vodka",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 8 Use of the United States.1.3",
+        "decimalField": "RUM f, 8 Use of the United States_2.1.3"
+      }
+    },
+    {
+      "id": "storage_l16_alcohol_190_and_over",
+      "label": "16. Research, development, or testing — Alcohol and spirits, 190° and over",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "190° AND OVER i, 16 Research, development or testing3",
+      "row": "line_16",
+      "column": "alcohol_190_and_over",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "190° AND OVER i, 16 Research, development or testing3",
+        "decimalField": "190° AND OVER i, 16 Research, development or testing3_2"
+      }
+    },
+    {
+      "id": "storage_l16_alcohol_under_190",
+      "label": "16. Research, development, or testing — Alcohol and spirits, under 190°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "UNDER 190° i, 8 Use of the United States.1.0",
+      "row": "line_16",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "UNDER 190° i, 8 Use of the United States.1.0",
+        "decimalField": "UNDER 190° i, 8 Use of the United States_2.1.0"
+      }
+    },
+    {
+      "id": "storage_l16_other",
+      "label": "16. Research, development, or testing — Other (identify)",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 8 Use of the United States.1.0",
+      "row": "line_16",
+      "column": "other",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 8 Use of the United States.1.0",
+        "decimalField": "OTHER Identify k, 8 Use of the United States_2.1.0"
+      }
+    },
+    {
+      "id": "storage_l16_total",
+      "label": "16. Research, development, or testing — Total",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 8 Use of the United States.1.1",
+      "row": "line_16",
+      "column": "total",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 8 Use of the United States.1.1",
+        "decimalField": "OTHER Identify k, 8 Use of the United States_2.1.1"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l16_whisky_160_and_under",
+          "storage_l16_whisky_over_160",
+          "storage_l16_brandy_170_and_under",
+          "storage_l16_brandy_over_170",
+          "storage_l16_rum",
+          "storage_l16_gin",
+          "storage_l16_vodka",
+          "storage_l16_alcohol_190_and_over",
+          "storage_l16_alcohol_under_190",
+          "storage_l16_other"
+        ]
+      }
+    },
+    {
+      "id": "storage_l17_whisky_160_and_under",
+      "label": "17. Transferred to processing account — Whisky, distilled at 160° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "17 Transferred to processing account",
+      "row": "line_17",
+      "column": "whisky_160_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "17 Transferred to processing account",
+        "decimalField": "DISTILLED AT 160° AND UNDER b, 1 On hand first of month_2.2"
+      }
+    },
+    {
+      "id": "storage_l17_whisky_over_160",
+      "label": "17. Transferred to processing account — Whisky, distilled at over 160°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT OVER 160° c, 1 On hand first of month.2",
+      "row": "line_17",
+      "column": "whisky_over_160",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT OVER 160° c, 1 On hand first of month.2",
+        "decimalField": "DISTILLED AT OVER 160° c, 1 On hand first of month_2.2"
+      }
+    },
+    {
+      "id": "storage_l17_brandy_170_and_under",
+      "label": "17. Transferred to processing account — Brandy, distilled at 170° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT 170° AND UNDER d, 1 On hand first of month.2",
+      "row": "line_17",
+      "column": "brandy_170_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT 170° AND UNDER d, 1 On hand first of month.2",
+        "decimalField": "DISTILLED AT 170° AND UNDER d, 1 On hand first of month_2.2"
+      }
+    },
+    {
+      "id": "storage_l17_brandy_over_170",
+      "label": "17. Transferred to processing account — Brandy, distilled at over 170°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 1 On hand first of month.2.0",
+      "row": "line_17",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 1 On hand first of month.2.0",
+        "decimalField": "RUM f, 1 On hand first of month_2.2.0"
+      }
+    },
+    {
+      "id": "storage_l17_rum",
+      "label": "17. Transferred to processing account — Rum",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 1 On hand first of month.2.1",
+      "row": "line_17",
+      "column": "rum",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 1 On hand first of month.2.1",
+        "decimalField": "RUM f, 1 On hand first of month_2.2.1"
+      }
+    },
+    {
+      "id": "storage_l17_gin",
+      "label": "17. Transferred to processing account — Gin",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 1 On hand first of month.2.2",
+      "row": "line_17",
+      "column": "gin",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 1 On hand first of month.2.2",
+        "decimalField": "RUM f, 1 On hand first of month_2.2.2"
+      }
+    },
+    {
+      "id": "storage_l17_vodka",
+      "label": "17. Transferred to processing account — Vodka",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 1 On hand first of month.2.3",
+      "row": "line_17",
+      "column": "vodka",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 1 On hand first of month.2.3",
+        "decimalField": "RUM f, 1 On hand first of month_2.2.3"
+      }
+    },
+    {
+      "id": "storage_l17_alcohol_190_and_over",
+      "label": "17. Transferred to processing account — Alcohol and spirits, 190° and over",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "190° AND OVER i, 17 Transferred to processing account",
+      "row": "line_17",
+      "column": "alcohol_190_and_over",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "190° AND OVER i, 17 Transferred to processing account",
+        "decimalField": "190° AND OVER i, 17 Transferred to processing account_2"
+      }
+    },
+    {
+      "id": "storage_l17_alcohol_under_190",
+      "label": "17. Transferred to processing account — Alcohol and spirits, under 190°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "UNDER 190° i, 1 On hand first of month.2.0",
+      "row": "line_17",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "UNDER 190° i, 1 On hand first of month.2.0",
+        "decimalField": "UNDER 190° i, 1 On hand first of month_2.2.0"
+      }
+    },
+    {
+      "id": "storage_l17_other",
+      "label": "17. Transferred to processing account — Other (identify)",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 1 On hand first of month.2.0",
+      "row": "line_17",
+      "column": "other",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 1 On hand first of month.2.0",
+        "decimalField": "OTHER Identify k, 1 On hand first of month_2.2.0"
+      }
+    },
+    {
+      "id": "storage_l17_wine",
+      "label": "17. Transferred to processing account — Wine",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "UNDER 190° i, 1 On hand first of month.2.1",
+      "row": "line_17",
+      "column": "wine",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "UNDER 190° i, 1 On hand first of month.2.1",
+        "decimalField": "UNDER 190° i, 1 On hand first of month_2.2.1"
+      }
+    },
+    {
+      "id": "storage_l17_total",
+      "label": "17. Transferred to processing account — Total",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 1 On hand first of month.2.1",
+      "row": "line_17",
+      "column": "total",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 1 On hand first of month.2.1",
+        "decimalField": "OTHER Identify k, 1 On hand first of month_2.2.1"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l17_whisky_160_and_under",
+          "storage_l17_whisky_over_160",
+          "storage_l17_brandy_170_and_under",
+          "storage_l17_brandy_over_170",
+          "storage_l17_rum",
+          "storage_l17_gin",
+          "storage_l17_vodka",
+          "storage_l17_alcohol_190_and_over",
+          "storage_l17_alcohol_under_190",
+          "storage_l17_other",
+          "storage_l17_wine"
+        ]
+      }
+    },
+    {
+      "id": "storage_l18_whisky_160_and_under",
+      "label": "18. Transferred to production account — Whisky, distilled at 160° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "18 Transferred to production account4",
+      "row": "line_18",
+      "column": "whisky_160_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "18 Transferred to production account4",
+        "decimalField": "DISTILLED AT 160° AND UNDER b, 2 Deposited in bulk storage1_2.2"
+      }
+    },
+    {
+      "id": "storage_l18_whisky_over_160",
+      "label": "18. Transferred to production account — Whisky, distilled at over 160°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT OVER 160° c, 2 Deposited in bulk storage1.2",
+      "row": "line_18",
+      "column": "whisky_over_160",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT OVER 160° c, 2 Deposited in bulk storage1.2",
+        "decimalField": "DISTILLED AT OVER 160° c, 2 Deposited in bulk storage1_2.2"
+      }
+    },
+    {
+      "id": "storage_l18_brandy_170_and_under",
+      "label": "18. Transferred to production account — Brandy, distilled at 170° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT 170° AND UNDER d, 2 Deposited in bulk storage1.2",
+      "row": "line_18",
+      "column": "brandy_170_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT 170° AND UNDER d, 2 Deposited in bulk storage1.2",
+        "decimalField": "DISTILLED AT 170° AND UNDER d, 2 Deposited in bulk storage1_2.2"
+      }
+    },
+    {
+      "id": "storage_l18_brandy_over_170",
+      "label": "18. Transferred to production account — Brandy, distilled at over 170°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 2 Deposited in bulk storage1.2.0",
+      "row": "line_18",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 2 Deposited in bulk storage1.2.0",
+        "decimalField": "RUM f, 2 Deposited in bulk storage1_2.2.0"
+      }
+    },
+    {
+      "id": "storage_l18_rum",
+      "label": "18. Transferred to production account — Rum",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 2 Deposited in bulk storage1.2.1",
+      "row": "line_18",
+      "column": "rum",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 2 Deposited in bulk storage1.2.1",
+        "decimalField": "RUM f, 2 Deposited in bulk storage1_2.2.1"
+      }
+    },
+    {
+      "id": "storage_l18_gin",
+      "label": "18. Transferred to production account — Gin",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 2 Deposited in bulk storage1.2.2",
+      "row": "line_18",
+      "column": "gin",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 2 Deposited in bulk storage1.2.2",
+        "decimalField": "RUM f, 2 Deposited in bulk storage1_2.2.2"
+      }
+    },
+    {
+      "id": "storage_l18_vodka",
+      "label": "18. Transferred to production account — Vodka",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 2 Deposited in bulk storage1.2.3",
+      "row": "line_18",
+      "column": "vodka",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 2 Deposited in bulk storage1.2.3",
+        "decimalField": "RUM f, 2 Deposited in bulk storage1_2.2.3"
+      }
+    },
+    {
+      "id": "storage_l18_alcohol_190_and_over",
+      "label": "18. Transferred to production account — Alcohol and spirits, 190° and over",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "190° AND OVER i, 18 Transferred to production account4",
+      "row": "line_18",
+      "column": "alcohol_190_and_over",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "190° AND OVER i, 18 Transferred to production account4",
+        "decimalField": "190° AND OVER i, 18 Transferred to production account4_2"
+      }
+    },
+    {
+      "id": "storage_l18_alcohol_under_190",
+      "label": "18. Transferred to production account — Alcohol and spirits, under 190°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "UNDER 190° i, 2 Deposited in bulk storage1.2.0",
+      "row": "line_18",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "UNDER 190° i, 2 Deposited in bulk storage1.2.0",
+        "decimalField": "UNDER 190° i, 2 Deposited in bulk storage1_2.2.0"
+      }
+    },
+    {
+      "id": "storage_l18_other",
+      "label": "18. Transferred to production account — Other (identify)",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 2 Deposited in bulk storage1.2.0",
+      "row": "line_18",
+      "column": "other",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 2 Deposited in bulk storage1.2.0",
+        "decimalField": "OTHER Identify k, 2 Deposited in bulk storage1_2.2.0"
+      }
+    },
+    {
+      "id": "storage_l18_wine",
+      "label": "18. Transferred to production account — Wine",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "UNDER 190° i, 2 Deposited in bulk storage1.2.1",
+      "row": "line_18",
+      "column": "wine",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "UNDER 190° i, 2 Deposited in bulk storage1.2.1",
+        "decimalField": "UNDER 190° i, 2 Deposited in bulk storage1_2.2.1"
+      }
+    },
+    {
+      "id": "storage_l18_total",
+      "label": "18. Transferred to production account — Total",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 2 Deposited in bulk storage1.2.1",
+      "row": "line_18",
+      "column": "total",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 2 Deposited in bulk storage1.2.1",
+        "decimalField": "OTHER Identify k, 2 Deposited in bulk storage1_2.2.1"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l18_whisky_160_and_under",
+          "storage_l18_whisky_over_160",
+          "storage_l18_brandy_170_and_under",
+          "storage_l18_brandy_over_170",
+          "storage_l18_rum",
+          "storage_l18_gin",
+          "storage_l18_vodka",
+          "storage_l18_alcohol_190_and_over",
+          "storage_l18_alcohol_under_190",
+          "storage_l18_other",
+          "storage_l18_wine"
+        ]
+      }
+    },
+    {
+      "id": "storage_l19_whisky_160_and_under",
+      "label": "19. Transferred to other bonded premises — Whisky, distilled at 160° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "19 Transferred to other bonded premises",
+      "row": "line_19",
+      "column": "whisky_160_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "19 Transferred to other bonded premises",
+        "decimalField": "DISTILLED AT 160° AND UNDER b, 3 Received from Customs custody_2.2"
+      }
+    },
+    {
+      "id": "storage_l19_whisky_over_160",
+      "label": "19. Transferred to other bonded premises — Whisky, distilled at over 160°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT OVER 160° c, 3 Received from Customs custody.2",
+      "row": "line_19",
+      "column": "whisky_over_160",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT OVER 160° c, 3 Received from Customs custody.2",
+        "decimalField": "DISTILLED AT OVER 160° c, 3 Received from Customs custody_2.2"
+      }
+    },
+    {
+      "id": "storage_l19_brandy_170_and_under",
+      "label": "19. Transferred to other bonded premises — Brandy, distilled at 170° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT 170° AND UNDER d, 3 Received from Customs custody.2",
+      "row": "line_19",
+      "column": "brandy_170_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT 170° AND UNDER d, 3 Received from Customs custody.2",
+        "decimalField": "DISTILLED AT 170° AND UNDER d, 3 Received from Customs custody_2.2"
+      }
+    },
+    {
+      "id": "storage_l19_brandy_over_170",
+      "label": "19. Transferred to other bonded premises — Brandy, distilled at over 170°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 3 Received from Customs custody.2.0",
+      "row": "line_19",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 3 Received from Customs custody.2.0",
+        "decimalField": "RUM f, 3 Received from Customs custody_2.2.0"
+      }
+    },
+    {
+      "id": "storage_l19_rum",
+      "label": "19. Transferred to other bonded premises — Rum",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 3 Received from Customs custody.2.1",
+      "row": "line_19",
+      "column": "rum",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 3 Received from Customs custody.2.1",
+        "decimalField": "RUM f, 3 Received from Customs custody_2.2.1"
+      }
+    },
+    {
+      "id": "storage_l19_gin",
+      "label": "19. Transferred to other bonded premises — Gin",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 3 Received from Customs custody.2.2",
+      "row": "line_19",
+      "column": "gin",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 3 Received from Customs custody.2.2",
+        "decimalField": "RUM f, 3 Received from Customs custody_2.2.2"
+      }
+    },
+    {
+      "id": "storage_l19_vodka",
+      "label": "19. Transferred to other bonded premises — Vodka",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 3 Received from Customs custody.2.3",
+      "row": "line_19",
+      "column": "vodka",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 3 Received from Customs custody.2.3",
+        "decimalField": "RUM f, 3 Received from Customs custody_2.2.3"
+      }
+    },
+    {
+      "id": "storage_l19_alcohol_190_and_over",
+      "label": "19. Transferred to other bonded premises — Alcohol and spirits, 190° and over",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "190° AND OVER i, 19 Transferred to other bonded premises",
+      "row": "line_19",
+      "column": "alcohol_190_and_over",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "190° AND OVER i, 19 Transferred to other bonded premises",
+        "decimalField": "190° AND OVER i, 19 Transferred to other bonded premises_2"
+      }
+    },
+    {
+      "id": "storage_l19_alcohol_under_190",
+      "label": "19. Transferred to other bonded premises — Alcohol and spirits, under 190°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "UNDER 190° i, 3 Received from Customs custody.2.0",
+      "row": "line_19",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "UNDER 190° i, 3 Received from Customs custody.2.0",
+        "decimalField": "UNDER 190° i, 3 Received from Customs custody_2.2.0"
+      }
+    },
+    {
+      "id": "storage_l19_other",
+      "label": "19. Transferred to other bonded premises — Other (identify)",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 3 Received from Customs custody.2.0",
+      "row": "line_19",
+      "column": "other",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 3 Received from Customs custody.2.0",
+        "decimalField": "OTHER Identify k, 3 Received from Customs custody_2.2.0"
+      }
+    },
+    {
+      "id": "storage_l19_wine",
+      "label": "19. Transferred to other bonded premises — Wine",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "UNDER 190° i, 3 Received from Customs custody.2.1",
+      "row": "line_19",
+      "column": "wine",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "UNDER 190° i, 3 Received from Customs custody.2.1",
+        "decimalField": "UNDER 190° i, 3 Received from Customs custody_2.2.1"
+      }
+    },
+    {
+      "id": "storage_l19_total",
+      "label": "19. Transferred to other bonded premises — Total",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 3 Received from Customs custody.2.1",
+      "row": "line_19",
+      "column": "total",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 3 Received from Customs custody.2.1",
+        "decimalField": "OTHER Identify k, 3 Received from Customs custody_2.2.1"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l19_whisky_160_and_under",
+          "storage_l19_whisky_over_160",
+          "storage_l19_brandy_170_and_under",
+          "storage_l19_brandy_over_170",
+          "storage_l19_rum",
+          "storage_l19_gin",
+          "storage_l19_vodka",
+          "storage_l19_alcohol_190_and_over",
+          "storage_l19_alcohol_under_190",
+          "storage_l19_other",
+          "storage_l19_wine"
+        ]
+      }
+    },
+    {
+      "id": "storage_l20_whisky_160_and_under",
+      "label": "20. Destroyed — Whisky, distilled at 160° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "20 Destroyed",
+      "row": "line_20",
+      "column": "whisky_160_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "20 Destroyed",
+        "decimalField": "DISTILLED AT 160° AND UNDER b, 4 Returned to bulk storage_2.2"
+      }
+    },
+    {
+      "id": "storage_l20_whisky_over_160",
+      "label": "20. Destroyed — Whisky, distilled at over 160°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT OVER 160° c, 4 Returned to bulk storage.2",
+      "row": "line_20",
+      "column": "whisky_over_160",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT OVER 160° c, 4 Returned to bulk storage.2",
+        "decimalField": "DISTILLED AT OVER 160° c, 4 Returned to bulk storage_2.2"
+      }
+    },
+    {
+      "id": "storage_l20_brandy_170_and_under",
+      "label": "20. Destroyed — Brandy, distilled at 170° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT 170° AND UNDER d, 4 Returned to bulk storage.2",
+      "row": "line_20",
+      "column": "brandy_170_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT 170° AND UNDER d, 4 Returned to bulk storage.2",
+        "decimalField": "DISTILLED AT 170° AND UNDER d, 4 Returned to bulk storage_2.2"
+      }
+    },
+    {
+      "id": "storage_l20_brandy_over_170",
+      "label": "20. Destroyed — Brandy, distilled at over 170°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 4 Returned to bulk storage.2.0",
+      "row": "line_20",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 4 Returned to bulk storage.2.0",
+        "decimalField": "RUM f, 4 Returned to bulk storage_2.2.0"
+      }
+    },
+    {
+      "id": "storage_l20_rum",
+      "label": "20. Destroyed — Rum",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 4 Returned to bulk storage.2.1",
+      "row": "line_20",
+      "column": "rum",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 4 Returned to bulk storage.2.1",
+        "decimalField": "RUM f, 4 Returned to bulk storage_2.2.1"
+      }
+    },
+    {
+      "id": "storage_l20_gin",
+      "label": "20. Destroyed — Gin",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 4 Returned to bulk storage.2.2",
+      "row": "line_20",
+      "column": "gin",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 4 Returned to bulk storage.2.2",
+        "decimalField": "RUM f, 4 Returned to bulk storage_2.2.2"
+      }
+    },
+    {
+      "id": "storage_l20_vodka",
+      "label": "20. Destroyed — Vodka",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 4 Returned to bulk storage.2.3",
+      "row": "line_20",
+      "column": "vodka",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 4 Returned to bulk storage.2.3",
+        "decimalField": "RUM f, 4 Returned to bulk storage_2.2.3"
+      }
+    },
+    {
+      "id": "storage_l20_alcohol_190_and_over",
+      "label": "20. Destroyed — Alcohol and spirits, 190° and over",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "190° AND OVER i, 20 Destroyed",
+      "row": "line_20",
+      "column": "alcohol_190_and_over",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "190° AND OVER i, 20 Destroyed",
+        "decimalField": "190° AND OVER i, 20 Destroyed_2"
+      }
+    },
+    {
+      "id": "storage_l20_alcohol_under_190",
+      "label": "20. Destroyed — Alcohol and spirits, under 190°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "UNDER 190° i, 4 Returned to bulk storage.2.0",
+      "row": "line_20",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "UNDER 190° i, 4 Returned to bulk storage.2.0",
+        "decimalField": "UNDER 190° i, 4 Returned to bulk storage_2.2.0"
+      }
+    },
+    {
+      "id": "storage_l20_other",
+      "label": "20. Destroyed — Other (identify)",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 4 Returned to bulk storage.2.0",
+      "row": "line_20",
+      "column": "other",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 4 Returned to bulk storage.2.0",
+        "decimalField": "OTHER Identify k, 4 Returned to bulk storage_2.2.0"
+      }
+    },
+    {
+      "id": "storage_l20_wine",
+      "label": "20. Destroyed — Wine",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "UNDER 190° i, 4 Returned to bulk storage.2.1",
+      "row": "line_20",
+      "column": "wine",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "UNDER 190° i, 4 Returned to bulk storage.2.1",
+        "decimalField": "UNDER 190° i, 4 Returned to bulk storage_2.2.1"
+      }
+    },
+    {
+      "id": "storage_l20_total",
+      "label": "20. Destroyed — Total",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 4 Returned to bulk storage.2.1",
+      "row": "line_20",
+      "column": "total",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 4 Returned to bulk storage.2.1",
+        "decimalField": "OTHER Identify k, 4 Returned to bulk storage_2.2.1"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l20_whisky_160_and_under",
+          "storage_l20_whisky_over_160",
+          "storage_l20_brandy_170_and_under",
+          "storage_l20_brandy_over_170",
+          "storage_l20_rum",
+          "storage_l20_gin",
+          "storage_l20_vodka",
+          "storage_l20_alcohol_190_and_over",
+          "storage_l20_alcohol_under_190",
+          "storage_l20_other",
+          "storage_l20_wine"
+        ]
+      }
+    },
+    {
+      "id": "storage_l21_whisky_160_and_under",
+      "label": "21. (Identify transaction) — Whisky, distilled at 160° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "21",
+      "row": "line_21",
+      "column": "whisky_160_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "21",
+        "decimalField": "DISTILLED AT 160° AND UNDER b, 5_2.2"
+      }
+    },
+    {
+      "id": "storage_l21_whisky_over_160",
+      "label": "21. (Identify transaction) — Whisky, distilled at over 160°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT OVER 160° c, 5.2",
+      "row": "line_21",
+      "column": "whisky_over_160",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT OVER 160° c, 5.2",
+        "decimalField": "DISTILLED AT OVER 160° c, 5_2.2"
+      }
+    },
+    {
+      "id": "storage_l21_brandy_170_and_under",
+      "label": "21. (Identify transaction) — Brandy, distilled at 170° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT 170° AND UNDER d, 5.2",
+      "row": "line_21",
+      "column": "brandy_170_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT 170° AND UNDER d, 5.2",
+        "decimalField": "DISTILLED AT 170° AND UNDER d, 5_2.2"
+      }
+    },
+    {
+      "id": "storage_l21_brandy_over_170",
+      "label": "21. (Identify transaction) — Brandy, distilled at over 170°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 5.2.0",
+      "row": "line_21",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 5.2.0",
+        "decimalField": "RUM f, 5_2.2.0"
+      }
+    },
+    {
+      "id": "storage_l21_rum",
+      "label": "21. (Identify transaction) — Rum",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 5.2.1",
+      "row": "line_21",
+      "column": "rum",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 5.2.1",
+        "decimalField": "RUM f, 5_2.2.1"
+      }
+    },
+    {
+      "id": "storage_l21_gin",
+      "label": "21. (Identify transaction) — Gin",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 5.2.2",
+      "row": "line_21",
+      "column": "gin",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 5.2.2",
+        "decimalField": "RUM f, 5_2.2.2"
+      }
+    },
+    {
+      "id": "storage_l21_vodka",
+      "label": "21. (Identify transaction) — Vodka",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 5.2.3",
+      "row": "line_21",
+      "column": "vodka",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 5.2.3",
+        "decimalField": "RUM f, 5_2.2.3"
+      }
+    },
+    {
+      "id": "storage_l21_alcohol_190_and_over",
+      "label": "21. (Identify transaction) — Alcohol and spirits, 190° and over",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "190° AND OVER i, 21",
+      "row": "line_21",
+      "column": "alcohol_190_and_over",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "190° AND OVER i, 21",
+        "decimalField": "190° AND OVER i, 21_2"
+      }
+    },
+    {
+      "id": "storage_l21_alcohol_under_190",
+      "label": "21. (Identify transaction) — Alcohol and spirits, under 190°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "UNDER 190° i, 5.2.0",
+      "row": "line_21",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "UNDER 190° i, 5.2.0",
+        "decimalField": "UNDER 190° i, 5_2.2.0"
+      }
+    },
+    {
+      "id": "storage_l21_other",
+      "label": "21. (Identify transaction) — Other (identify)",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 5.2.0",
+      "row": "line_21",
+      "column": "other",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 5.2.0",
+        "decimalField": "OTHER Identify k, 5_2.2.0"
+      }
+    },
+    {
+      "id": "storage_l21_wine",
+      "label": "21. (Identify transaction) — Wine",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "UNDER 190° i, 5.2.1",
+      "row": "line_21",
+      "column": "wine",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "UNDER 190° i, 5.2.1",
+        "decimalField": "UNDER 190° i, 5_2.2.1"
+      }
+    },
+    {
+      "id": "storage_l21_total",
+      "label": "21. (Identify transaction) — Total",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 5.2.1",
+      "row": "line_21",
+      "column": "total",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 5.2.1",
+        "decimalField": "OTHER Identify k, 5_2.2.1"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l21_whisky_160_and_under",
+          "storage_l21_whisky_over_160",
+          "storage_l21_brandy_170_and_under",
+          "storage_l21_brandy_over_170",
+          "storage_l21_rum",
+          "storage_l21_gin",
+          "storage_l21_vodka",
+          "storage_l21_alcohol_190_and_over",
+          "storage_l21_alcohol_under_190",
+          "storage_l21_other",
+          "storage_l21_wine"
+        ]
+      }
+    },
+    {
+      "id": "storage_l22_whisky_160_and_under",
+      "label": "22. Other Losses — Whisky, distilled at 160° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "22 Other Losses5",
+      "row": "line_22",
+      "column": "whisky_160_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "22 Other Losses5",
+        "decimalField": "DISTILLED AT 160° AND UNDER b, 6 TOTAL Lines 1 through 5_2.2"
+      }
+    },
+    {
+      "id": "storage_l22_whisky_over_160",
+      "label": "22. Other Losses — Whisky, distilled at over 160°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT OVER 160° c, 6 TOTAL Lines 1 through 5.2",
+      "row": "line_22",
+      "column": "whisky_over_160",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT OVER 160° c, 6 TOTAL Lines 1 through 5.2",
+        "decimalField": "DISTILLED AT OVER 160° c, 6 TOTAL Lines 1 through 5_2.2"
+      }
+    },
+    {
+      "id": "storage_l22_brandy_170_and_under",
+      "label": "22. Other Losses — Brandy, distilled at 170° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT 170° AND UNDER d, 6 TOTAL Lines 1 through 5.2",
+      "row": "line_22",
+      "column": "brandy_170_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT 170° AND UNDER d, 6 TOTAL Lines 1 through 5.2",
+        "decimalField": "DISTILLED AT 170° AND UNDER d, 6 TOTAL Lines 1 through 5_2.2"
+      }
+    },
+    {
+      "id": "storage_l22_brandy_over_170",
+      "label": "22. Other Losses — Brandy, distilled at over 170°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 6 TOTAL Lines 1 through 5.2.0",
+      "row": "line_22",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 6 TOTAL Lines 1 through 5.2.0",
+        "decimalField": "RUM f, 6 TOTAL Lines 1 through 5_2.2.0"
+      }
+    },
+    {
+      "id": "storage_l22_rum",
+      "label": "22. Other Losses — Rum",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 6 TOTAL Lines 1 through 5.2.1",
+      "row": "line_22",
+      "column": "rum",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 6 TOTAL Lines 1 through 5.2.1",
+        "decimalField": "RUM f, 6 TOTAL Lines 1 through 5_2.2.1"
+      }
+    },
+    {
+      "id": "storage_l22_gin",
+      "label": "22. Other Losses — Gin",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 6 TOTAL Lines 1 through 5.2.2",
+      "row": "line_22",
+      "column": "gin",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 6 TOTAL Lines 1 through 5.2.2",
+        "decimalField": "RUM f, 6 TOTAL Lines 1 through 5_2.2.2"
+      }
+    },
+    {
+      "id": "storage_l22_vodka",
+      "label": "22. Other Losses — Vodka",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 6 TOTAL Lines 1 through 5.2.3",
+      "row": "line_22",
+      "column": "vodka",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 6 TOTAL Lines 1 through 5.2.3",
+        "decimalField": "RUM f, 6 TOTAL Lines 1 through 5_2.2.3"
+      }
+    },
+    {
+      "id": "storage_l22_alcohol_190_and_over",
+      "label": "22. Other Losses — Alcohol and spirits, 190° and over",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "190° AND OVER i, 22 Other Losses5",
+      "row": "line_22",
+      "column": "alcohol_190_and_over",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "190° AND OVER i, 22 Other Losses5",
+        "decimalField": "190° AND OVER i, 22 Other Losses5_2"
+      }
+    },
+    {
+      "id": "storage_l22_alcohol_under_190",
+      "label": "22. Other Losses — Alcohol and spirits, under 190°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "UNDER 190° i, 6 TOTAL Lines 1 through 5.2.0",
+      "row": "line_22",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "UNDER 190° i, 6 TOTAL Lines 1 through 5.2.0",
+        "decimalField": "UNDER 190° i, 6 TOTAL Lines 1 through 5_2.2.0"
+      }
+    },
+    {
+      "id": "storage_l22_other",
+      "label": "22. Other Losses — Other (identify)",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 6 TOTAL Lines 1 through 5.2.0",
+      "row": "line_22",
+      "column": "other",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 6 TOTAL Lines 1 through 5.2.0",
+        "decimalField": "OTHER Identify k, 6 TOTAL Lines 1 through 5_2.2.0"
+      }
+    },
+    {
+      "id": "storage_l22_wine",
+      "label": "22. Other Losses — Wine",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "UNDER 190° i, 6 TOTAL Lines 1 through 5.2.1",
+      "row": "line_22",
+      "column": "wine",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "UNDER 190° i, 6 TOTAL Lines 1 through 5.2.1",
+        "decimalField": "UNDER 190° i, 6 TOTAL Lines 1 through 5_2.2.1"
+      }
+    },
+    {
+      "id": "storage_l22_total",
+      "label": "22. Other Losses — Total",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 6 TOTAL Lines 1 through 5.2.1",
+      "row": "line_22",
+      "column": "total",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 6 TOTAL Lines 1 through 5.2.1",
+        "decimalField": "OTHER Identify k, 6 TOTAL Lines 1 through 5_2.2.1"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l22_whisky_160_and_under",
+          "storage_l22_whisky_over_160",
+          "storage_l22_brandy_170_and_under",
+          "storage_l22_brandy_over_170",
+          "storage_l22_rum",
+          "storage_l22_gin",
+          "storage_l22_vodka",
+          "storage_l22_alcohol_190_and_over",
+          "storage_l22_alcohol_under_190",
+          "storage_l22_other",
+          "storage_l22_wine"
+        ]
+      }
+    },
+    {
+      "id": "storage_l23_whisky_160_and_under",
+      "label": "23. On hand end of month — Whisky, distilled at 160° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "23 On hand end of month",
+      "row": "line_23",
+      "column": "whisky_160_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "23 On hand end of month",
+        "decimalField": "DISTILLED AT 160° AND UNDER b, 7 Taxpaid_2.2"
+      }
+    },
+    {
+      "id": "storage_l23_whisky_over_160",
+      "label": "23. On hand end of month — Whisky, distilled at over 160°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT OVER 160° c, 7 Taxpaid.2",
+      "row": "line_23",
+      "column": "whisky_over_160",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT OVER 160° c, 7 Taxpaid.2",
+        "decimalField": "DISTILLED AT OVER 160° c, 7 Taxpaid_2.2"
+      }
+    },
+    {
+      "id": "storage_l23_brandy_170_and_under",
+      "label": "23. On hand end of month — Brandy, distilled at 170° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT 170° AND UNDER d, 7 Taxpaid.2",
+      "row": "line_23",
+      "column": "brandy_170_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT 170° AND UNDER d, 7 Taxpaid.2",
+        "decimalField": "DISTILLED AT 170° AND UNDER d, 7 Taxpaid_2.2"
+      }
+    },
+    {
+      "id": "storage_l23_brandy_over_170",
+      "label": "23. On hand end of month — Brandy, distilled at over 170°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 7 Taxpaid.2.0",
+      "row": "line_23",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 7 Taxpaid.2.0",
+        "decimalField": "RUM f, 7 Taxpaid_2.2.0"
+      }
+    },
+    {
+      "id": "storage_l23_rum",
+      "label": "23. On hand end of month — Rum",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 7 Taxpaid.2.1",
+      "row": "line_23",
+      "column": "rum",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 7 Taxpaid.2.1",
+        "decimalField": "RUM f, 7 Taxpaid_2.2.1"
+      }
+    },
+    {
+      "id": "storage_l23_gin",
+      "label": "23. On hand end of month — Gin",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 7 Taxpaid.2.2",
+      "row": "line_23",
+      "column": "gin",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 7 Taxpaid.2.2",
+        "decimalField": "RUM f, 7 Taxpaid_2.2.2"
+      }
+    },
+    {
+      "id": "storage_l23_vodka",
+      "label": "23. On hand end of month — Vodka",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 7 Taxpaid.2.3",
+      "row": "line_23",
+      "column": "vodka",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 7 Taxpaid.2.3",
+        "decimalField": "RUM f, 7 Taxpaid_2.2.3"
+      }
+    },
+    {
+      "id": "storage_l23_alcohol_190_and_over",
+      "label": "23. On hand end of month — Alcohol and spirits, 190° and over",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "190° AND OVER i, 23 On hand end of month",
+      "row": "line_23",
+      "column": "alcohol_190_and_over",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "190° AND OVER i, 23 On hand end of month",
+        "decimalField": "190° AND OVER i, 23 On hand end of month_2"
+      }
+    },
+    {
+      "id": "storage_l23_alcohol_under_190",
+      "label": "23. On hand end of month — Alcohol and spirits, under 190°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "UNDER 190° i, 7 Taxpaid.2.0",
+      "row": "line_23",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "UNDER 190° i, 7 Taxpaid.2.0",
+        "decimalField": "UNDER 190° i, 7 Taxpaid_2.2.0"
+      }
+    },
+    {
+      "id": "storage_l23_other",
+      "label": "23. On hand end of month — Other (identify)",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 7 Taxpaid.2.0",
+      "row": "line_23",
+      "column": "other",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 7 Taxpaid.2.0",
+        "decimalField": "OTHER Identify k, 7 Taxpaid_2.2.0"
+      }
+    },
+    {
+      "id": "storage_l23_wine",
+      "label": "23. On hand end of month — Wine",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "UNDER 190° i, 7 Taxpaid.2.1",
+      "row": "line_23",
+      "column": "wine",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "UNDER 190° i, 7 Taxpaid.2.1",
+        "decimalField": "UNDER 190° i, 7 Taxpaid_2.2.1"
+      }
+    },
+    {
+      "id": "storage_l23_total",
+      "label": "23. On hand end of month — Total",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 7 Taxpaid.2.1",
+      "row": "line_23",
+      "column": "total",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 7 Taxpaid.2.1",
+        "decimalField": "OTHER Identify k, 7 Taxpaid_2.2.1"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l23_whisky_160_and_under",
+          "storage_l23_whisky_over_160",
+          "storage_l23_brandy_170_and_under",
+          "storage_l23_brandy_over_170",
+          "storage_l23_rum",
+          "storage_l23_gin",
+          "storage_l23_vodka",
+          "storage_l23_alcohol_190_and_over",
+          "storage_l23_alcohol_under_190",
+          "storage_l23_other",
+          "storage_l23_wine"
+        ]
+      }
+    },
+    {
+      "id": "storage_l24_whisky_160_and_under",
+      "label": "24. TOTAL (Lines 7 through 23) — Whisky, distilled at 160° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "24 TOTAL Lines 7 through 23",
+      "row": "line_24",
+      "column": "whisky_160_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "24 TOTAL Lines 7 through 23",
+        "decimalField": "DISTILLED AT 160° AND UNDER b, 8 Use of the United States_2.2"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l07_whisky_160_and_under",
+          "storage_l08_whisky_160_and_under",
+          "storage_l10_whisky_160_and_under",
+          "storage_l11_whisky_160_and_under",
+          "storage_l12_whisky_160_and_under",
+          "storage_l13_whisky_160_and_under",
+          "storage_l15_whisky_160_and_under",
+          "storage_l16_whisky_160_and_under",
+          "storage_l17_whisky_160_and_under",
+          "storage_l18_whisky_160_and_under",
+          "storage_l19_whisky_160_and_under",
+          "storage_l20_whisky_160_and_under",
+          "storage_l21_whisky_160_and_under",
+          "storage_l22_whisky_160_and_under",
+          "storage_l23_whisky_160_and_under"
+        ]
+      }
+    },
+    {
+      "id": "storage_l24_whisky_over_160",
+      "label": "24. TOTAL (Lines 7 through 23) — Whisky, distilled at over 160°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT OVER 160° c, 8 Use of the United States.2",
+      "row": "line_24",
+      "column": "whisky_over_160",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT OVER 160° c, 8 Use of the United States.2",
+        "decimalField": "DISTILLED AT OVER 160° c, 8 Use of the United States_2.2"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l07_whisky_over_160",
+          "storage_l08_whisky_over_160",
+          "storage_l10_whisky_over_160",
+          "storage_l11_whisky_over_160",
+          "storage_l12_whisky_over_160",
+          "storage_l13_whisky_over_160",
+          "storage_l15_whisky_over_160",
+          "storage_l16_whisky_over_160",
+          "storage_l17_whisky_over_160",
+          "storage_l18_whisky_over_160",
+          "storage_l19_whisky_over_160",
+          "storage_l20_whisky_over_160",
+          "storage_l21_whisky_over_160",
+          "storage_l22_whisky_over_160",
+          "storage_l23_whisky_over_160"
+        ]
+      }
+    },
+    {
+      "id": "storage_l24_brandy_170_and_under",
+      "label": "24. TOTAL (Lines 7 through 23) — Brandy, distilled at 170° and under",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "DISTILLED AT 170° AND UNDER d, 8 Use of the United States.2",
+      "row": "line_24",
+      "column": "brandy_170_and_under",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "DISTILLED AT 170° AND UNDER d, 8 Use of the United States.2",
+        "decimalField": "DISTILLED AT 170° AND UNDER d, 8 Use of the United States_2.2"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l07_brandy_170_and_under",
+          "storage_l08_brandy_170_and_under",
+          "storage_l10_brandy_170_and_under",
+          "storage_l11_brandy_170_and_under",
+          "storage_l12_brandy_170_and_under",
+          "storage_l13_brandy_170_and_under",
+          "storage_l14_brandy_170_and_under",
+          "storage_l15_brandy_170_and_under",
+          "storage_l16_brandy_170_and_under",
+          "storage_l17_brandy_170_and_under",
+          "storage_l18_brandy_170_and_under",
+          "storage_l19_brandy_170_and_under",
+          "storage_l20_brandy_170_and_under",
+          "storage_l21_brandy_170_and_under",
+          "storage_l22_brandy_170_and_under",
+          "storage_l23_brandy_170_and_under"
+        ]
+      }
+    },
+    {
+      "id": "storage_l24_brandy_over_170",
+      "label": "24. TOTAL (Lines 7 through 23) — Brandy, distilled at over 170°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 8 Use of the United States.2.0",
+      "row": "line_24",
+      "column": "brandy_over_170",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 8 Use of the United States.2.0",
+        "decimalField": "RUM f, 8 Use of the United States_2.2.0"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l07_brandy_over_170",
+          "storage_l08_brandy_over_170",
+          "storage_l10_brandy_over_170",
+          "storage_l11_brandy_over_170",
+          "storage_l12_brandy_over_170",
+          "storage_l13_brandy_over_170",
+          "storage_l14_brandy_over_170",
+          "storage_l15_brandy_over_170",
+          "storage_l16_brandy_over_170",
+          "storage_l17_brandy_over_170",
+          "storage_l18_brandy_over_170",
+          "storage_l19_brandy_over_170",
+          "storage_l20_brandy_over_170",
+          "storage_l21_brandy_over_170",
+          "storage_l22_brandy_over_170",
+          "storage_l23_brandy_over_170"
+        ]
+      }
+    },
+    {
+      "id": "storage_l24_rum",
+      "label": "24. TOTAL (Lines 7 through 23) — Rum",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 8 Use of the United States.2.1",
+      "row": "line_24",
+      "column": "rum",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 8 Use of the United States.2.1",
+        "decimalField": "RUM f, 8 Use of the United States_2.2.1"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l07_rum",
+          "storage_l08_rum",
+          "storage_l10_rum",
+          "storage_l11_rum",
+          "storage_l12_rum",
+          "storage_l13_rum",
+          "storage_l15_rum",
+          "storage_l16_rum",
+          "storage_l17_rum",
+          "storage_l18_rum",
+          "storage_l19_rum",
+          "storage_l20_rum",
+          "storage_l21_rum",
+          "storage_l22_rum",
+          "storage_l23_rum"
+        ]
+      }
+    },
+    {
+      "id": "storage_l24_gin",
+      "label": "24. TOTAL (Lines 7 through 23) — Gin",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 8 Use of the United States.2.2",
+      "row": "line_24",
+      "column": "gin",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 8 Use of the United States.2.2",
+        "decimalField": "RUM f, 8 Use of the United States_2.2.2"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l07_gin",
+          "storage_l08_gin",
+          "storage_l10_gin",
+          "storage_l11_gin",
+          "storage_l12_gin",
+          "storage_l13_gin",
+          "storage_l15_gin",
+          "storage_l16_gin",
+          "storage_l17_gin",
+          "storage_l18_gin",
+          "storage_l19_gin",
+          "storage_l20_gin",
+          "storage_l21_gin",
+          "storage_l22_gin",
+          "storage_l23_gin"
+        ]
+      }
+    },
+    {
+      "id": "storage_l24_vodka",
+      "label": "24. TOTAL (Lines 7 through 23) — Vodka",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "RUM f, 8 Use of the United States.2.3",
+      "row": "line_24",
+      "column": "vodka",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "RUM f, 8 Use of the United States.2.3",
+        "decimalField": "RUM f, 8 Use of the United States_2.2.3"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l07_vodka",
+          "storage_l08_vodka",
+          "storage_l10_vodka",
+          "storage_l11_vodka",
+          "storage_l12_vodka",
+          "storage_l13_vodka",
+          "storage_l15_vodka",
+          "storage_l16_vodka",
+          "storage_l17_vodka",
+          "storage_l18_vodka",
+          "storage_l19_vodka",
+          "storage_l20_vodka",
+          "storage_l21_vodka",
+          "storage_l22_vodka",
+          "storage_l23_vodka"
+        ]
+      }
+    },
+    {
+      "id": "storage_l24_alcohol_190_and_over",
+      "label": "24. TOTAL (Lines 7 through 23) — Alcohol and spirits, 190° and over",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "190° AND OVER i, 24 TOTAL Lines 7 through 23",
+      "row": "line_24",
+      "column": "alcohol_190_and_over",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "190° AND OVER i, 24 TOTAL Lines 7 through 23",
+        "decimalField": "190° AND OVER i, 24 TOTAL Lines 7 through 23_2"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l07_alcohol_190_and_over",
+          "storage_l08_alcohol_190_and_over",
+          "storage_l09_alcohol_190_and_over",
+          "storage_l10_alcohol_190_and_over",
+          "storage_l11_alcohol_190_and_over",
+          "storage_l12_alcohol_190_and_over",
+          "storage_l13_alcohol_190_and_over",
+          "storage_l14_alcohol_190_and_over",
+          "storage_l15_alcohol_190_and_over",
+          "storage_l16_alcohol_190_and_over",
+          "storage_l17_alcohol_190_and_over",
+          "storage_l18_alcohol_190_and_over",
+          "storage_l19_alcohol_190_and_over",
+          "storage_l20_alcohol_190_and_over",
+          "storage_l21_alcohol_190_and_over",
+          "storage_l22_alcohol_190_and_over",
+          "storage_l23_alcohol_190_and_over"
+        ]
+      }
+    },
+    {
+      "id": "storage_l24_alcohol_under_190",
+      "label": "24. TOTAL (Lines 7 through 23) — Alcohol and spirits, under 190°",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "UNDER 190° i, 8 Use of the United States.2.0",
+      "row": "line_24",
+      "column": "alcohol_under_190",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "UNDER 190° i, 8 Use of the United States.2.0",
+        "decimalField": "UNDER 190° i, 8 Use of the United States_2.2.0"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l07_alcohol_under_190",
+          "storage_l08_alcohol_under_190",
+          "storage_l10_alcohol_under_190",
+          "storage_l11_alcohol_under_190",
+          "storage_l12_alcohol_under_190",
+          "storage_l13_alcohol_under_190",
+          "storage_l14_alcohol_under_190",
+          "storage_l15_alcohol_under_190",
+          "storage_l16_alcohol_under_190",
+          "storage_l17_alcohol_under_190",
+          "storage_l18_alcohol_under_190",
+          "storage_l19_alcohol_under_190",
+          "storage_l20_alcohol_under_190",
+          "storage_l21_alcohol_under_190",
+          "storage_l22_alcohol_under_190",
+          "storage_l23_alcohol_under_190"
+        ]
+      }
+    },
+    {
+      "id": "storage_l24_other",
+      "label": "24. TOTAL (Lines 7 through 23) — Other (identify)",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 8 Use of the United States.2.0",
+      "row": "line_24",
+      "column": "other",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 8 Use of the United States.2.0",
+        "decimalField": "OTHER Identify k, 8 Use of the United States_2.2.0"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l07_other",
+          "storage_l08_other",
+          "storage_l10_other",
+          "storage_l11_other",
+          "storage_l12_other",
+          "storage_l13_other",
+          "storage_l15_other",
+          "storage_l16_other",
+          "storage_l17_other",
+          "storage_l18_other",
+          "storage_l19_other",
+          "storage_l20_other",
+          "storage_l21_other",
+          "storage_l22_other",
+          "storage_l23_other"
+        ]
+      }
+    },
+    {
+      "id": "storage_l24_wine",
+      "label": "24. TOTAL (Lines 7 through 23) — Wine",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "UNDER 190° i, 8 Use of the United States.2.1",
+      "row": "line_24",
+      "column": "wine",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "UNDER 190° i, 8 Use of the United States.2.1",
+        "decimalField": "UNDER 190° i, 8 Use of the United States_2.2.1"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l17_wine",
+          "storage_l18_wine",
+          "storage_l19_wine",
+          "storage_l20_wine",
+          "storage_l21_wine",
+          "storage_l22_wine",
+          "storage_l23_wine"
+        ]
+      }
+    },
+    {
+      "id": "storage_l24_total",
+      "label": "24. TOTAL (Lines 7 through 23) — Total",
+      "section": "storage",
+      "type": "number",
+      "pdfField": "OTHER Identify k, 8 Use of the United States.2.1",
+      "row": "line_24",
+      "column": "total",
+      "unit": "Proof gallons",
+      "pdfMapping": {
+        "kind": "splitDecimal",
+        "wholeField": "OTHER Identify k, 8 Use of the United States.2.1",
+        "decimalField": "OTHER Identify k, 8 Use of the United States_2.2.1"
+      },
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "storage_l07_total",
+          "storage_l08_total",
+          "storage_l09_total",
+          "storage_l10_total",
+          "storage_l11_total",
+          "storage_l12_total",
+          "storage_l13_total",
+          "storage_l14_total",
+          "storage_l15_total",
+          "storage_l16_total",
+          "storage_l17_total",
+          "storage_l18_total",
+          "storage_l19_total",
+          "storage_l20_total",
+          "storage_l21_total",
+          "storage_l22_total",
+          "storage_l23_total"
+        ]
+      }
+    },
+    {
+      "id": "certification_date",
+      "label": "Date",
+      "section": "certification",
+      "type": "date",
+      "pdfField": "DATE"
+    },
+    {
+      "id": "certification_proprietor",
+      "label": "Proprietor",
+      "section": "certification",
+      "type": "text",
+      "pdfField": "Text2",
+      "profileKey": "legalName"
+    },
+    {
+      "id": "signature_and_title",
+      "label": "By: signature and title",
+      "section": "certification",
+      "type": "text",
+      "pdfField": "Text3",
+      "manualOnly": true
+    }
+  ],
+  "checks": [
+    {
+      "id": "storage_balance_whisky_160_and_under",
+      "label": "Whisky, distilled at 160° and under: line 6 equals line 24 (proof gallons)",
+      "leftRefs": [
+        "storage_l06_whisky_160_and_under"
+      ],
+      "rightRefs": [
+        "storage_l24_whisky_160_and_under"
+      ]
+    },
+    {
+      "id": "storage_balance_whisky_over_160",
+      "label": "Whisky, distilled at over 160°: line 6 equals line 24 (proof gallons)",
+      "leftRefs": [
+        "storage_l06_whisky_over_160"
+      ],
+      "rightRefs": [
+        "storage_l24_whisky_over_160"
+      ]
+    },
+    {
+      "id": "storage_balance_brandy_170_and_under",
+      "label": "Brandy, distilled at 170° and under: line 6 equals line 24 (proof gallons)",
+      "leftRefs": [
+        "storage_l06_brandy_170_and_under"
+      ],
+      "rightRefs": [
+        "storage_l24_brandy_170_and_under"
+      ]
+    },
+    {
+      "id": "storage_balance_brandy_over_170",
+      "label": "Brandy, distilled at over 170°: line 6 equals line 24 (proof gallons)",
+      "leftRefs": [
+        "storage_l06_brandy_over_170"
+      ],
+      "rightRefs": [
+        "storage_l24_brandy_over_170"
+      ]
+    },
+    {
+      "id": "storage_balance_rum",
+      "label": "Rum: line 6 equals line 24 (proof gallons)",
+      "leftRefs": [
+        "storage_l06_rum"
+      ],
+      "rightRefs": [
+        "storage_l24_rum"
+      ]
+    },
+    {
+      "id": "storage_balance_gin",
+      "label": "Gin: line 6 equals line 24 (proof gallons)",
+      "leftRefs": [
+        "storage_l06_gin"
+      ],
+      "rightRefs": [
+        "storage_l24_gin"
+      ]
+    },
+    {
+      "id": "storage_balance_vodka",
+      "label": "Vodka: line 6 equals line 24 (proof gallons)",
+      "leftRefs": [
+        "storage_l06_vodka"
+      ],
+      "rightRefs": [
+        "storage_l24_vodka"
+      ]
+    },
+    {
+      "id": "storage_balance_alcohol_190_and_over",
+      "label": "Alcohol and spirits, 190° and over: line 6 equals line 24 (proof gallons)",
+      "leftRefs": [
+        "storage_l06_alcohol_190_and_over"
+      ],
+      "rightRefs": [
+        "storage_l24_alcohol_190_and_over"
+      ]
+    },
+    {
+      "id": "storage_balance_alcohol_under_190",
+      "label": "Alcohol and spirits, under 190°: line 6 equals line 24 (proof gallons)",
+      "leftRefs": [
+        "storage_l06_alcohol_under_190"
+      ],
+      "rightRefs": [
+        "storage_l24_alcohol_under_190"
+      ]
+    },
+    {
+      "id": "storage_balance_other",
+      "label": "Other (identify): line 6 equals line 24 (proof gallons)",
+      "leftRefs": [
+        "storage_l06_other"
+      ],
+      "rightRefs": [
+        "storage_l24_other"
+      ]
+    },
+    {
+      "id": "storage_balance_wine",
+      "label": "Wine: line 6 equals line 24 (proof gallons)",
+      "leftRefs": [
+        "storage_l06_wine"
+      ],
+      "rightRefs": [
+        "storage_l24_wine"
+      ]
+    },
+    {
+      "id": "storage_balance_total",
+      "label": "Total: line 6 equals line 24 (proof gallons)",
+      "leftRefs": [
+        "storage_l06_total"
+      ],
+      "rightRefs": [
+        "storage_l24_total"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2734 @@
+{
+  "id": "ttb_processing",
+  "name": "TTB — Processing",
+  "shortName": "Processing",
+  "formNumber": "TTB F 5110.28",
+  "sourceEdition": "10/2010",
+  "frequency": "monthly",
+  "jurisdiction": "federal",
+  "agency": "TTB",
+  "schedule": {
+    "type": "monthly_following",
+    "targetDay": 5,
+    "dueDay": 15
+  },
+  "pdfAsset": "/assets/report-forms/ttb-processing.pdf",
+  "sourceNotes": "Mapped from the user-provided form edition. Blank quantities remain unknown; enter zero explicitly where appropriate. Shaded cells are unavailable. No business identities, source quantities, signatures, or sample reporting periods are included. Approval in this application does not sign the official form.",
+  "sections": [
+    {
+      "id": "identity",
+      "title": "Plant and reporting period",
+      "type": "fields",
+      "description": "Use the plant identity and reporting month for this processing report."
+    },
+    {
+      "id": "transaction_labels",
+      "title": "Blank-line descriptions",
+      "type": "fields",
+      "description": "Identify the transactions used on blank lines 21–23 and 41–43, and the kind of spirit used on blank line 66."
+    },
+    {
+      "id": "bulk",
+      "title": "Part I — Bulk ingredients",
+      "type": "table",
+      "description": "Both wine and spirits are reported in proof gallons. Line 8 totals lines 1–7; line 26 totals lines 9–25. Only the unshaded cells on the source form are available. Each column is checked for line 8 equaling line 26.",
+      "rows": [
+        {
+          "id": "line_01",
+          "label": "1. On hand first of month"
+        },
+        {
+          "id": "line_02",
+          "label": "2. Received (Other than line 3)"
+        },
+        {
+          "id": "line_03",
+          "label": "3. Alcohol for fuel use received from Customs custody"
+        },
+        {
+          "id": "line_04",
+          "label": "4. Alcohol, flavor, materials dumped"
+        },
+        {
+          "id": "line_05",
+          "label": "5. Wine mixed with spirits"
+        },
+        {
+          "id": "line_06",
+          "label": "6. Dumped for further processing"
+        },
+        {
+          "id": "line_07",
+          "label": "7. Gains"
+        },
+        {
+          "id": "line_08",
+          "label": "8. TOTAL — Lines 1 through 7"
+        },
+        {
+          "id": "line_09",
+          "label": "9. Bottled or packaged"
+        },
+        {
+          "id": "line_10",
+          "label": "10. Wine mixed with spirits"
+        },
+        {
+          "id": "line_11",
+          "label": "11. Used for denaturation"
+        },
+        {
+          "id": "line_12",
+          "label": "12. Transferred in bond"
+        },
+        {
+          "id": "line_13",
+          "label": "13. Withdrawn tax determined"
+        },
+        {
+          "id": "line_14",
+          "label": "14. Withdrawn free of tax: for U.S., hospital, scientific, or educational use"
+        },
+        {
+          "id": "line_15",
+          "label": "15. Withdrawn without payment of tax: for addition to wine"
+        },
+        {
+          "id": "line_16",
+          "label": "16. For exportation & transfer to C.B.W."
+        },
+        {
+          "id": "line_17",
+          "label": "17. Transferred to production account for redistillation"
+        },
+        {
+          "id": "line_18",
+          "label": "18. Withdrawn for research, development, or testing (Including Gov. samples)"
+        },
+        {
+          "id": "line_19",
+          "label": "19. Destroyed"
+        },
+        {
+          "id": "line_20",
+          "label": "20. Used for redistillation"
+        },
+        {
+          "id": "line_21",
+          "label": "21. (Identify transaction)"
+        },
+        {
+          "id": "line_22",
+          "label": "22. (Identify transaction)"
+        },
+        {
+          "id": "line_23",
+          "label": "23. (Identify transaction)"
+        },
+        {
+          "id": "line_24",
+          "label": "24. Losses"
+        },
+        {
+          "id": "line_25",
+          "label": "25. On hand end of month"
+        },
+        {
+          "id": "line_26",
+          "label": "26. TOTAL — Lines 9 through 25"
+        }
+      ],
+      "columns": [
+        {
+          "id": "wine",
+          "label": "(b) Wine",
+          "unit": "Proof gallons"
+        },
+        {
+          "id": "spirits",
+          "label": "(c) Spirits",
+          "unit": "Proof gallons"
+        }
+      ]
+    },
+    {
+      "id": "finished",
+      "title": "Part II — Finished products",
+      "type": "table",
+      "description": "Bottled and packaged quantities are proof gallons. Line 31 totals lines 27–30; line 47 totals lines 32–46. Each column is checked for line 31 equaling line 47. The source form footnote states that bottled nonindustrial (beverage) use spirits may not be received or transferred in bond.",
+      "rows": [
+        {
+          "id": "line_27",
+          "label": "27. On hand first of month"
+        },
+        {
+          "id": "line_28",
+          "label": "28. Bottled or packaged"
+        },
+        {
+          "id": "line_29",
+          "label": "29. Received"
+        },
+        {
+          "id": "line_30",
+          "label": "30. Inventory overages"
+        },
+        {
+          "id": "line_31",
+          "label": "31. TOTAL — Lines 27 through 30"
+        },
+        {
+          "id": "line_32",
+          "label": "32. Transferred in bond"
+        },
+        {
+          "id": "line_33",
+          "label": "33. Withdrawn tax determined"
+        },
+        {
+          "id": "line_34",
+          "label": "34. Withdrawn free of tax: for U.S., hospital, scientific, or educational use"
+        },
+        {
+          "id": "line_35",
+          "label": "35. Withdrawn without payment of tax: for addition to wine"
+        },
+        {
+          "id": "line_36",
+          "label": "36. For exportation, vessels, and aircraft, and transfer to C.B.W."
+        },
+        {
+          "id": "line_37",
+          "label": "37. Transferred to production account for redistillation"
+        },
+        {
+          "id": "line_38",
+          "label": "38. Withdrawn for research, development, or testing (Including Gov. samples)"
+        },
+        {
+          "id": "line_39",
+          "label": "39. Destroyed"
+        },
+        {
+          "id": "line_40",
+          "label": "40. Dumped for further processing"
+        },
+        {
+          "id": "line_41",
+          "label": "41. (Identify transaction)"
+        },
+        {
+          "id": "line_42",
+          "label": "42. (Identify transaction)"
+        },
+        {
+          "id": "line_43",
+          "label": "43. (Identify transaction)"
+        },
+        {
+          "id": "line_44",
+          "label": "44. Recorded losses"
+        },
+        {
+          "id": "line_45",
+          "label": "45. Inventory shortages"
+        },
+        {
+          "id": "line_46",
+          "label": "46. On hand end of month"
+        },
+        {
+          "id": "line_47",
+          "label": "47. TOTAL — Lines 32 through 46"
+        }
+      ],
+      "columns": [
+        {
+          "id": "bottled",
+          "label": "(b) Bottled",
+          "unit": "Proof gallons"
+        },
+        {
+          "id": "packaged",
+          "label": "(c) Packaged",
+          "unit": "Proof gallons"
+        }
+      ]
+    },
+    {
+      "id": "origins",
+      "title": "Part III — Puerto Rican and Virgin Islands spirits (rum) and “other” imported rum",
+      "type": "table",
+      "description": "Enter proof gallons removed taxpaid or tax determined. The source form footnote limits Puerto Rican and Virgin Islands entries here and on lines 59a–b to products containing at least 92% rum.",
+      "rows": [
+        {
+          "id": "line_48",
+          "label": "48. Proof gallons removed taxpaid or tax determined (27 CFR 19.778)"
+        }
+      ],
+      "columns": [
+        {
+          "id": "puerto_rican",
+          "label": "(a) Puerto Rican spirits",
+          "unit": "Proof gallons"
+        },
+        {
+          "id": "virgin_islands",
+          "label": "(b) Virgin Islands spirits",
+          "unit": "Proof gallons"
+        },
+        {
+          "id": "other_imported_rum",
+          "label": "(c) “Other” imported rum",
+          "unit": "Proof gallons"
+        }
+      ]
+    },
+    {
+      "id": "beverage",
+      "title": "Part IV — Processing of beverage (nonindustrial use) spirits",
+      "type": "table",
+      "description": "Columns (b) and (c) use whole proof gallons; columns (d), (e), and (f) use whole wine gallons. Enter whole numbers in this part. Each line 67 total sums only its own column, including all lettered sublines. No proof-to-wine conversion is assumed. Consult the source form footnotes for the product categories and which dumped or imported spirits belong in each column.",
+      "rows": [
+        {
+          "id": "line_49",
+          "label": "49. Alcohol and neutral spirits (Other than vodka)"
+        },
+        {
+          "id": "line_50",
+          "label": "50. Blended straight whiskey"
+        },
+        {
+          "id": "line_51a",
+          "label": "51a. Blended whiskey: with neutral spirits"
+        },
+        {
+          "id": "line_51b",
+          "label": "51b. Blended whiskey: with light whiskey"
+        },
+        {
+          "id": "line_52",
+          "label": "52. Blended light whiskey"
+        },
+        {
+          "id": "line_53",
+          "label": "53. Any other blends of 100% whiskey"
+        },
+        {
+          "id": "line_54a",
+          "label": "54a. Imported whiskey: Scotch"
+        },
+        {
+          "id": "line_54b",
+          "label": "54b. Imported whiskey: Canadian"
+        },
+        {
+          "id": "line_54c",
+          "label": "54c. Imported whiskey: Irish and Others"
+        },
+        {
+          "id": "line_55",
+          "label": "55. Domestic whiskey distilled at 160° and under"
+        },
+        {
+          "id": "line_56",
+          "label": "56. Domestic whiskey distilled at over 160°"
+        },
+        {
+          "id": "line_57",
+          "label": "57. Brandy distilled at 170° and under"
+        },
+        {
+          "id": "line_58",
+          "label": "58. Brandy distilled at over 170°"
+        },
+        {
+          "id": "line_59a",
+          "label": "59a. Spirits (Rum): Puerto Rican"
+        },
+        {
+          "id": "line_59b",
+          "label": "59b. Spirits (Rum): Virgin Islands"
+        },
+        {
+          "id": "line_60a",
+          "label": "60a. Rum: Domestic"
+        },
+        {
+          "id": "line_60b",
+          "label": "60b. Rum: “Other” Imported"
+        },
+        {
+          "id": "line_61",
+          "label": "61. Gin"
+        },
+        {
+          "id": "line_62",
+          "label": "62. Vodka"
+        },
+        {
+          "id": "line_63",
+          "label": "63. Cordials, liqueurs, and specialties"
+        },
+        {
+          "id": "line_64",
+          "label": "64. Cocktails and mixed drinks"
+        },
+        {
+          "id": "line_65",
+          "label": "65. Tequila"
+        },
+        {
+          "id": "line_66",
+          "label": "66. (Identify kind of spirit)"
+        },
+        {
+          "id": "line_67",
+          "label": "67. TOTAL — Lines 49 through 66"
+        }
+      ],
+      "columns": [
+        {
+          "id": "bulk_dumped",
+          "label": "(b) Bulk spirits dumped into processing",
+          "unit": "Whole proof gallons"
+        },
+        {
+          "id": "bottled_imported",
+          "label": "(c) Bottled — imported",
+          "unit": "Whole proof gallons"
+        },
+        {
+          "id": "bottled",
+          "label": "(d) Bottled (Exclude bottled in bond and export)",
+          "unit": "Whole wine gallons"
+        },
+        {
+          "id": "bottled_in_bond",
+          "label": "(e) Bottled in bond — 27 CFR 5.42(b) (Exclude export)",
+          "unit": "Whole wine gallons"
+        },
+        {
+          "id": "bottled_for_export",
+          "label": "(f) Bottled for export",
+          "unit": "Whole wine gallons"
+        }
+      ]
+    },
+    {
+      "id": "certification",
+      "title": "Official form certification",
+      "type": "fields",
+      "description": "Review the declaration on the official form. The signature and title must be completed through the official filing process; application approval leaves the signature unsigned."
+    }
+  ],
+  "fields": [
+    {
+      "id": "plant_number",
+      "label": "1. Plant number",
+      "section": "identity",
+      "type": "text",
+      "pdfField": "1  PLANT NUMBER",
+      "required": true,
+      "profileKey": "plantNumber"
+    },
+    {
+      "id": "report_month_year",
+      "label": "2. Month and year",
+      "section": "identity",
+      "type": "text",
+      "pdfField": "2  MONTH AND YEAR",
+      "required": true,
+      "periodKey": "monthYear"
+    },
+    {
+      "id": "proprietor_name",
+      "label": "3. Name of proprietor",
+      "section": "identity",
+      "type": "text",
+      "pdfField": "3  NAME OF PROPRIETOR",
+      "required": true,
+      "profileKey": "legalName"
+    },
+    {
+      "id": "plant_location",
+      "label": "4. Location of plant",
+      "section": "identity",
+      "type": "textarea",
+      "pdfField": "4 LOCATION OF PLANT",
+      "required": true,
+      "profileKey": "address"
+    },
+    {
+      "id": "ein",
+      "label": "5. Employer Identification Number (EIN)",
+      "section": "identity",
+      "type": "text",
+      "pdfField": "5 Employer Identification Number EIN",
+      "required": true,
+      "profileKey": "ein"
+    },
+    {
+      "id": "line_21_description",
+      "label": "21. Transaction description",
+      "section": "transaction_labels",
+      "type": "text",
+      "pdfField": "Text1.0"
+    },
+    {
+      "id": "line_22_description",
+      "label": "22. Transaction description",
+      "section": "transaction_labels",
+      "type": "text",
+      "pdfField": "Text1.1"
+    },
+    {
+      "id": "line_23_description",
+      "label": "23. Transaction description",
+      "section": "transaction_labels",
+      "type": "text",
+      "pdfField": "Text1.2"
+    },
+    {
+      "id": "line_41_description",
+      "label": "41. Transaction description",
+      "section": "transaction_labels",
+      "type": "text",
+      "pdfField": "Text2.0"
+    },
+    {
+      "id": "line_42_description",
+      "label": "42. Transaction description",
+      "section": "transaction_labels",
+      "type": "text",
+      "pdfField": "Text2.1"
+    },
+    {
+      "id": "line_43_description",
+      "label": "43. Transaction description",
+      "section": "transaction_labels",
+      "type": "text",
+      "pdfField": "Text2.2"
+    },
+    {
+      "id": "line_66_description",
+      "label": "66. Kind of spirit",
+      "section": "transaction_labels",
+      "type": "text",
+      "pdfField": "Text3"
+    },
+    {
+      "id": "bulk_l01_wine",
+      "label": "1. On hand first of month — Wine",
+      "section": "bulk",
+      "type": "number",
+      "pdfField": "WINE Proof  gallons b1 ON HAND FIRST OF MONTH",
+      "row": "line_01",
+      "column": "wine",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "bulk_l01_spirits",
+      "label": "1. On hand first of month — Spirits",
+      "section": "bulk",
+      "type": "number",
+      "pdfField": "SPIRITS Proof gallons c1 ON HAND FIRST OF MONTH",
+      "row": "line_01",
+      "column": "spirits",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "bulk_l02_wine",
+      "label": "2. Received (Other than line 3) — Wine",
+      "section": "bulk",
+      "type": "number",
+      "pdfField": "WINE Proof  gallons b2 RECEIVED  Other than line 3",
+      "row": "line_02",
+      "column": "wine",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "bulk_l02_spirits",
+      "label": "2. Received (Other than line 3) — Spirits",
+      "section": "bulk",
+      "type": "number",
+      "pdfField": "SPIRITS Proof gallons c2 RECEIVED  Other than line 3",
+      "row": "line_02",
+      "column": "spirits",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "bulk_l03_spirits",
+      "label": "3. Alcohol for fuel use received from Customs custody — Spirits",
+      "section": "bulk",
+      "type": "number",
+      "pdfField": "SPIRITS Proof gallons c3 ALCOHOL FOR FUEL USE RECEIVED FROM CUSTOMS CUSTODY",
+      "row": "line_03",
+      "column": "spirits",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "bulk_l04_spirits",
+      "label": "4. Alcohol, flavor, materials dumped — Spirits",
+      "section": "bulk",
+      "type": "number",
+      "pdfField": "SPIRITS Proof gallons c4 ALCOHOL FLAVOR MATERIALS DUMPED",
+      "row": "line_04",
+      "column": "spirits",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "bulk_l05_spirits",
+      "label": "5. Wine mixed with spirits — Spirits",
+      "section": "bulk",
+      "type": "number",
+      "pdfField": "SPIRITS Proof gallons c5 WINE MIXED WITH SPIRITS",
+      "row": "line_05",
+      "column": "spirits",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "bulk_l06_spirits",
+      "label": "6. Dumped for further processing — Spirits",
+      "section": "bulk",
+      "type": "number",
+      "pdfField": "SPIRITS Proof gallons c6 DUMPED FOR FURTHER PROCESSING",
+      "row": "line_06",
+      "column": "spirits",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "bulk_l07_wine",
+      "label": "7. Gains — Wine",
+      "section": "bulk",
+      "type": "number",
+      "pdfField": "WINE Proof  gallons b7 GAINS",
+      "row": "line_07",
+      "column": "wine",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "bulk_l07_spirits",
+      "label": "7. Gains — Spirits",
+      "section": "bulk",
+      "type": "number",
+      "pdfField": "SPIRITS Proof gallons c7 GAINS",
+      "row": "line_07",
+      "column": "spirits",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "bulk_l08_wine",
+      "label": "8. TOTAL — Lines 1 through 7 — Wine",
+      "section": "bulk",
+      "type": "number",
+      "pdfField": "WINE Proof  gallons b8 TOTAL  LINES 1 THROUGH 7",
+      "row": "line_08",
+      "column": "wine",
+      "unit": "Proof gallons",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "bulk_l01_wine",
+          "bulk_l02_wine",
+          "bulk_l07_wine"
+        ]
+      }
+    },
+    {
+      "id": "bulk_l08_spirits",
+      "label": "8. TOTAL — Lines 1 through 7 — Spirits",
+      "section": "bulk",
+      "type": "number",
+      "pdfField": "SPIRITS Proof gallons c8 TOTAL  LINES 1 THROUGH 7",
+      "row": "line_08",
+      "column": "spirits",
+      "unit": "Proof gallons",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "bulk_l01_spirits",
+          "bulk_l02_spirits",
+          "bulk_l03_spirits",
+          "bulk_l04_spirits",
+          "bulk_l05_spirits",
+          "bulk_l06_spirits",
+          "bulk_l07_spirits"
+        ]
+      }
+    },
+    {
+      "id": "bulk_l09_spirits",
+      "label": "9. Bottled or packaged — Spirits",
+      "section": "bulk",
+      "type": "number",
+      "pdfField": "SPIRITS Proof gallons c9 BOTTLED OR PACKAGED",
+      "row": "line_09",
+      "column": "spirits",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "bulk_l10_wine",
+      "label": "10. Wine mixed with spirits — Wine",
+      "section": "bulk",
+      "type": "number",
+      "pdfField": "WINE Proof  gallons b10 WINE MIXED WITH SPIRITS",
+      "row": "line_10",
+      "column": "wine",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "bulk_l11_spirits",
+      "label": "11. Used for denaturation — Spirits",
+      "section": "bulk",
+      "type": "number",
+      "pdfField": "SPIRITS Proof gallons c11 USED FOR DENATURATION",
+      "row": "line_11",
+      "column": "spirits",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "bulk_l12_wine",
+      "label": "12. Transferred in bond — Wine",
+      "section": "bulk",
+      "type": "number",
+      "pdfField": "WINE Proof  gallons b12 TRANSFERRED IN BOND",
+      "row": "line_12",
+      "column": "wine",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "bulk_l12_spirits",
+      "label": "12. Transferred in bond — Spirits",
+      "section": "bulk",
+      "type": "number",
+      "pdfField": "SPIRITS Proof gallons c12 TRANSFERRED IN BOND",
+      "row": "line_12",
+      "column": "spirits",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "bulk_l13_spirits",
+      "label": "13. Withdrawn tax determined — Spirits",
+      "section": "bulk",
+      "type": "number",
+      "pdfField": "SPIRITS Proof gallons c13 WITHDRAWN TAX DETERMINED",
+      "row": "line_13",
+      "column": "spirits",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "bulk_l14_spirits",
+      "label": "14. Withdrawn free of tax: for U.S., hospital, scientific, or educational use — Spirits",
+      "section": "bulk",
+      "type": "number",
+      "pdfField": "SPIRITS Proof gallons c14 WITHDRAWN FREE OF TAX  FOR US HOSPITAL SCIENTIFIC OR EDUCATIONAL USE",
+      "row": "line_14",
+      "column": "spirits",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "bulk_l15_spirits",
+      "label": "15. Withdrawn without payment of tax: for addition to wine — Spirits",
+      "section": "bulk",
+      "type": "number",
+      "pdfField": "SPIRITS Proof gallons c15 WITHDRAWN WITHOUT PAYMENT OF TAX FOR ADDITION TO WINE",
+      "row": "line_15",
+      "column": "spirits",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "bulk_l16_spirits",
+      "label": "16. For exportation & transfer to C.B.W. — Spirits",
+      "section": "bulk",
+      "type": "number",
+      "pdfField": "SPIRITS Proof gallons c16 FOR EXPORTATION  TRANSFER TO CBW",
+      "row": "line_16",
+      "column": "spirits",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "bulk_l17_spirits",
+      "label": "17. Transferred to production account for redistillation — Spirits",
+      "section": "bulk",
+      "type": "number",
+      "pdfField": "SPIRITS Proof gallons c17 TRANSFERRED TO PRODUCTION ACCOUNT FOR REDISTILLATION",
+      "row": "line_17",
+      "column": "spirits",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "bulk_l18_wine",
+      "label": "18. Withdrawn for research, development, or testing (Including Gov. samples) — Wine",
+      "section": "bulk",
+      "type": "number",
+      "pdfField": "WINE Proof  gallons b18 WITHDRAWN FOR RESEARCH DEVELOPMENT OR TESTING Including Gov samples",
+      "row": "line_18",
+      "column": "wine",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "bulk_l18_spirits",
+      "label": "18. Withdrawn for research, development, or testing (Including Gov. samples) — Spirits",
+      "section": "bulk",
+      "type": "number",
+      "pdfField": "SPIRITS Proof gallons c18 WITHDRAWN FOR RESEARCH DEVELOPMENT OR TESTING Including Gov samples",
+      "row": "line_18",
+      "column": "spirits",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "bulk_l19_wine",
+      "label": "19. Destroyed — Wine",
+      "section": "bulk",
+      "type": "number",
+      "pdfField": "WINE Proof  gallons b19 DESTROYED",
+      "row": "line_19",
+      "column": "wine",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "bulk_l19_spirits",
+      "label": "19. Destroyed — Spirits",
+      "section": "bulk",
+      "type": "number",
+      "pdfField": "SPIRITS Proof gallons c19 DESTROYED",
+      "row": "line_19",
+      "column": "spirits",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "bulk_l20_wine",
+      "label": "20. Used for redistillation — Wine",
+      "section": "bulk",
+      "type": "number",
+      "pdfField": "WINE Proof  gallons b20 USED FOR REDISTILLATION",
+      "row": "line_20",
+      "column": "wine",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "bulk_l20_spirits",
+      "label": "20. Used for redistillation — Spirits",
+      "section": "bulk",
+      "type": "number",
+      "pdfField": "SPIRITS Proof gallons c20 USED FOR REDISTILLATION",
+      "row": "line_20",
+      "column": "spirits",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "bulk_l21_wine",
+      "label": "21. (Identify transaction) — Wine",
+      "section": "bulk",
+      "type": "number",
+      "pdfField": "WINE Proof  gallons b21",
+      "row": "line_21",
+      "column": "wine",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "bulk_l21_spirits",
+      "label": "21. (Identify transaction) — Spirits",
+      "section": "bulk",
+      "type": "number",
+      "pdfField": "SPIRITS Proof gallons c21",
+      "row": "line_21",
+      "column": "spirits",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "bulk_l22_wine",
+      "label": "22. (Identify transaction) — Wine",
+      "section": "bulk",
+      "type": "number",
+      "pdfField": "WINE Proof  gallons b22",
+      "row": "line_22",
+      "column": "wine",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "bulk_l22_spirits",
+      "label": "22. (Identify transaction) — Spirits",
+      "section": "bulk",
+      "type": "number",
+      "pdfField": "SPIRITS Proof gallons c22",
+      "row": "line_22",
+      "column": "spirits",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "bulk_l23_wine",
+      "label": "23. (Identify transaction) — Wine",
+      "section": "bulk",
+      "type": "number",
+      "pdfField": "WINE Proof  gallons b23",
+      "row": "line_23",
+      "column": "wine",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "bulk_l23_spirits",
+      "label": "23. (Identify transaction) — Spirits",
+      "section": "bulk",
+      "type": "number",
+      "pdfField": "SPIRITS Proof gallons c23",
+      "row": "line_23",
+      "column": "spirits",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "bulk_l24_wine",
+      "label": "24. Losses — Wine",
+      "section": "bulk",
+      "type": "number",
+      "pdfField": "WINE Proof  gallons b24 LOSSES",
+      "row": "line_24",
+      "column": "wine",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "bulk_l24_spirits",
+      "label": "24. Losses — Spirits",
+      "section": "bulk",
+      "type": "number",
+      "pdfField": "SPIRITS Proof gallons c24 LOSSES",
+      "row": "line_24",
+      "column": "spirits",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "bulk_l25_wine",
+      "label": "25. On hand end of month — Wine",
+      "section": "bulk",
+      "type": "number",
+      "pdfField": "WINE Proof  gallons b25 ON HAND END OF MONTH",
+      "row": "line_25",
+      "column": "wine",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "bulk_l25_spirits",
+      "label": "25. On hand end of month — Spirits",
+      "section": "bulk",
+      "type": "number",
+      "pdfField": "SPIRITS Proof gallons c25 ON HAND END OF MONTH",
+      "row": "line_25",
+      "column": "spirits",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "bulk_l26_wine",
+      "label": "26. TOTAL — Lines 9 through 25 — Wine",
+      "section": "bulk",
+      "type": "number",
+      "pdfField": "WINE Proof  gallons b26 TOTAL  LINES 9 THROUGH 25",
+      "row": "line_26",
+      "column": "wine",
+      "unit": "Proof gallons",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "bulk_l10_wine",
+          "bulk_l12_wine",
+          "bulk_l18_wine",
+          "bulk_l19_wine",
+          "bulk_l20_wine",
+          "bulk_l21_wine",
+          "bulk_l22_wine",
+          "bulk_l23_wine",
+          "bulk_l24_wine",
+          "bulk_l25_wine"
+        ]
+      }
+    },
+    {
+      "id": "bulk_l26_spirits",
+      "label": "26. TOTAL — Lines 9 through 25 — Spirits",
+      "section": "bulk",
+      "type": "number",
+      "pdfField": "SPIRITS Proof gallons c26 TOTAL  LINES 9 THROUGH 25",
+      "row": "line_26",
+      "column": "spirits",
+      "unit": "Proof gallons",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "bulk_l09_spirits",
+          "bulk_l11_spirits",
+          "bulk_l12_spirits",
+          "bulk_l13_spirits",
+          "bulk_l14_spirits",
+          "bulk_l15_spirits",
+          "bulk_l16_spirits",
+          "bulk_l17_spirits",
+          "bulk_l18_spirits",
+          "bulk_l19_spirits",
+          "bulk_l20_spirits",
+          "bulk_l21_spirits",
+          "bulk_l22_spirits",
+          "bulk_l23_spirits",
+          "bulk_l24_spirits",
+          "bulk_l25_spirits"
+        ]
+      }
+    },
+    {
+      "id": "finished_l27_bottled",
+      "label": "27. On hand first of month — Bottled",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "BOTTLED Proof gallons b27 ON HAND FIRST OF MONTH",
+      "row": "line_27",
+      "column": "bottled",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "finished_l27_packaged",
+      "label": "27. On hand first of month — Packaged",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "PACKAGED Proof gallons c27 ON HAND FIRST OF MONTH",
+      "row": "line_27",
+      "column": "packaged",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "finished_l28_bottled",
+      "label": "28. Bottled or packaged — Bottled",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "BOTTLED Proof gallons b28 BOTTLED OR PACKAGED",
+      "row": "line_28",
+      "column": "bottled",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "finished_l28_packaged",
+      "label": "28. Bottled or packaged — Packaged",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "PACKAGED Proof gallons c28 BOTTLED OR PACKAGED",
+      "row": "line_28",
+      "column": "packaged",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "finished_l29_bottled",
+      "label": "29. Received — Bottled",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "BOTTLED Proof gallons b29 RECEIVED",
+      "row": "line_29",
+      "column": "bottled",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "finished_l29_packaged",
+      "label": "29. Received — Packaged",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "PACKAGED Proof gallons c29 RECEIVED",
+      "row": "line_29",
+      "column": "packaged",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "finished_l30_bottled",
+      "label": "30. Inventory overages — Bottled",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "BOTTLED Proof gallons b30 INVENTORY OVERAGES",
+      "row": "line_30",
+      "column": "bottled",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "finished_l30_packaged",
+      "label": "30. Inventory overages — Packaged",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "PACKAGED Proof gallons c30 INVENTORY OVERAGES",
+      "row": "line_30",
+      "column": "packaged",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "finished_l31_bottled",
+      "label": "31. TOTAL — Lines 27 through 30 — Bottled",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "BOTTLED Proof gallons b31 TOTAL  LINES 27 THROUGH 30",
+      "row": "line_31",
+      "column": "bottled",
+      "unit": "Proof gallons",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "finished_l27_bottled",
+          "finished_l28_bottled",
+          "finished_l29_bottled",
+          "finished_l30_bottled"
+        ]
+      }
+    },
+    {
+      "id": "finished_l31_packaged",
+      "label": "31. TOTAL — Lines 27 through 30 — Packaged",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "PACKAGED Proof gallons c31 TOTAL  LINES 27 THROUGH 30",
+      "row": "line_31",
+      "column": "packaged",
+      "unit": "Proof gallons",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "finished_l27_packaged",
+          "finished_l28_packaged",
+          "finished_l29_packaged",
+          "finished_l30_packaged"
+        ]
+      }
+    },
+    {
+      "id": "finished_l32_bottled",
+      "label": "32. Transferred in bond — Bottled",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "BOTTLED Proof gallons b32 TRANSFERRED IN BOND",
+      "row": "line_32",
+      "column": "bottled",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "finished_l32_packaged",
+      "label": "32. Transferred in bond — Packaged",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "PACKAGED Proof gallons c32 TRANSFERRED IN BOND",
+      "row": "line_32",
+      "column": "packaged",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "finished_l33_bottled",
+      "label": "33. Withdrawn tax determined — Bottled",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "BOTTLED Proof gallons b33 WITHDRAWN TAX DETERMINED",
+      "row": "line_33",
+      "column": "bottled",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "finished_l33_packaged",
+      "label": "33. Withdrawn tax determined — Packaged",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "PACKAGED Proof gallons c33 WITHDRAWN TAX DETERMINED",
+      "row": "line_33",
+      "column": "packaged",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "finished_l34_bottled",
+      "label": "34. Withdrawn free of tax: for U.S., hospital, scientific, or educational use — Bottled",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "BOTTLED Proof gallons b34 WITHDRAWN FREE OF TAX  FOR US HOSPITAL SCIENTIFIC OR EDUCATIONAL USE",
+      "row": "line_34",
+      "column": "bottled",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "finished_l34_packaged",
+      "label": "34. Withdrawn free of tax: for U.S., hospital, scientific, or educational use — Packaged",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "PACKAGED Proof gallons c34 WITHDRAWN FREE OF TAX  FOR US HOSPITAL SCIENTIFIC OR EDUCATIONAL USE",
+      "row": "line_34",
+      "column": "packaged",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "finished_l35_bottled",
+      "label": "35. Withdrawn without payment of tax: for addition to wine — Bottled",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "BOTTLED Proof gallons b35 WITHDRAWN WITHOUT PAYMENT OF TAX FOR ADDITION TO WINE",
+      "row": "line_35",
+      "column": "bottled",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "finished_l35_packaged",
+      "label": "35. Withdrawn without payment of tax: for addition to wine — Packaged",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "PACKAGED Proof gallons c35 WITHDRAWN WITHOUT PAYMENT OF TAX FOR ADDITION TO WINE",
+      "row": "line_35",
+      "column": "packaged",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "finished_l36_bottled",
+      "label": "36. For exportation, vessels, and aircraft, and transfer to C.B.W. — Bottled",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "BOTTLED Proof gallons b36 FOR EXPORTATION VESSELS AND AIRCRAFT AND TRANSFER TO CBW",
+      "row": "line_36",
+      "column": "bottled",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "finished_l36_packaged",
+      "label": "36. For exportation, vessels, and aircraft, and transfer to C.B.W. — Packaged",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "PACKAGED Proof gallons c36 FOR EXPORTATION VESSELS AND AIRCRAFT AND TRANSFER TO CBW",
+      "row": "line_36",
+      "column": "packaged",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "finished_l37_bottled",
+      "label": "37. Transferred to production account for redistillation — Bottled",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "BOTTLED Proof gallons b37 TRANSFERRED TO PRODUCTION ACCOUNT FOR REDISTILLATION",
+      "row": "line_37",
+      "column": "bottled",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "finished_l37_packaged",
+      "label": "37. Transferred to production account for redistillation — Packaged",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "PACKAGED Proof gallons c37 TRANSFERRED TO PRODUCTION ACCOUNT FOR REDISTILLATION",
+      "row": "line_37",
+      "column": "packaged",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "finished_l38_bottled",
+      "label": "38. Withdrawn for research, development, or testing (Including Gov. samples) — Bottled",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "BOTTLED Proof gallons b38 WITHDRAWN FOR RESEARCH DEVELOPMENT OR TESTING Including Gov samples",
+      "row": "line_38",
+      "column": "bottled",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "finished_l38_packaged",
+      "label": "38. Withdrawn for research, development, or testing (Including Gov. samples) — Packaged",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "PACKAGED Proof gallons c38 WITHDRAWN FOR RESEARCH DEVELOPMENT OR TESTING Including Gov samples",
+      "row": "line_38",
+      "column": "packaged",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "finished_l39_bottled",
+      "label": "39. Destroyed — Bottled",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "BOTTLED Proof gallons b39 DESTROYED",
+      "row": "line_39",
+      "column": "bottled",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "finished_l39_packaged",
+      "label": "39. Destroyed — Packaged",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "PACKAGED Proof gallons c39 DESTROYED",
+      "row": "line_39",
+      "column": "packaged",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "finished_l40_bottled",
+      "label": "40. Dumped for further processing — Bottled",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "BOTTLED Proof gallons b40 DUMPED FOR FURTHER PROCESSING",
+      "row": "line_40",
+      "column": "bottled",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "finished_l40_packaged",
+      "label": "40. Dumped for further processing — Packaged",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "PACKAGED Proof gallons c40 DUMPED FOR FURTHER PROCESSING",
+      "row": "line_40",
+      "column": "packaged",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "finished_l41_bottled",
+      "label": "41. (Identify transaction) — Bottled",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "BOTTLED Proof gallons b41",
+      "row": "line_41",
+      "column": "bottled",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "finished_l41_packaged",
+      "label": "41. (Identify transaction) — Packaged",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "PACKAGED Proof gallons c41",
+      "row": "line_41",
+      "column": "packaged",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "finished_l42_bottled",
+      "label": "42. (Identify transaction) — Bottled",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "BOTTLED Proof gallons b42",
+      "row": "line_42",
+      "column": "bottled",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "finished_l42_packaged",
+      "label": "42. (Identify transaction) — Packaged",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "PACKAGED Proof gallons c42",
+      "row": "line_42",
+      "column": "packaged",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "finished_l43_bottled",
+      "label": "43. (Identify transaction) — Bottled",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "BOTTLED Proof gallons b43",
+      "row": "line_43",
+      "column": "bottled",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "finished_l43_packaged",
+      "label": "43. (Identify transaction) — Packaged",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "PACKAGED Proof gallons c43",
+      "row": "line_43",
+      "column": "packaged",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "finished_l44_bottled",
+      "label": "44. Recorded losses — Bottled",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "BOTTLED Proof gallons b44 RECORDED LOSSES",
+      "row": "line_44",
+      "column": "bottled",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "finished_l44_packaged",
+      "label": "44. Recorded losses — Packaged",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "PACKAGED Proof gallons c44 RECORDED LOSSES",
+      "row": "line_44",
+      "column": "packaged",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "finished_l45_bottled",
+      "label": "45. Inventory shortages — Bottled",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "BOTTLED Proof gallons b45 INVENTORY SHORTAGES",
+      "row": "line_45",
+      "column": "bottled",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "finished_l45_packaged",
+      "label": "45. Inventory shortages — Packaged",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "PACKAGED Proof gallons c45 INVENTORY SHORTAGES",
+      "row": "line_45",
+      "column": "packaged",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "finished_l46_bottled",
+      "label": "46. On hand end of month — Bottled",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "BOTTLED Proof gallons b46 ON HAND END OF MONTH",
+      "row": "line_46",
+      "column": "bottled",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "finished_l46_packaged",
+      "label": "46. On hand end of month — Packaged",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "PACKAGED Proof gallons c46 ON HAND END OF MONTH",
+      "row": "line_46",
+      "column": "packaged",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "finished_l47_bottled",
+      "label": "47. TOTAL — Lines 32 through 46 — Bottled",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "BOTTLED Proof gallons b47 TOTAL  LINES 32 THROUGH 46",
+      "row": "line_47",
+      "column": "bottled",
+      "unit": "Proof gallons",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "finished_l32_bottled",
+          "finished_l33_bottled",
+          "finished_l34_bottled",
+          "finished_l35_bottled",
+          "finished_l36_bottled",
+          "finished_l37_bottled",
+          "finished_l38_bottled",
+          "finished_l39_bottled",
+          "finished_l40_bottled",
+          "finished_l41_bottled",
+          "finished_l42_bottled",
+          "finished_l43_bottled",
+          "finished_l44_bottled",
+          "finished_l45_bottled",
+          "finished_l46_bottled"
+        ]
+      }
+    },
+    {
+      "id": "finished_l47_packaged",
+      "label": "47. TOTAL — Lines 32 through 46 — Packaged",
+      "section": "finished",
+      "type": "number",
+      "pdfField": "PACKAGED Proof gallons c47 TOTAL  LINES 32 THROUGH 46",
+      "row": "line_47",
+      "column": "packaged",
+      "unit": "Proof gallons",
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "finished_l32_packaged",
+          "finished_l33_packaged",
+          "finished_l34_packaged",
+          "finished_l35_packaged",
+          "finished_l36_packaged",
+          "finished_l37_packaged",
+          "finished_l38_packaged",
+          "finished_l39_packaged",
+          "finished_l40_packaged",
+          "finished_l41_packaged",
+          "finished_l42_packaged",
+          "finished_l43_packaged",
+          "finished_l44_packaged",
+          "finished_l45_packaged",
+          "finished_l46_packaged"
+        ]
+      }
+    },
+    {
+      "id": "origins_l48_puerto_rican",
+      "label": "48. Proof gallons removed taxpaid or tax determined — Puerto Rican spirits",
+      "section": "origins",
+      "type": "number",
+      "pdfField": "Text8.0",
+      "row": "line_48",
+      "column": "puerto_rican",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "origins_l48_virgin_islands",
+      "label": "48. Proof gallons removed taxpaid or tax determined — Virgin Islands spirits",
+      "section": "origins",
+      "type": "number",
+      "pdfField": "Text8.1.0",
+      "row": "line_48",
+      "column": "virgin_islands",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "origins_l48_other_imported_rum",
+      "label": "48. Proof gallons removed taxpaid or tax determined — “Other” imported rum",
+      "section": "origins",
+      "type": "number",
+      "pdfField": "Text8.1.1",
+      "row": "line_48",
+      "column": "other_imported_rum",
+      "unit": "Proof gallons"
+    },
+    {
+      "id": "beverage_l49_bulk_dumped",
+      "label": "49. Alcohol and neutral spirits (Other than vodka) — Bulk spirits dumped into processing",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.0.0",
+      "row": "line_49",
+      "column": "bulk_dumped",
+      "unit": "Whole proof gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l49_bottled_imported",
+      "label": "49. Alcohol and neutral spirits (Other than vodka) — Bottled — imported",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.0.1.0",
+      "row": "line_49",
+      "column": "bottled_imported",
+      "unit": "Whole proof gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l49_bottled",
+      "label": "49. Alcohol and neutral spirits (Other than vodka) — Bottled (Exclude bottled in bond and export)",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.0.2",
+      "row": "line_49",
+      "column": "bottled",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l49_bottled_for_export",
+      "label": "49. Alcohol and neutral spirits (Other than vodka) — Bottled for export",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.0.1.1.0",
+      "row": "line_49",
+      "column": "bottled_for_export",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l50_bulk_dumped",
+      "label": "50. Blended straight whiskey — Bulk spirits dumped into processing",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.1.0",
+      "row": "line_50",
+      "column": "bulk_dumped",
+      "unit": "Whole proof gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l50_bottled",
+      "label": "50. Blended straight whiskey — Bottled (Exclude bottled in bond and export)",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.1.2",
+      "row": "line_50",
+      "column": "bottled",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l50_bottled_for_export",
+      "label": "50. Blended straight whiskey — Bottled for export",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.0.1.1.1",
+      "row": "line_50",
+      "column": "bottled_for_export",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l51a_bulk_dumped",
+      "label": "51a. Blended whiskey: with neutral spirits — Bulk spirits dumped into processing",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.2.0",
+      "row": "line_51a",
+      "column": "bulk_dumped",
+      "unit": "Whole proof gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l51a_bottled",
+      "label": "51a. Blended whiskey: with neutral spirits — Bottled (Exclude bottled in bond and export)",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.2.2",
+      "row": "line_51a",
+      "column": "bottled",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l51a_bottled_for_export",
+      "label": "51a. Blended whiskey: with neutral spirits — Bottled for export",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.0.1.1.2",
+      "row": "line_51a",
+      "column": "bottled_for_export",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l51b_bulk_dumped",
+      "label": "51b. Blended whiskey: with light whiskey — Bulk spirits dumped into processing",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.3.0",
+      "row": "line_51b",
+      "column": "bulk_dumped",
+      "unit": "Whole proof gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l51b_bottled",
+      "label": "51b. Blended whiskey: with light whiskey — Bottled (Exclude bottled in bond and export)",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.3.2",
+      "row": "line_51b",
+      "column": "bottled",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l51b_bottled_for_export",
+      "label": "51b. Blended whiskey: with light whiskey — Bottled for export",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.0.1.1.3",
+      "row": "line_51b",
+      "column": "bottled_for_export",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l52_bulk_dumped",
+      "label": "52. Blended light whiskey — Bulk spirits dumped into processing",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.4.0",
+      "row": "line_52",
+      "column": "bulk_dumped",
+      "unit": "Whole proof gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l52_bottled",
+      "label": "52. Blended light whiskey — Bottled (Exclude bottled in bond and export)",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.4.2",
+      "row": "line_52",
+      "column": "bottled",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l52_bottled_for_export",
+      "label": "52. Blended light whiskey — Bottled for export",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.0.1.1.4",
+      "row": "line_52",
+      "column": "bottled_for_export",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l53_bulk_dumped",
+      "label": "53. Any other blends of 100% whiskey — Bulk spirits dumped into processing",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.5.0",
+      "row": "line_53",
+      "column": "bulk_dumped",
+      "unit": "Whole proof gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l53_bottled",
+      "label": "53. Any other blends of 100% whiskey — Bottled (Exclude bottled in bond and export)",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.5.2",
+      "row": "line_53",
+      "column": "bottled",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l53_bottled_for_export",
+      "label": "53. Any other blends of 100% whiskey — Bottled for export",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.0.1.1.5",
+      "row": "line_53",
+      "column": "bottled_for_export",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l54a_bulk_dumped",
+      "label": "54a. Imported whiskey: Scotch — Bulk spirits dumped into processing",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.6.0",
+      "row": "line_54a",
+      "column": "bulk_dumped",
+      "unit": "Whole proof gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l54a_bottled_imported",
+      "label": "54a. Imported whiskey: Scotch — Bottled — imported",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.6.1",
+      "row": "line_54a",
+      "column": "bottled_imported",
+      "unit": "Whole proof gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l54a_bottled",
+      "label": "54a. Imported whiskey: Scotch — Bottled (Exclude bottled in bond and export)",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.6.2",
+      "row": "line_54a",
+      "column": "bottled",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l54a_bottled_for_export",
+      "label": "54a. Imported whiskey: Scotch — Bottled for export",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.0.1.1.6",
+      "row": "line_54a",
+      "column": "bottled_for_export",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l54b_bulk_dumped",
+      "label": "54b. Imported whiskey: Canadian — Bulk spirits dumped into processing",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.7.0",
+      "row": "line_54b",
+      "column": "bulk_dumped",
+      "unit": "Whole proof gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l54b_bottled_imported",
+      "label": "54b. Imported whiskey: Canadian — Bottled — imported",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.7.1",
+      "row": "line_54b",
+      "column": "bottled_imported",
+      "unit": "Whole proof gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l54b_bottled",
+      "label": "54b. Imported whiskey: Canadian — Bottled (Exclude bottled in bond and export)",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.7.2",
+      "row": "line_54b",
+      "column": "bottled",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l54b_bottled_for_export",
+      "label": "54b. Imported whiskey: Canadian — Bottled for export",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.0.1.1.7",
+      "row": "line_54b",
+      "column": "bottled_for_export",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l54c_bulk_dumped",
+      "label": "54c. Imported whiskey: Irish and Others — Bulk spirits dumped into processing",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.8.0",
+      "row": "line_54c",
+      "column": "bulk_dumped",
+      "unit": "Whole proof gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l54c_bottled_imported",
+      "label": "54c. Imported whiskey: Irish and Others — Bottled — imported",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.8.1",
+      "row": "line_54c",
+      "column": "bottled_imported",
+      "unit": "Whole proof gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l54c_bottled",
+      "label": "54c. Imported whiskey: Irish and Others — Bottled (Exclude bottled in bond and export)",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.8.2",
+      "row": "line_54c",
+      "column": "bottled",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l54c_bottled_for_export",
+      "label": "54c. Imported whiskey: Irish and Others — Bottled for export",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.0.1.1.8",
+      "row": "line_54c",
+      "column": "bottled_for_export",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l55_bulk_dumped",
+      "label": "55. Domestic whiskey distilled at 160° and under — Bulk spirits dumped into processing",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.9.0",
+      "row": "line_55",
+      "column": "bulk_dumped",
+      "unit": "Whole proof gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l55_bottled",
+      "label": "55. Domestic whiskey distilled at 160° and under — Bottled (Exclude bottled in bond and export)",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.9.2",
+      "row": "line_55",
+      "column": "bottled",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l55_bottled_in_bond",
+      "label": "55. Domestic whiskey distilled at 160° and under — Bottled in bond — 27 CFR 5.42(b) (Exclude export)",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.9.3",
+      "row": "line_55",
+      "column": "bottled_in_bond",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l55_bottled_for_export",
+      "label": "55. Domestic whiskey distilled at 160° and under — Bottled for export",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.0.1.1.9",
+      "row": "line_55",
+      "column": "bottled_for_export",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l56_bulk_dumped",
+      "label": "56. Domestic whiskey distilled at over 160° — Bulk spirits dumped into processing",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.10.0",
+      "row": "line_56",
+      "column": "bulk_dumped",
+      "unit": "Whole proof gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l56_bottled",
+      "label": "56. Domestic whiskey distilled at over 160° — Bottled (Exclude bottled in bond and export)",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.10.2",
+      "row": "line_56",
+      "column": "bottled",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l56_bottled_in_bond",
+      "label": "56. Domestic whiskey distilled at over 160° — Bottled in bond — 27 CFR 5.42(b) (Exclude export)",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.10.3",
+      "row": "line_56",
+      "column": "bottled_in_bond",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l56_bottled_for_export",
+      "label": "56. Domestic whiskey distilled at over 160° — Bottled for export",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.0.1.1.10",
+      "row": "line_56",
+      "column": "bottled_for_export",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l57_bulk_dumped",
+      "label": "57. Brandy distilled at 170° and under — Bulk spirits dumped into processing",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.11.0",
+      "row": "line_57",
+      "column": "bulk_dumped",
+      "unit": "Whole proof gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l57_bottled_imported",
+      "label": "57. Brandy distilled at 170° and under — Bottled — imported",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.11.1",
+      "row": "line_57",
+      "column": "bottled_imported",
+      "unit": "Whole proof gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l57_bottled",
+      "label": "57. Brandy distilled at 170° and under — Bottled (Exclude bottled in bond and export)",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.11.2",
+      "row": "line_57",
+      "column": "bottled",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l57_bottled_in_bond",
+      "label": "57. Brandy distilled at 170° and under — Bottled in bond — 27 CFR 5.42(b) (Exclude export)",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.11.3",
+      "row": "line_57",
+      "column": "bottled_in_bond",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l57_bottled_for_export",
+      "label": "57. Brandy distilled at 170° and under — Bottled for export",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.0.1.1.11",
+      "row": "line_57",
+      "column": "bottled_for_export",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l58_bulk_dumped",
+      "label": "58. Brandy distilled at over 170° — Bulk spirits dumped into processing",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.12.0",
+      "row": "line_58",
+      "column": "bulk_dumped",
+      "unit": "Whole proof gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l58_bottled_imported",
+      "label": "58. Brandy distilled at over 170° — Bottled — imported",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.12.1",
+      "row": "line_58",
+      "column": "bottled_imported",
+      "unit": "Whole proof gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l58_bottled",
+      "label": "58. Brandy distilled at over 170° — Bottled (Exclude bottled in bond and export)",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.12.2",
+      "row": "line_58",
+      "column": "bottled",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l58_bottled_in_bond",
+      "label": "58. Brandy distilled at over 170° — Bottled in bond — 27 CFR 5.42(b) (Exclude export)",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.12.3",
+      "row": "line_58",
+      "column": "bottled_in_bond",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l58_bottled_for_export",
+      "label": "58. Brandy distilled at over 170° — Bottled for export",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.0.1.1.12",
+      "row": "line_58",
+      "column": "bottled_for_export",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l59a_bulk_dumped",
+      "label": "59a. Spirits (Rum): Puerto Rican — Bulk spirits dumped into processing",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.13.0",
+      "row": "line_59a",
+      "column": "bulk_dumped",
+      "unit": "Whole proof gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l59a_bottled_imported",
+      "label": "59a. Spirits (Rum): Puerto Rican — Bottled — imported",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.13.1",
+      "row": "line_59a",
+      "column": "bottled_imported",
+      "unit": "Whole proof gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l59a_bottled",
+      "label": "59a. Spirits (Rum): Puerto Rican — Bottled (Exclude bottled in bond and export)",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.13.2",
+      "row": "line_59a",
+      "column": "bottled",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l59a_bottled_for_export",
+      "label": "59a. Spirits (Rum): Puerto Rican — Bottled for export",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.0.1.1.13",
+      "row": "line_59a",
+      "column": "bottled_for_export",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l59b_bulk_dumped",
+      "label": "59b. Spirits (Rum): Virgin Islands — Bulk spirits dumped into processing",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.14.0",
+      "row": "line_59b",
+      "column": "bulk_dumped",
+      "unit": "Whole proof gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l59b_bottled_imported",
+      "label": "59b. Spirits (Rum): Virgin Islands — Bottled — imported",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.14.1",
+      "row": "line_59b",
+      "column": "bottled_imported",
+      "unit": "Whole proof gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l59b_bottled",
+      "label": "59b. Spirits (Rum): Virgin Islands — Bottled (Exclude bottled in bond and export)",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.14.2",
+      "row": "line_59b",
+      "column": "bottled",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l59b_bottled_for_export",
+      "label": "59b. Spirits (Rum): Virgin Islands — Bottled for export",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.0.1.1.14",
+      "row": "line_59b",
+      "column": "bottled_for_export",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l60a_bulk_dumped",
+      "label": "60a. Rum: Domestic — Bulk spirits dumped into processing",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.15.0",
+      "row": "line_60a",
+      "column": "bulk_dumped",
+      "unit": "Whole proof gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l60a_bottled",
+      "label": "60a. Rum: Domestic — Bottled (Exclude bottled in bond and export)",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.15.2",
+      "row": "line_60a",
+      "column": "bottled",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l60a_bottled_in_bond",
+      "label": "60a. Rum: Domestic — Bottled in bond — 27 CFR 5.42(b) (Exclude export)",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.15.3",
+      "row": "line_60a",
+      "column": "bottled_in_bond",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l60a_bottled_for_export",
+      "label": "60a. Rum: Domestic — Bottled for export",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.0.1.1.15",
+      "row": "line_60a",
+      "column": "bottled_for_export",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l60b_bulk_dumped",
+      "label": "60b. Rum: “Other” Imported — Bulk spirits dumped into processing",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.16.0",
+      "row": "line_60b",
+      "column": "bulk_dumped",
+      "unit": "Whole proof gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l60b_bottled_imported",
+      "label": "60b. Rum: “Other” Imported — Bottled — imported",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.16.1",
+      "row": "line_60b",
+      "column": "bottled_imported",
+      "unit": "Whole proof gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l60b_bottled",
+      "label": "60b. Rum: “Other” Imported — Bottled (Exclude bottled in bond and export)",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.16.2",
+      "row": "line_60b",
+      "column": "bottled",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l60b_bottled_for_export",
+      "label": "60b. Rum: “Other” Imported — Bottled for export",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.0.1.1.16",
+      "row": "line_60b",
+      "column": "bottled_for_export",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l61_bulk_dumped",
+      "label": "61. Gin — Bulk spirits dumped into processing",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.17.0",
+      "row": "line_61",
+      "column": "bulk_dumped",
+      "unit": "Whole proof gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l61_bottled_imported",
+      "label": "61. Gin — Bottled — imported",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.17.1",
+      "row": "line_61",
+      "column": "bottled_imported",
+      "unit": "Whole proof gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l61_bottled",
+      "label": "61. Gin — Bottled (Exclude bottled in bond and export)",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.17.2",
+      "row": "line_61",
+      "column": "bottled",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l61_bottled_in_bond",
+      "label": "61. Gin — Bottled in bond — 27 CFR 5.42(b) (Exclude export)",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.17.3",
+      "row": "line_61",
+      "column": "bottled_in_bond",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l61_bottled_for_export",
+      "label": "61. Gin — Bottled for export",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.0.1.1.17",
+      "row": "line_61",
+      "column": "bottled_for_export",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l62_bulk_dumped",
+      "label": "62. Vodka — Bulk spirits dumped into processing",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.18.0",
+      "row": "line_62",
+      "column": "bulk_dumped",
+      "unit": "Whole proof gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l62_bottled_imported",
+      "label": "62. Vodka — Bottled — imported",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.18.1",
+      "row": "line_62",
+      "column": "bottled_imported",
+      "unit": "Whole proof gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l62_bottled",
+      "label": "62. Vodka — Bottled (Exclude bottled in bond and export)",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.18.2",
+      "row": "line_62",
+      "column": "bottled",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l62_bottled_in_bond",
+      "label": "62. Vodka — Bottled in bond — 27 CFR 5.42(b) (Exclude export)",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.18.3",
+      "row": "line_62",
+      "column": "bottled_in_bond",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l62_bottled_for_export",
+      "label": "62. Vodka — Bottled for export",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.0.1.1.18",
+      "row": "line_62",
+      "column": "bottled_for_export",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l63_bulk_dumped",
+      "label": "63. Cordials, liqueurs, and specialties — Bulk spirits dumped into processing",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.19.0",
+      "row": "line_63",
+      "column": "bulk_dumped",
+      "unit": "Whole proof gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l63_bottled_imported",
+      "label": "63. Cordials, liqueurs, and specialties — Bottled — imported",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.19.1",
+      "row": "line_63",
+      "column": "bottled_imported",
+      "unit": "Whole proof gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l63_bottled",
+      "label": "63. Cordials, liqueurs, and specialties — Bottled (Exclude bottled in bond and export)",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.19.2",
+      "row": "line_63",
+      "column": "bottled",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l63_bottled_for_export",
+      "label": "63. Cordials, liqueurs, and specialties — Bottled for export",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.0.1.1.19",
+      "row": "line_63",
+      "column": "bottled_for_export",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l64_bulk_dumped",
+      "label": "64. Cocktails and mixed drinks — Bulk spirits dumped into processing",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.20.0",
+      "row": "line_64",
+      "column": "bulk_dumped",
+      "unit": "Whole proof gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l64_bottled_imported",
+      "label": "64. Cocktails and mixed drinks — Bottled — imported",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.20.1",
+      "row": "line_64",
+      "column": "bottled_imported",
+      "unit": "Whole proof gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l64_bottled",
+      "label": "64. Cocktails and mixed drinks — Bottled (Exclude bottled in bond and export)",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.20.2",
+      "row": "line_64",
+      "column": "bottled",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l64_bottled_for_export",
+      "label": "64. Cocktails and mixed drinks — Bottled for export",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.0.1.1.20",
+      "row": "line_64",
+      "column": "bottled_for_export",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l65_bulk_dumped",
+      "label": "65. Tequila — Bulk spirits dumped into processing",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.21.0",
+      "row": "line_65",
+      "column": "bulk_dumped",
+      "unit": "Whole proof gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l65_bottled_imported",
+      "label": "65. Tequila — Bottled — imported",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.21.1",
+      "row": "line_65",
+      "column": "bottled_imported",
+      "unit": "Whole proof gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l65_bottled",
+      "label": "65. Tequila — Bottled (Exclude bottled in bond and export)",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.21.2",
+      "row": "line_65",
+      "column": "bottled",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l65_bottled_for_export",
+      "label": "65. Tequila — Bottled for export",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.0.1.1.21",
+      "row": "line_65",
+      "column": "bottled_for_export",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l66_bulk_dumped",
+      "label": "66. (Identify kind of spirit) — Bulk spirits dumped into processing",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.22.0.0",
+      "row": "line_66",
+      "column": "bulk_dumped",
+      "unit": "Whole proof gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l66_bottled_imported",
+      "label": "66. (Identify kind of spirit) — Bottled — imported",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.22.1",
+      "row": "line_66",
+      "column": "bottled_imported",
+      "unit": "Whole proof gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l66_bottled",
+      "label": "66. (Identify kind of spirit) — Bottled (Exclude bottled in bond and export)",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.22.2",
+      "row": "line_66",
+      "column": "bottled",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l66_bottled_in_bond",
+      "label": "66. (Identify kind of spirit) — Bottled in bond — 27 CFR 5.42(b) (Exclude export)",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.22.3",
+      "row": "line_66",
+      "column": "bottled_in_bond",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l66_bottled_for_export",
+      "label": "66. (Identify kind of spirit) — Bottled for export",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.0.1.1.22",
+      "row": "line_66",
+      "column": "bottled_for_export",
+      "unit": "Whole wine gallons",
+      "integer": true
+    },
+    {
+      "id": "beverage_l67_bulk_dumped",
+      "label": "67. TOTAL — Lines 49 through 66 — Bulk spirits dumped into processing",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.22.0.1.0",
+      "row": "line_67",
+      "column": "bulk_dumped",
+      "unit": "Whole proof gallons",
+      "integer": true,
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "beverage_l49_bulk_dumped",
+          "beverage_l50_bulk_dumped",
+          "beverage_l51a_bulk_dumped",
+          "beverage_l51b_bulk_dumped",
+          "beverage_l52_bulk_dumped",
+          "beverage_l53_bulk_dumped",
+          "beverage_l54a_bulk_dumped",
+          "beverage_l54b_bulk_dumped",
+          "beverage_l54c_bulk_dumped",
+          "beverage_l55_bulk_dumped",
+          "beverage_l56_bulk_dumped",
+          "beverage_l57_bulk_dumped",
+          "beverage_l58_bulk_dumped",
+          "beverage_l59a_bulk_dumped",
+          "beverage_l59b_bulk_dumped",
+          "beverage_l60a_bulk_dumped",
+          "beverage_l60b_bulk_dumped",
+          "beverage_l61_bulk_dumped",
+          "beverage_l62_bulk_dumped",
+          "beverage_l63_bulk_dumped",
+          "beverage_l64_bulk_dumped",
+          "beverage_l65_bulk_dumped",
+          "beverage_l66_bulk_dumped"
+        ]
+      }
+    },
+    {
+      "id": "beverage_l67_bottled_imported",
+      "label": "67. TOTAL — Lines 49 through 66 — Bottled — imported",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.22.0.1.1",
+      "row": "line_67",
+      "column": "bottled_imported",
+      "unit": "Whole proof gallons",
+      "integer": true,
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "beverage_l49_bottled_imported",
+          "beverage_l54a_bottled_imported",
+          "beverage_l54b_bottled_imported",
+          "beverage_l54c_bottled_imported",
+          "beverage_l57_bottled_imported",
+          "beverage_l58_bottled_imported",
+          "beverage_l59a_bottled_imported",
+          "beverage_l59b_bottled_imported",
+          "beverage_l60b_bottled_imported",
+          "beverage_l61_bottled_imported",
+          "beverage_l62_bottled_imported",
+          "beverage_l63_bottled_imported",
+          "beverage_l64_bottled_imported",
+          "beverage_l65_bottled_imported",
+          "beverage_l66_bottled_imported"
+        ]
+      }
+    },
+    {
+      "id": "beverage_l67_bottled",
+      "label": "67. TOTAL — Lines 49 through 66 — Bottled (Exclude bottled in bond and export)",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.22.0.1.2",
+      "row": "line_67",
+      "column": "bottled",
+      "unit": "Whole wine gallons",
+      "integer": true,
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "beverage_l49_bottled",
+          "beverage_l50_bottled",
+          "beverage_l51a_bottled",
+          "beverage_l51b_bottled",
+          "beverage_l52_bottled",
+          "beverage_l53_bottled",
+          "beverage_l54a_bottled",
+          "beverage_l54b_bottled",
+          "beverage_l54c_bottled",
+          "beverage_l55_bottled",
+          "beverage_l56_bottled",
+          "beverage_l57_bottled",
+          "beverage_l58_bottled",
+          "beverage_l59a_bottled",
+          "beverage_l59b_bottled",
+          "beverage_l60a_bottled",
+          "beverage_l60b_bottled",
+          "beverage_l61_bottled",
+          "beverage_l62_bottled",
+          "beverage_l63_bottled",
+          "beverage_l64_bottled",
+          "beverage_l65_bottled",
+          "beverage_l66_bottled"
+        ]
+      }
+    },
+    {
+      "id": "beverage_l67_bottled_in_bond",
+      "label": "67. TOTAL — Lines 49 through 66 — Bottled in bond — 27 CFR 5.42(b) (Exclude export)",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.22.0.1.3.0",
+      "row": "line_67",
+      "column": "bottled_in_bond",
+      "unit": "Whole wine gallons",
+      "integer": true,
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "beverage_l55_bottled_in_bond",
+          "beverage_l56_bottled_in_bond",
+          "beverage_l57_bottled_in_bond",
+          "beverage_l58_bottled_in_bond",
+          "beverage_l60a_bottled_in_bond",
+          "beverage_l61_bottled_in_bond",
+          "beverage_l62_bottled_in_bond",
+          "beverage_l66_bottled_in_bond"
+        ]
+      }
+    },
+    {
+      "id": "beverage_l67_bottled_for_export",
+      "label": "67. TOTAL — Lines 49 through 66 — Bottled for export",
+      "section": "beverage",
+      "type": "number",
+      "pdfField": "Text10.22.0.1.3.1",
+      "row": "line_67",
+      "column": "bottled_for_export",
+      "unit": "Whole wine gallons",
+      "integer": true,
+      "calculation": {
+        "op": "sum",
+        "refs": [
+          "beverage_l49_bottled_for_export",
+          "beverage_l50_bottled_for_export",
+          "beverage_l51a_bottled_for_export",
+          "beverage_l51b_bottled_for_export",
+          "beverage_l52_bottled_for_export",
+          "beverage_l53_bottled_for_export",
+          "beverage_l54a_bottled_for_export",
+          "beverage_l54b_bottled_for_export",
+          "beverage_l54c_bottled_for_export",
+          "beverage_l55_bottled_for_export",
+          "beverage_l56_bottled_for_export",
+          "beverage_l57_bottled_for_export",
+          "beverage_l58_bottled_for_export",
+          "beverage_l59a_bottled_for_export",
+          "beverage_l59b_bottled_for_export",
+          "beverage_l60a_bottled_for_export",
+          "beverage_l60b_bottled_for_export",
+          "beverage_l61_bottled_for_export",
+          "beverage_l62_bottled_for_export",
+          "beverage_l63_bottled_for_export",
+          "beverage_l64_bottled_for_export",
+          "beverage_l65_bottled_for_export",
+          "beverage_l66_bottled_for_export"
+        ]
+      }
+    },
+    {
+      "id": "certification_date",
+      "label": "Date",
+      "section": "certification",
+      "type": "date",
+      "pdfField": "DATE"
+    },
+    {
+      "id": "certification_proprietor",
+      "label": "Proprietor",
+      "section": "certification",
+      "type": "text",
+      "pdfField": "PROPRIETOR",
+      "profileKey": "legalName"
+    },
+    {
+      "id": "signature_and_title",
+      "label": "By: signature and title",
+      "section": "certification",
+      "type": "text",
+      "pdfField": "SIGNATURE",
+      "manualOnly": true
+    }
+  ],
+  "checks": [
+    {
+      "id": "bulk_balance_wine",
+      "label": "Wine: line 8 equals line 26 (proof gallons)",
+      "leftRefs": [
+        "bulk_l08_wine"
+      ],
+      "rightRefs": [
+        "bulk_l26_wine"
+      ]
+    },
+    {
+      "id": "bulk_balance_spirits",
+      "label": "Spirits: line 8 equals line 26 (proof gallons)",
+      "leftRefs": [
+        "bulk_l08_spirits"
+      ],
+      "rightRefs": [
+        "bulk_l26_spirits"
+      ]
+    },
+    {
+      "id": "finished_balance_bottled",
+      "label": "Bottled: line 31 equals line 47 (proof gallons)",
+      "leftRefs": [
+        "finished_l31_bottled"
+      ],
+      "rightRefs": [
+        "finished_l47_bottled"
+      ]
+    },
+    {
+      "id": "finished_balance_packaged",
+      "label": "Packaged: line 31 equals line 47 (proof gallons)",
+      "leftRefs": [
+        "finished_l31_packaged"
+      ],
+      "rightRefs": [
+        "finished_l47_packaged"
+      ]
+    }
+  ]
+}
