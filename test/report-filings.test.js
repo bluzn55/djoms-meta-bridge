@@ -8,7 +8,7 @@ const PASSWORD='this-is-only-a-test-password';
 const ENV_KEYS=['PUBLIC_BASE_URL','UPSTASH_REDIS_REST_URL','UPSTASH_REDIS_REST_TOKEN',
   'KV_REST_API_URL','KV_REST_API_TOKEN','DJOMS_SESSION_SECRET','DJOMS_ADMIN_PASSWORD',
   'DJOMS_OWNER_NAME','RESEND_API_KEY','DJOMS_EMAIL_FROM'];
-const validReport=()=>({name:'Example monthly report',frequency:'monthly',
+const validReport=()=>({name:'Example monthly report',jurisdiction:'state',frequency:'monthly',
   periodStart:'2026-01-01',periodEnd:'2026-01-31',dueDate:'2026-02-15',
   recipientName:'Example receiving office',deliveryMethod:'email',recipientEmail:'reports@example.test',
   portalUrl:'',subject:'Example report — January 2026',notes:'Owner-entered information.',
@@ -119,6 +119,7 @@ test('draft approval is refused; exact revision is required and edits clear appr
   assert.equal(report.status,'approved');
   assert.equal(report.approval.revision,report.revision);
   assert.equal(report.approval.snapshot.recipientEmail,'reports@example.test');
+  assert.equal(report.approval.snapshot.jurisdiction,'state');
   assert.equal(h.providerCalls.length,0,'Approval alone never sends');
   report=(await h.action('save',report,{report:{...validReport(),fields:[{label:'Units',value:'8',required:true}]}})).body.report;
   assert.equal(report.status,'draft');assert.equal(report.approval,null);assert.equal(report.reviewedEmailPreview,null);
@@ -133,6 +134,29 @@ test('missing required values remain missing and incomplete reports cannot becom
   assert.equal((await h.action('review',report)).statusCode,400);
   assert.throws(()=>normalizeFiling({...validReport(),periodEnd:'2026-02-30'}),/valid period end/);
   assert.throws(()=>normalizeFiling({...validReport(),recipientEmail:'one@example.test,two@example.test'}),/one valid/);
+}));
+
+test('jurisdiction stays unassigned for legacy reports and is required before review',()=>harness(async h=>{
+  const legacy=validReport();delete legacy.jurisdiction;
+  const normalized=normalizeFiling(legacy);
+  assert.equal(normalized.jurisdiction,'unassigned');
+  assert.deepEqual(normalized.fields,legacy.fields,'Adding classification preserves entered report values');
+  assert.equal(normalizeFiling({...legacy,jurisdiction:''}).jurisdiction,'unassigned');
+  assert.throws(()=>normalizeFiling({...legacy,jurisdiction:'county'}),/Choose City, Parish, State or Federal/);
+  const report=await h.create(legacy);
+  assert.equal(report.jurisdiction,'unassigned');
+  assert.equal((await h.action('review',report)).statusCode,400);
+  const storedKey=PREFIX+'report-filing:'+report.id;
+  const stored=JSON.parse(h.storage.get(storedKey));delete stored.jurisdiction;
+  h.storage.set(storedKey,JSON.stringify(stored));
+  const listing=await h.request({}, {method:'GET'});
+  assert.equal(listing.body.reports[0].jurisdiction,'unassigned');
+  assert.equal(Object.hasOwn(JSON.parse(h.storage.get(storedKey)),'jurisdiction'),false,'Reading legacy records does not migrate them');
+  let selected=await h.create(validReport());
+  selected=(await h.action('save',selected,{report:legacy})).body.report;
+  assert.equal(selected.jurisdiction,'state','An older open page omitting classification preserves the existing selection');
+  selected=(await h.action('save',selected,{report:{...legacy,jurisdiction:''}})).body.report;
+  assert.equal(selected.jurisdiction,'unassigned','An explicit empty selection still resets the draft classification');
 }));
 
 test('Approve and send transmits exactly the reviewed preview once and keeps provider receipt',()=>harness(async h=>{
@@ -208,6 +232,7 @@ test('next period requires entered dates, clears values and never carries approv
   assert.equal(next.notes,'');assert.equal(next.subject,'');assert.equal(next.dueDate,dates.dueDate);
   assert.equal(next.fields[0].value,'');assert.equal(next.fields[0].required,true);
   assert.equal(next.previousReportId,report.id);
+  assert.equal(next.jurisdiction,report.jurisdiction);
   const duplicate=await h.action('nextPeriod',report,{report:dates});
   assert.equal(duplicate.body.report.id,next.id);
   assert.equal((await h.request({}, {method:'GET'})).body.reports.length,2);
