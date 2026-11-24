@@ -159,6 +159,39 @@ test('jurisdiction stays unassigned for legacy reports and is required before re
   assert.equal(selected.jurisdiction,'unassigned','An explicit empty selection still resets the draft classification');
 }));
 
+test('amount due preserves blank versus zero, validates exact cents and protects approval',()=>harness(async h=>{
+  const normalize=value=>normalizeFiling({...validReport(),amountDue:value}).amountDue;
+  assert.equal(normalize(undefined),'');assert.equal(normalize(''),'');
+  assert.equal(normalize('0'),'0.00');assert.equal(normalize('123'),'123.00');
+  assert.equal(normalize('123.4'),'123.40');assert.equal(normalize('123.45'),'123.45');
+  assert.equal(normalize('999999999.99'),'999999999.99');
+  for(const value of ['-1','1e3','1,000.00','$1.00','1.234','1000000000','NaN','Infinity'])
+    assert.throws(()=>normalize(value),/Enter an amount/);
+  const blank=await h.create();
+  assert.equal(blank.amountDue,'');assert.doesNotMatch(blank.emailPreview.text,/Amount due:/);
+  const storedKey=PREFIX+'report-filing:'+blank.id;
+  const stored=JSON.parse(h.storage.get(storedKey));delete stored.amountDue;
+  h.storage.set(storedKey,JSON.stringify(stored));
+  assert.equal((await h.request({}, {method:'GET'})).body.reports[0].amountDue,'');
+  assert.equal(Object.hasOwn(JSON.parse(h.storage.get(storedKey)),'amountDue'),false);
+  const zero=await h.create({...validReport(),amountDue:'0'});
+  assert.match(zero.emailPreview.text,/Amount due: \$0\.00/);
+  let report=(await h.action('approve',await h.ready({...validReport(),amountDue:'123.45'}))).body.report;
+  const approvedHash=report.approval.contentHash;
+  assert.equal(report.approval.snapshot.amountDue,'123.45');
+  assert.match(report.emailPreview.text,/Amount due: \$123\.45/);
+  report=(await h.action('save',report,{report:validReport()})).body.report;
+  assert.equal(report.amountDue,'123.45','An older page omitting amount due preserves the saved amount');
+  report=(await h.action('save',report,{report:{...validReport(),amountDue:'123.46'}})).body.report;
+  assert.equal(report.status,'draft');assert.equal(report.approval,null);
+  report=(await h.action('review',report)).body.report;
+  report=(await h.action('approve',report)).body.report;
+  assert.notEqual(report.approval.contentHash,approvedHash,'The approval hash binds the exact amount');
+  report=(await h.action('save',report,{report:{...validReport(),amountDue:''}})).body.report;
+  assert.equal(report.amountDue,'');assert.doesNotMatch(report.emailPreview.text,/Amount due:/);
+  assert.equal(h.providerCalls.length,0);
+}));
+
 test('Approve and send transmits exactly the reviewed preview once and keeps provider receipt',()=>harness(async h=>{
   const report=await h.ready();
   const preview=report.emailPreview;
@@ -222,7 +255,7 @@ test('lost final persistence after provider acceptance cannot replay the send',(
 }));
 
 test('next period requires entered dates, clears values and never carries approval or duplicate periods',()=>harness(async h=>{
-  const report=(await h.action('approve',await h.ready())).body.report;
+  const report=(await h.action('approve',await h.ready({...validReport(),amountDue:'250.50'}))).body.report;
   assert.equal((await h.action('nextPeriod',report)).statusCode,400);
   const dates={periodStart:'2026-02-01',periodEnd:'2026-02-28',dueDate:'2026-03-18'};
   const first=await h.action('nextPeriod',report,{report:dates});
@@ -233,6 +266,7 @@ test('next period requires entered dates, clears values and never carries approv
   assert.equal(next.fields[0].value,'');assert.equal(next.fields[0].required,true);
   assert.equal(next.previousReportId,report.id);
   assert.equal(next.jurisdiction,report.jurisdiction);
+  assert.equal(next.amountDue,'','A new period never carries forward the prior amount due');
   const duplicate=await h.action('nextPeriod',report,{report:dates});
   assert.equal(duplicate.body.report.id,next.id);
   assert.equal((await h.request({}, {method:'GET'})).body.reports.length,2);
