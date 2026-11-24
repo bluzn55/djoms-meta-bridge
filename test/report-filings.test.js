@@ -345,7 +345,7 @@ test('amount due preserves blank versus zero, validates exact cents and protects
 test('Approve and send transmits exactly the reviewed preview once and keeps provider receipt',()=>harness(async h=>{
   const report=await h.ready();
   const preview=report.emailPreview;
-  assert.match(preview.text,/^Conestoga Distillery report\n/);
+  assert.match(preview.text,/^Colo Distillery LLC report\n/);
   const sent=await h.action('approveSend',report);
   assert.equal(sent.statusCode,200,sent.body?.error);
   assert.equal(sent.body.report.status,'sent');

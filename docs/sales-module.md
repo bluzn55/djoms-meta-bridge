@@ -1,5 +1,10 @@
 # DJOMS main Sales page
 
+The current landing and product/outlet model are specified in
+`daily-sales-master.md`: Food, Alcohol, Swag, Events, Catering. The Alcohol
+conversion and daily visitor details are in `sales-distillery-layout.md`.
+The original sale/payment protections below remain in force.
+
 This module records owner-entered sales and payments already received. It does
 not charge cards, move money, submit filings, alter inventory, post accounting
 entries, import Wix orders, or process refunds. The existing Wix website-sales

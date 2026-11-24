@@ -8,6 +8,14 @@ export default async function handler(req, res) {
   const action = req.query?.action;
   if (action === 'session') return sessionEndpoint(req, res);
   if (action === 'password') return passwordEndpoint(req, res);
+  if (action === 'sales-products') {
+    const { salesProductsEndpoint } = await import('../../lib/sales-products.js');
+    return salesProductsEndpoint(req, res);
+  }
+  if (action === 'sales-days') {
+    const { salesDaysEndpoint } = await import('../../lib/sales-days.js');
+    return salesDaysEndpoint(req, res);
+  }
   if (action === 'sales') {
     const { salesEndpoint } = await import('../../lib/sales.js');
     return salesEndpoint(req, res);

@@ -44,10 +44,10 @@ async function harness(run){
       }else if(command==='EVAL'){
         const [script,count,...rest]=args,keys=rest.slice(0,count),values=rest.slice(count);
         if(script.includes('local previous=redis.call("get",KEYS[3])')){
-          const [record,score,id,hash,previousNumber,mapping,nextNumber]=values;
+          const [record,score,id,hash,previousNumber,mapping,nextNumber,legacyHash,version2Hash]=values;
           const previous=storage.get(keys[2]);
           if(previous){
-            const saved=JSON.parse(previous);result=saved.hash===hash?saved.saleId:'!conflict';
+            const saved=JSON.parse(previous);result=[hash,legacyHash,version2Hash].includes(saved.hash)?saved.saleId:'!conflict';
           }else if((storage.get(keys[3])||'0')!==previousNumber)result='!sequence';
           else{
             storage.set(keys[0],record);storage.set(keys[2],mapping);storage.set(keys[3],nextNumber);
@@ -269,4 +269,146 @@ test('bounded sales pagination keeps all history and stable positions across edi
     assert.equal((await h.request({}, {method:'GET',query:{cursor}})).statusCode,400);
   const missingId='f'.repeat(36);index.set(missingId,100);
   assert.equal((await h.request({}, {method:'GET'})).statusCode,503,'Missing indexed records are never silently skipped');
+}));
+
+test('classified bottles and explicit packs use exact TTB volume math without assuming proof or usage',()=>{
+  const line=overrides=>normalizeSale({...exampleSale(),items:[{...exampleSale().items[0],purpose:'bottle_sale',bottleSizeMl:'750',proof:'80',...overrides}]},'conestoga').items[0];
+  const bottle=line({});
+  assert.equal(bottle.bottleCount,1);assert.equal(bottle.volumeMl,750);
+  assert.equal(bottle.wineGallonsMicros,198129);assert.equal(bottle.proofGallonsMicros,158503);
+  const pack=line({unit:'case',quantity:'3',bottlesPerUnit:'003',bottleSizeMl:'0150'});
+  assert.equal(pack.bottlesPerUnit,'3');assert.equal(pack.bottleSizeMl,'150');
+  assert.equal(pack.bottleCount,9);assert.equal(pack.volumeMl,1350);
+  assert.equal(pack.wineGallonsMicros,356631);assert.equal(pack.proofGallonsMicros,285305);
+  const loose=line({quantity:'9',bottleSizeMl:'150'});
+  assert.equal(loose.wineGallonsMicros,356632);assert.equal(loose.proofGallonsMicros,285306,'Loose bottles retain the factor until final line rounding');
+  const decimal=line({bottleSizeMl:'1000',proof:'080.125'});
+  assert.equal(decimal.proof,'80.125');assert.equal(decimal.proofGallonsMicros,211668);
+  assert.equal(line({bottleSizeMl:'350'}).volumeMl,350,'Custom size never changes to a preset');
+  const unknownProof=line({proof:''});
+  assert.equal(unknownProof.volumeMl,750);assert.equal(unknownProof.wineGallonsMicros,198129);assert.equal(unknownProof.proofGallonsMicros,null);
+  for(const overrides of [{purpose:''},{purpose:'tasting'},{purpose:'cocktail'},{purpose:'sample'},{purpose:'other'},
+    {category:'food'},{unit:'each'},{quantity:''},{quantity:'1.5'},{bottleSizeMl:''},{unit:'case',bottlesPerUnit:''}]){
+    const item=line(overrides);
+    assert.deepEqual([item.bottleCount,item.volumeMl,item.wineGallonsMicros,item.proofGallonsMicros],[null,null,null,null]);
+  }
+  const forged=line({bottleCount:9999,volumeMl:123,wineGallonsMicros:1,proofGallonsMicros:1});
+  assert.deepEqual([forged.bottleCount,forged.volumeMl,forged.proofGallonsMicros],[1,750,158503]);
+  for(const value of ['0','-1','1.5','1e2','100001'])assert.throws(()=>line({bottleSizeMl:value}),/Bottle size/);
+  for(const value of ['0','-1','1.5','1001'])assert.throws(()=>line({unit:'case',bottlesPerUnit:value}),/Bottles per case/);
+  for(const value of ['0','200.001','-1','80.0001','1e2'])assert.throws(()=>line({proof:value}),/U.S. proof/);
+  assert.throws(()=>line({bottlesPerUnit:'3'}),/exactly one bottle/);
+  assert.throws(()=>line({purpose:'unknown'}),/purpose/);
+  assert.throws(()=>line({unitPrice:'0',quantity:'999999999',unit:'case',bottlesPerUnit:'1000',bottleSizeMl:'100000'}),/too large to save exactly/);
+  assert.throws(()=>line({unitPrice:'0',quantity:'200000000',bottleSizeMl:'100000',proof:'200'}),/too large to save exactly/,'Proof gallon micro-units are also bounded');
+});
+
+test('recorded bottle sales require whole quantities, sizes, explicit packs and proof while legacy lines stay usable',()=>harness(async h=>{
+  const classified=overrides=>({...exampleSale(),items:[{...exampleSale().items[0],purpose:'bottle_sale',bottleSizeMl:'750',proof:'80',...overrides}]});
+  for(const overrides of [{quantity:'1.5'},{bottleSizeMl:''},{unit:'case',bottlesPerUnit:''},{proof:''}]){
+    const draft=await h.create(classified(overrides));
+    assert.equal((await h.action('record',draft)).statusCode,400);assert.equal(h.stored(draft).status,'draft');
+  }
+  const recorded=await h.record(classified({unit:'case',bottlesPerUnit:'3'}));
+  assert.equal(recorded.items[0].bottleCount,3);assert.equal(recorded.items[0].volumeMl,2250);
+  const original=JSON.parse(JSON.stringify(recorded.items));
+  assert.equal((await h.action('save',recorded,{sale:classified({proof:'90'})})).statusCode,409);
+  assert.deepEqual(h.stored(recorded).items,original);
+  const legacy=await h.record();assert.equal(legacy.items[0].purpose,'');assert.equal(legacy.items[0].proofGallonsMicros,null);
+  const draft=await h.create(classified({}));
+  const staleClient={...exampleSale(),items:[{...exampleSale().items[0],quantity:'2'}]};
+  const saved=await h.action('save',draft,{sale:staleClient});
+  assert.equal(saved.statusCode,200);assert.equal(saved.body.sale.items[0].proof,'80');
+  assert.equal(saved.body.sale.items[0].bottleSizeMl,'750');assert.equal(saved.body.sale.items[0].bottleCount,2);
+  assert.equal((await h.action('save',saved.body.sale,{sale:{...staleClient,items:[{...staleClient.items[0],description:'Another item'}]}})).statusCode,409);
+  const cleared=await h.action('save',saved.body.sale,{sale:classified({purpose:'',bottleSizeMl:'',bottlesPerUnit:'',proof:''})});
+  assert.equal(cleared.statusCode,200);assert.equal(cleared.body.sale.items[0].bottleCount,null);
+}));
+
+test('unchanged v1 and v2 create retries survive new metadata but changed classification or package conflicts',()=>harness(async h=>{
+  const token='test-create-before-upgrade',sale=await h.create(exampleSale(),token);
+  // Captured from the actual v1 normalized synthetic fixture, before new fields existed.
+  const hash='d0e842c4d89e6f54fb3031ad933441e175b9c99166a089857cb35afb66785cfa';
+  h.storage.set(PREFIX+'sales-create:conestoga:'+token,JSON.stringify({saleId:sale.id,hash}));
+  const body={action:'save',businessId:'conestoga',requestId:token,sale:exampleSale()};
+  const retry=await h.request(body);assert.equal(retry.statusCode,200);assert.equal(retry.body.sale.id,sale.id);
+  assert.equal((await h.request({...body,sale:{...exampleSale(),items:[{...exampleSale().items[0],purpose:'bottle_sale'}]}})).statusCode,409);
+  const classified={...exampleSale(),items:[{...exampleSale().items[0],purpose:'bottle_sale',bottleSizeMl:'350',proof:'80',quantity:'2'}]};
+  const v2Token='test-create-version-two',v2=await h.create(classified,v2Token);
+  // Captured from the v2 fixture including size/proof and exact converted amounts.
+  h.storage.set(PREFIX+'sales-create:conestoga:'+v2Token,JSON.stringify({saleId:v2.id,hash:'909747650135304aedccd098ff03e30e5c1dde8947fcee726da78656a267df7b'}));
+  const v2Body={action:'save',businessId:'conestoga',requestId:v2Token,sale:classified};
+  const v2Retry=await h.request(v2Body);assert.equal(v2Retry.statusCode,200);assert.equal(v2Retry.body.sale.id,v2.id);
+  for(const update of [{division:'alcohol'},{outlet:'event'},{customer:{companyName:'Synthetic company'}},
+    {items:[{...classified.items[0],packageLabel:'Synthetic package'}]},{items:[{...classified.items[0],proof:'90'}]}])
+    assert.equal((await h.request({...v2Body,sale:{...classified,...update}})).statusCode,409);
+  assert.equal((await h.request({}, {method:'GET'})).body.sales.length,2);
+}));
+
+test('master section, outlet and company fields normalize without converting Food package labels',()=>{
+  const raw={...exampleSale(),division:'food',outlet:'farmers_market',customer:{name:'',email:'',companyName:' Synthetic company ',
+    contactName:' Test contact ',phone:' +1 555 0100 ',address:' First line\nSecond line '},
+    items:[{...exampleSale().items[0],category:'food',packageLabel:' 12 oz bottle '}]};
+  const sale=normalizeSale(raw,'conestoga');
+  assert.equal(sale.division,'food');assert.equal(sale.outlet,'farmers_market');
+  assert.deepEqual(sale.customer,{name:'',email:'',companyName:'Synthetic company',contactName:'Test contact',phone:'+1 555 0100',address:'First line\nSecond line'});
+  assert.equal(sale.items[0].packageLabel,'12 oz bottle');assert.equal(sale.items[0].bottleSizeMl,'');
+  assert.deepEqual([sale.items[0].bottleCount,sale.items[0].volumeMl,sale.items[0].wineGallonsMicros,sale.items[0].proofGallonsMicros],[null,null,null,null]);
+  const legacy=normalizeSale(exampleSale(),'conestoga');
+  assert.equal(legacy.division,'');assert.equal(legacy.outlet,'');assert.equal(legacy.customer.companyName,'');assert.equal(legacy.items[0].packageLabel,'');
+  for(const division of ['food','alcohol','swag','events','catering'])assert.equal(normalizeSale({...raw,division},'conestoga').division,division);
+  for(const outlet of ['online','farmers_market','event','catering','in_store','other'])assert.equal(normalizeSale({...raw,outlet},'conestoga').outlet,outlet);
+  assert.throws(()=>normalizeSale({...raw,division:'spirits'},'conestoga'),/sales section/);
+  assert.throws(()=>normalizeSale({...raw,outlet:'unknown'},'conestoga'),/selling outlet/);
+  for(const [field,limit] of [['companyName',200],['contactName',200],['phone',80],['address',1000]])
+    assert.throws(()=>normalizeSale({...raw,customer:{...raw.customer,[field]:'x'.repeat(limit+1)}},'conestoga'),/no more than/);
+  assert.throws(()=>normalizeSale({...raw,items:[{...raw.items[0],packageLabel:'x'.repeat(121)}]},'conestoga'),/Package label/);
+  const catering=normalizeSale({...exampleSale(),division:'catering',outlet:'event',items:[{...exampleSale().items[0],purpose:'bottle_sale',bottleSizeMl:'750',proof:'80'}]},'conestoga');
+  assert.equal(catering.items[0].proofGallonsMicros,158503,'Alcohol line volume follows its saved facts even in another primary section');
+});
+
+test('classified retail and wholesale recording require outlet or company while legacy channels stay compatible',()=>harness(async h=>{
+  const retail=await h.create({...exampleSale(),division:'food'});
+  const blockedRetail=await h.action('record',retail);assert.equal(blockedRetail.statusCode,400);assert.match(blockedRetail.body.error,/outlet/);
+  assert.equal(h.stored(retail).status,'draft');
+  const wholesale=await h.create({...exampleSale(),division:'food',channel:'wholesale'});
+  const blockedWholesale=await h.action('record',wholesale);assert.equal(blockedWholesale.statusCode,400);assert.match(blockedWholesale.body.error,/company name/);
+  assert.equal(h.stored(wholesale).status,'draft');
+  const recordedRetail=await h.record({...exampleSale(),division:'food',outlet:'event',items:[{...exampleSale().items[0],category:'food',packageLabel:'12 oz bottle'}]});
+  assert.equal(recordedRetail.division,'food');assert.equal(recordedRetail.outlet,'event');
+  const recordedWholesale=await h.record({...exampleSale(),division:'swag',channel:'wholesale',customer:{name:'',email:'',companyName:'Synthetic wholesale company',contactName:'Test contact',phone:'555-0100',address:'Synthetic address'}});
+  assert.equal(recordedWholesale.customer.companyName,'Synthetic wholesale company');assert.equal(recordedWholesale.customer.contactName,'Test contact');
+  assert.equal((await h.action('save',recordedWholesale,{sale:{...exampleSale(),customer:{companyName:'Changed'}}})).statusCode,409);
+  for(const channel of ['retail','wholesale','event','website','other'])assert.equal((await h.record({...exampleSale(),channel})).channel,channel);
+}));
+
+test('older draft clients preserve omitted master and package fields while explicit blanks clear them',()=>harness(async h=>{
+  const raw={...exampleSale(),division:'food',outlet:'farmers_market',customer:{name:'',email:'',companyName:'Synthetic company',contactName:'Test contact',phone:'555-0100',address:'Synthetic address'},
+    items:[{...exampleSale().items[0],category:'food',packageLabel:'12 oz bottle'}]};
+  const created=await h.create(raw);
+  const oldClient={...exampleSale(),notes:'Synthetic edit from prior view',items:[{...exampleSale().items[0],category:'food',quantity:'2'}]};
+  const changed=await h.action('save',created,{sale:oldClient});assert.equal(changed.statusCode,200);
+  const saved=changed.body.sale;assert.equal(saved.division,'food');assert.equal(saved.outlet,'farmers_market');assert.deepEqual(saved.customer,raw.customer);
+  assert.equal(saved.items[0].packageLabel,'12 oz bottle');assert.equal(saved.items[0].quantity,'2');assert.equal(saved.items[0].volumeMl,null);
+  assert.equal((await h.action('save',saved,{sale:{...oldClient,items:[{...oldClient.items[0],description:'Different item'}]}})).statusCode,409);
+  const reset={...oldClient,division:'',outlet:'',customer:{name:'',email:'',companyName:'',contactName:'',phone:'',address:''},
+    items:[{...oldClient.items[0],packageLabel:'',purpose:'',bottleSizeMl:'',bottlesPerUnit:'',proof:''}]};
+  const cleared=await h.action('save',saved,{sale:reset});assert.equal(cleared.statusCode,200);
+  assert.equal(cleared.body.sale.division,'');assert.equal(cleared.body.sale.outlet,'');assert.equal(cleared.body.sale.customer.companyName,'');assert.equal(cleared.body.sale.items[0].packageLabel,'');
+}));
+
+test('stale clients cannot reattach different sizes or proof when otherwise identical item rows are reordered',()=>harness(async h=>{
+  const base={...exampleSale().items[0],purpose:'bottle_sale',bottlesPerUnit:''};
+  const raw={...exampleSale(),items:[{...base,quantity:'1',bottleSizeMl:'350',proof:'80',packageLabel:'Synthetic small package'},
+    {...base,quantity:'2',bottleSizeMl:'750',proof:'90',packageLabel:'Synthetic large package'}]};
+  const saved=await h.create(raw),before=h.stored(saved);
+  const oldRows=[...raw.items].reverse().map(({purpose,bottleSizeMl,bottlesPerUnit,proof,packageLabel,...item})=>item);
+  const rejected=await h.action('save',saved,{sale:{...raw,items:oldRows}});
+  assert.equal(rejected.statusCode,409);assert.match(rejected.body.error,/Reload/);
+  assert.deepEqual(h.stored(saved),before,'Ambiguous legacy saves preserve the complete draft and revision');
+  const current=await h.action('save',saved,{sale:{...saved,items:[...saved.items].reverse()}});
+  assert.equal(current.statusCode,200,'A current client sending explicit metadata can reorder the lines');
+  assert.deepEqual(current.body.sale.items.map(item=>[item.quantity,item.bottleSizeMl,item.proof,item.packageLabel]),
+    [['2','750','90','Synthetic large package'],['1','350','80','Synthetic small package']]);
+  assert.deepEqual(current.body.sale.items.map(item=>item.bottleCount),[2,1]);
 }));
